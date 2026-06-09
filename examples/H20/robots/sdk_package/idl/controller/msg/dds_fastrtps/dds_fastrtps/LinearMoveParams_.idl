@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/LinearMoveParams.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__linear_move_params__idl__
+#define __controller__msg__linear_move_params__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct LinearMoveParams_ {
+long type_;
+sequence<double> pose_;
+
+double velocity_percent_;
+double acceleration_percent_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__linear_move_params__idl__

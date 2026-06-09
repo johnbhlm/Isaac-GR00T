@@ -1,0 +1,25 @@
+枚举
+==================
+
+PowerState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.PowerState
+   :members:
+   :exclude-members: name, value
+   
+
+BrakeState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.BrakeState
+   :members:
+   :exclude-members: name, value
+
+
+ControlPolicy
+----------------------
+
+.. autoclass:: humanoid_sdk_py.ControlPolicy
+   :members:
+   :exclude-members: name, value

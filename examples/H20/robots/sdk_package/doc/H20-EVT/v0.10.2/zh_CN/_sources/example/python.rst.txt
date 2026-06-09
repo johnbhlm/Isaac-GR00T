@@ -1,0 +1,58 @@
+Python 使用示例
+==================
+
+本文档介绍如何使用 Python 语言调用 HumanoidSDK 库，并演示如何构建一个简单的示例程序。
+
+.. hint::
+   更多示例请参考 sdk_package/example_py 目录。
+
+配置环境变量
+-----------------
+
+.. code-block:: bash
+
+    cd ~/sdk_package
+    export LD_LIBRARY_PATH="$(pwd)/lib/linux/x86_64/x64:$(pwd)/dependency/sdk/Runtime_Env/linux/x86_64/x64:$(pwd)/dependency/fastdds/linux/x86_64/x64:$LD_LIBRARY_PATH"
+    export PYTHONPATH="$(pwd)/lib/linux/x86_64/x64:$PYTHONPATH"
+
+
+可选：如果要使用自定义 DDS 配置文件，设置 ROBOT_DDS_PROFILE 环境变量：
+
+.. code-block:: bash
+
+   export ROBOT_DDS_PROFILE=path/to/your/Robot_DDS_Profile.xml
+
+构建一个简单示例程序
+----------------------
+
+1. 创建 example.py 文件
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+   :linenos:
+
+    ## example.py
+    import humanoid_sdk_py
+    import humanoid_sdk_py.h10w as h10w
+    import time
+
+    h10w_params = h10w.H10wParams()
+    time.sleep(1)
+
+    ret, limit = h10w_params.getJointSoftLimit()
+    if ret == 0:
+        for index, max, min in limit:
+            print(
+                "    joint {}: max pos= {:.3f} rad, min pos= {:.3f} rad".format(
+                    index, max, min
+                )
+            )
+    else:
+        print("Failed to get joint soft limit.")
+
+2. 运行示例程序
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+   python3 example.py

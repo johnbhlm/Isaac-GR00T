@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from h2x/srv/GetLowBatteryThreshold.srv
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module srv {
+    @verbatim (language="comment", text=
+      "请求部分")
+    struct GetLowBatteryThreshold_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      "响应部分")
+    struct GetLowBatteryThreshold_Response {
+      int32 result;
+
+      int32 low_battery_threshold;
+    };
+  };
+};

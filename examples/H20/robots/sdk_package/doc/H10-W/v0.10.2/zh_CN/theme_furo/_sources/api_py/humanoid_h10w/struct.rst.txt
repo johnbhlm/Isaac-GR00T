@@ -1,0 +1,122 @@
+结构体
+==============
+
+RealtimeJointsParams
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.RealtimeJointsParams
+   :members:
+
+RealtimeTcpParams
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.RealtimeTcpParams
+   :members:
+
+LinearTarget
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.LinearTarget
+   :members:
+
+TcpPoseParams
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.TcpPoseParams
+   :members:
+
+MoveMessageParams
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.MoveMessageParams
+   :members:
+
+ErrorMessageParams
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.ErrorMessageParams
+   :members:
+
+MotorCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.MotorCmd
+   :members:
+
+BaseCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.BaseCmd
+   :members:
+
+ElevatorCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.ElevatorCmd
+   :members:
+
+GripperCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.GripperCmd
+   :members:
+
+PCUCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.PCUCmd
+   :members:
+
+LowCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.LowCmd
+   :members:
+
+MotorState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.MotorState
+   :members:
+
+IMUState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.IMUState
+   :members:
+
+BaseState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.BaseState
+   :members:
+
+ElevatorState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.ElevatorState
+   :members:
+
+GripperState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.GripperState
+   :members:
+
+PCUState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.PCUState
+   :members:
+
+BatteryState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.BatteryState
+   :members:
+
+LowState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.LowState
+   :members:

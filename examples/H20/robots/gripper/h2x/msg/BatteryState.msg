@@ -1,0 +1,5 @@
+uint8 battery_percentage
+uint8 battery_state
+uint8 battery_low_warning
+int32 error_code
+int32 warning_code

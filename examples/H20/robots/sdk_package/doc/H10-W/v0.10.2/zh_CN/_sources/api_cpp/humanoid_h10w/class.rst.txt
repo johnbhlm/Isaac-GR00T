@@ -1,0 +1,64 @@
+类
+==========
+
+
+humanoid::h10w::H10wChassis
+----------------------------
+.. doxygenclass:: humanoid::h10w::H10wChassis
+   :members:
+   :protected-members:
+   :private-members:
+
+humanoid::h10w::H10wMotion
+---------------------------
+.. doxygenclass:: humanoid::h10w::H10wMotion
+   :members:
+   :protected-members:
+   :private-members:
+
+.. note::
+
+   **控制器模式说明**
+   
+   - **EnableController = true**: 启用运动控制功能，可以使用高级运动控制API
+   - **EnableController = false**: 激活底层控制模式，直接控制电机底层
+   
+   在使用运动控制功能前，请确保已正确设置控制器模式。
+
+humanoid::h10w::H10wParams
+---------------------------
+.. doxygenclass:: humanoid::h10w::H10wParams
+   :members:
+   :protected-members:
+   :private-members:
+
+humanoid::h10w::H10wStatus
+---------------------------
+.. doxygenclass:: humanoid::h10w::H10wStatus
+   :members:
+   :protected-members:
+   :private-members:
+
+humanoid::h10w::H10wSystem
+-----------------------------
+.. doxygenclass:: humanoid::h10w::H10wSystem
+   :members:
+   :protected-members:
+   :private-members:
+
+humanoid::h10w::H10wLowLevel
+-----------------------------
+.. doxygenclass:: humanoid::h10w::H10wLowLevel
+   :members:
+   :protected-members:
+   :private-members:
+
+
+.. note::
+
+   **控制器模式说明**
+   
+   - **EnableController = true**: 启用运动控制功能，可以使用高级运动控制API
+   - **EnableController = false**: 激活底层控制模式，直接控制电机底层
+   
+   在使用运动控制功能前，请确保已正确设置控制器模式。

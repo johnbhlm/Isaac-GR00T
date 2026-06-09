@@ -1,0 +1,2539 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Error Code List" href="error.html" /><link rel="prev" title="Struct" href="struct.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.08.06 -->
+        <title>Classes - User Manual For H10-W SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=03768ecb" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #007acc;
+  --color-brand-content: #005a9e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+      }
+    }
+  }
+</style>
+  
+  
+    <link rel="stylesheet" href="../../_static/toolbar.css">
+    <script defer src="../../_static/toolbar.js"></script>
+  
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">User Manual For H10-W SDK</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">User Manual For H10-W SDK</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">installation guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_cpp/index.html">C++ interface description</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of C++ interface description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_cpp/humanoid/index.html">humanoid namespace</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of humanoid namespace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid/enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid/struct.html">Struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html">Typedef</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_cpp/humanoid_h10w/index.html">humanoid::h10w namespace</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of humanoid::h10w namespace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h10w/enum.html">Enumerations and Joint Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html">Struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h10w/class.html">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h10w/error.html">Error Code List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Python interface description</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Python interface description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../humanoid/index.html">humanoid_sdk_py module description</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py module description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/struct.html">Struct</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">humanoid_sdk_py.h10w module description</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py.h10w module description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html">Struct</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="error.html">Error Code List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../example/index.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../example/cpp.html">C++ Usage Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../example/python.html">Python Usage Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">common problems</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theme Switching</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../api_py/humanoid_h10w/class.html">Sphinx RTD</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Furo</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="id1">
+<h1>Classes<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<section id="h10wchassis">
+<h2>H10wChassis<a class="headerlink" href="#h10wchassis" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wChassis</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w chassis interface</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.baseControl">
+<span class="sig-name descname"><span class="pre">baseControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.baseControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chassis brake control</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>control_word</strong> – Control word. bit0 = 0：disable servo, bit0 = 1:enable servo.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value</strong></p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>other: Error Code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.getChassisMaxVel">
+<span class="sig-name descname"><span class="pre">getChassisMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.getChassisMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get chassis max velocity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, (linear_velocity, angular_velocity)) : contains chassis max linear and angular velocity as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, tuple[float, float] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>(linear_velocity, angular_velocity): tuple[float, float] | None</dt><dd><ul class="simple">
+<li><p>linear_velocity (float): Chassis max linear velocity in m/s</p></li>
+<li><p>angular_velocity (float): Chassis max angular velocity in rad/s</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.getChassisSpeed">
+<span class="sig-name descname"><span class="pre">getChassisSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.getChassisSpeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get chassis velocity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, (linear_velocity, angular_velocity)) : contains chassis linear and angular velocity as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, tuple[float, float] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>(linear_velocity, angular_velocity): tuple[float, float] | None</dt><dd><ul class="simple">
+<li><p>linear_velocity (float): Chassis linear velocity in m/s</p></li>
+<li><p>angular_velocity (float): Chassis angular velocity in rad/s</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.getLocalization">
+<span class="sig-name descname"><span class="pre">getLocalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.getLocalization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get localization message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, (pos_x, pos_y, is_valid)) : contains status code and localization message as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, tuple[float, float, bool] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>(pos_x, pos_y, is_valid): tuple[float, float, bool] | None</dt><dd><ul class="simple">
+<li><p>pos_x (float): X coordinate in m</p></li>
+<li><p>pos_y (float): Y coordinate in m</p></li>
+<li><p>is_valid (bool): Localization is valid or not</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.getOdometryMessage">
+<span class="sig-name descname"><span class="pre">getOdometryMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.getOdometryMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get odometry message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, (cur_time, cur_mileage)) : contains status code and odometry message as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, tuple[int, int] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>(cur_time, cur_mileage): tuple[int, int] | None</dt><dd><ul class="simple">
+<li><p>cur_time (int): Accumulated time in s</p></li>
+<li><p>cur_mileage (int): Accumulated_mileage in m</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.setChassisMaxVel">
+<span class="sig-name descname"><span class="pre">setChassisMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.setChassisMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set chassis max velocity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_velocity</strong> – Chassis max linear velocity in m/s</p></li>
+<li><p><strong>angular_velocity</strong> – Chassis max angular velocity in rad/s</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.setLocalization">
+<span class="sig-name descname"><span class="pre">setLocalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.setLocalization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set chassis localization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_x</strong> – X coordinate in m</p></li>
+<li><p><strong>pos_y</strong> – Y coordinate in m</p></li>
+<li><p><strong>is_valid</strong> – Localization is valid or not</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.speedChassis">
+<span class="sig-name descname"><span class="pre">speedChassis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.speedChassis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute chassis velocity control</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_velocity</strong> – Chassis linear velocity in m/s</p></li>
+<li><p><strong>angular_velocity</strong> – Chassis angular velocity in rad/s</p></li>
+<li><p><strong>lifetime</strong> – Command lifetime</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h10wmotion">
+<h2>H10wMotion<a class="headerlink" href="#h10wmotion" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wMotion</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w motion interface</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.enableRealtimeCmd">
+<span class="sig-name descname"><span class="pre">enableRealtimeCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.enableRealtimeCmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable the realtime cmd</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – true: enable the realtime command; false: disable the realtime command</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the realtime cmd control mode is enabled, it is not possible to use any non-realtime commands for motion control.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.getControlPolicy">
+<span class="sig-name descname"><span class="pre">getControlPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.getControlPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the robot current control policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, policy) : contains status code and control policy as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.ControlPolicy" title="humanoid_sdk_py.ControlPolicy">ControlPolicy</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>policy: ControlPolicy | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a ControlPolicy object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.getSafeMode">
+<span class="sig-name descname"><span class="pre">getSafeMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.getSafeMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current robot safe mode status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, mode) : contains status code and safe mode status as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, bool | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>mode: bool | None</dt><dd><ul class="simple">
+<li><p>true: in safe mode</p></li>
+<li><p>false: not in safe mode</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.requestLinearMove">
+<span class="sig-name descname"><span class="pre">requestLinearMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.LinearTarget" title="humanoid_sdk_py.h10w.LinearTarget"><span class="pre">humanoid_sdk_py.h10w.LinearTarget</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.requestLinearMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear Move</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>joint_targets</strong> – The target of the TCPs</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.requestMultiJointsMove">
+<span class="sig-name descname"><span class="pre">requestMultiJointsMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.requestMultiJointsMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move multiple joints</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joint_targets</strong> – The target of the joints</p></li>
+<li><p><strong>velocity</strong> – The percentage of the target joint speed, ranging from (0, 1)</p></li>
+<li><p><strong>acc</strong> – The percentage of the target joint acceleration, ranging from (0, 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.requestSingleJointMove">
+<span class="sig-name descname"><span class="pre">requestSingleJointMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.requestSingleJointMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move a single joint</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joint_target</strong> – The target of the single joint</p></li>
+<li><p><strong>velocity</strong> – The percentage of the target joint speed, ranging from (0, 1)</p></li>
+<li><p><strong>acc</strong> – The percentage of the target joint acceleration, ranging from (0, 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.requestStop">
+<span class="sig-name descname"><span class="pre">requestStop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.requestStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop moving the robot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.servoJoint">
+<span class="sig-name descname"><span class="pre">servoJoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.RealtimeJointsParams" title="humanoid_sdk_py.h10w.RealtimeJointsParams"><span class="pre">humanoid_sdk_py.h10w.RealtimeJointsParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.servoJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute real-time joint space servo motion</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – Target joint parameters containing joint angles and validity flags</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.servoLinear">
+<span class="sig-name descname"><span class="pre">servoLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.RealtimeTcpParams" title="humanoid_sdk_py.h10w.RealtimeTcpParams"><span class="pre">humanoid_sdk_py.h10w.RealtimeTcpParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.servoLinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute real-time linear space servo motion (TCP trajectory)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – Target TCP parameters containing pose and validity flags</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.setControlPolicy">
+<span class="sig-name descname"><span class="pre">setControlPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.ControlPolicy" title="humanoid_sdk_py.ControlPolicy"><span class="pre">humanoid_sdk_py.ControlPolicy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.setControlPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the robot control policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>policy</strong> – Control policy to set (FULL_BODY or SINGLE_ARM)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.setSafeMode">
+<span class="sig-name descname"><span class="pre">setSafeMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.setSafeMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable robot safe mode
+In safe mode, if any joint exceeds its limits, you can drive the joint back towards the non-exceeding direction to ensure operational safety.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> – true to enable safe mode, false to disable safe mode</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In safe mode, realtime commands cannot be used for motion control.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.speedJoint">
+<span class="sig-name descname"><span class="pre">speedJoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.RealtimeJointsParams" title="humanoid_sdk_py.h10w.RealtimeJointsParams"><span class="pre">humanoid_sdk_py.h10w.RealtimeJointsParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.speedJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute joint space velocity control motion</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – Target joint parameters containing joint velocities and validity flags</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.speedLinear">
+<span class="sig-name descname"><span class="pre">speedLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.RealtimeTcpParams" title="humanoid_sdk_py.h10w.RealtimeTcpParams"><span class="pre">humanoid_sdk_py.h10w.RealtimeTcpParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.speedLinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute Cartesian space velocity control motion (TCP velocity)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – Target TCP parameters containing TCP velocities and validity flags</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.waitMove">
+<span class="sig-name descname"><span class="pre">waitMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.waitMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blocking wait until move is complete</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Timeout in ms</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Controller mode description</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: Enable motion control features, can use advanced motion control API**EnableController = true**: Enable motion control features and use high-level motion control APIs</p></li>
+<li><p><strong>EnableController = false</strong>: Activate low-level control mode, directly control motor layer**EnableController = false**: Activate low-level control mode and directly control the motor layer</p></li>
+</ul>
+<p>Before using motion control features, make sure the controller mode is set correctly.Before using motion control features, make sure the controller mode is set correctly.</p>
+</div>
+</section>
+<section id="h10wparams">
+<h2>H10wParams<a class="headerlink" href="#h10wparams" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wParams</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w params interface</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.forwardKinematics">
+<span class="sig-name descname"><span class="pre">forwardKinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.forwardKinematics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward kinematics calculation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – End effector index list of Cartesian coordinate system</p></li>
+<li><p><strong>joint_angles</strong> – Joint angles of whole body</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(code, pose) : contains status code and TCP pose as a tuple</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, list[<a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.TcpPoseParams" title="humanoid_sdk_py.h10w.TcpPoseParams">TcpPoseParams</a>] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>pose: list[TcpPoseParams] | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a list of TcpPoseParams objects:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxAcc">
+<span class="sig-name descname"><span class="pre">getCartRotaMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Cartesian rotation maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartRotaMaxAccList) : contains status code and Cartesian rotation maximum accelerations as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartRotaMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartRotaMaxAccList: CartRotaMaxAcc | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartRotaMaxAcc object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxVel">
+<span class="sig-name descname"><span class="pre">getCartRotaMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Cartesian rotation maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartRotaMaxVelList) : contains status code and Cartesian rotation maximum velocities as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartRotaMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartRotaMaxVelList: CartRotaMaxVel | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartRotaMaxVel object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartTransMaxAcc">
+<span class="sig-name descname"><span class="pre">getCartTransMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartTransMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Cartesian translation maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartTransMaxAccList) : contains status code and Cartesian translation maximum accelerations as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartTransMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartTransMaxAccList: CartTransMaxAcc | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartTransMaxAcc object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartTransMaxVel">
+<span class="sig-name descname"><span class="pre">getCartTransMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartTransMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Cartesian translation maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartTransMaxVelList) : contains status code and Cartesian translation maximum velocities as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartTransMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartTransMaxVelList: CartTransMaxVel | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartTransMaxVel object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartesianControlParams">
+<span class="sig-name descname"><span class="pre">getCartesianControlParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartesianControlParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get cartesian control parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartesianControlParamsList) : contains status code and cartesian control parameters as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartesianControlParams | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartesianControlParamsList: CartesianControlParams | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartesianControlParams object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getJointControlParams">
+<span class="sig-name descname"><span class="pre">getJointControlParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getJointControlParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get joint control parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointControlParamsList) : contains status code and joint control parameters as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointControlParams | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>jointControlParamsList: JointControlParams | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a JointControlParams object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getJointMaxAcc">
+<span class="sig-name descname"><span class="pre">getJointMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getJointMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get joint maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointMaxAccList) : contains status code and joint maximum accelerations as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointMaxAcc | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>jointMaxAccList: JointMaxAcc | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a JointMaxAcc object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getJointMaxVel">
+<span class="sig-name descname"><span class="pre">getJointMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getJointMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get joint maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointMaxVelList) : contains status code and joint maximum velocities as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>jointMaxVelList: JointMaxVel | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a JointMaxVel object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getJointSoftLimit">
+<span class="sig-name descname"><span class="pre">getJointSoftLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getJointSoftLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get joint soft limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointLimitList) ：contains status code and joint soft limits as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointLimit | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>jointLimitList: JointLimit | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a JointLimit object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechCartRotMaxAcc">
+<span class="sig-name descname"><span class="pre">getMechCartRotMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartRotMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get mechanical Cartesian rotation maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartMaxAccList) : contains status code and mechanical Cartesian rotation maximum accelerations as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartRotaMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartMaxAccList: CartRotaMaxAcc | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartRotaMaxAcc object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechCartRotaMaxVel">
+<span class="sig-name descname"><span class="pre">getMechCartRotaMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartRotaMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get mechanical Cartesian rotation maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartMaxVelList) : contains status code and mechanical Cartesian rotation maximum velocities as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartRotaMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartMaxVelList: CartRotaMaxVel | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartRotaMaxVel object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxAcc">
+<span class="sig-name descname"><span class="pre">getMechCartTransMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get mechanical Cartesian translation maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartTransMaxAccList) : contains status code and mechanical Cartesian translation maximum accelerations as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartTransMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartTransMaxAccList: CartTransMaxAcc | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartTransMaxAcc object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxVel">
+<span class="sig-name descname"><span class="pre">getMechCartTransMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get mechanical Cartesian translation maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartTransMaxVelList) : contains status code and mechanical Cartesian translation maximum velocities as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartTransMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>cartTransMaxVelList: CartTransMaxVel | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a CartTransMaxVel object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechJointLimit">
+<span class="sig-name descname"><span class="pre">getMechJointLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get mechanical joint limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointLimitList) : contains status code and joint mechanical limits as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointLimit | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>jointLimitList: JointLimit | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a JointLimit object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechJointMaxAcc">
+<span class="sig-name descname"><span class="pre">getMechJointMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get mechanical joint maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointMaxAccList) : contains status code and mechanical joint maximum accelerations as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>jointMaxAccList: JointMaxAcc | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a JointMaxAcc object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechJointMaxVel">
+<span class="sig-name descname"><span class="pre">getMechJointMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get mechanical joint maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointMaxVelList) : contains status code and mechanical joint maximum velocities as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>jointMaxVelList: JointMaxVel | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a JointMaxVel object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getTcpOffset">
+<span class="sig-name descname"><span class="pre">getTcpOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getTcpOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get TCP offset parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, tcpOffsetParamsList) ：contains status code and TCP offset parameters as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, TcpOffsetParams | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>tcpOffsetParamsList: TcpOffsetParams | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a TcpOffsetParams object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getTcpPayload">
+<span class="sig-name descname"><span class="pre">getTcpPayload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getTcpPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get TCP payload parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, tcpPayloadParamsList) ：包含状态码和TCP负载参数的元组</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, TcpPayloadParams | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>tcpPayloadParamsList: TcpPayloadParams | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a TcpPayloadParams object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.inverseKinematics">
+<span class="sig-name descname"><span class="pre">inverseKinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.TcpPoseParams" title="humanoid_sdk_py.h10w.TcpPoseParams"><span class="pre">humanoid_sdk_py.h10w.TcpPoseParams</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.inverseKinematics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse kinematics calculation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose</strong> – TCP pose</p></li>
+<li><p><strong>reference_angles</strong> – Reference joint positions‌， used for calculating the inverse solution with the shortest distance</p></li>
+<li><p><strong>if_use_whole_body</strong> – Specifies whether the TCP pose is computed using the full-body joints</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(code, joint_angles) : contains status code and joint angles as a tuple</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, list[float] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>joint_angles: list[float] | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a list of floats:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxAcc">
+<span class="sig-name descname"><span class="pre">setCartRotaMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set Cartesian rotation maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartRotaMaxAccList</strong> – Cartesian rotation maximum accelerations</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxVel">
+<span class="sig-name descname"><span class="pre">setCartRotaMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set Cartesian rotation maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartRotaMaxVelList</strong> – Cartesian rotation maximum velocities</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartTransMaxAcc">
+<span class="sig-name descname"><span class="pre">setCartTransMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartTransMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set Cartesian translation maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartTransMaxAccList</strong> – Cartesian translation maximum accelerations</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartTransMaxVel">
+<span class="sig-name descname"><span class="pre">setCartTransMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartTransMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set Cartesian translation maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartTransMaxVelList</strong> – Cartesian translation maximum velocities</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartesianControlParams">
+<span class="sig-name descname"><span class="pre">setCartesianControlParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list[tuple[int,</span> <span class="pre">Annotated[list[float],</span> <span class="pre">FixedSize(6)],</span> <span class="pre">Annotated[list[float],</span> <span class="pre">FixedSize(6)],</span> <span class="pre">Annotated[list[float],</span> <span class="pre">FixedSize(6)]]]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartesianControlParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set cartesian control parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartesianControlParamsList</strong> – Cartesian control parameters list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setJointControlParams">
+<span class="sig-name descname"><span class="pre">setJointControlParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setJointControlParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set joint control parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointControlParamsList</strong> – Joint control parameters list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setJointMaxAcc">
+<span class="sig-name descname"><span class="pre">setJointMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setJointMaxAcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set joint maximum accelerations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxAccList</strong> – Joint maximum accelerations</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setJointMaxVel">
+<span class="sig-name descname"><span class="pre">setJointMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setJointMaxVel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set joint maximum velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxVelList</strong> – Joint maximum velocities</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setJointSoftLimit">
+<span class="sig-name descname"><span class="pre">setJointSoftLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setJointSoftLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set joint soft limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointLimitList</strong> – Joint soft limits</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setTcpOffset">
+<span class="sig-name descname"><span class="pre">setTcpOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setTcpOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set TCP offset parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tcpOffsetParamsList</strong> – TCP offset parameters</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setTcpPayload">
+<span class="sig-name descname"><span class="pre">setTcpPayload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setTcpPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set TCP payload parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tcpPayloadParamsList</strong> – TCP payload parameters</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h10wstatus">
+<h2>H10wStatus<a class="headerlink" href="#h10wstatus" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wStatus</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w status interface</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wStatus.getControllerMessage">
+<span class="sig-name descname"><span class="pre">getControllerMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus" title="humanoid_sdk_py.h10w.H10wStatus"><span class="pre">humanoid_sdk_py.h10w.H10wStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wStatus.getControllerMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get current controller status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, controller_message)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.ControllerMessageParams" title="humanoid_sdk_py.ControllerMessageParams">ControllerMessageParams</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: Error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>error_message: ControllerMessageParams | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is an ControllerMessageParams object</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wStatus.getErrorMessage">
+<span class="sig-name descname"><span class="pre">getErrorMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus" title="humanoid_sdk_py.h10w.H10wStatus"><span class="pre">humanoid_sdk_py.h10w.H10wStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wStatus.getErrorMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get current error state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, error_message) : contains status code and error message as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.ErrorMessageParams" title="humanoid_sdk_py.h10w.ErrorMessageParams">ErrorMessageParams</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: Error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>error_message: ErrorMessageParams | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is an ErrorMessageParams object</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wStatus.getMoveMessage">
+<span class="sig-name descname"><span class="pre">getMoveMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus" title="humanoid_sdk_py.h10w.H10wStatus"><span class="pre">humanoid_sdk_py.h10w.H10wStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wStatus.getMoveMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get current motion state message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, move_message): contains status code and motion message as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.MoveMessageParams" title="humanoid_sdk_py.h10w.MoveMessageParams">MoveMessageParams</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<p>code: int</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: Error code</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>move_message: MoveMessageParams | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a MoveMessageParams object</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h10wsystem">
+<h2>H10wSystem<a class="headerlink" href="#h10wsystem" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wSystem</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w system interface</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.calibrate90DegPosition">
+<span class="sig-name descname"><span class="pre">calibrate90DegPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.calibrate90DegPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calibrate the 90Deg position of a specified joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – Joint index (int) to be calibrated. Mapping is defined by JointIndexValue in common/h10w_def.h. Elevator and gripper are not currently supported.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.calibrateMechanicalZeroPosition">
+<span class="sig-name descname"><span class="pre">calibrateMechanicalZeroPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.calibrateMechanicalZeroPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calibrate the mechanical zero position of a specified joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – Joint index (int) to be calibrated. Mapping is defined by JointIndexValue in common/h10w_def.h. Elevator and gripper are not currently supported.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.clearError">
+<span class="sig-name descname"><span class="pre">clearError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.clearError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the error state of the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.controlBrake">
+<span class="sig-name descname"><span class="pre">controlBrake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.BrakeState" title="humanoid_sdk_py.BrakeState"><span class="pre">humanoid_sdk_py.BrakeState</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.controlBrake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control the brake state of the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – BrakeState.BRAKE_OFF: close brake; BrakeState.BRAKE_ON: open brake.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.controlPower">
+<span class="sig-name descname"><span class="pre">controlPower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.PowerState" title="humanoid_sdk_py.PowerState"><span class="pre">humanoid_sdk_py.PowerState</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.controlPower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control the power state of the robot.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When calling the <cite>controlPower</cite> interface, leave sufficient time between operations to avoid proceeding while power on/off has not fully taken effect.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – PowerState.POWER_ON: power on; PowerState.POWER_OFF: power off.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.enableController">
+<span class="sig-name descname"><span class="pre">enableController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.enableController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable the robot controller.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – true: enable; false: disable.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the robot controller is enabled, it can send motion commands to drives. When disabled, the controller will not send any motion commands to drives for safety.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.getMicrophone">
+<span class="sig-name descname"><span class="pre">getMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.getMicrophone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the microphone status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, status) : contains status code and microphone status as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.MicrophoneStatus" title="humanoid_sdk_py.MicrophoneStatus">MicrophoneStatus</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>status: MicrophoneStatus | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a MicrophoneStatus object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.getPushPeriod">
+<span class="sig-name descname"><span class="pre">getPushPeriod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.getPushPeriod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get push period</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, period) : contains status code and push period as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, int | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>period: int | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is the push period (milliseconds):</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.getRobotVersion">
+<span class="sig-name descname"><span class="pre">getRobotVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.getRobotVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the version of the robot and its plugins.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, version) : contains status code and version information as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.RobotVersion" title="humanoid_sdk_py.RobotVersion">RobotVersion</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>version: RobotVersion | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a RobotVersion object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.getSpeaker">
+<span class="sig-name descname"><span class="pre">getSpeaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.getSpeaker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the speaker status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, status) : contains status code and speaker status as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.SpeakerStatus" title="humanoid_sdk_py.SpeakerStatus">SpeakerStatus</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>status: SpeakerStatus | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a SpeakerStatus object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.isControllerEnabled">
+<span class="sig-name descname"><span class="pre">isControllerEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.isControllerEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the robot controller is enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, enable) : contains status code and controller status as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, bool | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: error code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>enable: bool | None</dt><dd><ul class="simple">
+<li><p>true: controller is enabled</p></li>
+<li><p>false: controller is disabled</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.saveJointParameters">
+<span class="sig-name descname"><span class="pre">saveJointParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.saveJointParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the mechanical 90Deg position of specified joint</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – Joint index (int) whose mechanical 90Deg position is to be saved. Mapping is defined by JointIndexValue in common/h10w_def.h. Elevator and gripper are not currently supported.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.setMicrophone">
+<span class="sig-name descname"><span class="pre">setMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.MicrophoneStatus" title="humanoid_sdk_py.MicrophoneStatus"><span class="pre">humanoid_sdk_py.MicrophoneStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.setMicrophone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the microphone status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – The microphone status structure.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.setPushPeriod">
+<span class="sig-name descname"><span class="pre">setPushPeriod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.setPushPeriod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set push period</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>period</strong> – Push period (milliseconds)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.setSpeaker">
+<span class="sig-name descname"><span class="pre">setSpeaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.SpeakerStatus" title="humanoid_sdk_py.SpeakerStatus"><span class="pre">humanoid_sdk_py.SpeakerStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.setSpeaker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the speaker status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – The speaker status structure.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.statusPower">
+<span class="sig-name descname"><span class="pre">statusPower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.statusPower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the power state of the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, state)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.PowerState" title="humanoid_sdk_py.PowerState">PowerState</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Other: Error code</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>state: PowerState | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a PowerState object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h10wlowlevel">
+<h2>H10wLowLevel<a class="headerlink" href="#h10wlowlevel" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wLowLevel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wLowLevel</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wLowLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w low-level control interface</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wLowLevel.readLowState">
+<span class="sig-name descname"><span class="pre">readLowState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wLowLevel" title="humanoid_sdk_py.h10w.H10wLowLevel"><span class="pre">humanoid_sdk_py.h10w.H10wLowLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wLowLevel.readLowState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscribe low-level state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, lowState) : contains status code and low-level state as a tuple</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.LowState" title="humanoid_sdk_py.h10w.LowState">LowState</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>Return value 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Return value 2</strong>:</p>
+<dl class="simple">
+<dt>lowState: LowState | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a LowState object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wLowLevel.writeLowCmd">
+<span class="sig-name descname"><span class="pre">writeLowCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wLowLevel" title="humanoid_sdk_py.h10w.H10wLowLevel"><span class="pre">humanoid_sdk_py.h10w.H10wLowLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.LowCmd" title="humanoid_sdk_py.h10w.LowCmd"><span class="pre">humanoid_sdk_py.h10w.LowCmd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wLowLevel.writeLowCmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publish low-level control command</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lowCmd</strong> – Low-level control command</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Controller mode description</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: Enable motion control features, can use advanced motion control API**EnableController = true**: Enable motion control features and use high-level motion control APIs</p></li>
+<li><p><strong>EnableController = false</strong>: Activate low-level control mode, directly control motor layer**EnableController = false**: Activate low-level control mode and directly control the motor layer</p></li>
+</ul>
+<p>Before using motion control features, make sure the controller mode is set correctly.Before using motion control features, make sure the controller mode is set correctly.</p>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  
+        <div class="related-pages">
+          <a class="next-page" href="error.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Error Code List</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="struct.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Struct</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025 Beijing Siling Robot Technology Co., Ltd.
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+  
+    ﻿<div id="doc-toolbar">
+  <label>
+    
+      Language:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H10-W/v0.10.2/cpp/zh_CN/"
+              >
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H10-W/v0.10.2/cpp/en/"
+              selected>
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      Version:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H10-W/v0.10.2/cpp/en/en/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+  
+
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Classes</a><ul>
+<li><a class="reference internal" href="#h10wchassis">H10wChassis</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis"><code class="docutils literal notranslate"><span class="pre">H10wChassis</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis.baseControl"><code class="docutils literal notranslate"><span class="pre">baseControl</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis.getChassisMaxVel"><code class="docutils literal notranslate"><span class="pre">getChassisMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis.getChassisSpeed"><code class="docutils literal notranslate"><span class="pre">getChassisSpeed</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis.getLocalization"><code class="docutils literal notranslate"><span class="pre">getLocalization</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis.getOdometryMessage"><code class="docutils literal notranslate"><span class="pre">getOdometryMessage</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis.setChassisMaxVel"><code class="docutils literal notranslate"><span class="pre">setChassisMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis.setLocalization"><code class="docutils literal notranslate"><span class="pre">setLocalization</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis.speedChassis"><code class="docutils literal notranslate"><span class="pre">speedChassis</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h10wmotion">H10wMotion</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion"><code class="docutils literal notranslate"><span class="pre">H10wMotion</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.enableRealtimeCmd"><code class="docutils literal notranslate"><span class="pre">enableRealtimeCmd</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.getControlPolicy"><code class="docutils literal notranslate"><span class="pre">getControlPolicy</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.getSafeMode"><code class="docutils literal notranslate"><span class="pre">getSafeMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.requestLinearMove"><code class="docutils literal notranslate"><span class="pre">requestLinearMove</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.requestMultiJointsMove"><code class="docutils literal notranslate"><span class="pre">requestMultiJointsMove</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.requestSingleJointMove"><code class="docutils literal notranslate"><span class="pre">requestSingleJointMove</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.requestStop"><code class="docutils literal notranslate"><span class="pre">requestStop</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.servoJoint"><code class="docutils literal notranslate"><span class="pre">servoJoint</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.servoLinear"><code class="docutils literal notranslate"><span class="pre">servoLinear</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.setControlPolicy"><code class="docutils literal notranslate"><span class="pre">setControlPolicy</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.setSafeMode"><code class="docutils literal notranslate"><span class="pre">setSafeMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.speedJoint"><code class="docutils literal notranslate"><span class="pre">speedJoint</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.speedLinear"><code class="docutils literal notranslate"><span class="pre">speedLinear</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion.waitMove"><code class="docutils literal notranslate"><span class="pre">waitMove</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h10wparams">H10wParams</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams"><code class="docutils literal notranslate"><span class="pre">H10wParams</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.forwardKinematics"><code class="docutils literal notranslate"><span class="pre">forwardKinematics</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxAcc"><code class="docutils literal notranslate"><span class="pre">getCartRotaMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxVel"><code class="docutils literal notranslate"><span class="pre">getCartRotaMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getCartTransMaxAcc"><code class="docutils literal notranslate"><span class="pre">getCartTransMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getCartTransMaxVel"><code class="docutils literal notranslate"><span class="pre">getCartTransMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getCartesianControlParams"><code class="docutils literal notranslate"><span class="pre">getCartesianControlParams</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getJointControlParams"><code class="docutils literal notranslate"><span class="pre">getJointControlParams</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getJointMaxAcc"><code class="docutils literal notranslate"><span class="pre">getJointMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getJointMaxVel"><code class="docutils literal notranslate"><span class="pre">getJointMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getJointSoftLimit"><code class="docutils literal notranslate"><span class="pre">getJointSoftLimit</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartRotMaxAcc"><code class="docutils literal notranslate"><span class="pre">getMechCartRotMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartRotaMaxVel"><code class="docutils literal notranslate"><span class="pre">getMechCartRotaMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxAcc"><code class="docutils literal notranslate"><span class="pre">getMechCartTransMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxVel"><code class="docutils literal notranslate"><span class="pre">getMechCartTransMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointLimit"><code class="docutils literal notranslate"><span class="pre">getMechJointLimit</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointMaxAcc"><code class="docutils literal notranslate"><span class="pre">getMechJointMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointMaxVel"><code class="docutils literal notranslate"><span class="pre">getMechJointMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getTcpOffset"><code class="docutils literal notranslate"><span class="pre">getTcpOffset</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.getTcpPayload"><code class="docutils literal notranslate"><span class="pre">getTcpPayload</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.inverseKinematics"><code class="docutils literal notranslate"><span class="pre">inverseKinematics</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxAcc"><code class="docutils literal notranslate"><span class="pre">setCartRotaMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxVel"><code class="docutils literal notranslate"><span class="pre">setCartRotaMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setCartTransMaxAcc"><code class="docutils literal notranslate"><span class="pre">setCartTransMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setCartTransMaxVel"><code class="docutils literal notranslate"><span class="pre">setCartTransMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setCartesianControlParams"><code class="docutils literal notranslate"><span class="pre">setCartesianControlParams</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setJointControlParams"><code class="docutils literal notranslate"><span class="pre">setJointControlParams</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setJointMaxAcc"><code class="docutils literal notranslate"><span class="pre">setJointMaxAcc</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setJointMaxVel"><code class="docutils literal notranslate"><span class="pre">setJointMaxVel</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setJointSoftLimit"><code class="docutils literal notranslate"><span class="pre">setJointSoftLimit</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setTcpOffset"><code class="docutils literal notranslate"><span class="pre">setTcpOffset</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams.setTcpPayload"><code class="docutils literal notranslate"><span class="pre">setTcpPayload</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h10wstatus">H10wStatus</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus"><code class="docutils literal notranslate"><span class="pre">H10wStatus</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus.getControllerMessage"><code class="docutils literal notranslate"><span class="pre">getControllerMessage</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus.getErrorMessage"><code class="docutils literal notranslate"><span class="pre">getErrorMessage</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus.getMoveMessage"><code class="docutils literal notranslate"><span class="pre">getMoveMessage</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h10wsystem">H10wSystem</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem"><code class="docutils literal notranslate"><span class="pre">H10wSystem</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.calibrate90DegPosition"><code class="docutils literal notranslate"><span class="pre">calibrate90DegPosition</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.calibrateMechanicalZeroPosition"><code class="docutils literal notranslate"><span class="pre">calibrateMechanicalZeroPosition</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.clearError"><code class="docutils literal notranslate"><span class="pre">clearError</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.controlBrake"><code class="docutils literal notranslate"><span class="pre">controlBrake</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.controlPower"><code class="docutils literal notranslate"><span class="pre">controlPower</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.enableController"><code class="docutils literal notranslate"><span class="pre">enableController</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.getMicrophone"><code class="docutils literal notranslate"><span class="pre">getMicrophone</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.getPushPeriod"><code class="docutils literal notranslate"><span class="pre">getPushPeriod</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.getRobotVersion"><code class="docutils literal notranslate"><span class="pre">getRobotVersion</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.getSpeaker"><code class="docutils literal notranslate"><span class="pre">getSpeaker</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.isControllerEnabled"><code class="docutils literal notranslate"><span class="pre">isControllerEnabled</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.saveJointParameters"><code class="docutils literal notranslate"><span class="pre">saveJointParameters</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.setMicrophone"><code class="docutils literal notranslate"><span class="pre">setMicrophone</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.setPushPeriod"><code class="docutils literal notranslate"><span class="pre">setPushPeriod</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.setSpeaker"><code class="docutils literal notranslate"><span class="pre">setSpeaker</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem.statusPower"><code class="docutils literal notranslate"><span class="pre">statusPower</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h10wlowlevel">H10wLowLevel</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wLowLevel"><code class="docutils literal notranslate"><span class="pre">H10wLowLevel</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wLowLevel.readLowState"><code class="docutils literal notranslate"><span class="pre">readLowState</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wLowLevel.writeLowCmd"><code class="docutils literal notranslate"><span class="pre">writeLowCmd</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=74347cb9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+    </body>
+</html>

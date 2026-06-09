@@ -1,0 +1,59 @@
+结构体
+==============
+
+DriverVersion
+----------------------
+
+.. autoclass:: humanoid_sdk_py.DriverVersion
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+
+ControllerVersion
+----------------------
+
+.. autoclass:: humanoid_sdk_py.ControllerVersion
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+
+MonitorVersion
+----------------------
+
+.. autoclass:: humanoid_sdk_py.MonitorVersion
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+
+RobotVersion
+----------------------
+
+.. autoclass:: humanoid_sdk_py.RobotVersion
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+MicrophoneStatus
+----------------------
+
+.. autoclass:: humanoid_sdk_py.MicrophoneStatus
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+SpeakerStatus
+----------------------
+
+.. autoclass:: humanoid_sdk_py.SpeakerStatus
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource

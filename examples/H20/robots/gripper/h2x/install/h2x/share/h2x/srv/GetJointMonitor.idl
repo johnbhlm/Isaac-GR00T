@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from h2x/srv/GetJointMonitor.srv
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module srv {
+    @verbatim (language="comment", text=
+      "请求部分 - 关节限位配置读取请求")
+    struct GetJointMonitor_Request {
+      @verbatim (language="comment", text=
+        "请求读取的关节索引数组")
+      sequence<uint32> motor_index;
+    };
+    @verbatim (language="comment", text=
+      "响应部分")
+    struct GetJointMonitor_Response {
+      @verbatim (language="comment", text=
+        "操作是否成功")
+      int32 result;
+
+      @verbatim (language="comment", text=
+        "返回的限位下限数组")
+      sequence<double> min_position;
+
+      @verbatim (language="comment", text=
+        "返回的限位上限数组")
+      sequence<double> max_position;
+    };
+  };
+};

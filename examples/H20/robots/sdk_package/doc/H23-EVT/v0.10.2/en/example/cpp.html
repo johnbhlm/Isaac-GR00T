@@ -1,0 +1,273 @@
+﻿
+﻿
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ Usage Examples &mdash; User Manual for H23-EVT</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/toolbar.css?v=8724d423" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=204bd9fb" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=eddc3210"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="../_static/toolbar.js?v=fb63e8ae"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python Usage Examples" href="python.html" />
+    <link rel="prev" title="Getting Started" href="index.html" />
+  
+   
+  <link rel="stylesheet" href="../_static/toolbar.css">
+  <script defer src="../_static/toolbar.js"></script>
+
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            User Manual for H23-EVT
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_cpp/index.html">C++ API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_py/index.html">Python API Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C++ Usage Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Configure environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Build a simple example program</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-cpp">1. Create the main.cpp file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cmakelists-txt">2. Create the CMakeLists.txt file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3. Build and run the example program</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python Usage Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../trouble.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theme Switch</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx RTD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theme_furo/example/cpp.html">Furo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">User Manual for H23-EVT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">C++ Usage Examples</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="c">
+<h1>C++ Usage Examples<a class="headerlink" href="#c" title="Permalink to this heading"></a></h1>
+<p>This document describes how to use C++ to call the HumanoidSDK library and demonstrates building a simple example program.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>For more examples, see the sdk_package/example directory.</p>
+</div>
+<section id="id1">
+<h2>Configure environment variables<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/sdk_package
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/lib/linux/x86_64/x64:</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/dependency/sdk/Runtime_Env/linux/x86_64/x64:</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/dependency/fastdds/linux/x86_64/x64:</span><span class="nv">$LD_LIBRARY_PATH</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Optional: To use a custom DDS configuration file, set the ROBOT_DDS_PROFILE environment variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROBOT_DDS_PROFILE</span><span class="o">=</span>path/to/your/Robot_DDS_Profile.xml
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Build a simple example program<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="main-cpp">
+<h3>1. Create the main.cpp file<a class="headerlink" href="#main-cpp" title="Permalink to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="c1">// main.cpp</span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="linenos"> 3</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
+<span class="linenos"> 4</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;h10-w/h10w_params.h&quot;</span>
+<span class="linenos"> 5</span><span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;common/common_def.h&quot;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">humanoid</span><span class="p">;</span>
+<span class="linenos"> 8</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">humanoid</span><span class="o">::</span><span class="nn">h10w</span><span class="p">;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w"> </span><span class="n">H10wParams</span><span class="w"> </span><span class="n">params</span><span class="p">;</span>
+<span class="linenos">12</span><span class="w"> </span><span class="n">JointLimit</span><span class="w"> </span><span class="n">jointLimits</span><span class="p">;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">params</span><span class="p">.</span><span class="n">getJointSoftLimit</span><span class="p">(</span><span class="n">jointLimits</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">15</span><span class="w">     </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;get joint soft limit success&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">limit</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">jointLimits</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">18</span><span class="w">     </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="p">[</span><span class="n">jointIndex</span><span class="p">,</span><span class="w"> </span><span class="n">maxPos</span><span class="p">,</span><span class="w"> </span><span class="n">minPos</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">limit</span><span class="p">;</span>
+<span class="linenos">19</span><span class="w">     </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;    joint &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">jointIndex</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: &quot;</span>
+<span class="linenos">20</span><span class="w">                 </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;max pos=&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">fixed</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setprecision</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">maxPos</span>
+<span class="linenos">21</span><span class="w">                 </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; rad, &quot;</span>
+<span class="linenos">22</span><span class="w">                 </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;min pos=&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">minPos</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; rad&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">23</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">24</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">25</span><span class="w">     </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;get joint soft limit failed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">26</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="linenos">27</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos">28</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">29</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="cmakelists-txt">
+<h3>2. Create the CMakeLists.txt file<a class="headerlink" href="#cmakelists-txt" title="Permalink to this heading"></a></h3>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="nb">project</span><span class="p">(</span><span class="s">simple_example</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c"># Project Options</span>
+<span class="linenos"> 5</span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span><span class="w"> </span><span class="s">17</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_EXTENSIONS</span><span class="w"> </span><span class="s">OFF</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD_REQUIRED</span><span class="w"> </span><span class="s">ON</span><span class="p">)</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c"># Find HumanoidSDK</span>
+<span class="linenos">10</span><span class="nb">set</span><span class="p">(</span><span class="s">HumanoidSDK_DIR</span><span class="w"> </span><span class="s2">&quot;path/to/sdk_package/cmake/HumanoidSDK&quot;</span><span class="p">)</span><span class="w"> </span><span class="c">## replace with your sdk package path</span>
+<span class="linenos">11</span><span class="nb">find_package</span><span class="p">(</span><span class="s">HumanoidSDK</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="nb">add_executable</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="w"> </span><span class="s">main.cpp</span><span class="p">)</span>
+<span class="linenos">14</span><span class="nb">target_link_libraries</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="w"> </span><span class="s">humanoid_sdk::humanoid_sdk</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>3. Build and run the example program<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cmake<span class="w"> </span>..<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make
+./simple_example
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="python.html" class="btn btn-neutral float-right" title="Python Usage Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025 Beijing Siling Robot Technology Co., Ltd..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  
+   
+  ﻿<div id="doc-toolbar">
+  <label>
+    
+      Language:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H23-EVT/v0.10.2/cpp/zh_CN/"
+              >
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H23-EVT/v0.10.2/cpp/en/"
+              selected>
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      Version:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H23-EVT/v0.10.2/cpp/en/en/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+
+  
+
+
+</body>
+</html>

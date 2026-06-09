@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/PCUState.msg
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module msg {
+    struct PCUState {
+      uint8 emergency_stop_state;
+
+      uint8 control_supply_state;
+
+      uint8 power_supply_state;
+
+      int32 pcu_error_code;
+
+      int32 pcu_warning_code;
+
+      float battery_voltage;
+
+      float motor_bus_voltage;
+
+      float motor_bus_current;
+
+      float dcdc_bus_voltage;
+
+      float voltage_24v;
+
+      float voltage_12v;
+
+      float current_24v;
+
+      float current_12v;
+    };
+  };
+};

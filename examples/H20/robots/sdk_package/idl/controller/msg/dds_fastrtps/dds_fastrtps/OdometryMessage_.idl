@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/OdometryMessage.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__odometry_message__idl__
+#define __controller__msg__odometry_message__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct OdometryMessage_ {
+unsigned long accumulated_time_;
+unsigned long accumulated_mileage_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__odometry_message__idl__

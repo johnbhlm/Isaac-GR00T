@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/RealTimeFPControl.idl
+// generated code does not contain a copyright notice
+#include "controller/msg/dds_fastrtps/FPControlMessage_.idl"
+
+#ifndef __controller__msg__real_time_fp_control__idl__
+#define __controller__msg__real_time_fp_control__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct RealTimeFPControl_ {
+controller::msg::dds_::FPControlMessage_ target_[37];
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__real_time_fp_control__idl__

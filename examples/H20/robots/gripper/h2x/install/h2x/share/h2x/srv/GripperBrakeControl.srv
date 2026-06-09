@@ -1,0 +1,7 @@
+# 请求部分
+uint32 motor_index
+uint32 request_state
+bool auto_clear_error
+---
+# 响应部分
+int32 result

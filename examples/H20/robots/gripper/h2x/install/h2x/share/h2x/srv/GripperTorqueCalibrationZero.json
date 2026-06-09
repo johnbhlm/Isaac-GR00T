@@ -1,0 +1,202 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/srv/GripperTorqueCalibrationZero",
+      "fields": [
+        {
+          "name": "request_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/GripperTorqueCalibrationZero_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/GripperTorqueCalibrationZero_Response"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "event_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/GripperTorqueCalibrationZero_Event"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/GripperTorqueCalibrationZero_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/GripperTorqueCalibrationZero_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/GripperTorqueCalibrationZero_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/GripperTorqueCalibrationZero_Request",
+        "fields": [
+          {
+            "name": "motor_index",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/GripperTorqueCalibrationZero_Response",
+        "fields": [
+          {
+            "name": "result",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/srv/GripperTorqueCalibrationZero",
+      "hash_string": "RIHS01_fc8fbfa758ea8c77c1b6207357c0630de45670954486348c4ebce1e9e22de9c8"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "h2x/srv/GripperTorqueCalibrationZero_Event",
+      "hash_string": "RIHS01_3120e807f9b43374e4c3e61ceccb3368294e4d4ad12698e3458b7b7620692b96"
+    },
+    {
+      "type_name": "h2x/srv/GripperTorqueCalibrationZero_Request",
+      "hash_string": "RIHS01_a6ad7a22e6b33fda953335cc6203f9d6d6a9795f090d4a62870dc356dc0ab7de"
+    },
+    {
+      "type_name": "h2x/srv/GripperTorqueCalibrationZero_Response",
+      "hash_string": "RIHS01_63879943ea63ebede3c1368f781e4cc00c72cc09472ab16812b62c41d58ab666"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    }
+  ]
+}

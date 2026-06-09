@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/GripperDiagnosticData.msg
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module msg {
+    struct GripperDiagnosticData {
+      int8 mode_of_operation;
+
+      int8 mode_display;
+    };
+  };
+};

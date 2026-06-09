@@ -1,0 +1,400 @@
+﻿
+﻿
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structures &mdash; User Manual for H20-DVT</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=204bd9fb" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=eddc3210"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Type Aliases" href="typedef.html" />
+    <link rel="prev" title="humanoid namespace" href="index.html" />
+  
+   
+  <link rel="stylesheet" href="../../_static/toolbar.css">
+  <script defer src="../../_static/toolbar.js"></script>
+
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            User Manual for H20-DVT
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">humanoid namespace</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Structures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-controllerversion">humanoid::ControllerVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-driverversion">humanoid::DriverVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-monitorversion">humanoid::MonitorVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-robotversion">humanoid::RobotVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-microphonestatus">humanoid::MicrophoneStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-speakerstatus">humanoid::SpeakerStatus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="typedef.html">Type Aliases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../humanoid_h2x/index.html">humanoid::h2x namespace</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_py/index.html">Python API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../example/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theme Switch</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx RTD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theme_furo/api_cpp/humanoid/struct.html">Furo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">User Manual for H20-DVT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">C++ API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="index.html">humanoid namespace</a></li>
+      <li class="breadcrumb-item active">Structures</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>Structures<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<section id="humanoid-controllerversion">
+<h2>humanoid::ControllerVersion<a class="headerlink" href="#humanoid-controllerversion" title="Permalink to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid17ControllerVersionE">
+<span id="_CPPv3N8humanoid17ControllerVersionE"></span><span id="_CPPv2N8humanoid17ControllerVersionE"></span><span id="humanoid::ControllerVersion"></span><span class="target" id="structhumanoid_1_1ControllerVersion"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ControllerVersion</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid17ControllerVersionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controller version information structure. </p>
+<p><ul class="simple">
+<li><p>main_version: Main version of the controller</p></li>
+<li><p>plugin_versions: Plugin version numbers </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid17ControllerVersion12main_versionE">
+<span id="_CPPv3N8humanoid17ControllerVersion12main_versionE"></span><span id="_CPPv2N8humanoid17ControllerVersion12main_versionE"></span><span id="humanoid::ControllerVersion::main_version__ss"></span><span class="target" id="structhumanoid_1_1ControllerVersion_1af0f13a3cfbe0564ab998f8d853403ac7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">main_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid17ControllerVersion12main_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid17ControllerVersion15plugin_versionsE">
+<span id="_CPPv3N8humanoid17ControllerVersion15plugin_versionsE"></span><span id="_CPPv2N8humanoid17ControllerVersion15plugin_versionsE"></span><span id="humanoid::ControllerVersion::plugin_versions__std::unordered_map:ss.ss:"></span><span class="target" id="structhumanoid_1_1ControllerVersion_1a6db59acf32a25ed3a28c952ca9269976"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plugin_versions</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid17ControllerVersion15plugin_versionsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-driverversion">
+<h2>humanoid::DriverVersion<a class="headerlink" href="#humanoid-driverversion" title="Permalink to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersionE">
+<span id="_CPPv3N8humanoid13DriverVersionE"></span><span id="_CPPv2N8humanoid13DriverVersionE"></span><span id="humanoid::DriverVersion"></span><span class="target" id="structhumanoid_1_1DriverVersion"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DriverVersion</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Driver version information structure. </p>
+<p><ul class="simple">
+<li><p>driver_version: Driver version number</p></li>
+<li><p>grpc_version: GRPC version number</p></li>
+<li><p>fastdds_version: FastDDS version number</p></li>
+<li><p>firmware_version: Firmware version number</p></li>
+<li><p>sdk_version: SDK version number</p></li>
+<li><p>ethercat_version: EtherCAT version number</p></li>
+<li><p>left_gripper_version: Left gripper version number</p></li>
+<li><p>right_gripper_version: Right gripper version number</p></li>
+<li><p>cdu_version: CDU version number</p></li>
+<li><p>pcu_version: PCU version number</p></li>
+<li><p>lrcu_version: LRCU version number </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion14driver_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion14driver_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion14driver_versionE"></span><span id="humanoid::DriverVersion::driver_version__ss"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a8b6869ae15871aafcf53f14521442135"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">driver_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion14driver_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion12grpc_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion12grpc_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion12grpc_versionE"></span><span id="humanoid::DriverVersion::grpc_version__ss"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a2b46ce8e0d081ce61eda79291341b722"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">grpc_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion12grpc_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion15fastdds_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion15fastdds_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion15fastdds_versionE"></span><span id="humanoid::DriverVersion::fastdds_version__ss"></span><span class="target" id="structhumanoid_1_1DriverVersion_1acb36c0cf8839fdb83c40013a35fe25d7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fastdds_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion15fastdds_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion16firmware_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion16firmware_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion16firmware_versionE"></span><span id="humanoid::DriverVersion::firmware_version__std::optional:ss:"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a58365b968e630d1d7ea764c421b5da03"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">firmware_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion16firmware_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion11sdk_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion11sdk_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion11sdk_versionE"></span><span id="humanoid::DriverVersion::sdk_version__std::optional:ss:"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a7fc4e59d92a74d92a6c6e81639496ebc"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sdk_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion11sdk_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion16ethercat_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion16ethercat_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion16ethercat_versionE"></span><span id="humanoid::DriverVersion::ethercat_version__std::optional:ss:"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a828ee4bdd9690ce68390219b043efe55"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ethercat_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion16ethercat_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion20left_gripper_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion20left_gripper_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion20left_gripper_versionE"></span><span id="humanoid::DriverVersion::left_gripper_version__std::optional:ss:"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a4a6441f5d8aa2b6d469de7004c0b15cf"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_gripper_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion20left_gripper_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion21right_gripper_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion21right_gripper_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion21right_gripper_versionE"></span><span id="humanoid::DriverVersion::right_gripper_version__std::optional:ss:"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a1d14f2d48c3359d4f5e8133a4489a9b8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_gripper_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion21right_gripper_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion11cdu_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion11cdu_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion11cdu_versionE"></span><span id="humanoid::DriverVersion::cdu_version__std::optional:ss:"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a51352463481a254cbb49066db45b0d91"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cdu_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion11cdu_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion11pcu_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion11pcu_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion11pcu_versionE"></span><span id="humanoid::DriverVersion::pcu_version__std::optional:ss:"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a8475219ed3d18940f29dc26de413d5b9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pcu_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion11pcu_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13DriverVersion12lrcu_versionE">
+<span id="_CPPv3N8humanoid13DriverVersion12lrcu_versionE"></span><span id="_CPPv2N8humanoid13DriverVersion12lrcu_versionE"></span><span id="humanoid::DriverVersion::lrcu_version__std::optional:ss:"></span><span class="target" id="structhumanoid_1_1DriverVersion_1a794c71b105fc1554c11b3b482fbc41c5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lrcu_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13DriverVersion12lrcu_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-monitorversion">
+<h2>humanoid::MonitorVersion<a class="headerlink" href="#humanoid-monitorversion" title="Permalink to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid14MonitorVersionE">
+<span id="_CPPv3N8humanoid14MonitorVersionE"></span><span id="_CPPv2N8humanoid14MonitorVersionE"></span><span id="humanoid::MonitorVersion"></span><span class="target" id="structhumanoid_1_1MonitorVersion"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MonitorVersion</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid14MonitorVersionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Monitor version information structure. </p>
+<p><ul class="simple">
+<li><p>main_version: Main version of the monitor</p></li>
+<li><p>robot_version: Robot version number</p></li>
+<li><p>function_versions: Function module version numbers </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid14MonitorVersion12main_versionE">
+<span id="_CPPv3N8humanoid14MonitorVersion12main_versionE"></span><span id="_CPPv2N8humanoid14MonitorVersion12main_versionE"></span><span id="humanoid::MonitorVersion::main_version__ss"></span><span class="target" id="structhumanoid_1_1MonitorVersion_1aefdd32624fbd1a36eb2514d2084f3df8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">main_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid14MonitorVersion12main_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid14MonitorVersion13robot_versionE">
+<span id="_CPPv3N8humanoid14MonitorVersion13robot_versionE"></span><span id="_CPPv2N8humanoid14MonitorVersion13robot_versionE"></span><span id="humanoid::MonitorVersion::robot_version__ss"></span><span class="target" id="structhumanoid_1_1MonitorVersion_1af656a995c53afbf94f8b5c3bdc8658e8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">robot_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid14MonitorVersion13robot_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid14MonitorVersion17function_versionsE">
+<span id="_CPPv3N8humanoid14MonitorVersion17function_versionsE"></span><span id="_CPPv2N8humanoid14MonitorVersion17function_versionsE"></span><span id="humanoid::MonitorVersion::function_versions__std::unordered_map:ss.ss:"></span><span class="target" id="structhumanoid_1_1MonitorVersion_1a927cb9f4f1942374fe7cf646f9073497"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">function_versions</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid14MonitorVersion17function_versionsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-robotversion">
+<h2>humanoid::RobotVersion<a class="headerlink" href="#humanoid-robotversion" title="Permalink to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid12RobotVersionE">
+<span id="_CPPv3N8humanoid12RobotVersionE"></span><span id="_CPPv2N8humanoid12RobotVersionE"></span><span id="humanoid::RobotVersion"></span><span class="target" id="structhumanoid_1_1RobotVersion"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RobotVersion</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid12RobotVersionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Robot version information structure. </p>
+<p><ul class="simple">
+<li><p>driver_version: Driver version information structure</p></li>
+<li><p>controller_version: Controller version information structure</p></li>
+<li><p>monitor_version: Monitor version information structure </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid12RobotVersion14driver_versionE">
+<span id="_CPPv3N8humanoid12RobotVersion14driver_versionE"></span><span id="_CPPv2N8humanoid12RobotVersion14driver_versionE"></span><span id="humanoid::RobotVersion::driver_version__DriverVersion"></span><span class="target" id="structhumanoid_1_1RobotVersion_1a0c94d509dc1d4b41f3207ae588c15d73"></span><a class="reference internal" href="#_CPPv4N8humanoid13DriverVersionE" title="humanoid::DriverVersion"><span class="n"><span class="pre">DriverVersion</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">driver_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid12RobotVersion14driver_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid12RobotVersion18controller_versionE">
+<span id="_CPPv3N8humanoid12RobotVersion18controller_versionE"></span><span id="_CPPv2N8humanoid12RobotVersion18controller_versionE"></span><span id="humanoid::RobotVersion::controller_version__ControllerVersion"></span><span class="target" id="structhumanoid_1_1RobotVersion_1a429c5bf52b3a85739df7e088224ccbab"></span><a class="reference internal" href="#_CPPv4N8humanoid17ControllerVersionE" title="humanoid::ControllerVersion"><span class="n"><span class="pre">ControllerVersion</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">controller_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid12RobotVersion18controller_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid12RobotVersion15monitor_versionE">
+<span id="_CPPv3N8humanoid12RobotVersion15monitor_versionE"></span><span id="_CPPv2N8humanoid12RobotVersion15monitor_versionE"></span><span id="humanoid::RobotVersion::monitor_version__MonitorVersion"></span><span class="target" id="structhumanoid_1_1RobotVersion_1a1a962fbf5beb2b94c4fbcd21b134855d"></span><a class="reference internal" href="#_CPPv4N8humanoid14MonitorVersionE" title="humanoid::MonitorVersion"><span class="n"><span class="pre">MonitorVersion</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">monitor_version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid12RobotVersion15monitor_versionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-microphonestatus">
+<h2>humanoid::MicrophoneStatus<a class="headerlink" href="#humanoid-microphonestatus" title="Permalink to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid16MicrophoneStatusE">
+<span id="_CPPv3N8humanoid16MicrophoneStatusE"></span><span id="_CPPv2N8humanoid16MicrophoneStatusE"></span><span id="humanoid::MicrophoneStatus"></span><span class="target" id="structhumanoid_1_1MicrophoneStatus"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MicrophoneStatus</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid16MicrophoneStatusE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>microphone status structure </p>
+<p><ul class="simple">
+<li><p>enable: whether microphone is enabled</p></li>
+<li><p>volume: volume level of the microphone </p></li>
+</ul>
+</p>
+</dd></dl>
+
+</section>
+<section id="humanoid-speakerstatus">
+<h2>humanoid::SpeakerStatus<a class="headerlink" href="#humanoid-speakerstatus" title="Permalink to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid13SpeakerStatusE">
+<span id="_CPPv3N8humanoid13SpeakerStatusE"></span><span id="_CPPv2N8humanoid13SpeakerStatusE"></span><span id="humanoid::SpeakerStatus"></span><span class="target" id="structhumanoid_1_1SpeakerStatus"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SpeakerStatus</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid13SpeakerStatusE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>speaker status structure </p>
+<p><ul class="simple">
+<li><p>enable: whether speaker is enabled</p></li>
+<li><p>volume: volume level of the speaker </p></li>
+</ul>
+</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="humanoid namespace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="typedef.html" class="btn btn-neutral float-right" title="Type Aliases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025 Beijing Siling Robot Technology Co., Ltd..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  
+   
+  ﻿<div id="doc-toolbar">
+  <label>
+    
+      Language:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H20-DVT/v0.10.2/cpp/zh_CN/"
+              >
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H20-DVT/v0.10.2/cpp/en/"
+              selected>
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      Version:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H20-DVT/v0.10.2/cpp/en/en/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+
+  
+
+
+</body>
+</html>

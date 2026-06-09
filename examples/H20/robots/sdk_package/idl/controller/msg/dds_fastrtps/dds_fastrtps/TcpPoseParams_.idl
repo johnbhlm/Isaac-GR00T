@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/TcpPoseParams.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__tcp_pose_params__idl__
+#define __controller__msg__tcp_pose_params__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct TcpPoseParams_ {
+long type_;
+sequence<double> pose_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__tcp_pose_params__idl__

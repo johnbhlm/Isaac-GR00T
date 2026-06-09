@@ -1,0 +1,14 @@
+uint8 mode
+uint8 operation_mode
+uint8 arrive_signal
+int32 state
+int32 hold_state
+float32 q
+float32 dq
+float32 finger1_force
+float32 finger2_force
+float32 temperature
+float32 cur
+int32 error_code
+int32 warning_code
+uint32[4] reserved

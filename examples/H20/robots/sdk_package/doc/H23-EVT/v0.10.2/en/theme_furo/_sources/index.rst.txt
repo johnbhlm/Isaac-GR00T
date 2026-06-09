@@ -1,0 +1,16 @@
+
+humanoid-sdk 用户手册
+=========================================
+
+.. toctree::
+   :maxdepth: 2
+
+   introduction
+   installation
+   api_cpp/index
+   api_py/index
+   example/index
+   trouble
+
+.. multi-theme-toctree::
+   :caption: 主题切换

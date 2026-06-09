@@ -1,0 +1,39 @@
+
+H10-W SDK用户手册
+=========================================
+
+欢迎探索 H10-W 助理机器人：一款融合先进硬件与智能软件的创新平台！
+
+本手册针对H10-W SDK提供从快速上手到高级开发的完整指导，涵盖SDK相关软件生态、接口开发和故障排除。
+无论您是初次接触机器人技术还是经验丰富的开发者，这里都有适合您的内容。
+
+.. admonition:: 开发使用温馨提示
+   :class: notice-block light
+
+   以下几点机器人使用事项，还请重视：
+
+   #. 一定要提前阅读使用手册，了解操作规程，严格按照使用规范操作；
+   #. 一定要注意安全，特别是在操作机械臂时要保持安全距离；
+   #. 不要随意拆卸组装机器人，如果有需要，请联系售后和技术支持；
+
+   希望以上内容能对您有所帮助。
+
+.. raw:: html
+
+    <div style="margin-top: 50px;"></div>
+
+    
+.. toctree::
+   :maxdepth: 2
+
+   introduction
+   installation
+   api_cpp/index
+   api_py/index
+   example/index
+   trouble
+
+
+
+.. multi-theme-toctree::
+   :caption: 主题切换

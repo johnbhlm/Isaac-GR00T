@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/Diagnosis.msg
+// generated code does not contain a copyright notice
+
+#include "h2x/msg/DebugCDUState.idl"
+#include "h2x/msg/DebugIMUState.idl"
+#include "h2x/msg/DiagnosticData.idl"
+
+module h2x {
+  module msg {
+    typedef boolean boolean__37[37];
+    typedef h2x::msg::DiagnosticData h2x__msg__DiagnosticData;
+    typedef h2x__msg__DiagnosticData h2x__msg__DiagnosticData__37[37];
+    typedef h2x::msg::DebugIMUState h2x__msg__DebugIMUState;
+    typedef h2x__msg__DebugIMUState h2x__msg__DebugIMUState__2[2];
+    typedef int32 int32__37[37];
+    typedef int32 int32__2[2];
+    struct Diagnosis {
+      boolean__37 is_ds402;
+
+      h2x__msg__DiagnosticData__37 ds402_data;
+
+      h2x__msg__DebugIMUState__2 debug_imu_state;
+
+      h2x::msg::DebugCDUState debug_cdu_state;
+
+      int32__37 error_code;
+
+      int32__37 warning_code;
+
+      int32 cdu_error_code;
+
+      int32 cdu_warning_code;
+
+      int32 pcu_error_code;
+
+      int32 pcu_warning_code;
+
+      int32__2 imu_error_code;
+
+      int32__2 imu_warning_code;
+
+      int32 battery_error_code;
+
+      int32 battery_warning_code;
+
+      uint32 crc;
+    };
+  };
+};

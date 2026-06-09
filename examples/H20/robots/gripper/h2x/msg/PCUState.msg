@@ -1,0 +1,13 @@
+uint8 emergency_stop_state
+uint8 control_supply_state
+uint8 power_supply_state
+int32 pcu_error_code
+int32 pcu_warning_code
+float32 battery_voltage
+float32 motor_bus_voltage
+float32 motor_bus_current
+float32 dcdc_bus_voltage
+float32 voltage_24v
+float32 voltage_12v
+float32 current_24v
+float32 current_12v

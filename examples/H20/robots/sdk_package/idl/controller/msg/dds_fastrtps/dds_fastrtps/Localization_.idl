@@ -1,0 +1,36 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/Localization.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_fastrtps/Pose_.idl"
+#include "std_msgs/msg/dds_fastrtps/Header_.idl"
+
+#ifndef __controller__msg__localization__idl__
+#define __controller__msg__localization__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct Localization_ {
+std_msgs::msg::dds_::Header_ header_;
+geometry_msgs::msg::dds_::Pose_ pose_;
+double confidence_;
+octet valid_flag_;
+long error_msgs_;
+long trajectory_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__localization__idl__

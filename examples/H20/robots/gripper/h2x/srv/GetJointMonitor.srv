@@ -1,0 +1,7 @@
+# 请求部分 - 关节限位配置读取请求
+uint32[] motor_index      # 请求读取的关节索引数组
+---
+# 响应部分
+int32 result              # 操作是否成功
+float64[] min_position    # 返回的限位下限数组
+float64[] max_position    # 返回的限位上限数组

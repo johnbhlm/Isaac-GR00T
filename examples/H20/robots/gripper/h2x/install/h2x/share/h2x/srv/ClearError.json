@@ -1,0 +1,202 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/srv/ClearError",
+      "fields": [
+        {
+          "name": "request_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/ClearError_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/ClearError_Response"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "event_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/ClearError_Event"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/ClearError_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/ClearError_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/ClearError_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/ClearError_Request",
+        "fields": [
+          {
+            "name": "structure_needs_at_least_one_member",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/ClearError_Response",
+        "fields": [
+          {
+            "name": "result",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/srv/ClearError",
+      "hash_string": "RIHS01_fd75cdd5f2af3f2bc1b88bc04733f9c30cd2edfe395c81fbeaec54a3891c7b77"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "h2x/srv/ClearError_Event",
+      "hash_string": "RIHS01_7af86f29032fe5f6541a83625e635f5e773e1a2c45a644889c63ca41d6e9e840"
+    },
+    {
+      "type_name": "h2x/srv/ClearError_Request",
+      "hash_string": "RIHS01_29a403847c75cc35d3be8b5e51d76befb77808c09321b60e21164320a9ece41c"
+    },
+    {
+      "type_name": "h2x/srv/ClearError_Response",
+      "hash_string": "RIHS01_66c7babf05282a585fa49b437413a838ed9c1459009cdd77f69b4bcb6fd57815"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    }
+  ]
+}

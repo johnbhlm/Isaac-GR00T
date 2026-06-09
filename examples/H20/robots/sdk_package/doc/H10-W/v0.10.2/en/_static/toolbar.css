@@ -1,0 +1,28 @@
+﻿#doc-toolbar{
+  position:fixed;
+  bottom:1rem;
+  right:1rem;
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+
+  font-size:.9rem;
+  background:var(--color-background-secondary,rgba(255,255,255,.85));
+  backdrop-filter:blur(4px);
+  padding:.3rem .8rem;
+  border-radius:.4rem;
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+  z-index:10000;
+}
+
+#doc-toolbar label{margin:0}
+#doc-toolbar select{min-width:5.5rem}
+
+#doc-toolbar select {
+  min-width:5.5rem;
+  /* 浅色背景 + 深色文字 */
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #ccc;
+  /* 其他样式: */
+}

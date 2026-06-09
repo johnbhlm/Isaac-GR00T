@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from h2x/srv/SetJointDirection.srv
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module srv {
+    @verbatim (language="comment", text=
+      "请求部分")
+    struct SetJointDirection_Request {
+      @verbatim (language="comment", text=
+        "请求的关节索引")
+      uint32 motor_index;
+
+      @verbatim (language="comment", text=
+        "请求设置的关节方向 1：面向关节法兰，顺时针旋转为正（默认）；2：面向关节法兰，顺时针旋转为负")
+      int32 direction;
+    };
+    @verbatim (language="comment", text=
+      "响应部分")
+    struct SetJointDirection_Response {
+      @verbatim (language="comment", text=
+        "操作是否成功")
+      int32 result;
+    };
+  };
+};

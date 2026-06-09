@@ -1,0 +1,39 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/RealTimeBodyJoints.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__real_time_body_joints__idl__
+#define __controller__msg__real_time_body_joints__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct RealTimeBodyJoints_ {
+long id_;
+double left_arm_[7];
+
+octet left_arm_valid_;
+double right_arm_[7];
+
+octet right_arm_valid_;
+double torso_[3];
+
+octet torso_valid_;
+double time_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__real_time_body_joints__idl__

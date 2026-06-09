@@ -1,0 +1,202 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/srv/IMUMagneticFieldCalibrationStart",
+      "fields": [
+        {
+          "name": "request_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Response"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "event_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Event"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Request",
+        "fields": [
+          {
+            "name": "imu_index",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Response",
+        "fields": [
+          {
+            "name": "result",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/srv/IMUMagneticFieldCalibrationStart",
+      "hash_string": "RIHS01_ad99f9a401d69ad4c2712e7e5c5b3340784946ad5cdd2d9a55c68be959d5a39a"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Event",
+      "hash_string": "RIHS01_595a509951bde8fe551dff65999b24619590fbbef6f8cba3bc6a50966bdd1556"
+    },
+    {
+      "type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Request",
+      "hash_string": "RIHS01_12c73d004e1beb87628d74a71cbc8dfd50f4c20d563133e26fdc163572172f5d"
+    },
+    {
+      "type_name": "h2x/srv/IMUMagneticFieldCalibrationStart_Response",
+      "hash_string": "RIHS01_474d44b5d46e1f4c81e663a127b8ddbea32ddb2e0100cfe4a3854456af5b3dda"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    }
+  ]
+}

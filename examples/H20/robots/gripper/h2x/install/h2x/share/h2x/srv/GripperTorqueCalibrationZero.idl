@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from h2x/srv/GripperTorqueCalibrationZero.srv
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module srv {
+    @verbatim (language="comment", text=
+      "请求部分")
+    struct GripperTorqueCalibrationZero_Request {
+      uint32 motor_index;
+    };
+    @verbatim (language="comment", text=
+      "响应部分")
+    struct GripperTorqueCalibrationZero_Response {
+      int32 result;
+    };
+  };
+};

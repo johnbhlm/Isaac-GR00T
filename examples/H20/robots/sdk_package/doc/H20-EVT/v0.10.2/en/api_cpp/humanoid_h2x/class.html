@@ -1,0 +1,812 @@
+﻿
+﻿
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes &mdash; User Manual for H20-EVT</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=204bd9fb" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=eddc3210"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python API Documentation" href="../../api_py/index.html" />
+    <link rel="prev" title="Structures" href="struct.html" />
+  
+   
+  <link rel="stylesheet" href="../../_static/toolbar.css">
+  <script defer src="../../_static/toolbar.js"></script>
+
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            User Manual for H20-EVT
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../humanoid/index.html">humanoid namespace</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">humanoid::h2x namespace</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">Enumerations and Joint Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html">Structures</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-h2x-h2xlowlevel">humanoid::h2x::H2xHighLevel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-h2x-h2xsystem">humanoid::h2x::H2xSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-h2x-h2xhighlevel">humanoid::h2x::H2xHighLevel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_py/index.html">Python API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../example/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theme Switch</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx RTD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theme_furo/api_cpp/humanoid_h2x/class.html">Furo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">User Manual for H20-EVT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">C++ API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="index.html">humanoid::h2x namespace</a></li>
+      <li class="breadcrumb-item active">Classes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>Classes<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<section id="humanoid-h2x-h2xlowlevel">
+<h2>humanoid::h2x::H2xHighLevel<a class="headerlink" href="#humanoid-h2x-h2xlowlevel" title="Permalink to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevelE">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevelE"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevelE"></span><span id="humanoid::h2x::H2xLowLevel"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H2xLowLevel</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevelE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>H2x robot low-level control interface class. </p>
+<p>This class provides direct control interfaces to H2x robot’s underlying hardware, including joint space control, robot state reading, etc. Suitable for applications that require fine-grained control of robot’s low-level behaviors. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevel11writeLowCmdERK6LowCmd">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevel11writeLowCmdERK6LowCmd"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevel11writeLowCmdERK6LowCmd"></span><span id="humanoid::h2x::H2xLowLevel::writeLowCmd__LowCmdCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel_1a592b531bfd2b6748f15bf900d0d5d8f4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeLowCmd</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid3h2x6LowCmdE" title="humanoid::h2x::LowCmd"><span class="n"><span class="pre">LowCmd</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lowCmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevel11writeLowCmdERK6LowCmd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write low-level control command. </p>
+<p>Send low-level control command to the robot, including joint angles, validity flags and timestamp. This interface provides direct control to the robot’s underlying hardware.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lowCmd</strong> – [in] Low-level control command structure </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int Execution result<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevel12readLowStateER8LowState">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevel12readLowStateER8LowState"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevel12readLowStateER8LowState"></span><span id="humanoid::h2x::H2xLowLevel::readLowState__LowStateR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel_1a0c032aa19b79c096ea142b17dcded023"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readLowState</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="struct.html#_CPPv4N8humanoid3h2x8LowStateE" title="humanoid::h2x::LowState"><span class="n"><span class="pre">LowState</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lowState</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevel12readLowStateER8LowState" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read low-level state information. </p>
+<p>Read current low-level state information from the robot, including end-effector poses, validity flags, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lowState</strong> – [out] Low-level state structure to receive state data </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int Execution result<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevel12writeLRCUCmdERK7LRCUCmd">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevel12writeLRCUCmdERK7LRCUCmd"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevel12writeLRCUCmdERK7LRCUCmd"></span><span id="humanoid::h2x::H2xLowLevel::writeLRCUCmd__LRCUCmdCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel_1ac74b7930fdca7aefc1efd57b40f3568d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeLRCUCmd</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">LRCUCmd</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lRCUCmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevel12writeLRCUCmdERK7LRCUCmd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Write LR-CU control command. </p>
+<p>Send control command to LR-CU (Left-Right Control Unit).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lRCUCmd</strong> – [in] LR-CU control command </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int Execution result<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevel13readLRCUStateER9LRCUState">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevel13readLRCUStateER9LRCUState"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevel13readLRCUStateER9LRCUState"></span><span id="humanoid::h2x::H2xLowLevel::readLRCUState__LRCUStateR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel_1a22cbd63100b36c120a89776951b4f080"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readLRCUState</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">LRCUState</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lRCUState</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevel13readLRCUStateER9LRCUState" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Read LR-CU state information. </p>
+<p>Read current state information from LR-CU (Left-Right Control Unit).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lRCUState</strong> – [out] LR-CU state structure to receive state data </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int Execution result<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Controller mode description</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: Enable motion control features and use high-level motion control APIs</p></li>
+<li><p><strong>EnableController = false</strong>: Activate low-level control mode and directly control the motor layer</p></li>
+</ul>
+<p>Before using motion control features, make sure the controller mode is set correctly.</p>
+</div>
+</section>
+<section id="humanoid-h2x-h2xsystem">
+<h2>humanoid::h2x::H2xSystem<a class="headerlink" href="#humanoid-h2x-h2xsystem" title="Permalink to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystemE">
+<span id="_CPPv3N8humanoid3h2x9H2xSystemE"></span><span id="_CPPv2N8humanoid3h2x9H2xSystemE"></span><span id="humanoid::h2x::H2xSystem"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H2xSystem</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystemE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>H2x system interface. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem31calibrateMechanicalZeroPositionEi">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem31calibrateMechanicalZeroPositionEi"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem31calibrateMechanicalZeroPositionEi"></span><span id="humanoid::h2x::H2xSystem::calibrateMechanicalZeroPosition__i"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1aec6a9cf93f133a3a33ca00d60ac1ddd3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrateMechanicalZeroPosition</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem31calibrateMechanicalZeroPositionEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calibrate the mechanical zero position of a specified joint. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mapping between joint indexes and int values is defined in <code class="docutils literal notranslate"><span class="pre">humanoid::h2x::JointIndexValue</span></code> in <code class="docutils literal notranslate"><span class="pre">common/h2x_def.h</span></code>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – [in] Joint index (int) to be calibrated. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem19saveJointParametersEi">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem19saveJointParametersEi"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem19saveJointParametersEi"></span><span id="humanoid::h2x::H2xSystem::saveJointParameters__i"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a0d84886a86448706e4de68002c6f11f3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveJointParameters</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem19saveJointParametersEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Save the current position of a specified joint as its mechanical zero position. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mapping between joint indexes and int values is defined in <code class="docutils literal notranslate"><span class="pre">humanoid::h2x::JointIndexValue</span></code> in <code class="docutils literal notranslate"><span class="pre">common/h2x_def.h</span></code>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – [in] Joint index (int) whose mechanical zero position is to be saved. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem15getRobotVersionER12RobotVersion">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem15getRobotVersionER12RobotVersion"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem15getRobotVersionER12RobotVersion"></span><span id="humanoid::h2x::H2xSystem::getRobotVersion__RobotVersionR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a78606abfc6274eccaa0ab24b83094da7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRobotVersion</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid12RobotVersionE" title="humanoid::RobotVersion"><span class="n"><span class="pre">RobotVersion</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">version</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem15getRobotVersionER12RobotVersion" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the version of the robot and its plugins. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>version</strong> – [out] The version information structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>- other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem10clearErrorEv">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem10clearErrorEv"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem10clearErrorEv"></span><span id="humanoid::h2x::H2xSystem::clearError"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1adcc83e146c85451a8a5c03074154ad24"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem10clearErrorEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Clear the error state of the robot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>- other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem16enableControllerEb">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem16enableControllerEb"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem16enableControllerEb"></span><span id="humanoid::h2x::H2xSystem::enableController__b"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a587db2612453775550343d5fae4f848b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableController</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem16enableControllerEb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enable or disable the robot controller. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the robot controller is enabled, it can send motion commands to drives. When disabled, the controller will not send any motion commands to drives for safety. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – [in] true: enable; false: disable. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>- other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem19isControllerEnabledERb">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem19isControllerEnabledERb"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem19isControllerEnabledERb"></span><span id="humanoid::h2x::H2xSystem::isControllerEnabled__bR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a9a9aa7951ab6439db28599dd1d00322f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isControllerEnabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem19isControllerEnabledERb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Check whether the robot controller is enabled. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – [out] The controller status, true: enable; false: disable. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>- other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem13getMicrophoneER16MicrophoneStatus">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem13getMicrophoneER16MicrophoneStatus"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem13getMicrophoneER16MicrophoneStatus"></span><span id="humanoid::h2x::H2xSystem::getMicrophone__MicrophoneStatusR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a63a30ecfac4f3b80b1c26b4cc68b6b73"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMicrophone</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid16MicrophoneStatusE" title="humanoid::MicrophoneStatus"><span class="n"><span class="pre">MicrophoneStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem13getMicrophoneER16MicrophoneStatus" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the microphone status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [out] The microphone status structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>- other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem13setMicrophoneERK16MicrophoneStatus">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem13setMicrophoneERK16MicrophoneStatus"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem13setMicrophoneERK16MicrophoneStatus"></span><span id="humanoid::h2x::H2xSystem::setMicrophone__MicrophoneStatusCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a63f6e380aed081d0a2b6a0e346ad8498"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMicrophone</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid16MicrophoneStatusE" title="humanoid::MicrophoneStatus"><span class="n"><span class="pre">MicrophoneStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem13setMicrophoneERK16MicrophoneStatus" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the microphone status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [in] The microphone status structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>- other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem10getSpeakerER13SpeakerStatus">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem10getSpeakerER13SpeakerStatus"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem10getSpeakerER13SpeakerStatus"></span><span id="humanoid::h2x::H2xSystem::getSpeaker__SpeakerStatusR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a2a167d4d4d72aad9699a646033eb3c9d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSpeaker</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid13SpeakerStatusE" title="humanoid::SpeakerStatus"><span class="n"><span class="pre">SpeakerStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem10getSpeakerER13SpeakerStatus" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the speaker status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [out] The speaker status structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>- other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem10setSpeakerERK13SpeakerStatus">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem10setSpeakerERK13SpeakerStatus"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem10setSpeakerERK13SpeakerStatus"></span><span id="humanoid::h2x::H2xSystem::setSpeaker__SpeakerStatusCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a5cfa909f9df941c1754bb8e319a26e42"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSpeaker</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid13SpeakerStatusE" title="humanoid::SpeakerStatus"><span class="n"><span class="pre">SpeakerStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem10setSpeakerERK13SpeakerStatus" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the speaker status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [in] The speaker status structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>- other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h2x-h2xhighlevel">
+<h2>humanoid::h2x::H2xHighLevel<a class="headerlink" href="#humanoid-h2x-h2xhighlevel" title="Permalink to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevelE">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevelE"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevelE"></span><span id="humanoid::h2x::H2xHighLevel"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H2xHighLevel</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevelE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>H2x robot high-level control interface class. </p>
+<p>This class provides a high-level control interface for the H2x robot, including functions such as mode switching, posture control, and motion control. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel14ZeroTorqueModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel14ZeroTorqueModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel14ZeroTorqueModeEv"></span><span id="humanoid::h2x::H2xHighLevel::ZeroTorqueMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a885a4661d95fe5cedfa0f9af794dcdd9"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ZeroTorqueMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel14ZeroTorqueModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enter zero-torque mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel8DampModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel8DampModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel8DampModeEv"></span><span id="humanoid::h2x::H2xHighLevel::DampMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1aeb9d2a3a82629933d438f607c9435d17"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DampMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel8DampModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enter damp mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel13LockStandModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel13LockStandModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel13LockStandModeEv"></span><span id="humanoid::h2x::H2xHighLevel::LockStandMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a0b125bfe42d0cddfe035d2e890c80015"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LockStandMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel13LockStandModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enter lock stand mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel11WalkRunModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel11WalkRunModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel11WalkRunModeEv"></span><span id="humanoid::h2x::H2xHighLevel::WalkRunMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a1a7f282f22a3d32efe50fe4b469aa212"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WalkRunMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel11WalkRunModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enter walk run mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel15ClimbStairsModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel15ClimbStairsModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel15ClimbStairsModeEv"></span><span id="humanoid::h2x::H2xHighLevel::ClimbStairsMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1aa66a8d46a12a6a808b6a3bef2bf7dd51"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ClimbStairsMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel15ClimbStairsModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enter the stair climbing (blind walk) mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel9DanceModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel9DanceModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel9DanceModeEv"></span><span id="humanoid::h2x::H2xHighLevel::DanceMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a910a4c14c94a59aff609f9568ac0f27f"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DanceMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel9DanceModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enter dance mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel5DanceENSt6stringE">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel5DanceENSt6stringE"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel5DanceENSt6stringE"></span><span id="humanoid::h2x::H2xHighLevel::Dance__ss"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a7d262b5f10327297575e4737e2e71a56"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Dance</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dance_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel5DanceENSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Execute the specified dance action. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dance_name</strong> – [in] The name of the dance action </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel4MoveEddddb">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel4MoveEddddb"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel4MoveEddddb"></span><span id="humanoid::h2x::H2xHighLevel::Move__double.double.double.double.b"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a62144495da2eeca23cce0df8b08c1ed2"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Move</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vx</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vy</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vyaw</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">height</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">continuous_move</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel4MoveEddddb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Robot motion control interface. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vx</strong> – Forward speed (vertical axis), forward is positive. </p></li>
+<li><p><strong>vy</strong> – Side speed (lateral axis), left is positive. </p></li>
+<li><p><strong>vyaw</strong> – Rotation speed (horizontal plane), clockwise is positive. </p></li>
+<li><p><strong>height</strong> – Center of mass height during walking of robot. </p></li>
+<li><p><strong>continuous_move</strong> – Whether to continue moving, true for continuous movement, otherwise only move for 1s. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel8StopMoveEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel8StopMoveEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel8StopMoveEv"></span><span id="humanoid::h2x::H2xHighLevel::StopMove"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a688b9f0a74374e1f00f05b2250ca417e"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StopMove</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel8StopMoveEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>robot stop motion interface </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel11waitRunningEKi">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel11waitRunningEKi"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel11waitRunningEKi"></span><span id="humanoid::h2x::H2xHighLevel::waitRunning__iC"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a084029d085e9f1131ac97c44544d87e2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitRunning</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1000</span></span><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><span class="m"><span class="pre">100</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel11waitRunningEKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Blocking wait until execution is complete. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – <strong>[in]</strong> Timeout in ms </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel17WalkOnTerrainModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel17WalkOnTerrainModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel17WalkOnTerrainModeEv"></span><span id="humanoid::h2x::H2xHighLevel::WalkOnTerrainMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a0b76baace8a4c3958be23a6458f15408"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WalkOnTerrainMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel17WalkOnTerrainModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>enter multi-terrain walking mode In this mode, the robot can walk on various terrains (with sensors) and maintain balance, such as stair climbing, mud, and wooden steps. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel9SquatDownEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel9SquatDownEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel9SquatDownEv"></span><span id="humanoid::h2x::H2xHighLevel::SquatDown"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1af6d54901622033a78c3aad109bb556ba"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SquatDown</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel9SquatDownEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>robot squat down interface The robot smoothly squats down from a standing posture to a squatting posture Execution conditions: The robot is in a standing state, the ground is flat and there are no obstacles; Execution process: </p>
+<p><ol class="lowerroman simple">
+<li><p>Initially in walk-run mode;</p></li>
+<li><p>First switch to the squat model and perform the squat action;</p></li>
+<li><p>Maintain anti-interference state during movement; Execution completed: Finally, the feet maintain stiffness, and the other joints </p></li>
+</ol>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel7SquatUpEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel7SquatUpEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel7SquatUpEv"></span><span id="humanoid::h2x::H2xHighLevel::SquatUp"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a69e4c92c8eac789b4ae264c241670134"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SquatUp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel7SquatUpEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>robot squat up interface The robot smoothly stands up from a squatting posture to a standing posture Execution conditions: The robot is in a stable squatting posture, there are no obstacles around; Execution process: </p>
+<p><ol class="lowerroman simple">
+<li><p>First switch to position mode and move to the initial squatting position;</p></li>
+<li><p>Then switch to the stand-up model;</p></li>
+<li><p>During movement, maintain anti-interference state; Execution completed: The robot is in a stable standing posture, and it automatically switches to walk-run mode; </p></li>
+</ol>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel7SitDownEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel7SitDownEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel7SitDownEv"></span><span id="humanoid::h2x::H2xHighLevel::SitDown"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a566a1895afd2f67475ed94c0ce3a7568"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SitDown</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel7SitDownEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>robot sit down interface The robot moves from a standing posture to a sitting posture Execution conditions: The robot is in a standing state Execution process: Position control performs the sit-down action; Execution completed: The upper body joint is in damping mode, the shoulder joint and lower body are in locked position mode, maintaining a stable sitting posture; </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel4RiseEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel4RiseEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel4RiseEv"></span><span id="humanoid::h2x::H2xHighLevel::Rise"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a41aaf930f02ea34370a141538ff67d9b"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Rise</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel4RiseEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>robot rise up interface The robot moves from a lying posture to a standing posture Execution conditions: The ground is flat and there is enough space, and the posture is manually unfolded; Execution process: </p>
+<p><ol class="lowerroman simple">
+<li><p>The initial state is damping mode, and the posture is adjusted to a standard lying posture through position control.</p></li>
+<li><p>Slowly rise from lying to standing posture, position control is not anti-interference.</p></li>
+<li><p>Squat down smoothly and maintain anti-interference state. Execution completed: The robot stands up smoothly and maintains balance mode; </p></li>
+</ol>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel12GetRobotModeER7int32_t">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel12GetRobotModeER7int32_t"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel12GetRobotModeER7int32_t"></span><span id="humanoid::h2x::H2xHighLevel::GetRobotMode__int32_tR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a81a6e71012d62ef21b5e4b29d020c204"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetRobotMode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">robotMode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel12GetRobotModeER7int32_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get current mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>robotMode</strong> – <strong>[out]</strong> robot mode </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel12realtimeMoveERK11RealtimeCmd">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel12realtimeMoveERK11RealtimeCmd"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel12realtimeMoveERK11RealtimeCmd"></span><span id="humanoid::h2x::H2xHighLevel::realtimeMove__RealtimeCmdCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1ab480607e69b6878352392addd8950073"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">realtimeMove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid3h2x11RealtimeCmdE" title="humanoid::h2x::RealtimeCmd"><span class="n"><span class="pre">RealtimeCmd</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">realtimeCmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel12realtimeMoveERK11RealtimeCmd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send realtime control command. </p>
+<p>Send realtime control command to the robot using realtime DDS messages. This interface is currently intended for upper-body realtime control in <code class="docutils literal notranslate"><span class="pre">ClimbStairsMode</span></code>. <code class="docutils literal notranslate"><span class="pre">realtimeCmd.time</span></code> is the interpolation duration in seconds. For example, <code class="docutils literal notranslate"><span class="pre">0.1</span></code> means the controller will blend to the target within 100 ms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>realtimeCmd</strong> – [in] Realtime control command structure </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int32_t<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Controller mode description</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: Enable motion control features and use high-level motion control APIs</p></li>
+<li><p><strong>EnableController = false</strong>: Activate low-level control mode and directly control the motor layer</p></li>
+</ul>
+<p>Before using motion control features, make sure the controller mode is set correctly.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct.html" class="btn btn-neutral float-left" title="Structures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../api_py/index.html" class="btn btn-neutral float-right" title="Python API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025 Beijing Siling Robot Technology Co., Ltd..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  
+   
+  ﻿<div id="doc-toolbar">
+  <label>
+    
+      Language:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H20-EVT/v0.10.2/cpp/zh_CN/"
+              >
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H20-EVT/v0.10.2/cpp/en/"
+              selected>
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      Version:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H20-EVT/v0.10.2/cpp/en/en/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+
+  
+
+
+</body>
+</html>

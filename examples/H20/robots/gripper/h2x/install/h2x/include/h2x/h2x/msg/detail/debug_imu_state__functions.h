@@ -1,0 +1,210 @@
+// generated from rosidl_generator_c/resource/idl__functions.h.em
+// with input from h2x:msg/DebugIMUState.idl
+// generated code does not contain a copyright notice
+
+// IWYU pragma: private, include "h2x/msg/debug_imu_state.h"
+
+
+#ifndef H2X__MSG__DETAIL__DEBUG_IMU_STATE__FUNCTIONS_H_
+#define H2X__MSG__DETAIL__DEBUG_IMU_STATE__FUNCTIONS_H_
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include <stdbool.h>
+#include <stdlib.h>
+
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
+#include "rosidl_runtime_c/visibility_control.h"
+#include "h2x/msg/rosidl_generator_c__visibility_control.h"
+
+#include "h2x/msg/detail/debug_imu_state__struct.h"
+
+/// Initialize msg/DebugIMUState message.
+/**
+ * If the init function is called twice for the same message without
+ * calling fini inbetween previously allocated memory will be leaked.
+ * \param[in,out] msg The previously allocated message pointer.
+ * Fields without a default value will not be initialized by this function.
+ * You might want to call memset(msg, 0, sizeof(
+ * h2x__msg__DebugIMUState
+ * )) before or use
+ * h2x__msg__DebugIMUState__create()
+ * to allocate and initialize the message.
+ * \return true if initialization was successful, otherwise false
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+bool
+h2x__msg__DebugIMUState__init(h2x__msg__DebugIMUState * msg);
+
+/// Finalize msg/DebugIMUState message.
+/**
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+void
+h2x__msg__DebugIMUState__fini(h2x__msg__DebugIMUState * msg);
+
+/// Create msg/DebugIMUState message.
+/**
+ * It allocates the memory for the message, sets the memory to zero, and
+ * calls
+ * h2x__msg__DebugIMUState__init().
+ * \return The pointer to the initialized message if successful,
+ * otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+h2x__msg__DebugIMUState *
+h2x__msg__DebugIMUState__create(void);
+
+/// Destroy msg/DebugIMUState message.
+/**
+ * It calls
+ * h2x__msg__DebugIMUState__fini()
+ * and frees the memory of the message.
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+void
+h2x__msg__DebugIMUState__destroy(h2x__msg__DebugIMUState * msg);
+
+/// Check for msg/DebugIMUState message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+bool
+h2x__msg__DebugIMUState__are_equal(const h2x__msg__DebugIMUState * lhs, const h2x__msg__DebugIMUState * rhs);
+
+/// Copy a msg/DebugIMUState message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+bool
+h2x__msg__DebugIMUState__copy(
+  const h2x__msg__DebugIMUState * input,
+  h2x__msg__DebugIMUState * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+const rosidl_type_hash_t *
+h2x__msg__DebugIMUState__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+const rosidl_runtime_c__type_description__TypeDescription *
+h2x__msg__DebugIMUState__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+const rosidl_runtime_c__type_description__TypeSource *
+h2x__msg__DebugIMUState__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+h2x__msg__DebugIMUState__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
+/// Initialize array of msg/DebugIMUState messages.
+/**
+ * It allocates the memory for the number of elements and calls
+ * h2x__msg__DebugIMUState__init()
+ * for each element of the array.
+ * \param[in,out] array The allocated array pointer.
+ * \param[in] size The size / capacity of the array.
+ * \return true if initialization was successful, otherwise false
+ * If the array pointer is valid and the size is zero it is guaranteed
+ # to return true.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+bool
+h2x__msg__DebugIMUState__Sequence__init(h2x__msg__DebugIMUState__Sequence * array, size_t size);
+
+/// Finalize array of msg/DebugIMUState messages.
+/**
+ * It calls
+ * h2x__msg__DebugIMUState__fini()
+ * for each element of the array and frees the memory for the number of
+ * elements.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+void
+h2x__msg__DebugIMUState__Sequence__fini(h2x__msg__DebugIMUState__Sequence * array);
+
+/// Create array of msg/DebugIMUState messages.
+/**
+ * It allocates the memory for the array and calls
+ * h2x__msg__DebugIMUState__Sequence__init().
+ * \param[in] size The size / capacity of the array.
+ * \return The pointer to the initialized array if successful, otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+h2x__msg__DebugIMUState__Sequence *
+h2x__msg__DebugIMUState__Sequence__create(size_t size);
+
+/// Destroy array of msg/DebugIMUState messages.
+/**
+ * It calls
+ * h2x__msg__DebugIMUState__Sequence__fini()
+ * on the array,
+ * and frees the memory of the array.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+void
+h2x__msg__DebugIMUState__Sequence__destroy(h2x__msg__DebugIMUState__Sequence * array);
+
+/// Check for msg/DebugIMUState message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+bool
+h2x__msg__DebugIMUState__Sequence__are_equal(const h2x__msg__DebugIMUState__Sequence * lhs, const h2x__msg__DebugIMUState__Sequence * rhs);
+
+/// Copy an array of msg/DebugIMUState messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_h2x
+bool
+h2x__msg__DebugIMUState__Sequence__copy(
+  const h2x__msg__DebugIMUState__Sequence * input,
+  h2x__msg__DebugIMUState__Sequence * output);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // H2X__MSG__DETAIL__DEBUG_IMU_STATE__FUNCTIONS_H_

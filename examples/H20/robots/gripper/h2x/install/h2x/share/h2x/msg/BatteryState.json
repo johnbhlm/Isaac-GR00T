@@ -1,0 +1,66 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/msg/BatteryState",
+      "fields": [
+        {
+          "name": "battery_percentage",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "battery_state",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "battery_low_warning",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "error_code",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "warning_code",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/msg/BatteryState",
+      "hash_string": "RIHS01_0ac8ad932f3f508b99531d8cf236ad77fd0c0b55ea919a934fc687ca1a04f1ed"
+    }
+  ]
+}

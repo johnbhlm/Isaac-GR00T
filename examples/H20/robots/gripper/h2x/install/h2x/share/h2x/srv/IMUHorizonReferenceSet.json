@@ -1,0 +1,202 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/srv/IMUHorizonReferenceSet",
+      "fields": [
+        {
+          "name": "request_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/IMUHorizonReferenceSet_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/IMUHorizonReferenceSet_Response"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "event_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/IMUHorizonReferenceSet_Event"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/IMUHorizonReferenceSet_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/IMUHorizonReferenceSet_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/IMUHorizonReferenceSet_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/IMUHorizonReferenceSet_Request",
+        "fields": [
+          {
+            "name": "imu_index",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/IMUHorizonReferenceSet_Response",
+        "fields": [
+          {
+            "name": "result",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/srv/IMUHorizonReferenceSet",
+      "hash_string": "RIHS01_f187239a177b7100247db6a52810149e399f7894e2428f5cfb50091328c2a353"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "h2x/srv/IMUHorizonReferenceSet_Event",
+      "hash_string": "RIHS01_aef5900b482952d513cd29feaa5f4ee4b7e69307371fa6a77f1f227844cd3e11"
+    },
+    {
+      "type_name": "h2x/srv/IMUHorizonReferenceSet_Request",
+      "hash_string": "RIHS01_e8dd3e147ca201ecb9a718bc916ba327130ea095658e4613e7695cc0a00c8be9"
+    },
+    {
+      "type_name": "h2x/srv/IMUHorizonReferenceSet_Response",
+      "hash_string": "RIHS01_5c86f60ebdd19b049cf5759f151d4d5306f5c130b0761e66e6f16cbb0dde3bd4"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    }
+  ]
+}

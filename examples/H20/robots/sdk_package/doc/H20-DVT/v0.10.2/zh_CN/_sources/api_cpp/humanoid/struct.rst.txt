@@ -1,0 +1,44 @@
+结构体
+==============
+
+humanoid::ControllerVersion
+-----------------------------
+.. doxygenstruct:: humanoid::ControllerVersion
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::DriverVersion
+-------------------------
+.. doxygenstruct:: humanoid::DriverVersion
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::MonitorVersion
+--------------------------
+.. doxygenstruct:: humanoid::MonitorVersion
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::RobotVersion
+------------------------
+.. doxygenstruct:: humanoid::RobotVersion
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::MicrophoneStatus
+-----------------------------
+.. doxygenstruct:: humanoid::MicrophoneStatus
+   :members:
+
+humanoid::SpeakerStatus
+------------------------
+.. doxygenstruct:: humanoid::SpeakerStatus
+   :members:

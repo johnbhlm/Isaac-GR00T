@@ -1,0 +1,13 @@
+uint8 mode
+uint8 operation_mode
+float32 q
+float32 dq
+float32 ddq
+float32 cur
+float32 tau_est
+float32[2] temperature
+float32 kp
+float32 kd
+int32 error_code
+int32 warning_code
+uint32[4] reserved

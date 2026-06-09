@@ -1,0 +1,222 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/srv/GetJointMonitor",
+      "fields": [
+        {
+          "name": "request_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/GetJointMonitor_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/GetJointMonitor_Response"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "event_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/srv/GetJointMonitor_Event"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/GetJointMonitor_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/GetJointMonitor_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "h2x/srv/GetJointMonitor_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/GetJointMonitor_Request",
+        "fields": [
+          {
+            "name": "motor_index",
+            "type": {
+              "type_id": 151,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/srv/GetJointMonitor_Response",
+        "fields": [
+          {
+            "name": "result",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "min_position",
+            "type": {
+              "type_id": 155,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "max_position",
+            "type": {
+              "type_id": 155,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/srv/GetJointMonitor",
+      "hash_string": "RIHS01_7d0d96eb1ddf55ef324f2bd7467f01e24db721ac6be821c8a8f1ba8eb0c04f79"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "h2x/srv/GetJointMonitor_Event",
+      "hash_string": "RIHS01_f426362f2a8a472a8f8018bdf64613e526c23e519007bfae3736caa2bd42c921"
+    },
+    {
+      "type_name": "h2x/srv/GetJointMonitor_Request",
+      "hash_string": "RIHS01_675a3726c48f024424b2623b0e442235d692f4360a044424b4c228e094d954b1"
+    },
+    {
+      "type_name": "h2x/srv/GetJointMonitor_Response",
+      "hash_string": "RIHS01_aea42abad49471b24ee3098aa671d15c32660aaabaa0f17dc50a20652440f2aa"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    }
+  ]
+}

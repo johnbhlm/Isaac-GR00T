@@ -1,0 +1,46 @@
+类
+==========
+
+humanoid::h2x::H2xLowLevel
+-----------------------------
+.. doxygenclass:: humanoid::h2x::H2xLowLevel
+   :members:
+   :protected-members:
+   :private-members:
+
+
+
+.. note::
+
+   **控制器模式说明**
+   
+   - **EnableController = true**: 启用运动控制功能，可以使用高级运动控制API
+   - **EnableController = false**: 激活底层控制模式，直接控制电机底层
+   
+   在使用运动控制功能前，请确保已正确设置控制器模式。
+
+
+humanoid::h2x::H2xSystem
+-----------------------------
+.. doxygenclass:: humanoid::h2x::H2xSystem
+   :members:
+   :protected-members:
+   :private-members:
+
+humanoid::h2x::H2xHighLevel
+-----------------------------
+.. doxygenclass:: humanoid::h2x::H2xHighLevel
+   :members:
+   :protected-members:
+   :private-members:
+
+
+
+.. note::
+
+   **控制器模式说明**
+   
+   - **EnableController = true**: 启用运动控制功能，可以使用高级运动控制API
+   - **EnableController = false**: 激活底层控制模式，直接控制电机底层
+   
+   在使用运动控制功能前，请确保已正确设置控制器模式。

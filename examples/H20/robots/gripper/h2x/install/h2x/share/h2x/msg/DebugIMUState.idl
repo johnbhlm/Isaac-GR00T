@@ -1,0 +1,54 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/DebugIMUState.msg
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module msg {
+    struct DebugIMUState {
+      uint8 slave_id;
+
+      uint8 frame_counter;
+
+      uint16 status_word;
+
+      float temperature;
+
+      float euler_angle_roll;
+
+      float eluer_angle_pitch;
+
+      float eluer_angle_yaw;
+
+      float q1;
+
+      float q2;
+
+      float q3;
+
+      float q4;
+
+      float accx;
+
+      float accy;
+
+      float accz;
+
+      float angular_vel_x;
+
+      float angular_vel_y;
+
+      float angular_vel_z;
+
+      int16 mag_x;
+
+      int16 mag_y;
+
+      int16 mag_z;
+
+      int32 txobject_index;
+
+      int32 txobject_data;
+    };
+  };
+};

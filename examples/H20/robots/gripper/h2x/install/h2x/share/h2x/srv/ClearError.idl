@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from h2x/srv/ClearError.srv
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module srv {
+    @verbatim (language="comment", text=
+      "清除错误服务" "\n"
+      "请求部分")
+    struct ClearError_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      "响应部分")
+    struct ClearError_Response {
+      int32 result;
+    };
+  };
+};

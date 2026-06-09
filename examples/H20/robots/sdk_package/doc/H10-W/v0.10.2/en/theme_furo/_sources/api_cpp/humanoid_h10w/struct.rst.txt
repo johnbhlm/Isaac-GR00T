@@ -1,0 +1,162 @@
+结构体
+==============
+
+humanoid::h10w::RealtimeJointsParams
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::RealtimeJointsParams
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+   
+humanoid::h10w::RealtimeTcpParams
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::RealtimeTcpParams
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::LinearTarget
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::LinearTarget
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::TcpPoseParams
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::TcpPoseParams
+   :members:
+   :protected-members:
+   :private-members: 
+   :undoc-members:
+
+humanoid::h10w::MoveMessageParams
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::MoveMessageParams
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::ErrorMessageParams
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::ErrorMessageParams
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::MotorCmd
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::MotorCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::BaseCmd
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::BaseCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::ElevatorCmd
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::ElevatorCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::GripperCmd
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::GripperCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::PCUCmd
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::PCUCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::MotorState
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::MotorState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::IMUState
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::IMUState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::BaseState
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::BaseState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::ElevatorState
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::ElevatorState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::GripperState
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::GripperState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::PCUState
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::PCUState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::BatteryState
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::BatteryState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::LowCmd
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::LowCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+humanoid::h10w::LowState
+--------------------------------------
+.. doxygenstruct:: humanoid::h10w::LowState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:

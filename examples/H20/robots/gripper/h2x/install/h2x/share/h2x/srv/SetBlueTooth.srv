@@ -1,0 +1,5 @@
+# 请求部分
+bool mode_state
+---
+# 响应部分
+int32 result

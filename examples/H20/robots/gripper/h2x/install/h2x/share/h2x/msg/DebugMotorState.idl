@@ -1,0 +1,176 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/DebugMotorState.msg
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module msg {
+    struct DebugMotorState {
+      uint8 slave_id;
+
+      uint8 frame_counter;
+
+      uint8 error_register;
+
+      uint8 motor_mode;
+
+      uint16 status_word;
+
+      float joint_position;
+
+      float joint_speed;
+
+      float motor_current;
+
+      float joint_torque;
+
+      uint16 tx_object_index;
+
+      int32 tx_object_value;
+
+      float pos_kp;
+
+      double vibration_dampratio;
+
+      double min_position;
+
+      double max_position;
+
+      float spd_coefficient;
+
+      float spd_kp;
+
+      float spd_ki;
+
+      float spd_rmax;
+
+      float spd_rmin;
+
+      int32 position_velocity_torque_current_polarity;
+
+      float position_ctrl_vibration_controller_bandwidth;
+
+      int32 position_feedback_encoder_select;
+
+      int32 align_motor_pos_2_link_pos;
+
+      int32 velocity_ctrl_link_speed_observer_bandwidth;
+
+      float deceleration_of_link_side;
+
+      float spd_bandwidth;
+
+      float current_coefficient;
+
+      float max_motor_torque;
+
+      float max_joint_torque;
+
+      float torque_a_offset;
+
+      float torque_b_offset;
+
+      float torque_kp;
+
+      float torque_kd;
+
+      float torque_bfe;
+
+      float torque_l;
+
+      float torque_kfc;
+
+      float current_torque_coefficient;
+
+      uint32 led_rgb_ctrl;
+
+      uint32 motor_error_configmask;
+
+      uint32 link_error_configmask;
+
+      uint32 board_error_configmask;
+
+      uint32 joint_error_configmask;
+
+      uint32 ctrl_error_configmask;
+
+      uint32 communication_error_configmask;
+
+      int32 current_ctrl_bandwidth;
+
+      int32 current_ctrl_mode;
+
+      int32 motor_rs;
+
+      int32 motor_l;
+
+      int32 motor_ke;
+
+      int32 motorside_position;
+
+      int32 linkside_position;
+
+      int32 friction_ctrl_param1;
+
+      int32 friction_ctrl_param2;
+
+      int32 friction_ctrl_param3;
+
+      int32 friction_ctrl_param4;
+
+      int32 vendor_id;
+
+      int32 robot_product_code;
+
+      int32 robot_version_number;
+
+      int32 robot_serial_number;
+
+      uint32 joint_type;
+
+      uint32 joint_version;
+
+      uint32 joint_serial_number;
+
+      string firmware_version;
+
+      string bootloader_version;
+
+      string app_branch_name;
+
+      string app_tag_sha1_id;
+
+      string boot_branch_name;
+
+      string boot_tag_sha1_id;
+
+      int32 link_encoder_calibrated_data;
+
+      int32 motor_encoder_calibrated_data;
+
+      uint16 a_phase_current_offset;
+
+      uint16 b_phase_current_offset;
+
+      uint16 c_phase_current_offset;
+
+      uint16 bus_current_offset;
+
+      int16 motor_temperature;
+
+      int16 drive_temperature;
+
+      int16 estimated_temperature1;
+
+      int16 estimated_temperature2;
+
+      float bus_current;
+
+      float bus_voltage;
+
+      uint32 flag;
+
+      int32 developer_command_status;
+    };
+  };
+};

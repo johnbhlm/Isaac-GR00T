@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/LRCUCmd.msg
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module msg {
+    @verbatim (language="comment", text=
+      "LED control command message")
+    struct LRCUCmd {
+      @verbatim (language="comment", text=
+        "1. 三色灯使能控制" "\n"
+        "0: disable, 1: enable")
+      uint8 led_enable;
+
+      @verbatim (language="comment", text=
+        "2. LED 模式控制" "\n"
+        "0: off, 1: constant, 2: blink, 3: breathing")
+      uint8 led_mode;
+
+      @verbatim (language="comment", text=
+        "3. 闪烁/呼吸周期控制 (ms)" "\n"
+        "Range: 100~1000 ms")
+      uint16 led_period_ms;
+
+      @verbatim (language="comment", text=
+        "4-6. RGB 通道亮度控制 (0~255)")
+      uint8 led_r;
+
+      uint8 led_g;
+
+      uint8 led_b;
+
+      uint32 crc;
+    };
+  };
+};

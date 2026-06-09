@@ -1,0 +1,60 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/LowState.msg
+// generated code does not contain a copyright notice
+
+#include "h2x/msg/BatteryState.idl"
+#include "h2x/msg/CDUState.idl"
+#include "h2x/msg/IMUState.idl"
+#include "h2x/msg/MotorState.idl"
+#include "h2x/msg/PCUState.idl"
+
+module h2x {
+  module msg {
+    typedef uint32 uint32__2[2];
+    typedef h2x::msg::IMUState h2x__msg__IMUState;
+    typedef h2x__msg__IMUState h2x__msg__IMUState__2[2];
+    typedef h2x::msg::MotorState h2x__msg__MotorState;
+    typedef h2x__msg__MotorState h2x__msg__MotorState__37[37];
+    typedef uint8 uint8__4[4];
+    typedef uint32 uint32__4[4];
+    struct LowState {
+      uint32__2 version;
+
+      uint8 mode_pr;
+
+      uint32 tick;
+
+      h2x__msg__IMUState__2 imu_state;
+
+      h2x__msg__MotorState__37 motor_state;
+
+      boolean has_battery_info;
+
+      h2x::msg::BatteryState battery_info;
+
+      uint16 ground_count;
+
+      uint8__4 ground_signal;
+
+      int32 time_seconds;
+
+      uint8 is_pcu_valid;
+
+      h2x::msg::PCUState pcu_state;
+
+      uint8 is_cdu_valid;
+
+      h2x::msg::CDUState cdu_state;
+
+      uint8 is_data_valid;
+
+      int32 error_code;
+
+      int32 warning_code;
+
+      uint32__4 reserved;
+
+      uint32 crc;
+    };
+  };
+};

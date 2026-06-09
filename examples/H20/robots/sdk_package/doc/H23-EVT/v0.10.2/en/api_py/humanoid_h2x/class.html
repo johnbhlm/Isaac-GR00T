@@ -1,0 +1,2084 @@
+﻿
+﻿
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes &mdash; User Manual for H23-EVT</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=204bd9fb" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=eddc3210"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Getting Started" href="../../example/index.html" />
+    <link rel="prev" title="Enumerations" href="enum.html" />
+  
+   
+  <link rel="stylesheet" href="../../_static/toolbar.css">
+  <script defer src="../../_static/toolbar.js"></script>
+
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            User Manual for H23-EVT
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_cpp/index.html">C++ API Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Python API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../humanoid/index.html">humanoid_sdk_py module description</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">humanoid_sdk_py.h2x module description</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">Enumerations</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#motorcmd">MotorCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lowcmd">LowCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#realtimecmd">RealtimeCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imustate">IMUState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#motorstate">MotorState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#batterystate">BatteryState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pcustate">PCUState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cdustate">CDUState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lowstate">LowState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h2xlowlevel">H2xLowLevel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h2xsystem">H2xSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h2xhighlevel">H2xHighLevel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../example/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theme Switch</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx RTD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theme_furo/api_py/humanoid_h2x/class.html">Furo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">User Manual for H23-EVT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Python API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="index.html">humanoid_sdk_py.h2x module description</a></li>
+      <li class="breadcrumb-item active">Classes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>Classes<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<section id="motorcmd">
+<h2>MotorCmd<a class="headerlink" href="#motorcmd" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">MotorCmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>Motor control command structure</p>
+<p>Contains motor control mode, position, velocity, torque and other parameters.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.dq">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dq</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.dq" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.kd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.kd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.kp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kp</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.kp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.mode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.operation_mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operation_mode</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.operation_mode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.q">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.reserved" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.tau">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.tau" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">Parameter Description</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode</strong>: Motor control mode, 0 = Disable (command ignored), 1 = Enable (command active).</p></li>
+<li><p><strong>operation_mode</strong>: Operation mode.</p></li>
+<li><p><strong>q</strong>: Joint target position, unit: <strong>rad</strong></p></li>
+<li><p><strong>dq</strong>: Joint target velocity, unit: <strong>rad/s</strong></p></li>
+<li><p><strong>tau</strong>: Joint feedforward torque, unit: <strong>Nm</strong></p></li>
+<li><p><strong>kp</strong>: Joint stiffness coefficient</p></li>
+<li><p><strong>kd</strong>: Joint damping coefficient</p></li>
+<li><p><strong>reserved</strong>: Reserved</p></li>
+</ul>
+<p>Joint 0-12 operating modes:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Software Mode Code</p></th>
+<th class="head"><p>Mode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>Force-Position Hybrid Control Mode (Default Operation Mode)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>Servo Position Control Mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0x02</p></td>
+<td><p>Servo Velocity Control Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x03</p></td>
+<td><p>Current/Torque Control Mode and Brake Control Command</p></td>
+</tr>
+<tr class="row-even"><td><p>0x04</p></td>
+<td><p>Configuration Command</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x05</p></td>
+<td><p>Motor control parameter query command</p></td>
+</tr>
+</tbody>
+</table>
+<p>Joints 15~28, 35~36 Operating Mode:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Software Mode Code</p></th>
+<th class="head"><p>Mode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>Force-Position Hybrid Control Mode (Default Operation Mode)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x09</p></td>
+<td><p>Profile Position Mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0A</p></td>
+<td><p>Profile Velocity Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0B</p></td>
+<td><p>Profile Torque Mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0C</p></td>
+<td><p>Homing Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x06</p></td>
+<td><p>Cyclic Synchronous Position Mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0x07</p></td>
+<td><p>Cyclic Synchronous Velocity Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x08</p></td>
+<td><p>Cyclic Synchronous Torque Mode</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</section>
+<section id="lowcmd">
+<h2>LowCmd<a class="headerlink" href="#lowcmd" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowCmd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">LowCmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowCmd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x low-level control command structure</p>
+<p>Contains robot low-level control commands, including motor control commands.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowCmd.mode_pr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode_pr</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowCmd.mode_pr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowCmd.motor_cmd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_cmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowCmd.motor_cmd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowCmd.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowCmd.reserved" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">Parameter Description</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode_pr</strong>: Parallel mechanism (ankle and waist) control mode</p>
+<ul>
+<li><p>0: PR (pitch/roll angle control) [default]</p></li>
+<li><p>1: AB (direct motor control)</p></li>
+</ul>
+</li>
+<li><p><strong>motorCmd[37]</strong>: Motor control command</p></li>
+<li><p><strong>reserved[4]</strong>: Reserved</p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+<section id="realtimecmd">
+<h2>RealtimeCmd<a class="headerlink" href="#realtimecmd" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">RealtimeCmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>Realtime control command structure</p>
+<p>Contains realtime control commands, including motor control commands.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd.mode_pr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode_pr</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd.mode_pr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd.motor_cmd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_cmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd.motor_cmd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd.reserved" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd.time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd.time" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">Parameter Description</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode_pr</strong>: Parallel mechanism control mode</p>
+<ul>
+<li><p>0: PR (pitch/roll angle control) [default]</p></li>
+<li><p>1: AB (direct motor control)</p></li>
+</ul>
+</li>
+<li><p><strong>motorCmd[37]</strong>: Motor control command</p></li>
+<li><p><strong>reserved[4]</strong>: Reserved</p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+<section id="imustate">
+<h2>IMUState<a class="headerlink" href="#imustate" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">IMUState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>IMU state structure</p>
+<p>Contains IMU sensor data, such as quaternion, angular velocity, acceleration, etc.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.accelerometer">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accelerometer</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.accelerometer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.error_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.gyroscope">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gyroscope</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.gyroscope" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.quaternion">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quaternion</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.quaternion" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.rpy">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rpy</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.rpy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.temperature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">temperature</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.temperature" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.warning_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">Parameter Description</p>
+<ul class="simple">
+<li><p><strong>quaternion</strong>: Quaternion, representing the rotation of the robot coordinate system relative to the world coordinate system.</p>
+<ul>
+<li><p><strong>0</strong>： w</p></li>
+<li><p><strong>1</strong>： x</p></li>
+<li><p><strong>2</strong>： y</p></li>
+<li><p><strong>3</strong>： z</p></li>
+</ul>
+</li>
+<li><p><strong>gyroscope</strong>: Gyroscope angular velocity (around the three coordinate axes), unit <strong>rad/s</strong>.</p>
+<ul>
+<li><p><strong>0</strong>: x-axis</p></li>
+<li><p><strong>1</strong>: y-axis</p></li>
+<li><p><strong>2</strong>: z-axis</p></li>
+</ul>
+</li>
+<li><p><strong>accelerometer</strong>: Acceleration (three coordinate axes), unit <strong>m/s²</strong>.</p>
+<ul>
+<li><p><strong>0</strong>: x-axis</p></li>
+<li><p><strong>1</strong>: y-axis</p></li>
+<li><p><strong>2</strong>: z-axis</p></li>
+</ul>
+</li>
+<li><p><strong>rpy</strong>: Euler angles (Roll, Pitch, Yaw), representing the rotation angles of the robot coordinate system relative to the world coordinate system, unit <strong>rad</strong>.</p>
+<ul>
+<li><p><strong>0</strong>： roll</p></li>
+<li><p><strong>1</strong>： pitch</p></li>
+<li><p><strong>2</strong>： yaw</p></li>
+</ul>
+</li>
+<li><p><strong>temperature</strong>: IMU sensor temperature, unit <strong>°C</strong>.</p></li>
+<li><p><strong>error_code</strong>: IMU error code.</p></li>
+<li><p><strong>warning_code</strong>: IMU warning code.</p></li>
+</ul>
+</div>
+</section>
+<section id="motorstate">
+<h2>MotorState<a class="headerlink" href="#motorstate" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">MotorState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>Motor state structure</p>
+<p>Contains current motor state information, such as position, velocity, torque, etc.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.cur">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cur</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.cur" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.ddq">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ddq</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.ddq" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.dq">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dq</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.dq" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.error_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.kd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.kd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.kp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kp</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.kp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.mode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.operation_mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operation_mode</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.operation_mode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.q">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.reserved" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.tau_est">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau_est</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.tau_est" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.temperature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">temperature</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.temperature" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.warning_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">Parameter Description</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode</strong>: Current control mode, 0 = Disable (commands ignored), 1 = Enable (commands active).</p></li>
+<li><p><strong>operation_mode</strong>: Operation mode.</p></li>
+<li><p><strong>q</strong>: Joint feedback position, unit <strong>rad</strong>.</p></li>
+<li><p><strong>dq</strong>: Joint feedback velocity, unit <strong>rad/s</strong>.</p></li>
+<li><p><strong>ddq</strong>: Joint feedback acceleration, unit <strong>rad/s²</strong>.</p></li>
+<li><p><strong>cur</strong>: Joint feedback current, unit <strong>A</strong>.</p></li>
+<li><p><strong>tau_est</strong>: Joint feedback torque, unit <strong>N·m</strong>.</p></li>
+<li><p><strong>temperature</strong>: Joint temperature, unit <strong>°C</strong>.</p>
+<ul>
+<li><p><strong>0</strong>: Surface temperature</p></li>
+<li><p><strong>1</strong>: Winding temperature</p></li>
+</ul>
+</li>
+<li><p><strong>kp</strong>: Joint stiffness coefficient.</p></li>
+<li><p><strong>kd</strong>: Joint damping coefficient.</p></li>
+<li><p><strong>error_code</strong>: Error code.</p></li>
+<li><p><strong>warning_code</strong>: Warning code.</p></li>
+<li><p><strong>reserved</strong>: Reserved (4 entries), unsigned long type.</p></li>
+</ul>
+<p>Joint 0-12 operating modes:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Software Mode Code</p></th>
+<th class="head"><p>Mode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>Force-Position Hybrid Control Mode (Default Operation Mode)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>Servo Position Control Mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0x02</p></td>
+<td><p>Servo Velocity Control Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x03</p></td>
+<td><p>Current/Torque Control Mode and Brake Control Command</p></td>
+</tr>
+<tr class="row-even"><td><p>0x04</p></td>
+<td><p>Configuration Command</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x05</p></td>
+<td><p>Motor control parameter query command</p></td>
+</tr>
+</tbody>
+</table>
+<p>Joints 15~28, 35~36 Operating Mode:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Software Mode Code</p></th>
+<th class="head"><p>Mode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>Force-Position Hybrid Control Mode (Default Operation Mode)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x09</p></td>
+<td><p>Profile Position Mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0A</p></td>
+<td><p>Profile Velocity Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0B</p></td>
+<td><p>Profile Torque Mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0C</p></td>
+<td><p>Homing Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x06</p></td>
+<td><p>Cyclic Synchronous Position Mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0x07</p></td>
+<td><p>Cyclic Synchronous Velocity Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x08</p></td>
+<td><p>Cyclic Synchronous Torque Mode</p></td>
+</tr>
+</tbody>
+</table>
+<p>Motor Error Code Definitions</p>
+<p>Error code definitions for joints 0–12:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Software Error Codes</p></th>
+<th class="head"><p>Error Definitions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1001</p></td>
+<td><p>No Error</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1002</p></td>
+<td><p>Motor Overheating</p></td>
+</tr>
+<tr class="row-even"><td><p>-1003</p></td>
+<td><p>Motor Overcurrent</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1004</p></td>
+<td><p>Motor Undervoltage</p></td>
+</tr>
+<tr class="row-even"><td><p>-1005</p></td>
+<td><p>Motor Encoder Error</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1006</p></td>
+<td><p>Motor Brake Overvoltage</p></td>
+</tr>
+<tr class="row-even"><td><p>-1007</p></td>
+<td><p>DRV Drive Error</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1203</p></td>
+<td><p>Invalid parameter</p></td>
+</tr>
+<tr class="row-even"><td><p>-1204</p></td>
+<td><p>Position limit exceeded</p></td>
+</tr>
+</tbody>
+</table>
+<p>13~28, 35~36 Joint Error Code Definitions:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Software Error Codes</p></th>
+<th class="head"><p>Error Definitions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1022</p></td>
+<td><p>Continuous Over Current (Motor Overload)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1023</p></td>
+<td><p>Mains Under Voltage (Power Supply Under Voltage)</p></td>
+</tr>
+<tr class="row-even"><td><p>-1024</p></td>
+<td><p>Mains Over Voltage (Power Supply Over Voltage)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1025</p></td>
+<td><p>Temperature Device (Motor Temperature Alarm)</p></td>
+</tr>
+<tr class="row-even"><td><p>-1026</p></td>
+<td><p>Temperature Drive (Drive Temperature Alarm)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1027</p></td>
+<td><p>Sensor Error (Encoder Alarm)</p></td>
+</tr>
+<tr class="row-even"><td><p>-1028</p></td>
+<td><p>Control Computing Circuit (Control Circuit CPU Error)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1029</p></td>
+<td><p>Short Circuit Earth Leakage Motor Side (Output Short Circuit Alarm)</p></td>
+</tr>
+<tr class="row-even"><td><p>-1030</p></td>
+<td><p>Internal Software (Internal Software Error)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1031</p></td>
+<td><p>Communication (Communication Error)</p></td>
+</tr>
+<tr class="row-even"><td><p>-1032</p></td>
+<td><p>Following Error (Following Error Excessive)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1203</p></td>
+<td><p>Invalid parameter</p></td>
+</tr>
+<tr class="row-even"><td><p>-1204</p></td>
+<td><p>Position limit exceeded</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</section>
+<section id="batterystate">
+<h2>BatteryState<a class="headerlink" href="#batterystate" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">BatteryState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>Battery state structure</p>
+<p>Contains battery percentage, state and other information.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.battery_low_warning">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_low_warning</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.battery_low_warning" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.battery_percentage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_percentage</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.battery_percentage" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.battery_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.battery_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.error_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.warning_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">Battery Parameter Description</p>
+<ul class="simple">
+<li><p><strong>battery_percentage</strong>: Battery Level</p>
+<ul>
+<li><p>Range: <strong>0–100%</strong></p></li>
+<li><p>Invalid when <strong>0</strong></p></li>
+</ul>
+</li>
+<li><p><strong>battery_state</strong>: Battery State</p>
+<ul>
+<li><p><strong>0</strong>: Invalid</p></li>
+<li><p>Charging</p></li>
+<li><p>Discharging</p></li>
+<li><p>Standby</p></li>
+</ul>
+</li>
+<li><p><strong>battery_level_warning</strong>: Battery Level Warning</p>
+<ul>
+<li><p><strong>0</strong>: Invalid</p></li>
+<li><p>Low Battery Warning</p></li>
+<li><p>Other Warnings</p></li>
+</ul>
+</li>
+<li><p><strong>error_code</strong>: Error Code</p></li>
+<li><p><strong>warning_code</strong>: Warning Code</p></li>
+</ul>
+</div>
+</section>
+<section id="pcustate">
+<h2>PCUState<a class="headerlink" href="#pcustate" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">PCUState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>PCU state structure</p>
+<p>Contains power control unit state information, such as emergency stop state, power supply state, voltage and current, etc.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.battery_voltage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_voltage</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.battery_voltage" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.control_supply_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">control_supply_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.control_supply_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.current_12v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_12v</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.current_12v" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.current_24v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_24v</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.current_24v" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.dcdc_bus_voltage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dcdc_bus_voltage</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.dcdc_bus_voltage" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.emergency_stop_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">emergency_stop_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.emergency_stop_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.motor_bus_current">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_bus_current</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.motor_bus_current" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.motor_bus_voltage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_bus_voltage</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.motor_bus_voltage" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.pcu_error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcu_error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.pcu_error_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.pcu_warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcu_warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.pcu_warning_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.power_supply_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">power_supply_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.power_supply_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.voltage_12v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">voltage_12v</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.voltage_12v" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.voltage_24v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">voltage_24v</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.voltage_24v" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">Parameter Description</p>
+<ul class="simple">
+<li><p><strong>emergency_stop_state</strong>: Emergency stop state, <strong>0: on</strong>, <strong>1: off</strong>.</p></li>
+<li><p><strong>control_supply_state</strong>: Control power state: <strong>0: Standby</strong>, <strong>2: Powered on</strong>, <strong>4: Error state</strong>.</p></li>
+<li><p><strong>power_supply_state</strong>: Drive power state: <strong>0: Standby</strong>, <strong>1: Pre-charge</strong>, <strong>2: Powered on</strong>, <strong>3: Powering down</strong>, <strong>4: Error state</strong>.</p></li>
+<li><p><strong>pcu_error_code</strong>: PCU error code.</p></li>
+<li><p><strong>pcu_warning_code</strong>: PCU warning code.</p></li>
+<li><p><strong>battery_voltage</strong>: Battery voltage, unit: <strong>V</strong>.</p></li>
+<li><p><strong>motor_bus_voltage</strong>: Motor bus voltage, unit: <strong>V</strong>.</p></li>
+<li><p><strong>motor_bus_current</strong>: Motor bus current, unit: <strong>A</strong>.</p></li>
+<li><p><strong>dcdc_bus_voltage</strong>: DCDC bus voltage, unit: <strong>V</strong>.</p></li>
+<li><p><strong>voltage_24v</strong>: 24V voltage, unit: <strong>V</strong>.</p></li>
+<li><p><strong>voltage_12v</strong>: 12V voltage, unit: <strong>V</strong>.</p></li>
+<li><p><strong>current_24v</strong>: 24V current, unit: <strong>A</strong>.</p></li>
+<li><p><strong>current_12v</strong>: 12V current, unit <strong>A</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="cdustate">
+<h2>CDUState<a class="headerlink" href="#cdustate" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.CDUState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">CDUState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.CDUState" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>CDU state structure</p>
+<p>Contains CDU state information, such as error code, warning code, etc.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.CDUState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.CDUState.error_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.CDUState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.CDUState.warning_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">CDU Parameter Description</p>
+<ul class="simple">
+<li><p><strong>cdu_error_code</strong>: CDU Error Code</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>CDU Error Code</p></th>
+<th class="head"><p>Error Definitions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1205</p></td>
+<td><p>Host Low-Frequency Communication Error</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1206</p></td>
+<td><p>PCU Low-Frequency Communication Error</p></td>
+</tr>
+<tr class="row-even"><td><p>-1207</p></td>
+<td><p>LRCU Low-Frequency Communication Error</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1208</p></td>
+<td><p>Host Consecutive Frame Check Error</p></td>
+</tr>
+<tr class="row-even"><td><p>-1209</p></td>
+<td><p>PCU continuous frame verification error</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1210</p></td>
+<td><p>LRCU continuous frame verification error</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>cdu_warning_code</strong>: CDU warning code</p></li>
+</ul>
+</div>
+</section>
+<section id="lowstate">
+<h2>LowState<a class="headerlink" href="#lowstate" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">LowState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x low-level state structure</p>
+<p>Contains robot low-level state information, such as version, IMU state, motor state, battery state, etc.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.battery_info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_info</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.battery_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.cdu_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cdu_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.cdu_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.error_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.ground_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ground_count</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.ground_count" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.ground_signal">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ground_signal</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.ground_signal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.has_battery_info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_battery_info</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.has_battery_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.imu_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">imu_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.imu_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.is_cdu_valid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_cdu_valid</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.is_cdu_valid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.is_data_valid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_data_valid</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.is_data_valid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.is_pcu_valid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_pcu_valid</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.is_pcu_valid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.mode_pr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode_pr</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.mode_pr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.motor_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.motor_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.pcu_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcu_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.pcu_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.reserved" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.tick">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tick</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.tick" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.time_seconds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_seconds</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.time_seconds" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.warning_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">Parameter Description</p>
+<ul>
+<li><p><strong>version</strong>: Software version information</p></li>
+<li><p><strong>mode_pr</strong>: Parallel mechanism (ankle and waist) control mode</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: PR mode (Pitch/Roll angle control) [default]</p></li>
+<li><p>1: AB mode (direct motor control)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>tick</strong>: Timer, increments every <strong>1ms</strong></p></li>
+<li><p><strong>imu_state</strong>: IMU state</p></li>
+<li><p><strong>motor_state</strong>: All motor states</p></li>
+<li><p><strong>has_battery_info</strong>: Whether battery information is present</p>
+<ul class="simple">
+<li><p><strong>true</strong>: Includes battery information</p></li>
+<li><p><strong>false</strong>: Does not include battery information</p></li>
+</ul>
+</li>
+<li><p><strong>battery_info</strong>: Battery information</p></li>
+<li><p><strong>ground_count</strong>: Number of foot-ground contact switches</p></li>
+<li><p><strong>ground_signal</strong>: Foot-ground contact switch status</p></li>
+<li><p><strong>time_seconds</strong>: Cumulative time, unit <strong>s</strong></p></li>
+<li><p><strong>is_pcu_valid</strong>: Whether the PCU is valid</p>
+<ul class="simple">
+<li><p><strong>0</strong>: Invalid</p></li>
+<li><p><strong>1</strong>: Valid</p></li>
+</ul>
+</li>
+<li><p><strong>pcu_state</strong>: PCU state</p></li>
+<li><p><strong>is_cdu_valid</strong>: Whether the CDU is valid (invalid for this model)</p>
+<ul class="simple">
+<li><p><strong>0</strong>: Invalid</p></li>
+<li><p><strong>1</strong>: Valid</p></li>
+</ul>
+</li>
+<li><p><strong>cdu_state</strong>: CDU state</p></li>
+<li><p><strong>is_data_valid</strong>: Whether the data is valid (not applicable for this model)</p>
+<ul class="simple">
+<li><p><strong>0</strong>: All invalid</p></li>
+<li><p><strong>1</strong>: Partially valid</p></li>
+<li><p><strong>2</strong>: All valid</p></li>
+</ul>
+</li>
+<li><p><strong>error_code</strong>: Driver layer error code</p>
+<ul class="simple">
+<li><p><strong>0</strong>: No error</p></li>
+<li><p><strong>-2000~-2999</strong>: Drive layer software error</p></li>
+<li><p><strong>-1</strong>: Firmware layer error</p></li>
+</ul>
+</li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Error Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>No Error</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Firmware Layer Error</p></td>
+</tr>
+<tr class="row-even"><td><p>-2029</p></td>
+<td><p>Invalid parameter</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2030</p></td>
+<td><p>V3 Joint FrameCounter Mismatch Exceeds 10 Times Within 1 Minute</p></td>
+</tr>
+<tr class="row-even"><td><p>-2031</p></td>
+<td><p>Business Counter and HAL Counter Mismatch Exceeds 10 Times Within 1 Minute</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2032</p></td>
+<td><p>Algorithm Error</p></td>
+</tr>
+<tr class="row-even"><td><p>-2033</p></td>
+<td><p>Emergency Stop</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2034</p></td>
+<td><p>CDU Communication Interruption</p></td>
+</tr>
+<tr class="row-even"><td><p>-2035</p></td>
+<td><p>Waist IMU Communication Interruption</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>warning_code</strong>: Drive layer warning code</p>
+<ul>
+<li><p><strong>0</strong>: No Warning</p></li>
+<li><p><strong>-1</strong>: Firmware Layer Warning</p></li>
+</ul>
+</li>
+<li><p><strong>reserved</strong>: 4 reserved</p></li>
+</ul>
+</div>
+</section>
+<section id="h2xlowlevel">
+<h2>H2xLowLevel<a class="headerlink" href="#h2xlowlevel" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">H2xLowLevel</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x robot low-level control interface class</p>
+<p>This class provides direct control interfaces to H2x robot’s underlying hardware, including joint space control, robot state reading, etc. Suitable for applications that require fine-grained control of robot’s low-level behaviors.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel.readLRCUState">
+<span class="sig-name descname"><span class="pre">readLRCUState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="humanoid_sdk_py.h2x.H2xLowLevel"><span class="pre">humanoid_sdk_py.h2x.H2xLowLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel.readLRCUState" title="Permalink to this definition"></a></dt>
+<dd><p>Read LR-CU state information</p>
+<p>Read current state information from LR-CU (Left-Right Control Unit).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lrcu_state</strong> – LR-CU state structure to receive state data</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel.readLowState">
+<span class="sig-name descname"><span class="pre">readLowState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="humanoid_sdk_py.h2x.H2xLowLevel"><span class="pre">humanoid_sdk_py.h2x.H2xLowLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel.readLowState" title="Permalink to this definition"></a></dt>
+<dd><p>Read low-level state information</p>
+<p>Read current low-level state information from the robot, including end-effector poses, validity flags, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>low_state</strong> – Low-level state structure to receive state data</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel.writeLRCUCmd">
+<span class="sig-name descname"><span class="pre">writeLRCUCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="humanoid_sdk_py.h2x.H2xLowLevel"><span class="pre">humanoid_sdk_py.h2x.H2xLowLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lrcu_cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">humanoid_sdk_py.h2x.LRCUCmd</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel.writeLRCUCmd" title="Permalink to this definition"></a></dt>
+<dd><p>Write LR-CU control command</p>
+<p>Send control command to LR-CU (Left-Right Control Unit).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lrcu_cmd</strong> – LR-CU control command</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel.writeLowCmd">
+<span class="sig-name descname"><span class="pre">writeLowCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="humanoid_sdk_py.h2x.H2xLowLevel"><span class="pre">humanoid_sdk_py.h2x.H2xLowLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.LowCmd" title="humanoid_sdk_py.h2x.LowCmd"><span class="pre">humanoid_sdk_py.h2x.LowCmd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel.writeLowCmd" title="Permalink to this definition"></a></dt>
+<dd><p>Write low-level control command</p>
+<p>Send low-level control command to the robot, including joint angles, validity flags and timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>low_cmd</strong> – Low-level control command structure</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Controller mode description</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: Enable motion control features and use high-level motion control APIs</p></li>
+<li><p><strong>EnableController = false</strong>: Activate low-level control mode and directly control the motor layer</p></li>
+</ul>
+<p>Before using motion control features, make sure the controller mode is set correctly.Before using motion control features, make sure the controller mode is set correctly.</p>
+</div>
+</section>
+<section id="h2xsystem">
+<h2>H2xSystem<a class="headerlink" href="#h2xsystem" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">H2xSystem</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x system interface</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.calibrateMechanicalZeroPosition">
+<span class="sig-name descname"><span class="pre">calibrateMechanicalZeroPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.calibrateMechanicalZeroPosition" title="Permalink to this definition"></a></dt>
+<dd><p>Calibrate the mechanical zero position of a specified joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – Joint index (int) to be calibrated. Mapping is defined by JointIndexValue in common/h2x_def.h. Elevater and gripper are not currently supported.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.clearError">
+<span class="sig-name descname"><span class="pre">clearError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.clearError" title="Permalink to this definition"></a></dt>
+<dd><p>Clear the error state of the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><p>Integer</p>
+<ul class="simple">
+<li><p>0: Succeeded;</p></li>
+<li><p>Others: Failed;</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.enableController">
+<span class="sig-name descname"><span class="pre">enableController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.enableController" title="Permalink to this definition"></a></dt>
+<dd><p>Enable or disable the robot controller.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the robot controller is enabled, it can send motion commands to drives. When disabled, the controller will not send any motion commands to drives for safety.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – true: enable; false: disable.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.getMicrophone">
+<span class="sig-name descname"><span class="pre">getMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.getMicrophone" title="Permalink to this definition"></a></dt>
+<dd><p>Get the microphone status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, status)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.MicrophoneStatus" title="humanoid_sdk_py.MicrophoneStatus">MicrophoneStatus</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>status: MicrophoneStatus | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a MicrophoneStatus object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.getRobotVersion">
+<span class="sig-name descname"><span class="pre">getRobotVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.getRobotVersion" title="Permalink to this definition"></a></dt>
+<dd><p>Get the version of the robot and its plugins.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, version)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.RobotVersion" title="humanoid_sdk_py.RobotVersion">RobotVersion</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>version: RobotVersion | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a RobotVersion object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.getSpeaker">
+<span class="sig-name descname"><span class="pre">getSpeaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.getSpeaker" title="Permalink to this definition"></a></dt>
+<dd><p>Get the speaker status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, status)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.SpeakerStatus" title="humanoid_sdk_py.SpeakerStatus">SpeakerStatus</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>status: SpeakerStatus | None</dt><dd><ul class="simple">
+<li><p>When succeeded, the second element is a SpeakerStatus object:</p></li>
+<li><p>When failed, the second element is None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.isControllerEnabled">
+<span class="sig-name descname"><span class="pre">isControllerEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.isControllerEnabled" title="Permalink to this definition"></a></dt>
+<dd><p>Check whether the robot controller is enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, enable)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, bool | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>enable: bool | None</dt><dd><ul class="simple">
+<li><p>true: controller is enabled</p></li>
+<li><p>false: controller is disabled</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.saveJointParameters">
+<span class="sig-name descname"><span class="pre">saveJointParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.saveJointParameters" title="Permalink to this definition"></a></dt>
+<dd><p>Save the current position of a specified joint as its mechanical</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – Joint index (int) whose mechanical zero position is to be saved. Mapping is defined by JointIndexValue in common/h2x_def.h. Elevater and gripper are not currently supported.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.setMicrophone">
+<span class="sig-name descname"><span class="pre">setMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.MicrophoneStatus" title="humanoid_sdk_py.MicrophoneStatus"><span class="pre">humanoid_sdk_py.MicrophoneStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.setMicrophone" title="Permalink to this definition"></a></dt>
+<dd><p>Set the microphone status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – The microphone status structure.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.setSpeaker">
+<span class="sig-name descname"><span class="pre">setSpeaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.SpeakerStatus" title="humanoid_sdk_py.SpeakerStatus"><span class="pre">humanoid_sdk_py.SpeakerStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.setSpeaker" title="Permalink to this definition"></a></dt>
+<dd><p>Set the speaker status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – The speaker status structure.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h2xhighlevel">
+<h2>H2xHighLevel<a class="headerlink" href="#h2xhighlevel" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">H2xHighLevel</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x High-Level Control Interface Class</p>
+<p>This class provides high-level control interfaces for H2x robot, including mode switching, pose control, and motion control.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.ClimbStairsMode">
+<span class="sig-name descname"><span class="pre">ClimbStairsMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.ClimbStairsMode" title="Permalink to this definition"></a></dt>
+<dd><p>Enter climb stairs mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.DampMode">
+<span class="sig-name descname"><span class="pre">DampMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.DampMode" title="Permalink to this definition"></a></dt>
+<dd><p>Enter damp mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.Dance">
+<span class="sig-name descname"><span class="pre">Dance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.Dance" title="Permalink to this definition"></a></dt>
+<dd><p>Execute the specified dance action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dance_name</strong> – The name of the dance action</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return value</strong></dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.DanceMode">
+<span class="sig-name descname"><span class="pre">DanceMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.DanceMode" title="Permalink to this definition"></a></dt>
+<dd><p>Enter dance mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.GetRobotMode">
+<span class="sig-name descname"><span class="pre">GetRobotMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.GetRobotMode" title="Permalink to this definition"></a></dt>
+<dd><p>Get current robot operating mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, robotMode)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, int | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>Return value 1</strong>:</p></li>
+</ul>
+<p>code: int</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: call service succeeded</p></li>
+<li><p>Others: call service failed</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Return value 2</strong>:</p></li>
+</ul>
+<p>robotMode: int | None</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When service call is successful, the second element is the current robot mode</p></li>
+<li><p>When service call fails, the second element is None</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.LockStandMode">
+<span class="sig-name descname"><span class="pre">LockStandMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.LockStandMode" title="Permalink to this definition"></a></dt>
+<dd><p>Enter lock stand mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.Move">
+<span class="sig-name descname"><span class="pre">Move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.Move" title="Permalink to this definition"></a></dt>
+<dd><p>Enter walk run mode
+:param vx: Forward speed (vertical axis), forward is positive.
+:param vy: Side speed (lateral axis), left is positive.
+:param vyaw: Rotation speed (horizontal plane), clockwise is positive.
+:param height: Center of mass height during walking of robot.
+:param continuous_move: Whether to continue moving, true for continuous movement, otherwise only move for 1s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.Rise">
+<span class="sig-name descname"><span class="pre">Rise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.Rise" title="Permalink to this definition"></a></dt>
+<dd><p>robot rise up interface</p>
+<p>The robot moves from a lying posture to a standing posture</p>
+<p>Execution conditions: The ground is flat and there is enough space, and the posture is manually unfolded;</p>
+<p>Execution process:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The initial state is damping mode, and the posture is adjusted to a standard lying posture through position control.</p></li>
+<li><p>Slowly rise from lying to standing posture, position control is not anti-interference.</p></li>
+<li><p>Squat down smoothly and maintain anti-interference state.</p></li>
+</ol>
+</div></blockquote>
+<p>Execution completed: The robot stands up smoothly and maintains balance mode;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.SitDown">
+<span class="sig-name descname"><span class="pre">SitDown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.SitDown" title="Permalink to this definition"></a></dt>
+<dd><p>robot sit down interface</p>
+<p>The robot moves from a standing posture to a sitting posture.</p>
+<p>Execution conditions: The robot is in a standing state</p>
+<p>Execution process: Position control performs the sit-down action;</p>
+<p>Execution completed: The upper body joint is in damping mode, the shoulder joint and lower body are in locked position mode, maintaining a stable sitting posture;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.SquatDown">
+<span class="sig-name descname"><span class="pre">SquatDown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.SquatDown" title="Permalink to this definition"></a></dt>
+<dd><p>robot squat down interface</p>
+<p>The robot smoothly squats down from a standing posture to a squatting posture.</p>
+<p>Execution conditions: The robot is in a standing state, the ground is flat and there are no obstacles.</p>
+<p>Execution process:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Initially in walk-run mode;</p></li>
+<li><p>First switch to the squat model and perform the squat action;</p></li>
+<li><p>Maintain anti-interference state during movement;</p></li>
+</ol>
+</div></blockquote>
+<p>Execution completed: Finally, the feet maintain stiffness, and the other joints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.SquatUp">
+<span class="sig-name descname"><span class="pre">SquatUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.SquatUp" title="Permalink to this definition"></a></dt>
+<dd><p>robot squat up interface</p>
+<p>The robot smoothly stands up from a squatting posture to a standing posture.</p>
+<p>Execution conditions: The robot is in a stable squatting posture, there are no obstacles around;</p>
+<p>Execution process:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>First switch to position mode and move to the initial squatting position;</p></li>
+<li><p>Then switch to the stand-up model;</p></li>
+<li><p>During movement, maintain anti-interference state;</p></li>
+</ol>
+</div></blockquote>
+<p>Execution completed: The robot is in a stable standing posture, and it automatically switches to walk-run mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code: 0 indicates success, other indicates failure</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.StopMove">
+<span class="sig-name descname"><span class="pre">StopMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.StopMove" title="Permalink to this definition"></a></dt>
+<dd><p>robot stop motion interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.WalkOnTerrainMode">
+<span class="sig-name descname"><span class="pre">WalkOnTerrainMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.WalkOnTerrainMode" title="Permalink to this definition"></a></dt>
+<dd><p>enter multi-terrain walking mode
+In this mode, the robot can walk on various terrains (with sensors) and maintain balance, such as stair climbing, mud, and wooden steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.WalkRunMode">
+<span class="sig-name descname"><span class="pre">WalkRunMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.WalkRunMode" title="Permalink to this definition"></a></dt>
+<dd><p>Enter walk run mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.ZeroTorqueMode">
+<span class="sig-name descname"><span class="pre">ZeroTorqueMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.ZeroTorqueMode" title="Permalink to this definition"></a></dt>
+<dd><p>Enter zero torque mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.realtimeMove">
+<span class="sig-name descname"><span class="pre">realtimeMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">realtime_cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.RealtimeCmd" title="humanoid_sdk_py.h2x.RealtimeCmd"><span class="pre">humanoid_sdk_py.h2x.RealtimeCmd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.realtimeMove" title="Permalink to this definition"></a></dt>
+<dd><p>Send realtime control command</p>
+<p>Send realtime control command to the robot using low-level DDS messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>realtime_cmd</strong> – Realtime control command structure</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.waitRunning">
+<span class="sig-name descname"><span class="pre">waitRunning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.waitRunning" title="Permalink to this definition"></a></dt>
+<dd><p>Blocking wait until execution is complete</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Timeout in ms</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Return Value</strong>:</dt><dd><ul>
+<li><p>0: Call successful</p></li>
+<li><p>Other: Call failed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Controller mode description</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: Enable motion control features and use high-level motion control APIs</p></li>
+<li><p><strong>EnableController = false</strong>: Activate low-level control mode and directly control the motor layer</p></li>
+</ul>
+<p>Before using motion control features, make sure the controller mode is set correctly.Before using motion control features, make sure the controller mode is set correctly.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum.html" class="btn btn-neutral float-left" title="Enumerations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../example/index.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025 Beijing Siling Robot Technology Co., Ltd..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  
+   
+  ﻿<div id="doc-toolbar">
+  <label>
+    
+      Language:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H23-EVT/v0.10.2/cpp/zh_CN/"
+              >
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H23-EVT/v0.10.2/cpp/en/"
+              selected>
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      Version:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H23-EVT/v0.10.2/cpp/en/en/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+
+  
+
+
+</body>
+</html>

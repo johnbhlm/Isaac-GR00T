@@ -1,0 +1,5 @@
+# 请求部分
+uint32 motor_index          # 请求的关节索引数组
+---
+# 响应部分
+int32 result

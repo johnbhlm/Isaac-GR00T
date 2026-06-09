@@ -1,0 +1,2355 @@
+﻿
+﻿
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>类 &mdash; H10-W SDK用户手册</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=03768ecb" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=724c0c0a"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+      <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="错误码列表" href="error.html" />
+    <link rel="prev" title="结构体" href="struct.html" />
+  
+   
+  <link rel="stylesheet" href="../../_static/toolbar.css">
+  <script defer src="../../_static/toolbar.js"></script>
+
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            H10-W SDK用户手册
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">简介</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#id2">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#id3">平台支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#id4">坐标系定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#id5">关节索引与运动范围</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">安装教程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#ubuntu-22-04">Ubuntu 22.04</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#sdk">1. 解压 SDK 软件包</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#id2">2. 配置环境变量</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_cpp/index.html">C++ 接口说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api_cpp/humanoid/index.html">humanoid 命名空间</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid/enum.html">枚举</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/enum.html#humanoid-powerstate">humanoid::PowerState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/enum.html#humanoid-brakestate">humanoid::BrakeState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/enum.html#humanoid-controlpolicy">humanoid::ControlPolicy</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid/struct.html">结构体</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/struct.html#humanoid-controllerversion">humanoid::ControllerVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/struct.html#humanoid-driverversion">humanoid::DriverVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/struct.html#humanoid-monitorversion">humanoid::MonitorVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/struct.html#humanoid-robotversion">humanoid::RobotVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/struct.html#humanoid-microphonestatus">humanoid::MicrophoneStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/struct.html#humanoid-speakerstatus">humanoid::SpeakerStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/struct.html#humanoid-controllermessageparams">humanoid::ControllerMessageParams</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html">类型别名</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html#humanoid-jointtarget">humanoid::JointTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html#humanoid-jointlimit">humanoid::JointLimit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html#humanoid-jointmaxacc">humanoid::JointMaxAcc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html#humanoid-jointmaxvel">humanoid::JointMaxVel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html#humanoid-carttransmaxacc">humanoid::CartTransMaxAcc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html#humanoid-carttransmaxvel">humanoid::CartTransMaxVel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html#humanoid-cartrotamaxacc">humanoid::CartRotaMaxAcc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html#humanoid-cartrotamaxvel">humanoid::CartRotaMaxVel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_cpp/humanoid_h10w/index.html">humanoid::h10w 命名空间</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h10w/enum.html">枚举与关节索引</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/enum.html#h10w-int">H10w 关节索引（int）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/enum.html#humanoid-h10w-cartindex">humanoid::h10w::CartIndex</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html">结构体</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-realtimejointsparams">humanoid::h10w::RealtimeJointsParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-realtimetcpparams">humanoid::h10w::RealtimeTcpParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-lineartarget">humanoid::h10w::LinearTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-tcpposeparams">humanoid::h10w::TcpPoseParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-movemessageparams">humanoid::h10w::MoveMessageParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-errormessageparams">humanoid::h10w::ErrorMessageParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-motorcmd">humanoid::h10w::MotorCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-basecmd">humanoid::h10w::BaseCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-elevatorcmd">humanoid::h10w::ElevatorCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-grippercmd">humanoid::h10w::GripperCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-pcucmd">humanoid::h10w::PCUCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-motorstate">humanoid::h10w::MotorState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-imustate">humanoid::h10w::IMUState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-basestate">humanoid::h10w::BaseState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-elevatorstate">humanoid::h10w::ElevatorState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-gripperstate">humanoid::h10w::GripperState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-pcustate">humanoid::h10w::PCUState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-batterystate">humanoid::h10w::BatteryState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-lowcmd">humanoid::h10w::LowCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/struct.html#humanoid-h10w-lowstate">humanoid::h10w::LowState</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h10w/class.html">类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/class.html#humanoid-h10w-h10wchassis">humanoid::h10w::H10wChassis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/class.html#humanoid-h10w-h10wmotion">humanoid::h10w::H10wMotion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/class.html#humanoid-h10w-h10wparams">humanoid::h10w::H10wParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/class.html#humanoid-h10w-h10wstatus">humanoid::h10w::H10wStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/class.html#humanoid-h10w-h10wsystem">humanoid::h10w::H10wSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api_cpp/humanoid_h10w/class.html#humanoid-h10w-h10wlowlevel">humanoid::h10w::H10wLowLevel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h10w/error.html">错误码列表</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Python 接口说明</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../humanoid/index.html">humanoid_sdk_py 模块说明</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/enum.html">枚举</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/enum.html#powerstate">PowerState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/enum.html#brakestate">BrakeState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/enum.html#controlpolicy">ControlPolicy</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/struct.html">结构体</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/struct.html#driverversion">DriverVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/struct.html#controllerversion">ControllerVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/struct.html#monitorversion">MonitorVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/struct.html#robotversion">RobotVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/struct.html#microphonestatus">MicrophoneStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/struct.html#speakerstatus">SpeakerStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../humanoid/struct.html#controllermessageparams">ControllerMessageParams</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">humanoid_sdk_py.h10w 模块说明</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">枚举</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum.html#jointindex-int">JointIndex（int 映射）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum.html#cartindex">CartIndex</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html">结构体</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#realtimejointsparams">RealtimeJointsParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#realtimetcpparams">RealtimeTcpParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#lineartarget">LinearTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#tcpposeparams">TcpPoseParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#movemessageparams">MoveMessageParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#errormessageparams">ErrorMessageParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#motorcmd">MotorCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#basecmd">BaseCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#elevatorcmd">ElevatorCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#grippercmd">GripperCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#pcucmd">PCUCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#lowcmd">LowCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#motorstate">MotorState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#imustate">IMUState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#basestate">BaseState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#elevatorstate">ElevatorState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#gripperstate">GripperState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#pcustate">PCUState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#batterystate">BatteryState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct.html#lowstate">LowState</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#h10wchassis">H10wChassis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h10wmotion">H10wMotion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h10wparams">H10wParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h10wstatus">H10wStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h10wsystem">H10wSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#h10wlowlevel">H10wLowLevel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="error.html">错误码列表</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../example/index.html">开始使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../example/cpp.html">C++ 使用示例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../example/cpp.html#id1">配置环境变量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../example/cpp.html#id2">构建一个简单示例程序</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../example/cpp.html#main-cpp">1. 创建 main.cpp 文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../example/cpp.html#cmakelists-txt">2. 创建 CMakeLists.txt 文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../example/cpp.html#id3">3. 编译并运行示例程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../example/python.html">Python 使用示例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../example/python.html#id1">配置环境变量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../example/python.html#id2">构建一个简单示例程序</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../example/python.html#example-py">1. 创建 example.py 文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../example/python.html#id3">2. 运行示例程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">常见问题</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">主题切换</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx RTD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theme_furo/api_py/humanoid_h10w/class.html">Furo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">H10-W SDK用户手册</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Python 接口说明</a></li>
+          <li class="breadcrumb-item"><a href="index.html">humanoid_sdk_py.h10w 模块说明</a></li>
+      <li class="breadcrumb-item active">类</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>类<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<section id="h10wchassis">
+<h2>H10wChassis<a class="headerlink" href="#h10wchassis" title="此标题的永久链接"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wChassis</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis" title="永久链接至目标"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w 底盘接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.baseControl">
+<span class="sig-name descname"><span class="pre">baseControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.baseControl" title="永久链接至目标"></a></dt>
+<dd><p>底盘抱闸控制</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>control_word</strong> – 控制字。bit0 = 0：disable servo, bit0 = 1:enable servo。</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.getChassisMaxVel">
+<span class="sig-name descname"><span class="pre">getChassisMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.getChassisMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>获取底盘最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, (linear_velocity, angular_velocity)) ：包含底盘线速度和角速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, tuple[float, float] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>(linear_velocity, angular_velocity): tuple[float, float] | None</dt><dd><ul class="simple">
+<li><p>linear_velocity (float): 底盘最大线速度，单位m/s</p></li>
+<li><p>angular_velocity (float): 底盘最大角速度，单位rad/s</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.getChassisSpeed">
+<span class="sig-name descname"><span class="pre">getChassisSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.getChassisSpeed" title="永久链接至目标"></a></dt>
+<dd><p>获取底盘速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, (linear_velocity, angular_velocity)) ：包含底盘线速度和角速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, tuple[float, float] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>(linear_velocity, angular_velocity): tuple[float, float] | None</dt><dd><ul class="simple">
+<li><p>linear_velocity (float): 底盘线速度，单位m/s</p></li>
+<li><p>angular_velocity (float): 底盘角速度，单位rad/s</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.getLocalization">
+<span class="sig-name descname"><span class="pre">getLocalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.getLocalization" title="永久链接至目标"></a></dt>
+<dd><p>获取定位信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, (pos_x, pos_y, is_valid)) ：包含状态码和定位信息的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, tuple[float, float, bool] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>(pos_x, pos_y, is_valid): tuple[float, float, bool] | None</dt><dd><ul class="simple">
+<li><p>pos_x (float): X 坐标，单位：m</p></li>
+<li><p>pos_y (float): Y 坐标，单位：m</p></li>
+<li><p>is_valid (bool): 定位是否有效</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.getOdometryMessage">
+<span class="sig-name descname"><span class="pre">getOdometryMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.getOdometryMessage" title="永久链接至目标"></a></dt>
+<dd><p>获取里程计信息，包括累计运行时间和累计里程</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, (cur_time, cur_mileage)) ：包含状态码和里程计信息的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, tuple[int, int] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>(cur_time, cur_mileage): tuple[int, int] | None</dt><dd><ul class="simple">
+<li><p>cur_time (int): 累计运行时间，单位：s</p></li>
+<li><p>cur_mileage (int): 累计里程，单位：m</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.setChassisMaxVel">
+<span class="sig-name descname"><span class="pre">setChassisMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.setChassisMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>设置底盘最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_velocity</strong> – 底盘最大线速度，单位：m/s</p></li>
+<li><p><strong>angular_velocity</strong> – 底盘最大角速度，单位：rad/s</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.setLocalization">
+<span class="sig-name descname"><span class="pre">setLocalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.setLocalization" title="永久链接至目标"></a></dt>
+<dd><p>设置定位信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_x</strong> – X 坐标，单位：m</p></li>
+<li><p><strong>pos_y</strong> – Y 坐标，单位：m</p></li>
+<li><p><strong>is_valid</strong> – 定位是否有效</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wChassis.speedChassis">
+<span class="sig-name descname"><span class="pre">speedChassis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wChassis" title="humanoid_sdk_py.h10w.H10wChassis"><span class="pre">humanoid_sdk_py.h10w.H10wChassis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wChassis.speedChassis" title="永久链接至目标"></a></dt>
+<dd><p>底盘速度控制</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_velocity</strong> – 底盘线速度，单位：m/s</p></li>
+<li><p><strong>angular_velocity</strong> – 底盘角速度，单位：rad/s</p></li>
+<li><p><strong>lifetime</strong> – 命令有效时间，单位：s</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h10wmotion">
+<h2>H10wMotion<a class="headerlink" href="#h10wmotion" title="此标题的永久链接"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wMotion</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion" title="永久链接至目标"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w 运动接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.enableRealtimeCmd">
+<span class="sig-name descname"><span class="pre">enableRealtimeCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.enableRealtimeCmd" title="永久链接至目标"></a></dt>
+<dd><p>启用或禁用实时指令</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – true: 启用实时指令；false: 禁用实时指令</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>开启实时指令控制模式后，无法使用任何非实时指令进行运动控制。</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.getControlPolicy">
+<span class="sig-name descname"><span class="pre">getControlPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.getControlPolicy" title="永久链接至目标"></a></dt>
+<dd><p>获取机器人当前控制策略</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, policy) ：包含状态码和控制策略的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.ControlPolicy" title="humanoid_sdk_py.ControlPolicy">ControlPolicy</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>policy: ControlPolicy | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 ControlPolicy 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.getSafeMode">
+<span class="sig-name descname"><span class="pre">getSafeMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.getSafeMode" title="永久链接至目标"></a></dt>
+<dd><p>获取机器人安全模式状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, mode) ：包含状态码和安全模式状态的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, bool | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>mode: bool | None</dt><dd><ul class="simple">
+<li><p>true: 处于安全模式</p></li>
+<li><p>false: 未处于安全模式</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.requestLinearMove">
+<span class="sig-name descname"><span class="pre">requestLinearMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.LinearTarget" title="humanoid_sdk_py.h10w.LinearTarget"><span class="pre">humanoid_sdk_py.h10w.LinearTarget</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.requestLinearMove" title="永久链接至目标"></a></dt>
+<dd><p>直线运动请求</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>joint_targets</strong> – 直线目标</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.requestMultiJointsMove">
+<span class="sig-name descname"><span class="pre">requestMultiJointsMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.requestMultiJointsMove" title="永久链接至目标"></a></dt>
+<dd><p>多个关节运动请求</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joint_targets</strong> – 关节目标</p></li>
+<li><p><strong>velocity</strong> – 目标关节速度百分比，范围（0，1）</p></li>
+<li><p><strong>acc</strong> – 目标关节加速度百分比，范围（0，1）</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.requestSingleJointMove">
+<span class="sig-name descname"><span class="pre">requestSingleJointMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.requestSingleJointMove" title="永久链接至目标"></a></dt>
+<dd><p>单个关节运动请求</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joint_target</strong> – 关节目标</p></li>
+<li><p><strong>velocity</strong> – 目标关节速度百分比，范围（0，1）</p></li>
+<li><p><strong>acc</strong> – 目标关节加速度百分比，范围（0，1）</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.requestStop">
+<span class="sig-name descname"><span class="pre">requestStop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.requestStop" title="永久链接至目标"></a></dt>
+<dd><p>停止运动</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.servoJoint">
+<span class="sig-name descname"><span class="pre">servoJoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.RealtimeJointsParams" title="humanoid_sdk_py.h10w.RealtimeJointsParams"><span class="pre">humanoid_sdk_py.h10w.RealtimeJointsParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.servoJoint" title="永久链接至目标"></a></dt>
+<dd><p>执行关节空间实时伺服运动</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – 关节目标参数，包含关节角度和有效标志</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.servoLinear">
+<span class="sig-name descname"><span class="pre">servoLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.RealtimeTcpParams" title="humanoid_sdk_py.h10w.RealtimeTcpParams"><span class="pre">humanoid_sdk_py.h10w.RealtimeTcpParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.servoLinear" title="永久链接至目标"></a></dt>
+<dd><p>执行直线空间实时伺服运动（TCP轨迹）</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – 直线目标参数，包含位姿和有效标志</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.setControlPolicy">
+<span class="sig-name descname"><span class="pre">setControlPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.ControlPolicy" title="humanoid_sdk_py.ControlPolicy"><span class="pre">humanoid_sdk_py.ControlPolicy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.setControlPolicy" title="永久链接至目标"></a></dt>
+<dd><p>设置机器人控制策略</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>policy</strong> – 控制策略，FULL_BODY 或 SINGLE_ARM</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.setSafeMode">
+<span class="sig-name descname"><span class="pre">setSafeMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.setSafeMode" title="永久链接至目标"></a></dt>
+<dd><p>启用或禁用机器人安全模式
+在安全模式下，可以将超过限位的关节恢复到正常范围，以确保操作安全。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> – true 启用安全模式，false 禁用安全模式</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>在安全模式下，无法使用任何实时指令进行运动控制。</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.speedJoint">
+<span class="sig-name descname"><span class="pre">speedJoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.RealtimeJointsParams" title="humanoid_sdk_py.h10w.RealtimeJointsParams"><span class="pre">humanoid_sdk_py.h10w.RealtimeJointsParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.speedJoint" title="永久链接至目标"></a></dt>
+<dd><p>执行关节空间速度控制运动</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – 关节目标参数，包含关节速度和有效标志</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.speedLinear">
+<span class="sig-name descname"><span class="pre">speedLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.RealtimeTcpParams" title="humanoid_sdk_py.h10w.RealtimeTcpParams"><span class="pre">humanoid_sdk_py.h10w.RealtimeTcpParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.speedLinear" title="永久链接至目标"></a></dt>
+<dd><p>执行直线空间速度控制运动（TCP速度）</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – 直线目标参数，包含TCP速度和有效标志</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wMotion.waitMove">
+<span class="sig-name descname"><span class="pre">waitMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wMotion" title="humanoid_sdk_py.h10w.H10wMotion"><span class="pre">humanoid_sdk_py.h10w.H10wMotion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wMotion.waitMove" title="永久链接至目标"></a></dt>
+<dd><p>等待运动完成</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – 超时时间（毫秒）</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>控制器模式说明</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: 启用运动控制功能，可以使用高级运动控制API</p></li>
+<li><p><strong>EnableController = false</strong>: 激活底层控制模式，直接控制电机底层</p></li>
+</ul>
+<p>在使用运动控制功能前，请确保已正确设置控制器模式。</p>
+</div>
+</section>
+<section id="h10wparams">
+<h2>H10wParams<a class="headerlink" href="#h10wparams" title="此标题的永久链接"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wParams</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams" title="永久链接至目标"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w 参数接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.forwardKinematics">
+<span class="sig-name descname"><span class="pre">forwardKinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.forwardKinematics" title="永久链接至目标"></a></dt>
+<dd><p>运动学正解计算</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – 需要计算的笛卡尔坐标系末端索引列表</p></li>
+<li><p><strong>joint_angles</strong> – 全身关节角度</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>(code, pose) ：包含状态码和TCP位姿的元组</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, list[<a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.TcpPoseParams" title="humanoid_sdk_py.h10w.TcpPoseParams">TcpPoseParams</a>] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>pose: list[TcpPoseParams] | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 TcpPoseParams 列表:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxAcc">
+<span class="sig-name descname"><span class="pre">getCartRotaMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>获取笛卡尔旋转最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartRotaMaxAccList) ：包含状态码和笛卡尔旋转最大加速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartRotaMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartRotaMaxAccList: CartRotaMaxAcc | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartRotaMaxAcc 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxVel">
+<span class="sig-name descname"><span class="pre">getCartRotaMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartRotaMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>获取笛卡尔旋转最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartRotaMaxVelList) ：包含状态码和笛卡尔旋转最大速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartRotaMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartRotaMaxVelList: CartRotaMaxVel | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartRotaMaxVel 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartTransMaxAcc">
+<span class="sig-name descname"><span class="pre">getCartTransMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartTransMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>获取笛卡尔平移最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartTransMaxAccList) ：包含状态码和笛卡尔平移最大加速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartTransMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartTransMaxAccList: CartTransMaxAcc | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartTransMaxAcc 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartTransMaxVel">
+<span class="sig-name descname"><span class="pre">getCartTransMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartTransMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>获取笛卡尔平移最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartTransMaxVelList) ：包含状态码和笛卡尔平移最大速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartTransMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartTransMaxVelList: CartTransMaxVel | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartTransMaxVel 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getCartesianControlParams">
+<span class="sig-name descname"><span class="pre">getCartesianControlParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getCartesianControlParams" title="永久链接至目标"></a></dt>
+<dd><p>获取笛卡尔控制参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartesianControlParamsList) ：包含状态码和笛卡尔控制参数的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartesianControlParams | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartesianControlParamsList: CartesianControlParams | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartesianControlParams 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getJointControlParams">
+<span class="sig-name descname"><span class="pre">getJointControlParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getJointControlParams" title="永久链接至目标"></a></dt>
+<dd><p>获取关节控制参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointControlParamsList) ：包含状态码和关节控制参数的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointControlParams | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>jointControlParamsList: JointControlParams | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 JointControlParams 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getJointMaxAcc">
+<span class="sig-name descname"><span class="pre">getJointMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getJointMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>获取关节最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointMaxAccList) ：包含状态码和关节最大加速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>jointMaxAccList: JointMaxAcc | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 JointMaxAcc 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getJointMaxVel">
+<span class="sig-name descname"><span class="pre">getJointMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getJointMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>获取关节最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointMaxVelList) ：包含状态码和关节最大速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>jointMaxVelList: JointMaxVel | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 JointMaxVel 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getJointSoftLimit">
+<span class="sig-name descname"><span class="pre">getJointSoftLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getJointSoftLimit" title="永久链接至目标"></a></dt>
+<dd><p>获取关节软限位</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointLimitList) ：包含状态码和关节软限位的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointLimit | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>jointLimitList: JointLimit | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 JointLimit 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechCartRotMaxAcc">
+<span class="sig-name descname"><span class="pre">getMechCartRotMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartRotMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>获取机械笛卡尔旋转最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartMaxAccList) ：包含状态码和机械笛卡尔旋转最大加速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartRotaMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartMaxAccList: CartRotaMaxAcc | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartRotaMaxAcc 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechCartRotaMaxVel">
+<span class="sig-name descname"><span class="pre">getMechCartRotaMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartRotaMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>获取机械笛卡尔旋转最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartMaxVelList) ：包含状态码和机械笛卡尔旋转最大速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartRotaMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartMaxVelList: CartRotaMaxVel | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartRotaMaxVel 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxAcc">
+<span class="sig-name descname"><span class="pre">getMechCartTransMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>获取机械笛卡尔平移最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartTransMaxAccList) ：包含状态码和机械笛卡尔平移最大加速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartTransMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartTransMaxAccList: CartTransMaxAcc | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartTransMaxAcc 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxVel">
+<span class="sig-name descname"><span class="pre">getMechCartTransMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechCartTransMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>获取机械笛卡尔平移最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, cartTransMaxVelList) ：包含状态码和机械笛卡尔平移最大速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, CartTransMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>cartTransMaxVelList: CartTransMaxVel | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 CartTransMaxVel 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechJointLimit">
+<span class="sig-name descname"><span class="pre">getMechJointLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointLimit" title="永久链接至目标"></a></dt>
+<dd><p>获取关节机械限位</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointLimitList) ：包含状态码和关节机械限位的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointLimit | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>jointLimitList: JointLimit | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 JointLimit 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechJointMaxAcc">
+<span class="sig-name descname"><span class="pre">getMechJointMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>获取机械关节最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointMaxAccList) ：包含状态码和机械关节最大加速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointMaxAcc | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>jointMaxAccList: JointMaxAcc | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 JointMaxAcc 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getMechJointMaxVel">
+<span class="sig-name descname"><span class="pre">getMechJointMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getMechJointMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>获取机械关节最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, jointMaxVelList) ：包含状态码和机械关节最大速度的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, JointMaxVel | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>jointMaxVelList: JointMaxVel | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 JointMaxVel 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getTcpOffset">
+<span class="sig-name descname"><span class="pre">getTcpOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getTcpOffset" title="永久链接至目标"></a></dt>
+<dd><p>获取TCP偏移参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, tcpOffsetParamsList) ：包含状态码和TCP偏移参数的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, TcpOffsetParams | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>tcpOffsetParamsList: TcpOffsetParams | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 TcpOffsetParams 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.getTcpPayload">
+<span class="sig-name descname"><span class="pre">getTcpPayload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.getTcpPayload" title="永久链接至目标"></a></dt>
+<dd><p>获取TCP负载参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, tcpPayloadParamsList) ：包含状态码和TCP负载参数的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, TcpPayloadParams | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>tcpPayloadParamsList: TcpPayloadParams | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 TcpPayloadParams 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.inverseKinematics">
+<span class="sig-name descname"><span class="pre">inverseKinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.TcpPoseParams" title="humanoid_sdk_py.h10w.TcpPoseParams"><span class="pre">humanoid_sdk_py.h10w.TcpPoseParams</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.inverseKinematics" title="永久链接至目标"></a></dt>
+<dd><p>运动学逆解计算</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose</strong> – TCP位姿</p></li>
+<li><p><strong>reference_angles</strong> – 参考关节角度，用于计算距离最近的逆解</p></li>
+<li><p><strong>if_use_whole_body</strong> – 是否根据全身关节角度计算末端位姿</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>(code, joint_angles) ：包含状态码和关节角度的元组</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, list[float] | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>joint_angles: list[float] | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为浮点数列表:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxAcc">
+<span class="sig-name descname"><span class="pre">setCartRotaMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>设置笛卡尔旋转最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartRotaMaxAccList</strong> – 笛卡尔旋转最大加速度</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxVel">
+<span class="sig-name descname"><span class="pre">setCartRotaMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartRotaMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>设置笛卡尔旋转最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartRotaMaxVelList</strong> – 笛卡尔旋转最大速度</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartTransMaxAcc">
+<span class="sig-name descname"><span class="pre">setCartTransMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartTransMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>设置笛卡尔平移最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartTransMaxAccList</strong> – 笛卡尔平移最大加速度</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartTransMaxVel">
+<span class="sig-name descname"><span class="pre">setCartTransMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartTransMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>设置笛卡尔平移最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartTransMaxVelList</strong> – 笛卡尔平移最大速度</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setCartesianControlParams">
+<span class="sig-name descname"><span class="pre">setCartesianControlParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list[tuple[int,</span> <span class="pre">Annotated[list[float],</span> <span class="pre">FixedSize(6)],</span> <span class="pre">Annotated[list[float],</span> <span class="pre">FixedSize(6)],</span> <span class="pre">Annotated[list[float],</span> <span class="pre">FixedSize(6)]]]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setCartesianControlParams" title="永久链接至目标"></a></dt>
+<dd><p>设置笛卡尔控制参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartesianControlParamsList</strong> – 笛卡尔控制参数列表</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setJointControlParams">
+<span class="sig-name descname"><span class="pre">setJointControlParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setJointControlParams" title="永久链接至目标"></a></dt>
+<dd><p>设置关节控制参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointControlParamsList</strong> – 关节控制参数列表</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setJointMaxAcc">
+<span class="sig-name descname"><span class="pre">setJointMaxAcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setJointMaxAcc" title="永久链接至目标"></a></dt>
+<dd><p>设置关节最大加速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxAccList</strong> – 关节最大加速度</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setJointMaxVel">
+<span class="sig-name descname"><span class="pre">setJointMaxVel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setJointMaxVel" title="永久链接至目标"></a></dt>
+<dd><p>设置关节最大速度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxVelList</strong> – 关节最大速度</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setJointSoftLimit">
+<span class="sig-name descname"><span class="pre">setJointSoftLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setJointSoftLimit" title="永久链接至目标"></a></dt>
+<dd><p>设置关节软限位</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointLimitList</strong> – 关节软限位</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setTcpOffset">
+<span class="sig-name descname"><span class="pre">setTcpOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setTcpOffset" title="永久链接至目标"></a></dt>
+<dd><p>设置TCP偏移参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tcpOffsetParamsList</strong> – TCP偏移参数</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wParams.setTcpPayload">
+<span class="sig-name descname"><span class="pre">setTcpPayload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wParams" title="humanoid_sdk_py.h10w.H10wParams"><span class="pre">humanoid_sdk_py.h10w.H10wParams</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wParams.setTcpPayload" title="永久链接至目标"></a></dt>
+<dd><p>设置TCP负载参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tcpPayloadParamsList</strong> – TCP负载参数</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h10wstatus">
+<h2>H10wStatus<a class="headerlink" href="#h10wstatus" title="此标题的永久链接"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wStatus</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wStatus" title="永久链接至目标"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w 状态接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wStatus.getControllerMessage">
+<span class="sig-name descname"><span class="pre">getControllerMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus" title="humanoid_sdk_py.h10w.H10wStatus"><span class="pre">humanoid_sdk_py.h10w.H10wStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wStatus.getControllerMessage" title="永久链接至目标"></a></dt>
+<dd><p>获取当前控制器状态信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, controller_message)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.ControllerMessageParams" title="humanoid_sdk_py.ControllerMessageParams">ControllerMessageParams</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>error_message: ControllerMessageParams | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 ControllerMessageParams 对象</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wStatus.getErrorMessage">
+<span class="sig-name descname"><span class="pre">getErrorMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus" title="humanoid_sdk_py.h10w.H10wStatus"><span class="pre">humanoid_sdk_py.h10w.H10wStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wStatus.getErrorMessage" title="永久链接至目标"></a></dt>
+<dd><p>获取当前错误状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, error_message) ：包含状态码和错误信息的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.ErrorMessageParams" title="humanoid_sdk_py.h10w.ErrorMessageParams">ErrorMessageParams</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>error_message: ErrorMessageParams | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 ErrorMessageParams 对象</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wStatus.getMoveMessage">
+<span class="sig-name descname"><span class="pre">getMoveMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wStatus" title="humanoid_sdk_py.h10w.H10wStatus"><span class="pre">humanoid_sdk_py.h10w.H10wStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wStatus.getMoveMessage" title="永久链接至目标"></a></dt>
+<dd><p>获取当前运动状态信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, move_message) ：包含状态码和运动信息的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.MoveMessageParams" title="humanoid_sdk_py.h10w.MoveMessageParams">MoveMessageParams</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<p>code: int</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>move_message: MoveMessageParams | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 MoveMessageParams 对象</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h10wsystem">
+<h2>H10wSystem<a class="headerlink" href="#h10wsystem" title="此标题的永久链接"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wSystem</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem" title="永久链接至目标"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w 系统接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.calibrate90DegPosition">
+<span class="sig-name descname"><span class="pre">calibrate90DegPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.calibrate90DegPosition" title="永久链接至目标"></a></dt>
+<dd><p>标定指定关节的90°位置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – 要标定的关节索引（int），映射见 common/h10w_def.h 中 JointIndexValue，升降机构和夹爪暂不支持</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.calibrateMechanicalZeroPosition">
+<span class="sig-name descname"><span class="pre">calibrateMechanicalZeroPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.calibrateMechanicalZeroPosition" title="永久链接至目标"></a></dt>
+<dd><p>标定指定关节的机械零位位置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – 要标定的关节索引（int），映射见 common/h10w_def.h 中 JointIndexValue，升降机构和夹爪暂不支持</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.clearError">
+<span class="sig-name descname"><span class="pre">clearError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.clearError" title="永久链接至目标"></a></dt>
+<dd><p>清除机器人错误状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.controlBrake">
+<span class="sig-name descname"><span class="pre">controlBrake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.BrakeState" title="humanoid_sdk_py.BrakeState"><span class="pre">humanoid_sdk_py.BrakeState</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.controlBrake" title="永久链接至目标"></a></dt>
+<dd><p>控制机器人抱闸状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – 抱闸状态，BrakeState::BRAKE_OFF: 关闭抱闸  BrakeState::BRAKE_ON: 打开抱闸</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.controlPower">
+<span class="sig-name descname"><span class="pre">controlPower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.PowerState" title="humanoid_sdk_py.PowerState"><span class="pre">humanoid_sdk_py.PowerState</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.controlPower" title="永久链接至目标"></a></dt>
+<dd><p>控制机器人电源状态</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>调用 <cite>controlPower</cite> 接口时，请预留足够的时间间隔，避免上电或下电尚未完全生效就进行后续操作。</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – 电源状态，PowerState::POWER_ON: 上电 PowerState::POWER_OFF: 下电</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.enableController">
+<span class="sig-name descname"><span class="pre">enableController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.enableController" title="永久链接至目标"></a></dt>
+<dd><p>启用或禁用控制器</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – true: 启用；false: 禁用</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>开启机器人控制器后，控制器可以发送动作命令给驱动器。禁用后，控制器将不再向驱动器发送任何动作命令，以防止安全事故。</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.getMicrophone">
+<span class="sig-name descname"><span class="pre">getMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.getMicrophone" title="永久链接至目标"></a></dt>
+<dd><p>获取麦克风状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, status) ：包含状态码和麦克风状态的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.MicrophoneStatus" title="humanoid_sdk_py.MicrophoneStatus">MicrophoneStatus</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>status: MicrophoneStatus | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 MicrophoneStatus 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.getPushPeriod">
+<span class="sig-name descname"><span class="pre">getPushPeriod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.getPushPeriod" title="永久链接至目标"></a></dt>
+<dd><p>获取推送周期</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, period) ：包含状态码和推送周期的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, int | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>period: int | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为推送周期（毫秒）:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.getRobotVersion">
+<span class="sig-name descname"><span class="pre">getRobotVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.getRobotVersion" title="永久链接至目标"></a></dt>
+<dd><p>获取机器人版本信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, version) ：包含状态码和版本信息的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.RobotVersion" title="humanoid_sdk_py.RobotVersion">RobotVersion</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>version: RobotVersion | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 RobotVersion 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.getSpeaker">
+<span class="sig-name descname"><span class="pre">getSpeaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.getSpeaker" title="永久链接至目标"></a></dt>
+<dd><p>获取扬声器状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, status) ：包含状态码和扬声器状态的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.SpeakerStatus" title="humanoid_sdk_py.SpeakerStatus">SpeakerStatus</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>status: SpeakerStatus | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 SpeakerStatus 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.isControllerEnabled">
+<span class="sig-name descname"><span class="pre">isControllerEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.isControllerEnabled" title="永久链接至目标"></a></dt>
+<dd><p>检查机器人控制器是否开启</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, enable) ：包含状态码和控制器状态的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, bool | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>enable: bool | None</dt><dd><ul class="simple">
+<li><p>true: 控制器已启用</p></li>
+<li><p>false: 控制器已禁用</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.saveJointParameters">
+<span class="sig-name descname"><span class="pre">saveJointParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.saveJointParameters" title="永久链接至目标"></a></dt>
+<dd><p>保存指定关节的零位数据</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – 要设置机械零位位置的关节索引（int），映射见 common/h10w_def.h 中 JointIndexValue，升降机构和夹爪暂不支持</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.setMicrophone">
+<span class="sig-name descname"><span class="pre">setMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.MicrophoneStatus" title="humanoid_sdk_py.MicrophoneStatus"><span class="pre">humanoid_sdk_py.MicrophoneStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.setMicrophone" title="永久链接至目标"></a></dt>
+<dd><p>设置麦克风状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – 麦克风状态结构体</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.setPushPeriod">
+<span class="sig-name descname"><span class="pre">setPushPeriod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.setPushPeriod" title="永久链接至目标"></a></dt>
+<dd><p>设置推送周期</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>period</strong> – 推送周期（毫秒）</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.setSpeaker">
+<span class="sig-name descname"><span class="pre">setSpeaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.SpeakerStatus" title="humanoid_sdk_py.SpeakerStatus"><span class="pre">humanoid_sdk_py.SpeakerStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.setSpeaker" title="永久链接至目标"></a></dt>
+<dd><p>设置扬声器状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – 扬声器状态结构体</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wSystem.statusPower">
+<span class="sig-name descname"><span class="pre">statusPower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wSystem" title="humanoid_sdk_py.h10w.H10wSystem"><span class="pre">humanoid_sdk_py.h10w.H10wSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wSystem.statusPower" title="永久链接至目标"></a></dt>
+<dd><p>获取机器人电源状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, state)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/enum.html#humanoid_sdk_py.PowerState" title="humanoid_sdk_py.PowerState">PowerState</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 错误码</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>state: PowerState | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 PowerState 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h10wlowlevel">
+<h2>H10wLowLevel<a class="headerlink" href="#h10wlowlevel" title="此标题的永久链接"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wLowLevel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h10w.</span></span><span class="sig-name descname"><span class="pre">H10wLowLevel</span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wLowLevel" title="永久链接至目标"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H10w 底层控制接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wLowLevel.readLowState">
+<span class="sig-name descname"><span class="pre">readLowState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wLowLevel" title="humanoid_sdk_py.h10w.H10wLowLevel"><span class="pre">humanoid_sdk_py.h10w.H10wLowLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wLowLevel.readLowState" title="永久链接至目标"></a></dt>
+<dd><p>订阅底层状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, lowState) ：包含状态码和底层状态的元组</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.LowState" title="humanoid_sdk_py.h10w.LowState">LowState</a> | None]</p>
+</dd>
+</dl>
+<ul>
+<li><p><strong>返回值 1</strong>:</p>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>返回值 2</strong>:</p>
+<dl class="simple">
+<dt>lowState: LowState | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 LowState 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h10w.H10wLowLevel.writeLowCmd">
+<span class="sig-name descname"><span class="pre">writeLowCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h10w.H10wLowLevel" title="humanoid_sdk_py.h10w.H10wLowLevel"><span class="pre">humanoid_sdk_py.h10w.H10wLowLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="struct.html#humanoid_sdk_py.h10w.LowCmd" title="humanoid_sdk_py.h10w.LowCmd"><span class="pre">humanoid_sdk_py.h10w.LowCmd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h10w.H10wLowLevel.writeLowCmd" title="永久链接至目标"></a></dt>
+<dd><p>发布底层控制命令</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lowCmd</strong> – 底层控制命令</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>控制器模式说明</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: 启用运动控制功能，可以使用高级运动控制API</p></li>
+<li><p><strong>EnableController = false</strong>: 激活底层控制模式，直接控制电机底层</p></li>
+</ul>
+<p>在使用运动控制功能前，请确保已正确设置控制器模式。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="struct.html" class="btn btn-neutral float-left" title="结构体" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="error.html" class="btn btn-neutral float-right" title="错误码列表" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2025 北京思灵机器人科技有限责任公司。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  
+   
+  ﻿<div id="doc-toolbar">
+  <label>
+    
+      语言:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H10-W/v0.10.2/cpp/zh_CN/"
+              selected>
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H10-W/v0.10.2/cpp/en/"
+              >
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      版本:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H10-W/v0.10.2/cpp/zh_CN/zh_CN/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/ErrorMessage.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__error_message__idl__
+#define __controller__msg__error_message__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct ErrorMessage_ {
+unsigned long id_;
+octet level_;
+octet module_;
+long error_code_;
+string msg_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__error_message__idl__

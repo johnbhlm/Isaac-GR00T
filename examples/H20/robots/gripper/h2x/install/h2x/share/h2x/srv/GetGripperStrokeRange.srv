@@ -1,0 +1,7 @@
+# 请求部分
+uint32 motor_index
+---
+# 响应部分
+int32 result
+float32 min_stroke 
+float32 max_stroke

@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/MotorState.msg
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module msg {
+    typedef float float__2[2];
+    typedef uint32 uint32__4[4];
+    struct MotorState {
+      uint8 mode;
+
+      uint8 operation_mode;
+
+      float q;
+
+      float dq;
+
+      float ddq;
+
+      float cur;
+
+      float tau_est;
+
+      float__2 temperature;
+
+      float kp;
+
+      float kd;
+
+      int32 error_code;
+
+      int32 warning_code;
+
+      uint32__4 reserved;
+    };
+  };
+};

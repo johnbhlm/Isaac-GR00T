@@ -1,0 +1,34 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/FPControlMessage.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__fp_control_message__idl__
+#define __controller__msg__fp_control_message__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct FPControlMessage_ {
+long joint_index_;
+double position_;
+double velocity_;
+double force_;
+double kp_;
+double kd_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__fp_control_message__idl__

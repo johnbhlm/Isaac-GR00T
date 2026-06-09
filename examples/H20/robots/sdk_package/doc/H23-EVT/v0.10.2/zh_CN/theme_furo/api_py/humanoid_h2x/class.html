@@ -1,0 +1,2494 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="开始使用" href="../../example/index.html" /><link rel="prev" title="枚举" href="enum.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.08.06 -->
+        <title>类 - H23-EVT 用户手册</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=204bd9fb" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #007acc;
+  --color-brand-content: #005a9e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+      }
+    }
+  }
+</style>
+  
+  
+    <link rel="stylesheet" href="../../_static/toolbar.css">
+    <script defer src="../../_static/toolbar.js"></script>
+  
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">H23-EVT 用户手册</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">H23-EVT 用户手册</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">安装教程</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_cpp/index.html">C++ 接口说明</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of C++ 接口说明</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_cpp/humanoid/index.html">humanoid 命名空间</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of humanoid 命名空间</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid/struct.html">结构体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid/typedef.html">类型别名</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_cpp/humanoid_h2x/index.html">humanoid::h2x 命名空间</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of humanoid::h2x 命名空间</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h2x/enum.html">枚举与关节索引</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h2x/struct.html">结构体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_cpp/humanoid_h2x/class.html">类</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Python 接口说明</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Python 接口说明</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../humanoid/index.html">humanoid_sdk_py 模块说明</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py 模块说明</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/struct.html">结构体</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">humanoid_sdk_py.h2x 模块说明</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py.h2x 模块说明</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">枚举</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">类</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../example/index.html">开始使用</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 开始使用</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../example/cpp.html">C++ 使用示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../example/python.html">Python 使用示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">常见问题</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">主题切换</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../api_py/humanoid_h2x/class.html">Sphinx RTD</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Furo</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="id1">
+<h1>类<a class="headerlink" href="#id1" title="此标题的永久链接">¶</a></h1>
+<section id="motorcmd">
+<h2>MotorCmd<a class="headerlink" href="#motorcmd" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">MotorCmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>电机控制命令结构体</p>
+<p>包含电机控制模式、位置、速度、力矩等参数。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.dq">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dq</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.dq" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.kd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.kd" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.kp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kp</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.kp" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.mode" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.operation_mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operation_mode</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.operation_mode" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.q">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.q" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.reserved" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorCmd.tau">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorCmd.tau" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode</strong>： 电机控制模式，0 = Disable（命令忽略），1 = Enable（命令生效）。</p></li>
+<li><p><strong>operation_mode</strong>： 工作模式。</p></li>
+<li><p><strong>q</strong>：关节目标位置，单位：<strong>rad</strong></p></li>
+<li><p><strong>dq</strong>：关节目标速度，单位：<strong>rad/s</strong></p></li>
+<li><p><strong>tau</strong>：关节前馈力矩，单位：<strong>Nm</strong></p></li>
+<li><p><strong>kp</strong>：关节刚度系数</p></li>
+<li><p><strong>kd</strong>：关节阻尼系数</p></li>
+<li><p><strong>reserved</strong>：预留</p></li>
+</ul>
+<p>0～12 关节工作模式：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件模式码</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>力位混控模式（默认工作模式）</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>伺服位置控制模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x02</p></td>
+<td><p>伺服速度控制模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x03</p></td>
+<td><p>电流、力矩控制模式和刹车控制指令</p></td>
+</tr>
+<tr class="row-even"><td><p>0x04</p></td>
+<td><p>配置指令</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x05</p></td>
+<td><p>电机控制参数查询指令</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>15~28、35~36 关节工作模式：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件模式码</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>力位混控模式（默认工作模式）</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x09</p></td>
+<td><p>轮廓位置模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0A</p></td>
+<td><p>轮廓速度模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0B</p></td>
+<td><p>轮廓转矩模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0C</p></td>
+<td><p>回原模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x06</p></td>
+<td><p>周期同步位置模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x07</p></td>
+<td><p>周期同步速度模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x08</p></td>
+<td><p>周期同步转矩模式</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></blockquote>
+</div>
+</section>
+<section id="lowcmd">
+<h2>LowCmd<a class="headerlink" href="#lowcmd" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowCmd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">LowCmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowCmd" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x 低级别控制命令结构体</p>
+<p>包含机器人底层控制命令，包括电机控制命令等。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowCmd.mode_pr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode_pr</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowCmd.mode_pr" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowCmd.motor_cmd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_cmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowCmd.motor_cmd" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowCmd.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowCmd.reserved" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode_pr</strong>：并联机构（脚踝和腰部）控制模式</p>
+<ul>
+<li><p>0：PR (俯仰/滚转角度控制) [默认]</p></li>
+<li><p>1：AB (电机直接控制)</p></li>
+</ul>
+</li>
+<li><p><strong>motorCmd[37]</strong>：电机控制指令</p></li>
+<li><p><strong>reserved[4]</strong>：预留</p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+<section id="realtimecmd">
+<h2>RealtimeCmd<a class="headerlink" href="#realtimecmd" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">RealtimeCmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>实时控制命令结构体</p>
+<p>包含实时控制命令，包括电机控制命令等。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd.mode_pr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode_pr</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd.mode_pr" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd.motor_cmd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_cmd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd.motor_cmd" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd.reserved" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.RealtimeCmd.time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.RealtimeCmd.time" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode_pr</strong>：并联机构控制模式</p>
+<ul>
+<li><p>0：PR (俯仰/滚转角度控制) [默认]</p></li>
+<li><p>1：AB (电机直接控制)</p></li>
+</ul>
+</li>
+<li><p><strong>motorCmd[37]</strong>：电机控制指令</p></li>
+<li><p><strong>reserved[4]</strong>：预留</p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+<section id="imustate">
+<h2>IMUState<a class="headerlink" href="#imustate" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">IMUState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>IMU状态结构体</p>
+<p>包含IMU传感器数据，如四元数、角速度、加速度等。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.accelerometer">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accelerometer</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.accelerometer" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.error_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.gyroscope">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gyroscope</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.gyroscope" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.quaternion">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quaternion</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.quaternion" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.rpy">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rpy</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.rpy" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.temperature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">temperature</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.temperature" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.IMUState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.IMUState.warning_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<ul class="simple">
+<li><p><strong>quaternion</strong>： 四元数，表示机器人坐标系绕世界坐标系的转动情况。</p>
+<ul>
+<li><p><strong>0</strong>： w</p></li>
+<li><p><strong>1</strong>： x</p></li>
+<li><p><strong>2</strong>： y</p></li>
+<li><p><strong>3</strong>： z</p></li>
+</ul>
+</li>
+<li><p><strong>gyroscope</strong>： 陀螺仪角速度（绕三个坐标轴），单位 <strong>rad/s</strong>。</p>
+<ul>
+<li><p><strong>0</strong>： x轴</p></li>
+<li><p><strong>1</strong>： y轴</p></li>
+<li><p><strong>2</strong>： z轴</p></li>
+</ul>
+</li>
+<li><p><strong>accelerometer</strong>： 加速度（三个坐标轴），单位 <strong>m/s²</strong>。</p>
+<ul>
+<li><p><strong>0</strong>： x轴</p></li>
+<li><p><strong>1</strong>： y轴</p></li>
+<li><p><strong>2</strong>： z轴</p></li>
+</ul>
+</li>
+<li><p><strong>rpy</strong>： 欧拉角 (Roll, Pitch, Yaw)，表示机器人坐标系绕世界坐标系的转动角度，单位 <strong>rad</strong>。</p>
+<ul>
+<li><p><strong>0</strong>： roll</p></li>
+<li><p><strong>1</strong>： pitch</p></li>
+<li><p><strong>2</strong>： yaw</p></li>
+</ul>
+</li>
+<li><p><strong>temperature</strong>： IMU传感器温度，单位 <strong>°C</strong>。</p></li>
+<li><p><strong>error_code</strong>： IMU错误码。</p></li>
+<li><p><strong>warning_code</strong>： IMU警告码。</p></li>
+</ul>
+</div>
+</section>
+<section id="motorstate">
+<h2>MotorState<a class="headerlink" href="#motorstate" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">MotorState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>电机状态结构体</p>
+<p>包含电机当前状态信息，如位置、速度、力矩等。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.cur">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cur</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.cur" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.ddq">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ddq</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.ddq" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.dq">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dq</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.dq" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.error_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.kd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kd</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.kd" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.kp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kp</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.kp" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.mode" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.operation_mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operation_mode</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.operation_mode" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.q">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.q" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.reserved" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.tau_est">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau_est</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.tau_est" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.temperature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">temperature</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.temperature" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.MotorState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.MotorState.warning_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode</strong>： 当前控制模式， 0 = Disable（命令忽略）， 1 = Enable（命令生效）。</p></li>
+<li><p><strong>operation_mode</strong>： 工作模式。</p></li>
+<li><p><strong>q</strong>： 关节反馈位置，单位 <strong>rad</strong>。</p></li>
+<li><p><strong>dq</strong>： 关节反馈速度，单位 <strong>rad/s</strong>。</p></li>
+<li><p><strong>ddq</strong>： 关节反馈加速度，单位 <strong>rad/s²</strong>。</p></li>
+<li><p><strong>cur</strong>： 关节反馈电流，单位 <strong>A</strong>。</p></li>
+<li><p><strong>tau_est</strong>： 关节反馈力矩，单位 <strong>N·m</strong>。</p></li>
+<li><p><strong>temperature</strong>： 关节温度，单位 <strong>°C</strong>。</p>
+<ul>
+<li><p><strong>0</strong>： 外表温度</p></li>
+<li><p><strong>1</strong>： 绕组温度</p></li>
+</ul>
+</li>
+<li><p><strong>kp</strong>： 关节刚度系数。</p></li>
+<li><p><strong>kd</strong>： 关节阻尼系数。</p></li>
+<li><p><strong>error_code</strong>： 错误码。</p></li>
+<li><p><strong>warning_code</strong>： 警告码。</p></li>
+<li><p><strong>reserved</strong>： 预留 4 个，unsigned long 类型。</p></li>
+</ul>
+<p>0～12 关节工作模式：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件模式码</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>力位混控模式（默认工作模式）</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>伺服位置控制模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x02</p></td>
+<td><p>伺服速度控制模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x03</p></td>
+<td><p>电流、力矩控制模式和刹车控制指令</p></td>
+</tr>
+<tr class="row-even"><td><p>0x04</p></td>
+<td><p>配置指令</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x05</p></td>
+<td><p>电机控制参数查询指令</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>15~28、35~36 关节工作模式：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件模式码</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>力位混控模式（默认工作模式）</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x09</p></td>
+<td><p>轮廓位置模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0A</p></td>
+<td><p>轮廓速度模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0B</p></td>
+<td><p>轮廓转矩模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0C</p></td>
+<td><p>回原模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x06</p></td>
+<td><p>周期同步位置模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x07</p></td>
+<td><p>周期同步速度模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x08</p></td>
+<td><p>周期同步转矩模式</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>电机错误码定义</p>
+<p>0~12 关节错误码定义：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件错误码</p></th>
+<th class="head"><p>错误定义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1001</p></td>
+<td><p>无错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1002</p></td>
+<td><p>电机过热</p></td>
+</tr>
+<tr class="row-even"><td><p>-1003</p></td>
+<td><p>电机过流</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1004</p></td>
+<td><p>电机电压过低</p></td>
+</tr>
+<tr class="row-even"><td><p>-1005</p></td>
+<td><p>电机编码器错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1006</p></td>
+<td><p>电机刹车电压过高</p></td>
+</tr>
+<tr class="row-even"><td><p>-1007</p></td>
+<td><p>DRV 驱动错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1203</p></td>
+<td><p>参数非法</p></td>
+</tr>
+<tr class="row-even"><td><p>-1204</p></td>
+<td><p>位置超限</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>13~28、35~36 关节错误码定义：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件错误码</p></th>
+<th class="head"><p>错误定义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1022</p></td>
+<td><p>Continuous Over Current（电机过载）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1023</p></td>
+<td><p>Mains Under Voltage（供电电压过低）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1024</p></td>
+<td><p>Mains Over Voltage（供电电压过高）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1025</p></td>
+<td><p>Temperature Device（电机温度报警）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1026</p></td>
+<td><p>Temperature Drive（驱动器温度报警）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1027</p></td>
+<td><p>Sensor Error（编码器报警）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1028</p></td>
+<td><p>Control Computing Circuit（控制电路 CPU 错误）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1029</p></td>
+<td><p>Short Circuit Earth Leakage Motor Side（输出短路报警）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1030</p></td>
+<td><p>Internal Software（内部软件错误）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1031</p></td>
+<td><p>Communication（通讯错误）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1032</p></td>
+<td><p>Following Error（跟随误差过大）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1203</p></td>
+<td><p>参数非法</p></td>
+</tr>
+<tr class="row-even"><td><p>-1204</p></td>
+<td><p>位置超限</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></blockquote>
+</div>
+</section>
+<section id="batterystate">
+<h2>BatteryState<a class="headerlink" href="#batterystate" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">BatteryState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>电池状态结构体</p>
+<p>包含电池电量、状态等信息。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.battery_low_warning">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_low_warning</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.battery_low_warning" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.battery_percentage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_percentage</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.battery_percentage" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.battery_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.battery_state" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.error_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.BatteryState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.BatteryState.warning_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">电池参数说明</p>
+<ul class="simple">
+<li><p><strong>battery_percentage</strong>：电池电量</p>
+<ul>
+<li><p>范围：<strong>0～100％</strong></p></li>
+<li><p>无效时为 <strong>0</strong></p></li>
+</ul>
+</li>
+<li><p><strong>battery_state</strong>：电池状态</p>
+<ul>
+<li><p><strong>0</strong>：无效</p></li>
+<li><p><strong>1</strong>：充电</p></li>
+<li><p><strong>2</strong>：放电</p></li>
+<li><p><strong>3</strong>：静止</p></li>
+</ul>
+</li>
+<li><p><strong>battery_level_warning</strong>：电池电量警告</p>
+<ul>
+<li><p><strong>0</strong>：无效</p></li>
+<li><p><strong>1</strong>：电池电量低警告</p></li>
+<li><p><strong>2</strong>：其余警告</p></li>
+</ul>
+</li>
+<li><p><strong>error_code</strong>：错误码</p></li>
+<li><p><strong>warning_code</strong>：警告码</p></li>
+</ul>
+</div>
+</section>
+<section id="pcustate">
+<h2>PCUState<a class="headerlink" href="#pcustate" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">PCUState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>PCU状态结构体</p>
+<p>包含电源控制单元状态信息，如紧急停止状态、电源状态、电压电流等。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.battery_voltage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_voltage</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.battery_voltage" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.control_supply_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">control_supply_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.control_supply_state" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.current_12v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_12v</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.current_12v" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.current_24v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_24v</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.current_24v" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.dcdc_bus_voltage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dcdc_bus_voltage</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.dcdc_bus_voltage" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.emergency_stop_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">emergency_stop_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.emergency_stop_state" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.motor_bus_current">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_bus_current</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.motor_bus_current" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.motor_bus_voltage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_bus_voltage</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.motor_bus_voltage" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.pcu_error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcu_error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.pcu_error_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.pcu_warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcu_warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.pcu_warning_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.power_supply_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">power_supply_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.power_supply_state" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.voltage_12v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">voltage_12v</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.voltage_12v" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.PCUState.voltage_24v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">voltage_24v</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.PCUState.voltage_24v" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<ul class="simple">
+<li><p><strong>emergency_stop_state</strong>： 急停状态，<strong>0：on</strong>，<strong>1：off</strong>。</p></li>
+<li><p><strong>control_supply_state</strong>： 控制电状态：<strong>0：待机状态</strong>，<strong>2：上电状态</strong>，<strong>4：错误状态</strong>。</p></li>
+<li><p><strong>power_supply_state</strong>： 动力电状态：<strong>0：待机状态</strong>，<strong>1：预充状态</strong>，<strong>2：上电状态</strong>，<strong>3：下电状态</strong>，<strong>4：错误状态</strong>。</p></li>
+<li><p><strong>pcu_error_code</strong>： PCU错误码。</p></li>
+<li><p><strong>pcu_warning_code</strong>： PCU警告码。</p></li>
+<li><p><strong>battery_voltage</strong>： 电池电压，单位 <strong>V</strong>。</p></li>
+<li><p><strong>motor_bus_voltage</strong>： 电机母线电压，单位 <strong>V</strong>。</p></li>
+<li><p><strong>motor_bus_current</strong>： 电机母线电流，单位 <strong>A</strong>。</p></li>
+<li><p><strong>dcdc_bus_voltage</strong>： DCDC母线电压，单位 <strong>V</strong>。</p></li>
+<li><p><strong>voltage_24v</strong>： 24V电压，单位 <strong>V</strong>。</p></li>
+<li><p><strong>voltage_12v</strong>： 12V电压，单位 <strong>V</strong>。</p></li>
+<li><p><strong>current_24v</strong>： 24V电流，单位 <strong>A</strong>。</p></li>
+<li><p><strong>current_12v</strong>： 12V电流，单位 <strong>A</strong>。</p></li>
+</ul>
+</div>
+</section>
+<section id="cdustate">
+<h2>CDUState<a class="headerlink" href="#cdustate" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.CDUState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">CDUState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.CDUState" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>CDU状态结构体</p>
+<p>包含CDU模块的错误和警告信息。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.CDUState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.CDUState.error_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.CDUState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.CDUState.warning_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">CDU 参数说明</p>
+<ul class="simple">
+<li><p><strong>cdu_error_code</strong>：CDU 错误码</p></li>
+</ul>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>CDU 错误码</p></th>
+<th class="head"><p>错误定义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1205</p></td>
+<td><p>主机低频通信错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1206</p></td>
+<td><p>PCU 低频通信错误</p></td>
+</tr>
+<tr class="row-even"><td><p>-1207</p></td>
+<td><p>LRCU 低频通信错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1208</p></td>
+<td><p>主机连续帧校验错误</p></td>
+</tr>
+<tr class="row-even"><td><p>-1209</p></td>
+<td><p>PCU 连续帧校验错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1210</p></td>
+<td><p>LRCU 连续帧校验错误</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>cdu_warning_code</strong>：CDU 警告码</p></li>
+</ul>
+</div>
+</section>
+<section id="lowstate">
+<h2>LowState<a class="headerlink" href="#lowstate" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">LowState</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x 低级别状态结构体</p>
+<p>包含机器人底层状态信息，如版本、IMU状态、电机状态、电池状态等。</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.battery_info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_info</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.battery_info" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.cdu_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cdu_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.cdu_state" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.error_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.error_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.ground_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ground_count</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.ground_count" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.ground_signal">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ground_signal</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.ground_signal" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.has_battery_info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_battery_info</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.has_battery_info" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.imu_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">imu_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.imu_state" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.is_cdu_valid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_cdu_valid</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.is_cdu_valid" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.is_data_valid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_data_valid</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.is_data_valid" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.is_pcu_valid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_pcu_valid</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.is_pcu_valid" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.mode_pr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode_pr</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.mode_pr" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.motor_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">motor_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.motor_state" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.pcu_state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcu_state</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.pcu_state" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.reserved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reserved</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.reserved" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.tick">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tick</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.tick" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.time_seconds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_seconds</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.time_seconds" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.version" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.LowState.warning_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warning_code</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.LowState.warning_code" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<ul>
+<li><p><strong>version</strong>：软件版本信息</p></li>
+<li><p><strong>mode_pr</strong>：并联机构（脚踝和腰部）控制模式</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: PR模式 (俯仰/滚转角度控制) [默认]</p></li>
+<li><p>1: AB模式 (电机直接控制)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>tick</strong>：计时器，每 <strong>1ms</strong> 递增</p></li>
+<li><p><strong>imu_state</strong>：IMU 状态</p></li>
+<li><p><strong>motor_state</strong>：所有电机状态</p></li>
+<li><p><strong>has_battery_info</strong>：是否有电池信息</p>
+<ul class="simple">
+<li><p><strong>true</strong>：包含电池信息</p></li>
+<li><p><strong>false</strong>：不包含电池信息</p></li>
+</ul>
+</li>
+<li><p><strong>battery_info</strong>：电池信息</p></li>
+<li><p><strong>ground_count</strong>：足底触底开关数量</p></li>
+<li><p><strong>ground_signal</strong>：足底触底开关状态</p></li>
+<li><p><strong>time_seconds</strong>：累计时间，单位 <strong>s</strong></p></li>
+<li><p><strong>is_pcu_valid</strong>：PCU 是否有效</p>
+<ul class="simple">
+<li><p><strong>0</strong>：无效</p></li>
+<li><p><strong>1</strong>：有效</p></li>
+</ul>
+</li>
+<li><p><strong>pcu_state</strong>：PCU 状态</p></li>
+<li><p><strong>is_cdu_valid</strong>：CDU 是否有效(此机型无效)</p>
+<ul class="simple">
+<li><p><strong>0</strong>：无效</p></li>
+<li><p><strong>1</strong>：有效</p></li>
+</ul>
+</li>
+<li><p><strong>cdu_state</strong>：CDU 状态</p></li>
+<li><p><strong>is_data_valid</strong>：数据是否有效(此机型无效)</p>
+<ul class="simple">
+<li><p><strong>0</strong>：全部无效</p></li>
+<li><p><strong>1</strong>：部分有效</p></li>
+<li><p><strong>2</strong>：全部有效</p></li>
+</ul>
+</li>
+<li><p><strong>error_code</strong>：驱动层错误码</p>
+<ul class="simple">
+<li><p><strong>0</strong>：无错误</p></li>
+<li><p><strong>-2000~-2999</strong>：驱动层软件错误</p></li>
+<li><p><strong>-1</strong>：固件层错误</p></li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>错误码</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>无错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>固件层错误</p></td>
+</tr>
+<tr class="row-even"><td><p>-2029</p></td>
+<td><p>参数非法</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2030</p></td>
+<td><p>V3 关节 FrameCounter 在 1 分钟内不匹配超 10 次</p></td>
+</tr>
+<tr class="row-even"><td><p>-2031</p></td>
+<td><p>Business 计数和 HAL 计数在 1 分钟内不匹配超 10 次</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2032</p></td>
+<td><p>算法错误</p></td>
+</tr>
+<tr class="row-even"><td><p>-2033</p></td>
+<td><p>急停</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2034</p></td>
+<td><p>CDU 通讯中断</p></td>
+</tr>
+<tr class="row-even"><td><p>-2035</p></td>
+<td><p>腰部 IMU 通讯中断</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>warning_code</strong>：驱动层警告码</p>
+<ul>
+<li><p><strong>0</strong>：无警告</p></li>
+<li><p><strong>-1</strong>：固件层警告</p></li>
+</ul>
+</li>
+<li><p><strong>reserved</strong>：预留 4 个</p></li>
+</ul>
+</div>
+</section>
+<section id="h2xlowlevel">
+<h2>H2xLowLevel<a class="headerlink" href="#h2xlowlevel" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">H2xLowLevel</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x 机器人低级别控制接口类</p>
+<p>该类提供了对 H2x 机器人底层硬件的直接控制接口，包括关节空间控制、读取机器人状态等功能。适用于需要精细控制机器人底层行为的应用场景。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel.readLRCUState">
+<span class="sig-name descname"><span class="pre">readLRCUState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="humanoid_sdk_py.h2x.H2xLowLevel"><span class="pre">humanoid_sdk_py.h2x.H2xLowLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel.readLRCUState" title="永久链接至目标">¶</a></dt>
+<dd><p>读取LR-CU状态信息</p>
+<p>从LR-CU（左右控制单元）读取当前状态信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lrcu_state</strong> – LR-CU状态结构体，用于接收状态数据</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel.readLowState">
+<span class="sig-name descname"><span class="pre">readLowState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="humanoid_sdk_py.h2x.H2xLowLevel"><span class="pre">humanoid_sdk_py.h2x.H2xLowLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel.readLowState" title="永久链接至目标">¶</a></dt>
+<dd><p>读取低级别状态信息</p>
+<p>从机器人读取当前的低级别状态信息，包括末端执行器位姿、有效性标志等。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>low_state</strong> – 低级别状态结构体，用于接收状态数据</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel.writeLRCUCmd">
+<span class="sig-name descname"><span class="pre">writeLRCUCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="humanoid_sdk_py.h2x.H2xLowLevel"><span class="pre">humanoid_sdk_py.h2x.H2xLowLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lrcu_cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">humanoid_sdk_py.h2x.LRCUCmd</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel.writeLRCUCmd" title="永久链接至目标">¶</a></dt>
+<dd><p>写入LR-CU控制命令</p>
+<p>向LR-CU（左右控制单元）发送控制命令。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lrcu_cmd</strong> – LR-CU控制命令</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xLowLevel.writeLowCmd">
+<span class="sig-name descname"><span class="pre">writeLowCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel" title="humanoid_sdk_py.h2x.H2xLowLevel"><span class="pre">humanoid_sdk_py.h2x.H2xLowLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.LowCmd" title="humanoid_sdk_py.h2x.LowCmd"><span class="pre">humanoid_sdk_py.h2x.LowCmd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xLowLevel.writeLowCmd" title="永久链接至目标">¶</a></dt>
+<dd><p>写入低级别控制命令</p>
+<p>向机器人发送低级别控制命令，包括关节角度、有效性标志和时间戳。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>low_cmd</strong> – 低级别控制命令结构体</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>控制器模式说明</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: 启用运动控制功能，可以使用高级运动控制API</p></li>
+<li><p><strong>EnableController = false</strong>: 激活底层控制模式，直接控制电机底层</p></li>
+</ul>
+<p>在使用运动控制功能前，请确保已正确设置控制器模式。</p>
+</div>
+</section>
+<section id="h2xsystem">
+<h2>H2xSystem<a class="headerlink" href="#h2xsystem" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">H2xSystem</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x 系统接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.calibrateMechanicalZeroPosition">
+<span class="sig-name descname"><span class="pre">calibrateMechanicalZeroPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.calibrateMechanicalZeroPosition" title="永久链接至目标">¶</a></dt>
+<dd><p>标定指定关节的机械零位位置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – 要标定的关节索引（int），映射见 common/h2x_def.h 中 JointIndexValue，升降机构和夹爪暂不支持</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.clearError">
+<span class="sig-name descname"><span class="pre">clearError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.clearError" title="永久链接至目标">¶</a></dt>
+<dd><p>清除机器人错误状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.enableController">
+<span class="sig-name descname"><span class="pre">enableController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.enableController" title="永久链接至目标">¶</a></dt>
+<dd><p>使能机器人控制器</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>使能机器人控制器后，控制器可以发送动作命令给驱动器。禁用后，控制器将不再向驱动器发送任何动作命令，以防止安全事故。</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – true: 使能；false: 禁用</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.getMicrophone">
+<span class="sig-name descname"><span class="pre">getMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.getMicrophone" title="永久链接至目标">¶</a></dt>
+<dd><p>获取麦克风状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, status)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.MicrophoneStatus" title="humanoid_sdk_py.MicrophoneStatus">MicrophoneStatus</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>status: MicrophoneStatus | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 MicrophoneStatus 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.getRobotVersion">
+<span class="sig-name descname"><span class="pre">getRobotVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.getRobotVersion" title="永久链接至目标">¶</a></dt>
+<dd><p>获取机器人版本信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, version)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.RobotVersion" title="humanoid_sdk_py.RobotVersion">RobotVersion</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>version: RobotVersion | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 RobotVersion 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.getSpeaker">
+<span class="sig-name descname"><span class="pre">getSpeaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.getSpeaker" title="永久链接至目标">¶</a></dt>
+<dd><p>获取扬声器状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, status)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, <a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.SpeakerStatus" title="humanoid_sdk_py.SpeakerStatus">SpeakerStatus</a> | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>status: SpeakerStatus | None</dt><dd><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 SpeakerStatus 对象:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.isControllerEnabled">
+<span class="sig-name descname"><span class="pre">isControllerEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.isControllerEnabled" title="永久链接至目标">¶</a></dt>
+<dd><p>检查机器人控制器是否使能</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, enable)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, bool | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 1</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>code: int</dt><dd><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 2</strong>:</p></li>
+</ul>
+<dl class="simple">
+<dt>enable: bool | None</dt><dd><ul class="simple">
+<li><p>true: 控制器已启用</p></li>
+<li><p>false: 控制器已禁用</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.saveJointParameters">
+<span class="sig-name descname"><span class="pre">saveJointParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.saveJointParameters" title="永久链接至目标">¶</a></dt>
+<dd><p>设置当前关节的位置作为机械零位位置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – 要设置机械零位位置的关节索引（int），映射见 common/h2x_def.h 中 JointIndexValue，升降机构和夹爪暂不支持</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.setMicrophone">
+<span class="sig-name descname"><span class="pre">setMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.MicrophoneStatus" title="humanoid_sdk_py.MicrophoneStatus"><span class="pre">humanoid_sdk_py.MicrophoneStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.setMicrophone" title="永久链接至目标">¶</a></dt>
+<dd><p>设置麦克风状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – 麦克风状态结构体</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xSystem.setSpeaker">
+<span class="sig-name descname"><span class="pre">setSpeaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem" title="humanoid_sdk_py.h2x.H2xSystem"><span class="pre">humanoid_sdk_py.h2x.H2xSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../humanoid/struct.html#humanoid_sdk_py.SpeakerStatus" title="humanoid_sdk_py.SpeakerStatus"><span class="pre">humanoid_sdk_py.SpeakerStatus</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xSystem.setSpeaker" title="永久链接至目标">¶</a></dt>
+<dd><p>设置扬声器状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – 扬声器状态结构体</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="h2xhighlevel">
+<h2>H2xHighLevel<a class="headerlink" href="#h2xhighlevel" title="此标题的永久链接">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">humanoid_sdk_py.h2x.</span></span><span class="sig-name descname"><span class="pre">H2xHighLevel</span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>H2x 机器人高级别控制接口类</p>
+<p>该类提供了对 H2x 机器人的高级别控制接口， 包括模式切换、姿态控制、运动控制等功能。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.ClimbStairsMode">
+<span class="sig-name descname"><span class="pre">ClimbStairsMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.ClimbStairsMode" title="永久链接至目标">¶</a></dt>
+<dd><p>进入爬楼梯（盲走）模式</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.DampMode">
+<span class="sig-name descname"><span class="pre">DampMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.DampMode" title="永久链接至目标">¶</a></dt>
+<dd><p>进入阻尼模式</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.Dance">
+<span class="sig-name descname"><span class="pre">Dance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.Dance" title="永久链接至目标">¶</a></dt>
+<dd><p>执行指定的舞蹈动作</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dance_name</strong> – 舞蹈动作的名称</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.DanceMode">
+<span class="sig-name descname"><span class="pre">DanceMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.DanceMode" title="永久链接至目标">¶</a></dt>
+<dd><p>进入舞蹈模式</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.GetRobotMode">
+<span class="sig-name descname"><span class="pre">GetRobotMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.GetRobotMode" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前机器人运行模式</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(code, robotMode)</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, int | None]</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><strong>返回值 1</strong>:</p></li>
+</ul>
+<p>code: int</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: 调用服务成功</p></li>
+<li><p>其他: 调用服务失败</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>返回值 2</strong>:</p></li>
+</ul>
+<p>robotMode: int | None</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>当服务调用成功时，第二个元素为 当前机器人模式:</p></li>
+<li><p>当服务调用失败时，第二个元素为 None</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.LockStandMode">
+<span class="sig-name descname"><span class="pre">LockStandMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.LockStandMode" title="永久链接至目标">¶</a></dt>
+<dd><p>进入锁定站立模式</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.Move">
+<span class="sig-name descname"><span class="pre">Move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.Move" title="永久链接至目标">¶</a></dt>
+<dd><p>机器人移动控制接口</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vx</strong> – 前后运动速度（矢状轴），向前为正</p></li>
+<li><p><strong>vy</strong> – 左右移动速度（冠状轴），向左为正</p></li>
+<li><p><strong>vyaw</strong> – 旋转角速度（横截面），逆时针为正</p></li>
+<li><p><strong>height</strong> – 机器人移动时质心的高度</p></li>
+<li><p><strong>continuous_move</strong> – 是否持续运动，true为持续运动，否则仅移动1s</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.Rise">
+<span class="sig-name descname"><span class="pre">Rise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.Rise" title="永久链接至目标">¶</a></dt>
+<dd><p>机器人从躺姿移动到站立姿态接口</p>
+<p>执行条件：地面平坦且有足够空间，人为手动将姿势展开；</p>
+<p>执行过程：</p>
+<blockquote>
+<div><p>1.初始状态为阻尼模式，先通过位置控制将姿态调整至标准躺姿。</p>
+<p>2.从躺姿缓慢至蹲姿，位置控制非抗干扰；</p>
+<p>3.从蹲姿平稳站立，保持抗干扰状态；</p>
+</div></blockquote>
+<p>执行完成：机器人站立完成后保持平衡模式；</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.SitDown">
+<span class="sig-name descname"><span class="pre">SitDown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.SitDown" title="永久链接至目标">¶</a></dt>
+<dd><p>机器人从站立姿态移动到坐姿态接口</p>
+<p>执行条件：机器人处于站立状态</p>
+<p>执行过程：位置控制执行坐下动作；</p>
+<p>执行完成：机器人上半身关节为阻尼模式，腰部关节、下半身锁定位置模式，保持稳定坐姿；</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.SquatDown">
+<span class="sig-name descname"><span class="pre">SquatDown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.SquatDown" title="永久链接至目标">¶</a></dt>
+<dd><p>机器人从站立姿态平稳下蹲到蹲姿态接口</p>
+<p>执行条件：机器人处于站立状态，地面平坦且无障碍物；</p>
+<p>执行过程：</p>
+<blockquote>
+<div><p>1.初始为走跑模式；</p>
+<p>2.先切换至下蹲模型，执行下蹲动作；</p>
+<p>3.运动过程中保持抗干扰状态；</p>
+</div></blockquote>
+<p>执行完成：最终脚部保持刚度，其余关节切换为阻尼模式；</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.SquatUp">
+<span class="sig-name descname"><span class="pre">SquatUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.SquatUp" title="永久链接至目标">¶</a></dt>
+<dd><p>机器人从蹲姿平稳站起到站立姿态接口</p>
+<p>执行条件：机器人处于稳定蹲姿，周围无障碍物；</p>
+<p>执行过程：</p>
+<blockquote>
+<div><p>1.先切换为位置模式，移动至蹲姿初始位置；</p>
+<p>2.后切换为蹲起模型；</p>
+<p>3.移动过程中保持抗干扰状态；</p>
+</div></blockquote>
+<p>执行完成：机器人处于稳定站姿，并自动切换为走跑模式；</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code： 0表示成功，其他表示失败</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.StopMove">
+<span class="sig-name descname"><span class="pre">StopMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.StopMove" title="永久链接至目标">¶</a></dt>
+<dd><p>机器人停止运动接口</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.WalkOnTerrainMode">
+<span class="sig-name descname"><span class="pre">WalkOnTerrainMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.WalkOnTerrainMode" title="永久链接至目标">¶</a></dt>
+<dd><p>进入地面行走模式
+在此模式下，可以在多种地形行走（带传感器），并保持平衡状态，例如爬楼、泡沫、木头条等。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.WalkRunMode">
+<span class="sig-name descname"><span class="pre">WalkRunMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.WalkRunMode" title="永久链接至目标">¶</a></dt>
+<dd><p>进入走跑模式</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.ZeroTorqueMode">
+<span class="sig-name descname"><span class="pre">ZeroTorqueMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.ZeroTorqueMode" title="永久链接至目标">¶</a></dt>
+<dd><p>进入零力矩模式</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>code</p>
+</dd>
+<dt class="field-even">返回类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.realtimeMove">
+<span class="sig-name descname"><span class="pre">realtimeMove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">realtime_cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.RealtimeCmd" title="humanoid_sdk_py.h2x.RealtimeCmd"><span class="pre">humanoid_sdk_py.h2x.RealtimeCmd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.realtimeMove" title="永久链接至目标">¶</a></dt>
+<dd><p>发送实时控制命令</p>
+<p>向机器人发送实时控制命令，使用底层DDS消息进行通信。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>realtime_cmd</strong> – 实时控制命令结构体</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="humanoid_sdk_py.h2x.H2xHighLevel.waitRunning">
+<span class="sig-name descname"><span class="pre">waitRunning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel" title="humanoid_sdk_py.h2x.H2xHighLevel"><span class="pre">humanoid_sdk_py.h2x.H2xHighLevel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#humanoid_sdk_py.h2x.H2xHighLevel.waitRunning" title="永久链接至目标">¶</a></dt>
+<dd><p>等待执行完成</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – 超时时间（毫秒）</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>code</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>返回值</strong>:</dt><dd><ul>
+<li><p>0: 调用成功</p></li>
+<li><p>其他: 调用失败</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>控制器模式说明</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: 启用运动控制功能，可以使用高级运动控制API</p></li>
+<li><p><strong>EnableController = false</strong>: 激活底层控制模式，直接控制电机底层</p></li>
+</ul>
+<p>在使用运动控制功能前，请确保已正确设置控制器模式。</p>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  
+        <div class="related-pages">
+          <a class="next-page" href="../../example/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">开始使用</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="enum.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">枚举</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025 北京思灵机器人科技有限责任公司
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+  
+    ﻿<div id="doc-toolbar">
+  <label>
+    
+      语言:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H23-EVT/v0.10.2/cpp/zh_CN/"
+              selected>
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H23-EVT/v0.10.2/cpp/en/"
+              >
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      版本:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H23-EVT/v0.10.2/cpp/zh_CN/zh_CN/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+  
+
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">类</a><ul>
+<li><a class="reference internal" href="#motorcmd">MotorCmd</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd"><code class="docutils literal notranslate"><span class="pre">MotorCmd</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd.dq"><code class="docutils literal notranslate"><span class="pre">dq</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd.kd"><code class="docutils literal notranslate"><span class="pre">kd</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd.kp"><code class="docutils literal notranslate"><span class="pre">kp</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd.mode"><code class="docutils literal notranslate"><span class="pre">mode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd.operation_mode"><code class="docutils literal notranslate"><span class="pre">operation_mode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd.q"><code class="docutils literal notranslate"><span class="pre">q</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd.reserved"><code class="docutils literal notranslate"><span class="pre">reserved</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorCmd.tau"><code class="docutils literal notranslate"><span class="pre">tau</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lowcmd">LowCmd</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowCmd"><code class="docutils literal notranslate"><span class="pre">LowCmd</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowCmd.mode_pr"><code class="docutils literal notranslate"><span class="pre">mode_pr</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowCmd.motor_cmd"><code class="docutils literal notranslate"><span class="pre">motor_cmd</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowCmd.reserved"><code class="docutils literal notranslate"><span class="pre">reserved</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#realtimecmd">RealtimeCmd</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.RealtimeCmd"><code class="docutils literal notranslate"><span class="pre">RealtimeCmd</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.RealtimeCmd.mode_pr"><code class="docutils literal notranslate"><span class="pre">mode_pr</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.RealtimeCmd.motor_cmd"><code class="docutils literal notranslate"><span class="pre">motor_cmd</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.RealtimeCmd.reserved"><code class="docutils literal notranslate"><span class="pre">reserved</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.RealtimeCmd.time"><code class="docutils literal notranslate"><span class="pre">time</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#imustate">IMUState</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.IMUState"><code class="docutils literal notranslate"><span class="pre">IMUState</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.IMUState.accelerometer"><code class="docutils literal notranslate"><span class="pre">accelerometer</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.IMUState.error_code"><code class="docutils literal notranslate"><span class="pre">error_code</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.IMUState.gyroscope"><code class="docutils literal notranslate"><span class="pre">gyroscope</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.IMUState.quaternion"><code class="docutils literal notranslate"><span class="pre">quaternion</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.IMUState.rpy"><code class="docutils literal notranslate"><span class="pre">rpy</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.IMUState.temperature"><code class="docutils literal notranslate"><span class="pre">temperature</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.IMUState.warning_code"><code class="docutils literal notranslate"><span class="pre">warning_code</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#motorstate">MotorState</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState"><code class="docutils literal notranslate"><span class="pre">MotorState</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.cur"><code class="docutils literal notranslate"><span class="pre">cur</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.ddq"><code class="docutils literal notranslate"><span class="pre">ddq</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.dq"><code class="docutils literal notranslate"><span class="pre">dq</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.error_code"><code class="docutils literal notranslate"><span class="pre">error_code</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.kd"><code class="docutils literal notranslate"><span class="pre">kd</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.kp"><code class="docutils literal notranslate"><span class="pre">kp</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.mode"><code class="docutils literal notranslate"><span class="pre">mode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.operation_mode"><code class="docutils literal notranslate"><span class="pre">operation_mode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.q"><code class="docutils literal notranslate"><span class="pre">q</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.reserved"><code class="docutils literal notranslate"><span class="pre">reserved</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.tau_est"><code class="docutils literal notranslate"><span class="pre">tau_est</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.temperature"><code class="docutils literal notranslate"><span class="pre">temperature</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.MotorState.warning_code"><code class="docutils literal notranslate"><span class="pre">warning_code</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#batterystate">BatteryState</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.BatteryState"><code class="docutils literal notranslate"><span class="pre">BatteryState</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.BatteryState.battery_low_warning"><code class="docutils literal notranslate"><span class="pre">battery_low_warning</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.BatteryState.battery_percentage"><code class="docutils literal notranslate"><span class="pre">battery_percentage</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.BatteryState.battery_state"><code class="docutils literal notranslate"><span class="pre">battery_state</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.BatteryState.error_code"><code class="docutils literal notranslate"><span class="pre">error_code</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.BatteryState.warning_code"><code class="docutils literal notranslate"><span class="pre">warning_code</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pcustate">PCUState</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState"><code class="docutils literal notranslate"><span class="pre">PCUState</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.battery_voltage"><code class="docutils literal notranslate"><span class="pre">battery_voltage</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.control_supply_state"><code class="docutils literal notranslate"><span class="pre">control_supply_state</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.current_12v"><code class="docutils literal notranslate"><span class="pre">current_12v</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.current_24v"><code class="docutils literal notranslate"><span class="pre">current_24v</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.dcdc_bus_voltage"><code class="docutils literal notranslate"><span class="pre">dcdc_bus_voltage</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.emergency_stop_state"><code class="docutils literal notranslate"><span class="pre">emergency_stop_state</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.motor_bus_current"><code class="docutils literal notranslate"><span class="pre">motor_bus_current</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.motor_bus_voltage"><code class="docutils literal notranslate"><span class="pre">motor_bus_voltage</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.pcu_error_code"><code class="docutils literal notranslate"><span class="pre">pcu_error_code</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.pcu_warning_code"><code class="docutils literal notranslate"><span class="pre">pcu_warning_code</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.power_supply_state"><code class="docutils literal notranslate"><span class="pre">power_supply_state</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.voltage_12v"><code class="docutils literal notranslate"><span class="pre">voltage_12v</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.PCUState.voltage_24v"><code class="docutils literal notranslate"><span class="pre">voltage_24v</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cdustate">CDUState</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.CDUState"><code class="docutils literal notranslate"><span class="pre">CDUState</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.CDUState.error_code"><code class="docutils literal notranslate"><span class="pre">error_code</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.CDUState.warning_code"><code class="docutils literal notranslate"><span class="pre">warning_code</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lowstate">LowState</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState"><code class="docutils literal notranslate"><span class="pre">LowState</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.battery_info"><code class="docutils literal notranslate"><span class="pre">battery_info</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.cdu_state"><code class="docutils literal notranslate"><span class="pre">cdu_state</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.error_code"><code class="docutils literal notranslate"><span class="pre">error_code</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.ground_count"><code class="docutils literal notranslate"><span class="pre">ground_count</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.ground_signal"><code class="docutils literal notranslate"><span class="pre">ground_signal</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.has_battery_info"><code class="docutils literal notranslate"><span class="pre">has_battery_info</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.imu_state"><code class="docutils literal notranslate"><span class="pre">imu_state</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.is_cdu_valid"><code class="docutils literal notranslate"><span class="pre">is_cdu_valid</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.is_data_valid"><code class="docutils literal notranslate"><span class="pre">is_data_valid</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.is_pcu_valid"><code class="docutils literal notranslate"><span class="pre">is_pcu_valid</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.mode_pr"><code class="docutils literal notranslate"><span class="pre">mode_pr</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.motor_state"><code class="docutils literal notranslate"><span class="pre">motor_state</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.pcu_state"><code class="docutils literal notranslate"><span class="pre">pcu_state</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.reserved"><code class="docutils literal notranslate"><span class="pre">reserved</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.tick"><code class="docutils literal notranslate"><span class="pre">tick</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.time_seconds"><code class="docutils literal notranslate"><span class="pre">time_seconds</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.LowState.warning_code"><code class="docutils literal notranslate"><span class="pre">warning_code</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h2xlowlevel">H2xLowLevel</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel"><code class="docutils literal notranslate"><span class="pre">H2xLowLevel</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel.readLRCUState"><code class="docutils literal notranslate"><span class="pre">readLRCUState</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel.readLowState"><code class="docutils literal notranslate"><span class="pre">readLowState</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel.writeLRCUCmd"><code class="docutils literal notranslate"><span class="pre">writeLRCUCmd</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xLowLevel.writeLowCmd"><code class="docutils literal notranslate"><span class="pre">writeLowCmd</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h2xsystem">H2xSystem</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem"><code class="docutils literal notranslate"><span class="pre">H2xSystem</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.calibrateMechanicalZeroPosition"><code class="docutils literal notranslate"><span class="pre">calibrateMechanicalZeroPosition</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.clearError"><code class="docutils literal notranslate"><span class="pre">clearError</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.enableController"><code class="docutils literal notranslate"><span class="pre">enableController</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.getMicrophone"><code class="docutils literal notranslate"><span class="pre">getMicrophone</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.getRobotVersion"><code class="docutils literal notranslate"><span class="pre">getRobotVersion</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.getSpeaker"><code class="docutils literal notranslate"><span class="pre">getSpeaker</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.isControllerEnabled"><code class="docutils literal notranslate"><span class="pre">isControllerEnabled</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.saveJointParameters"><code class="docutils literal notranslate"><span class="pre">saveJointParameters</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.setMicrophone"><code class="docutils literal notranslate"><span class="pre">setMicrophone</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xSystem.setSpeaker"><code class="docutils literal notranslate"><span class="pre">setSpeaker</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h2xhighlevel">H2xHighLevel</a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel"><code class="docutils literal notranslate"><span class="pre">H2xHighLevel</span></code></a><ul>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.ClimbStairsMode"><code class="docutils literal notranslate"><span class="pre">ClimbStairsMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.DampMode"><code class="docutils literal notranslate"><span class="pre">DampMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.Dance"><code class="docutils literal notranslate"><span class="pre">Dance</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.DanceMode"><code class="docutils literal notranslate"><span class="pre">DanceMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.GetRobotMode"><code class="docutils literal notranslate"><span class="pre">GetRobotMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.LockStandMode"><code class="docutils literal notranslate"><span class="pre">LockStandMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.Move"><code class="docutils literal notranslate"><span class="pre">Move</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.Rise"><code class="docutils literal notranslate"><span class="pre">Rise</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.SitDown"><code class="docutils literal notranslate"><span class="pre">SitDown</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.SquatDown"><code class="docutils literal notranslate"><span class="pre">SquatDown</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.SquatUp"><code class="docutils literal notranslate"><span class="pre">SquatUp</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.StopMove"><code class="docutils literal notranslate"><span class="pre">StopMove</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.WalkOnTerrainMode"><code class="docutils literal notranslate"><span class="pre">WalkOnTerrainMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.WalkRunMode"><code class="docutils literal notranslate"><span class="pre">WalkRunMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.ZeroTorqueMode"><code class="docutils literal notranslate"><span class="pre">ZeroTorqueMode</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.realtimeMove"><code class="docutils literal notranslate"><span class="pre">realtimeMove</span></code></a></li>
+<li><a class="reference internal" href="#humanoid_sdk_py.h2x.H2xHighLevel.waitRunning"><code class="docutils literal notranslate"><span class="pre">waitRunning</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=5beec3ff"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

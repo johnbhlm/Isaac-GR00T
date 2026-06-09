@@ -1,0 +1,47 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from controller/msg/Localization.msg
+// generated code does not contain a copyright notice
+
+module controller {
+  module msg {
+
+    struct Time {
+      int32 sec_;
+      uint32 nanosec_;
+    };
+
+    struct Header {
+      controller::msg::Time stamp_;
+      string frame_id_;
+    };
+
+    struct Point {
+      double x_;
+      double y_;
+      double z_;
+    };
+
+    struct Quaternion {
+      double x_;
+      double y_;
+      double z_;
+      double w_;
+    };
+
+    struct Pose {
+      controller::msg::Point position_;
+      controller::msg::Quaternion orientation_;
+    };
+
+    struct Localization {
+      controller::msg::Header header_;
+      controller::msg::Pose pose_;
+      double confidence_;
+      int8 valid_flag_;        // 非0有效
+      int32 error_msgs_;
+      int32 trajectory_id_;
+    };
+
+  };
+};
+

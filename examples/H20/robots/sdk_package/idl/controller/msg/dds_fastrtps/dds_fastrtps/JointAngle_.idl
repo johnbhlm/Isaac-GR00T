@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/JointAngle.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__joint_angle__idl__
+#define __controller__msg__joint_angle__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct JointAngle_ {
+unsigned long joint_index_;
+double target_position_;
+double velocity_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__joint_angle__idl__

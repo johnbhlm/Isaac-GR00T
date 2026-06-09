@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/GripperCmd.msg
+// generated code does not contain a copyright notice
+
+#include "h2x/msg/MotorCmdGripper.idl"
+
+module h2x {
+  module msg {
+    typedef h2x::msg::MotorCmdGripper h2x__msg__MotorCmdGripper;
+    typedef h2x__msg__MotorCmdGripper h2x__msg__MotorCmdGripper__2[2];
+    struct GripperCmd {
+      h2x__msg__MotorCmdGripper__2 motor_cmd;
+
+      uint32 crc;
+    };
+  };
+};

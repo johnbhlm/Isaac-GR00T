@@ -1,0 +1,4 @@
+source;share/h2x/environment/ament_prefix_path.sh
+source;share/h2x/environment/library_path.sh
+source;share/h2x/environment/path.sh
+source;share/h2x/environment/pythonpath.sh

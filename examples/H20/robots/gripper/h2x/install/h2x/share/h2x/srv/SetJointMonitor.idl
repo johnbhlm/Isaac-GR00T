@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from h2x/srv/SetJointMonitor.srv
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module srv {
+    struct SetJointMonitor_Request {
+      @verbatim (language="comment", text=
+        "请求的关节索引数组")
+      sequence<uint32> motor_index;
+
+      @verbatim (language="comment", text=
+        "对应限位的下限数组")
+      sequence<double> min_position;
+
+      @verbatim (language="comment", text=
+        "对应限位的上限数组")
+      sequence<double> max_position;
+    };
+    @verbatim (language="comment", text=
+      "响应部分")
+    struct SetJointMonitor_Response {
+      @verbatim (language="comment", text=
+        "操作是否成功")
+      int32 result;
+    };
+  };
+};

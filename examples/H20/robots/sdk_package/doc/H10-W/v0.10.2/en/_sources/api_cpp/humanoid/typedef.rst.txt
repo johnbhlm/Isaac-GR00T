@@ -1,0 +1,41 @@
+类型别名
+================
+
+humanoid::JointTarget
+------------------------
+.. doxygentypedef:: humanoid::JointTarget
+
+
+humanoid::JointLimit
+------------------------
+.. doxygentypedef:: humanoid::JointLimit
+
+
+humanoid::JointMaxAcc
+------------------------
+.. doxygentypedef:: humanoid::JointMaxAcc
+
+
+humanoid::JointMaxVel
+------------------------
+.. doxygentypedef:: humanoid::JointMaxVel
+
+
+humanoid::CartTransMaxAcc
+---------------------------
+.. doxygentypedef:: humanoid::CartTransMaxAcc
+
+
+humanoid::CartTransMaxVel
+---------------------------
+.. doxygentypedef:: humanoid::CartTransMaxVel
+
+
+humanoid::CartRotaMaxAcc
+-------------------------
+.. doxygentypedef:: humanoid::CartRotaMaxAcc
+
+
+humanoid::CartRotaMaxVel
+-------------------------
+.. doxygentypedef:: humanoid::CartRotaMaxVel

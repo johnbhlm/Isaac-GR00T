@@ -1,0 +1,19 @@
+常见问题
+=============
+
+1. 什么是Humanoid-SDK？
+
+Humanoid-SDK是一套机器人软件开发包，主要用于开发机器人控制、机器人辅助等功能。
+
+2. Humanoid-SDK的主要功能有哪些？
+
+Humanoid-SDK主要功能有机器人控制、机器人辅助等功能。
+
+3. Humanoid-SDK的开发环境有哪些？
+
+Humanoid-SDK的开发环境主要基于Ubuntu 22.04 LTS,Python 3.10，C++ 17。
+
+
+
+
+

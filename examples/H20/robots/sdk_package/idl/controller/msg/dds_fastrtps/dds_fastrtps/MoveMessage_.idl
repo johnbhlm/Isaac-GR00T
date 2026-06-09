@@ -1,0 +1,37 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/MoveMessage.idl
+// generated code does not contain a copyright notice
+#include "controller/msg/dds_fastrtps/TcpPoseParams_.idl"
+
+#ifndef __controller__msg__move_message__idl__
+#define __controller__msg__move_message__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct MoveMessage_ {
+octet state_;
+sequence<double> position_;
+
+sequence<double> velocity_;
+
+sequence<controller::msg::dds_::TcpPoseParams_> tcp_pose_;
+
+unsigned long token_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__move_message__idl__

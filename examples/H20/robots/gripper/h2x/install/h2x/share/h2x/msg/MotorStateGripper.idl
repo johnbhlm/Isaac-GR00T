@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/MotorStateGripper.msg
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module msg {
+    typedef uint32 uint32__4[4];
+    struct MotorStateGripper {
+      uint8 mode;
+
+      uint8 operation_mode;
+
+      uint8 arrive_signal;
+
+      int32 state;
+
+      int32 hold_state;
+
+      float q;
+
+      float dq;
+
+      float finger1_force;
+
+      float finger2_force;
+
+      float temperature;
+
+      float cur;
+
+      int32 error_code;
+
+      int32 warning_code;
+
+      uint32__4 reserved;
+    };
+  };
+};

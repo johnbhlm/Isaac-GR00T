@@ -1,0 +1,6 @@
+uint16 control_word
+uint16 status_word
+uint8 error_register
+int8 mode_of_operation
+int8 mode_display
+DebugMotorState debug_motor_state

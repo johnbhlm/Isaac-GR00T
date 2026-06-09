@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/JointParams.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__joint_params__idl__
+#define __controller__msg__joint_params__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct JointParams_ {
+unsigned long joint_index_;
+double max_pos_;
+double min_pos_;
+double max_vel_;
+double max_acc_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__joint_params__idl__

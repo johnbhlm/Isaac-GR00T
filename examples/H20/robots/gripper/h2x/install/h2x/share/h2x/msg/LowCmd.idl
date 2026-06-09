@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/LowCmd.msg
+// generated code does not contain a copyright notice
+
+#include "h2x/msg/MotorCmd.idl"
+
+module h2x {
+  module msg {
+    typedef h2x::msg::MotorCmd h2x__msg__MotorCmd;
+    typedef h2x__msg__MotorCmd h2x__msg__MotorCmd__37[37];
+    typedef uint32 uint32__4[4];
+    struct LowCmd {
+      uint8 mode_pr;
+
+      h2x__msg__MotorCmd__37 motor_cmd;
+
+      uint32__4 reserved;
+
+      uint32 crc;
+    };
+  };
+};

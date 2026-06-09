@@ -1,0 +1,846 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/msg/DebugMotorState",
+      "fields": [
+        {
+          "name": "slave_id",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "frame_counter",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "error_register",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_mode",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "status_word",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "joint_position",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "joint_speed",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_current",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "joint_torque",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "tx_object_index",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "tx_object_value",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "pos_kp",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "vibration_dampratio",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "min_position",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "max_position",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "spd_coefficient",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "spd_kp",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "spd_ki",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "spd_rmax",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "spd_rmin",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "position_velocity_torque_current_polarity",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "position_ctrl_vibration_controller_bandwidth",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "position_feedback_encoder_select",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "align_motor_pos_2_link_pos",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "velocity_ctrl_link_speed_observer_bandwidth",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "deceleration_of_link_side",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "spd_bandwidth",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "current_coefficient",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "max_motor_torque",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "max_joint_torque",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "torque_a_offset",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "torque_b_offset",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "torque_kp",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "torque_kd",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "torque_bfe",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "torque_l",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "torque_kfc",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "current_torque_coefficient",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "led_rgb_ctrl",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_error_configmask",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "link_error_configmask",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "board_error_configmask",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "joint_error_configmask",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "ctrl_error_configmask",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "communication_error_configmask",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "current_ctrl_bandwidth",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "current_ctrl_mode",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_rs",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_l",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_ke",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motorside_position",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "linkside_position",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "friction_ctrl_param1",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "friction_ctrl_param2",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "friction_ctrl_param3",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "friction_ctrl_param4",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "vendor_id",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "robot_product_code",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "robot_version_number",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "robot_serial_number",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "joint_type",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "joint_version",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "joint_serial_number",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "firmware_version",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "bootloader_version",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "app_branch_name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "app_tag_sha1_id",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "boot_branch_name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "boot_tag_sha1_id",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "link_encoder_calibrated_data",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_encoder_calibrated_data",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "a_phase_current_offset",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "b_phase_current_offset",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "c_phase_current_offset",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "bus_current_offset",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_temperature",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "drive_temperature",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "estimated_temperature1",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "estimated_temperature2",
+          "type": {
+            "type_id": 4,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "bus_current",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "bus_voltage",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "flag",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "developer_command_status",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/msg/DebugMotorState",
+      "hash_string": "RIHS01_f7c12236364fb20e8c2b5262694f6ba383feb3e81a29f3842b295577787d4452"
+    }
+  ]
+}

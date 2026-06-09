@@ -1,0 +1,86 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/msg/GripperDiagnosis",
+      "fields": [
+        {
+          "name": "ds_data",
+          "type": {
+            "type_id": 49,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/msg/GripperDiagnosticData"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "error_code",
+          "type": {
+            "type_id": 54,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "warning_code",
+          "type": {
+            "type_id": 54,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "crc",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "h2x/msg/GripperDiagnosticData",
+        "fields": [
+          {
+            "name": "mode_of_operation",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "mode_display",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/msg/GripperDiagnosis",
+      "hash_string": "RIHS01_0b42735b5065f1d4781f4fd2eb2ccf5ff5a3a7819faa65d2b7b139723ac47f37"
+    },
+    {
+      "type_name": "h2x/msg/GripperDiagnosticData",
+      "hash_string": "RIHS01_b19692df821411fffea936d49f36abb34203a44f6c53cb5ad820b00df83a128a"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# 请求部分
+
+---
+# 响应部分
+int32 result
+int32 low_battery_threshold

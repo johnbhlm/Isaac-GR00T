@@ -1,0 +1,1927 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Error Code List" href="error.html" /><link rel="prev" title="Struct" href="struct.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.08.06 -->
+        <title>Classes - User Manual For H10-W SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=03768ecb" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #007acc;
+  --color-brand-content: #005a9e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+      }
+    }
+  }
+</style>
+  
+  
+    <link rel="stylesheet" href="../../_static/toolbar.css">
+    <script defer src="../../_static/toolbar.js"></script>
+  
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">User Manual For H10-W SDK</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">User Manual For H10-W SDK</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">installation guide</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">C++ interface description</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of C++ interface description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../humanoid/index.html">humanoid namespace</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of humanoid namespace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/struct.html">Struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/typedef.html">Typedef</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">humanoid::h10w namespace</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of humanoid::h10w namespace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">Enumerations and Joint Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html">Struct</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="error.html">Error Code List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_py/index.html">Python interface description</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Python interface description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_py/humanoid/index.html">humanoid_sdk_py module description</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py module description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid/enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid/struct.html">Struct</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_py/humanoid_h10w/index.html">humanoid_sdk_py.h10w module description</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py.h10w module description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h10w/enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h10w/struct.html">Struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h10w/class.html">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h10w/error.html">Error Code List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../example/index.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../example/cpp.html">C++ Usage Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../example/python.html">Python Usage Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">common problems</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theme Switching</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../api_cpp/humanoid_h10w/class.html">Sphinx RTD</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Furo</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="id1">
+<h1>Classes<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<section id="humanoid-h10w-h10wchassis">
+<h2>humanoid::h10w::H10wChassis<a class="headerlink" href="#humanoid-h10w-h10wchassis" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassisE">
+<span id="_CPPv3N8humanoid4h10w11H10wChassisE"></span><span id="_CPPv2N8humanoid4h10w11H10wChassisE"></span><span id="humanoid::h10w::H10wChassis"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H10wChassis</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassisE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>H10w chassis interface. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassis12speedChassisEfff">
+<span id="_CPPv3N8humanoid4h10w11H10wChassis12speedChassisEfff"></span><span id="_CPPv2N8humanoid4h10w11H10wChassis12speedChassisEfff"></span><span id="humanoid::h10w::H10wChassis::speedChassis__float.float.float"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis_1ae189aaab4f2fde5bca2e55cedf399d6e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speedChassis</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">linear_velocity</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angular_velocity</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lifetime</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassis12speedChassisEfff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute chassis velocity control. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_velocity</strong> – [in] Chassis linear velocity in m/s </p></li>
+<li><p><strong>angular_velocity</strong> – [in] Chassis angular velocity in rad/s </p></li>
+<li><p><strong>lifetime</strong> – [in] Command lifetime </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassis16getChassisMaxVelERfRf">
+<span id="_CPPv3N8humanoid4h10w11H10wChassis16getChassisMaxVelERfRf"></span><span id="_CPPv2N8humanoid4h10w11H10wChassis16getChassisMaxVelERfRf"></span><span id="humanoid::h10w::H10wChassis::getChassisMaxVel__floatR.floatR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis_1a13eaae00386e3edb2efd0b639c3c5d2a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChassisMaxVel</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">linear_velocity</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">angular_velocity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassis16getChassisMaxVelERfRf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get chassis max velocity. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_velocity</strong> – [out] Chassis max linear velocity in m/s </p></li>
+<li><p><strong>angular_velocity</strong> – [out] Chassis max angular velocity in rad/s </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassis16setChassisMaxVelEff">
+<span id="_CPPv3N8humanoid4h10w11H10wChassis16setChassisMaxVelEff"></span><span id="_CPPv2N8humanoid4h10w11H10wChassis16setChassisMaxVelEff"></span><span id="humanoid::h10w::H10wChassis::setChassisMaxVel__float.float"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis_1ac50ec5d1b1f3b2000be5dd4876ba7423"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setChassisMaxVel</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">linear_velocity</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angular_velocity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassis16setChassisMaxVelEff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set chassis max velocity. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_velocity</strong> – [in] Chassis max linear velocity in m/s </p></li>
+<li><p><strong>angular_velocity</strong> – [in] Chassis max angular velocity in rad/s </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassis11baseControlE7int32_t">
+<span id="_CPPv3N8humanoid4h10w11H10wChassis11baseControlE7int32_t"></span><span id="_CPPv2N8humanoid4h10w11H10wChassis11baseControlE7int32_t"></span><span id="humanoid::h10w::H10wChassis::baseControl__int32_t"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis_1ab8272a441e08c2bc7b83130ae72b62ec"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baseControl</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">control_word</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassis11baseControlE7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Chassis brake control. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>control_word</strong> – [in] Control word. bit0 = 0: disable servo, bit0 = 1:enable servo. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassis15getChassisSpeedERfRf">
+<span id="_CPPv3N8humanoid4h10w11H10wChassis15getChassisSpeedERfRf"></span><span id="_CPPv2N8humanoid4h10w11H10wChassis15getChassisSpeedERfRf"></span><span id="humanoid::h10w::H10wChassis::getChassisSpeed__floatR.floatR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis_1ae41c6cb297aa4b2491285a5d6e001095"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChassisSpeed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">linear_velocity</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">angular_velocity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassis15getChassisSpeedERfRf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get chassis velocity. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_velocity</strong> – [out] Chassis linear velocity in m/s </p></li>
+<li><p><strong>angular_velocity</strong> – [out] Chassis angular velocity in rad/s </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassis18getOdometryMessageERiRi">
+<span id="_CPPv3N8humanoid4h10w11H10wChassis18getOdometryMessageERiRi"></span><span id="_CPPv2N8humanoid4h10w11H10wChassis18getOdometryMessageERiRi"></span><span id="humanoid::h10w::H10wChassis::getOdometryMessage__iR.iR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis_1a6ee11bd4279225f0f8877c0fb179441a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getOdometryMessage</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cur_time</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cur_mileage</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassis18getOdometryMessageERiRi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get odometry message, which contains the information of the robot’s position relative to the reference point, including the accumulated running time and accumulated mileage. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cur_time</strong> – [out] Accumulated time in s </p></li>
+<li><p><strong>cur_mileage</strong> – [out] Accumulated_mileage in m </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassis15getLocalizationERfRfRb">
+<span id="_CPPv3N8humanoid4h10w11H10wChassis15getLocalizationERfRfRb"></span><span id="_CPPv2N8humanoid4h10w11H10wChassis15getLocalizationERfRfRb"></span><span id="humanoid::h10w::H10wChassis::getLocalization__floatR.floatR.bR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis_1a98797b5334939d59abbd7e82b2695113"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLocalization</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos_x</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos_y</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos_valid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassis15getLocalizationERfRfRb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get Localization. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_x</strong> – [out] X coordinate m </p></li>
+<li><p><strong>pos_y</strong> – [out] Y coordinate m </p></li>
+<li><p><strong>pos_valid</strong> – [out] whether position is valid </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11H10wChassis15setLocalizationEffb">
+<span id="_CPPv3N8humanoid4h10w11H10wChassis15setLocalizationEffb"></span><span id="_CPPv2N8humanoid4h10w11H10wChassis15setLocalizationEffb"></span><span id="humanoid::h10w::H10wChassis::setLocalization__float.float.b"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wChassis_1af5eb6eb98e441e694761dc7ce1ec100f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setLocalization</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pos_x</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pos_y</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pos_valid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11H10wChassis15setLocalizationEffb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set Localization. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_x</strong> – [in] X coordinate m </p></li>
+<li><p><strong>pos_y</strong> – [in] Y coordinate m </p></li>
+<li><p><strong>pos_valid</strong> – [in] position is valid or not </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error Code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-h10wmotion">
+<h2>humanoid::h10w::H10wMotion<a class="headerlink" href="#humanoid-h10w-h10wmotion" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotionE">
+<span id="_CPPv3N8humanoid4h10w10H10wMotionE"></span><span id="_CPPv2N8humanoid4h10w10H10wMotionE"></span><span id="humanoid::h10w::H10wMotion"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H10wMotion</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>H10w motion interface. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion22requestSingleJointMoveERK11JointTargetdd">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion22requestSingleJointMoveERK11JointTargetdd"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion22requestSingleJointMoveERK11JointTargetdd"></span><span id="humanoid::h10w::H10wMotion::requestSingleJointMove__JointTargetCR.double.double"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1a609638068984a002031d22fa152e4e61"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestSingleJointMove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid11JointTargetE" title="humanoid::JointTarget"><span class="n"><span class="pre">JointTarget</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">joint_target</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">velocity</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">acc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion22requestSingleJointMoveERK11JointTargetdd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Move a single joint. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joint_target</strong> – <strong>[in]</strong> The target of the single joint </p></li>
+<li><p><strong>velocity</strong> – <strong>[in]</strong> The target joint velocity (range: 0.0~1.0) </p></li>
+<li><p><strong>acc</strong> – <strong>[in]</strong> The target joint acceleration (range: 0.0~1.0) </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion22requestMultiJointsMoveERKNSt6vectorI11JointTargetEEdd">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion22requestMultiJointsMoveERKNSt6vectorI11JointTargetEEdd"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion22requestMultiJointsMoveERKNSt6vectorI11JointTargetEEdd"></span><span id="humanoid::h10w::H10wMotion::requestMultiJointsMove__std::vector:JointTarget:CR.double.double"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1aaccb04f38f0a3bddab4032245a4b0af9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestMultiJointsMove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid11JointTargetE" title="humanoid::JointTarget"><span class="n"><span class="pre">JointTarget</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">joint_targets</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">velocity</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">acc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion22requestMultiJointsMoveERKNSt6vectorI11JointTargetEEdd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Move multiple joints. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joint_targets</strong> – <strong>[in]</strong> The target of the joints </p></li>
+<li><p><strong>velocity</strong> – <strong>[in]</strong> The target joint velocity (range: 0.0~1.0) </p></li>
+<li><p><strong>acc</strong> – <strong>[in]</strong> The target joint acceleration (range: 0.0~1.0) </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion17requestLinearMoveERKNSt6vectorI12LinearTargetEE">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion17requestLinearMoveERKNSt6vectorI12LinearTargetEE"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion17requestLinearMoveERKNSt6vectorI12LinearTargetEE"></span><span id="humanoid::h10w::H10wMotion::requestLinearMove__std::vector:LinearTarget:CR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1abf79ddbc1239ab419c764b223b427a27"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestLinearMove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w12LinearTargetE" title="humanoid::h10w::LinearTarget"><span class="n"><span class="pre">LinearTarget</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">linear_targets</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion17requestLinearMoveERKNSt6vectorI12LinearTargetEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Linear Move. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>linear_targets</strong> – <strong>[in]</strong> The target of the tcps </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion8waitMoveEi">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion8waitMoveEi"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion8waitMoveEi"></span><span id="humanoid::h10w::H10wMotion::waitMove__i"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1a50f4a39e6904875e62a5b326d114eead"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitMove</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1000</span></span><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><span class="m"><span class="pre">100</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion8waitMoveEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Blocking wait until move is complete. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – <strong>[in]</strong> Timeout in ms </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion11requestStopEv">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion11requestStopEv"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion11requestStopEv"></span><span id="humanoid::h10w::H10wMotion::requestStop"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1a5fcd0f64ebaa59dcc17f9c05c39d32a9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestStop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion11requestStopEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Stop moving the robot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion17enableRealtimeCmdEb">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion17enableRealtimeCmdEb"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion17enableRealtimeCmdEb"></span><span id="humanoid::h10w::H10wMotion::enableRealtimeCmd__b"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1ab180d01b7a2383015661819f48a59704"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableRealtimeCmd</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion17enableRealtimeCmdEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable or disable the realtime cmd. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the realtime cmd mode is enabled, motion commands from non-realtime commands will fail. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – [in] true: enable the realtime cmd; false: disable the realtime cmd. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion10servoJointERK20RealtimeJointsParams">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion10servoJointERK20RealtimeJointsParams"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion10servoJointERK20RealtimeJointsParams"></span><span id="humanoid::h10w::H10wMotion::servoJoint__RealtimeJointsParamsCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1a6136fa90fa18ae4cb4c8d4cd7f32782a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">servoJoint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w20RealtimeJointsParamsE" title="humanoid::h10w::RealtimeJointsParams"><span class="n"><span class="pre">RealtimeJointsParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion10servoJointERK20RealtimeJointsParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute real-time joint space servo motion. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – [in] Target joint parameters containing joint angles and validity flags </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion11servoLinearERK17RealtimeTcpParams">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion11servoLinearERK17RealtimeTcpParams"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion11servoLinearERK17RealtimeTcpParams"></span><span id="humanoid::h10w::H10wMotion::servoLinear__RealtimeTcpParamsCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1a099cfe318c71e24d72dfcec60388ca90"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">servoLinear</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w17RealtimeTcpParamsE" title="humanoid::h10w::RealtimeTcpParams"><span class="n"><span class="pre">RealtimeTcpParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion11servoLinearERK17RealtimeTcpParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute linear Cartesian space servo motion (TCP trajectory) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – [in] Target TCP parameters containing pose and validity flags </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion10speedJointERK20RealtimeJointsParams">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion10speedJointERK20RealtimeJointsParams"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion10speedJointERK20RealtimeJointsParams"></span><span id="humanoid::h10w::H10wMotion::speedJoint__RealtimeJointsParamsCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1a165b8e4201454013abec06b714abe623"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speedJoint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w20RealtimeJointsParamsE" title="humanoid::h10w::RealtimeJointsParams"><span class="n"><span class="pre">RealtimeJointsParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion10speedJointERK20RealtimeJointsParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute joint space velocity control motion. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – [in] Target joint parameters containing joint velocities and validity flags </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion11speedLinearERK17RealtimeTcpParams">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion11speedLinearERK17RealtimeTcpParams"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion11speedLinearERK17RealtimeTcpParams"></span><span id="humanoid::h10w::H10wMotion::speedLinear__RealtimeTcpParamsCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1a5796b212e8f98cbaba17e0c27de8f686"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speedLinear</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w17RealtimeTcpParamsE" title="humanoid::h10w::RealtimeTcpParams"><span class="n"><span class="pre">RealtimeTcpParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion11speedLinearERK17RealtimeTcpParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute Cartesian space velocity control motion (TCP velocity) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – [in] Target TCP parameters containing TCP velocities and validity flags </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion16setControlPolicyERK13ControlPolicy">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion16setControlPolicyERK13ControlPolicy"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion16setControlPolicyERK13ControlPolicy"></span><span id="humanoid::h10w::H10wMotion::setControlPolicy__ControlPolicyCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1aaefc19991d70f5d1ee10d5d8c3fdf699"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setControlPolicy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/enum.html#_CPPv4N8humanoid13ControlPolicyE" title="humanoid::ControlPolicy"><span class="n"><span class="pre">ControlPolicy</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">policy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion16setControlPolicyERK13ControlPolicy" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the robot control policy. </p>
+<p>
+control policy only affects Cartesian space motion of the body, while joint motion is not affected.<ul class="simple">
+<li><p>FULL_BODY: full-body control policy, the body may move in Cartesian space while moving the arms.</p></li>
+<li><p>SINGLE_ARM: single-arm control policy, only the left and right arms </p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>policy</strong> – [in] Control policy to set (FULL_BODY or SINGLE_ARM)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion16getControlPolicyER13ControlPolicy">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion16getControlPolicyER13ControlPolicy"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion16getControlPolicyER13ControlPolicy"></span><span id="humanoid::h10w::H10wMotion::getControlPolicy__ControlPolicyR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1aeba623a62814edf946dd4a4fbbfcb3ff"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getControlPolicy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/enum.html#_CPPv4N8humanoid13ControlPolicyE" title="humanoid::ControlPolicy"><span class="n"><span class="pre">ControlPolicy</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">policy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion16getControlPolicyER13ControlPolicy" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the robot current control policy. </p>
+<p>
+control policy only affects Cartesian space motion of the body, while joint motion is not affected.<ul class="simple">
+<li><p>FULL_BODY: full-body control policy, the body may move in Cartesian space while moving the arms.</p></li>
+<li><p>SINGLE_ARM: single-arm control policy, only the left and right arms </p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>policy</strong> – [out] Reference to store the current control policy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion11setSafeModeEb">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion11setSafeModeEb"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion11setSafeModeEb"></span><span id="humanoid::h10w::H10wMotion::setSafeMode__b"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1a678c515d962daac44a42a2e455573cd7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSafeMode</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion11setSafeModeEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable or disable robot safe mode. </p>
+<p>In safe mode, you can drive any joint beyond its limits back towards the normal range to ensure operational safety. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>safe mode requires disabling realtime cmd to take effect </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> – [in] current safe mode status, true to enable safe mode, false to disable safe mode </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wMotion11getSafeModeERb">
+<span id="_CPPv3N8humanoid4h10w10H10wMotion11getSafeModeERb"></span><span id="_CPPv2N8humanoid4h10w10H10wMotion11getSafeModeERb"></span><span id="humanoid::h10w::H10wMotion::getSafeMode__bR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wMotion_1ad7f67c2e7404019da2603ac68ecc9b07"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSafeMode</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wMotion11getSafeModeERb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the current robot safe mode status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> – [out] Reference to store the current safe mode status </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Controller mode description</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: Enable motion control features and use high-level motion control APIs</p></li>
+<li><p><strong>EnableController = false</strong>: Activate low-level control mode and directly control the motor layer</p></li>
+</ul>
+<p>Before using motion control features, make sure the controller mode is set correctly.</p>
+</div>
+</section>
+<section id="humanoid-h10w-h10wparams">
+<h2>humanoid::h10w::H10wParams<a class="headerlink" href="#humanoid-h10w-h10wparams" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParamsE">
+<span id="_CPPv3N8humanoid4h10w10H10wParamsE"></span><span id="_CPPv2N8humanoid4h10w10H10wParamsE"></span><span id="humanoid::h10w::H10wParams"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H10wParams</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParamsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>H10w params interface. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17getJointSoftLimitER10JointLimit">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17getJointSoftLimitER10JointLimit"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17getJointSoftLimitER10JointLimit"></span><span id="humanoid::h10w::H10wParams::getJointSoftLimit__JointLimitR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ae446456737c8984d603243af1ab65f51"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointSoftLimit</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid10JointLimitE" title="humanoid::JointLimit"><span class="n"><span class="pre">JointLimit</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointLimitList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17getJointSoftLimitER10JointLimit" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get joint soft limits. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointLimitList</strong> – [out] Joint soft limits </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams14getJointMaxVelER11JointMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams14getJointMaxVelER11JointMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams14getJointMaxVelER11JointMaxVel"></span><span id="humanoid::h10w::H10wParams::getJointMaxVel__JointMaxVelR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a6878cbe2ef208966c319fc7d7110d989"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointMaxVel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid11JointMaxVelE" title="humanoid::JointMaxVel"><span class="n"><span class="pre">JointMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams14getJointMaxVelER11JointMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get joint maximum velocities. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxVelList</strong> – [out] Joint maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams14getJointMaxAccER11JointMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams14getJointMaxAccER11JointMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams14getJointMaxAccER11JointMaxAcc"></span><span id="humanoid::h10w::H10wParams::getJointMaxAcc__JointMaxAccR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ae2496806708f89a5b196fbfdc8071df8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointMaxAcc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid11JointMaxAccE" title="humanoid::JointMaxAcc"><span class="n"><span class="pre">JointMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams14getJointMaxAccER11JointMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get joint maximum accelerations. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxAccList</strong> – [out] Joint maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams18getCartTransMaxVelER15CartTransMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams18getCartTransMaxVelER15CartTransMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams18getCartTransMaxVelER15CartTransMaxVel"></span><span id="humanoid::h10w::H10wParams::getCartTransMaxVel__CartTransMaxVelR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1afa578676f81b461d9ef7897b0828db94"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCartTransMaxVel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid15CartTransMaxVelE" title="humanoid::CartTransMaxVel"><span class="n"><span class="pre">CartTransMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartTransMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams18getCartTransMaxVelER15CartTransMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get Cartesian translation maximum velocities. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartTransMaxVelList</strong> – [out] Cartesian translation maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams18getCartTransMaxAccER15CartTransMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams18getCartTransMaxAccER15CartTransMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams18getCartTransMaxAccER15CartTransMaxAcc"></span><span id="humanoid::h10w::H10wParams::getCartTransMaxAcc__CartTransMaxAccR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ab1c57875cb8beb2b5785d1a1c6f68be3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCartTransMaxAcc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid15CartTransMaxAccE" title="humanoid::CartTransMaxAcc"><span class="n"><span class="pre">CartTransMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartTransMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams18getCartTransMaxAccER15CartTransMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get Cartesian translation maximum accelerations. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartTransMaxAccList</strong> – [out] Cartesian translation maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17getCartRotaMaxVelER14CartRotaMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17getCartRotaMaxVelER14CartRotaMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17getCartRotaMaxVelER14CartRotaMaxVel"></span><span id="humanoid::h10w::H10wParams::getCartRotaMaxVel__CartRotaMaxVelR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ad868b2cf8c31b3c62814920cdbc82449"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCartRotaMaxVel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid14CartRotaMaxVelE" title="humanoid::CartRotaMaxVel"><span class="n"><span class="pre">CartRotaMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartRotaMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17getCartRotaMaxVelER14CartRotaMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get Cartesian rotation maximum velocities. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartRotaMaxVelList</strong> – [out] Cartesian rotation maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17getCartRotaMaxAccER14CartRotaMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17getCartRotaMaxAccER14CartRotaMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17getCartRotaMaxAccER14CartRotaMaxAcc"></span><span id="humanoid::h10w::H10wParams::getCartRotaMaxAcc__CartRotaMaxAccR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1add758923e965cb663ae4f10c084c2ce6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCartRotaMaxAcc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid14CartRotaMaxAccE" title="humanoid::CartRotaMaxAcc"><span class="n"><span class="pre">CartRotaMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartRotaMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17getCartRotaMaxAccER14CartRotaMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get Cartesian rotation maximum accelerations. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartRotaMaxAccList</strong> – [out] Cartesian rotation maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams12getTcpOffsetER15TcpOffsetParams">
+<span id="_CPPv3N8humanoid4h10w10H10wParams12getTcpOffsetER15TcpOffsetParams"></span><span id="_CPPv2N8humanoid4h10w10H10wParams12getTcpOffsetER15TcpOffsetParams"></span><span id="humanoid::h10w::H10wParams::getTcpOffset__TcpOffsetParamsR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a09bad0cebdd02464ef291a69ace38de1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTcpOffset</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TcpOffsetParams</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tcpOffsetParamsList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams12getTcpOffsetER15TcpOffsetParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get tcp offset. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tcpOffsetParamsList</strong> – [out] Tcp offset </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams13getTcpPayloadER16TcpPayloadParams">
+<span id="_CPPv3N8humanoid4h10w10H10wParams13getTcpPayloadER16TcpPayloadParams"></span><span id="_CPPv2N8humanoid4h10w10H10wParams13getTcpPayloadER16TcpPayloadParams"></span><span id="humanoid::h10w::H10wParams::getTcpPayload__TcpPayloadParamsR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a0dfe23263329557a1923a9b2f8bf0e8b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTcpPayload</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TcpPayloadParams</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tcpPayloadParamsList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams13getTcpPayloadER16TcpPayloadParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get tcp payload. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tcpPayloadParamsList</strong> – [out] Tcp payload </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17setJointSoftLimitERK10JointLimit">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17setJointSoftLimitERK10JointLimit"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17setJointSoftLimitERK10JointLimit"></span><span id="humanoid::h10w::H10wParams::setJointSoftLimit__JointLimitCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1afdebb9e4f21387fbf32642eafe5d0e2e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointSoftLimit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid10JointLimitE" title="humanoid::JointLimit"><span class="n"><span class="pre">JointLimit</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointLimitList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17setJointSoftLimitERK10JointLimit" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set joint soft limits. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointLimitList</strong> – [in] Joint soft limits </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams14setJointMaxVelERK11JointMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams14setJointMaxVelERK11JointMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams14setJointMaxVelERK11JointMaxVel"></span><span id="humanoid::h10w::H10wParams::setJointMaxVel__JointMaxVelCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1aa7fb27a83fbed916cdb4ddcd4f4e218d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointMaxVel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid11JointMaxVelE" title="humanoid::JointMaxVel"><span class="n"><span class="pre">JointMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams14setJointMaxVelERK11JointMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set joint maximum velocities. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxVelList</strong> – [in] Joint maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams14setJointMaxAccERK11JointMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams14setJointMaxAccERK11JointMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams14setJointMaxAccERK11JointMaxAcc"></span><span id="humanoid::h10w::H10wParams::setJointMaxAcc__JointMaxAccCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a03d2a596f9d29c7e33e43b6a75559cff"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointMaxAcc</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid11JointMaxAccE" title="humanoid::JointMaxAcc"><span class="n"><span class="pre">JointMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams14setJointMaxAccERK11JointMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set joint maximum accelerations. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxAccList</strong> – [in] Joint maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams18setCartTransMaxVelERK15CartTransMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams18setCartTransMaxVelERK15CartTransMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams18setCartTransMaxVelERK15CartTransMaxVel"></span><span id="humanoid::h10w::H10wParams::setCartTransMaxVel__CartTransMaxVelCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ad0b767c5efc1a5b3f6326ba4a59b118c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCartTransMaxVel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid15CartTransMaxVelE" title="humanoid::CartTransMaxVel"><span class="n"><span class="pre">CartTransMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartTransMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams18setCartTransMaxVelERK15CartTransMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set Cartesian translation maximum velocities. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartTransMaxVelList</strong> – [in] Cartesian translation maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams18setCartTransMaxAccERK15CartTransMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams18setCartTransMaxAccERK15CartTransMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams18setCartTransMaxAccERK15CartTransMaxAcc"></span><span id="humanoid::h10w::H10wParams::setCartTransMaxAcc__CartTransMaxAccCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ac6882be4cd5e99bfd1c029d0dda685f5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCartTransMaxAcc</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid15CartTransMaxAccE" title="humanoid::CartTransMaxAcc"><span class="n"><span class="pre">CartTransMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartTransMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams18setCartTransMaxAccERK15CartTransMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set Cartesian translation maximum accelerations. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartTransMaxAccList</strong> – [in] Cartesian translation maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17setCartRotaMaxVelERK14CartRotaMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17setCartRotaMaxVelERK14CartRotaMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17setCartRotaMaxVelERK14CartRotaMaxVel"></span><span id="humanoid::h10w::H10wParams::setCartRotaMaxVel__CartRotaMaxVelCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1aa3af32694d358defd7c06c7c8c7067c8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCartRotaMaxVel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid14CartRotaMaxVelE" title="humanoid::CartRotaMaxVel"><span class="n"><span class="pre">CartRotaMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartRotaMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17setCartRotaMaxVelERK14CartRotaMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set Cartesian rotation maximum velocities. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartRotaMaxVelList</strong> – [in] Cartesian rotation maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17setCartRotaMaxAccERK14CartRotaMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17setCartRotaMaxAccERK14CartRotaMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17setCartRotaMaxAccERK14CartRotaMaxAcc"></span><span id="humanoid::h10w::H10wParams::setCartRotaMaxAcc__CartRotaMaxAccCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a59a567682000df42ee11c0ab9e15bcfb"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCartRotaMaxAcc</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid14CartRotaMaxAccE" title="humanoid::CartRotaMaxAcc"><span class="n"><span class="pre">CartRotaMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartRotaMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17setCartRotaMaxAccERK14CartRotaMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set Cartesian rotation maximum accelerations. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartRotaMaxAccList</strong> – [in] Cartesian rotation maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams12setTcpOffsetERK15TcpOffsetParams">
+<span id="_CPPv3N8humanoid4h10w10H10wParams12setTcpOffsetERK15TcpOffsetParams"></span><span id="_CPPv2N8humanoid4h10w10H10wParams12setTcpOffsetERK15TcpOffsetParams"></span><span id="humanoid::h10w::H10wParams::setTcpOffset__TcpOffsetParamsCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a285215c048e8c8b7b276b717af0ff923"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTcpOffset</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TcpOffsetParams</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tcpOffsetParamsList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams12setTcpOffsetERK15TcpOffsetParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set tcp offset. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tcpOffsetParamsList</strong> – Tcp offset </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams13setTcpPayloadERK16TcpPayloadParams">
+<span id="_CPPv3N8humanoid4h10w10H10wParams13setTcpPayloadERK16TcpPayloadParams"></span><span id="_CPPv2N8humanoid4h10w10H10wParams13setTcpPayloadERK16TcpPayloadParams"></span><span id="humanoid::h10w::H10wParams::setTcpPayload__TcpPayloadParamsCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a3adeb48841aa17cb46d38738a0e97c17"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTcpPayload</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TcpPayloadParams</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tcpPayloadParamsList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams13setTcpPayloadERK16TcpPayloadParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set tcp payload. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tcpPayloadParamsList</strong> – Tcp payload </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17getMechJointLimitER10JointLimit">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17getMechJointLimitER10JointLimit"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17getMechJointLimitER10JointLimit"></span><span id="humanoid::h10w::H10wParams::getMechJointLimit__JointLimitR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a13215003d9aebf43c18831c77c164464"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMechJointLimit</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid10JointLimitE" title="humanoid::JointLimit"><span class="n"><span class="pre">JointLimit</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointLimitList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17getMechJointLimitER10JointLimit" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get mechanical joint soft limits, mechanical parameters cannot be modified by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointLimitList</strong> – [out] Mechanical joint limits </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams18getMechJointMaxVelER11JointMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams18getMechJointMaxVelER11JointMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams18getMechJointMaxVelER11JointMaxVel"></span><span id="humanoid::h10w::H10wParams::getMechJointMaxVel__JointMaxVelR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a97daf235ccd9513edbc599583111b503"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMechJointMaxVel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid11JointMaxVelE" title="humanoid::JointMaxVel"><span class="n"><span class="pre">JointMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams18getMechJointMaxVelER11JointMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get mechanical joint maximum velocities, mechanical parameters cannot be modified by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxVelList</strong> – [out] Mechanical joint maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams18getMechJointMaxAccER11JointMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams18getMechJointMaxAccER11JointMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams18getMechJointMaxAccER11JointMaxAcc"></span><span id="humanoid::h10w::H10wParams::getMechJointMaxAcc__JointMaxAccR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ad99e2d3a4e717865889a1e6016699a82"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMechJointMaxAcc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid11JointMaxAccE" title="humanoid::JointMaxAcc"><span class="n"><span class="pre">JointMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams18getMechJointMaxAccER11JointMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get mechanical joint maximum accelerations, mechanical parameters cannot be modified by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointMaxAccList</strong> – [out] Mechanical joint maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams22getMechCartTransMaxVelER15CartTransMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams22getMechCartTransMaxVelER15CartTransMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams22getMechCartTransMaxVelER15CartTransMaxVel"></span><span id="humanoid::h10w::H10wParams::getMechCartTransMaxVel__CartTransMaxVelR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1afcde28d827f9a42f201d2e0348b01705"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMechCartTransMaxVel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid15CartTransMaxVelE" title="humanoid::CartTransMaxVel"><span class="n"><span class="pre">CartTransMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams22getMechCartTransMaxVelER15CartTransMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get mechanical Cartesian translation maximum velocities, mechanical parameters cannot be modified by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartMaxVelList</strong> – [out] Mechanical Cartesian translation maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams22getMechCartTransMaxAccER15CartTransMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams22getMechCartTransMaxAccER15CartTransMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams22getMechCartTransMaxAccER15CartTransMaxAcc"></span><span id="humanoid::h10w::H10wParams::getMechCartTransMaxAcc__CartTransMaxAccR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a271b270308f2cd5d90e0e94049fa7e2c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMechCartTransMaxAcc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid15CartTransMaxAccE" title="humanoid::CartTransMaxAcc"><span class="n"><span class="pre">CartTransMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams22getMechCartTransMaxAccER15CartTransMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get mechanical Cartesian translation maximum accelerations, mechanical parameters cannot be modified by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartMaxAccList</strong> – [out] Mechanical Cartesian translation maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams21getMechCartRotaMaxVelER14CartRotaMaxVel">
+<span id="_CPPv3N8humanoid4h10w10H10wParams21getMechCartRotaMaxVelER14CartRotaMaxVel"></span><span id="_CPPv2N8humanoid4h10w10H10wParams21getMechCartRotaMaxVelER14CartRotaMaxVel"></span><span id="humanoid::h10w::H10wParams::getMechCartRotaMaxVel__CartRotaMaxVelR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a4bcbe22ef551cb309bd167012c470df2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMechCartRotaMaxVel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid14CartRotaMaxVelE" title="humanoid::CartRotaMaxVel"><span class="n"><span class="pre">CartRotaMaxVel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartMaxVelList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams21getMechCartRotaMaxVelER14CartRotaMaxVel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get mechanical Cartesian rotation maximum velocities, mechanical parameters cannot be modified by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartMaxVelList</strong> – [out] Mechanical Cartesian rotation maximum velocities </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams20getMechCartRotMaxAccER14CartRotaMaxAcc">
+<span id="_CPPv3N8humanoid4h10w10H10wParams20getMechCartRotMaxAccER14CartRotaMaxAcc"></span><span id="_CPPv2N8humanoid4h10w10H10wParams20getMechCartRotMaxAccER14CartRotaMaxAcc"></span><span id="humanoid::h10w::H10wParams::getMechCartRotMaxAcc__CartRotaMaxAccR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a7fb5e89f550d3755a9fc10455716b110"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMechCartRotMaxAcc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/typedef.html#_CPPv4N8humanoid14CartRotaMaxAccE" title="humanoid::CartRotaMaxAcc"><span class="n"><span class="pre">CartRotaMaxAcc</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartMaxAccList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams20getMechCartRotMaxAccER14CartRotaMaxAcc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get mechanical Cartesian rotation maximum accelerations, mechanical parameters cannot be modified by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartMaxAccList</strong> – [out] Mechanical Cartesian rotation maximum accelerations </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams21setJointControlParamsERK18JointControlParams">
+<span id="_CPPv3N8humanoid4h10w10H10wParams21setJointControlParamsERK18JointControlParams"></span><span id="_CPPv2N8humanoid4h10w10H10wParams21setJointControlParamsERK18JointControlParams"></span><span id="humanoid::h10w::H10wParams::setJointControlParams__JointControlParamsCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a17137294b384157bf6287ae01d0d238e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointControlParams</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">JointControlParams</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointControlParamsList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams21setJointControlParamsERK18JointControlParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set joint control parameters. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointControlParamsList</strong> – [in] Joint control parameters list </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams25setCartesianControlParamsERK22CartesianControlParams">
+<span id="_CPPv3N8humanoid4h10w10H10wParams25setCartesianControlParamsERK22CartesianControlParams"></span><span id="_CPPv2N8humanoid4h10w10H10wParams25setCartesianControlParamsERK22CartesianControlParams"></span><span id="humanoid::h10w::H10wParams::setCartesianControlParams__CartesianControlParamsCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1aeb5660475061e4d0317f66029dcf6951"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCartesianControlParams</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">CartesianControlParams</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartesianControlParamsList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams25setCartesianControlParamsERK22CartesianControlParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set cartesian control parameters. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartesianControlParamsList</strong> – [in] Cartesian control parameters list </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams21getJointControlParamsER18JointControlParams">
+<span id="_CPPv3N8humanoid4h10w10H10wParams21getJointControlParamsER18JointControlParams"></span><span id="_CPPv2N8humanoid4h10w10H10wParams21getJointControlParamsER18JointControlParams"></span><span id="humanoid::h10w::H10wParams::getJointControlParams__JointControlParamsR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ada5a64944e4a8a7dee7cc3250198037a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointControlParams</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">JointControlParams</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointControlParamsList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams21getJointControlParamsER18JointControlParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get joint control parameters. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointControlParamsList</strong> – [out] Joint control parameters list </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams25getCartesianControlParamsER22CartesianControlParams">
+<span id="_CPPv3N8humanoid4h10w10H10wParams25getCartesianControlParamsER22CartesianControlParams"></span><span id="_CPPv2N8humanoid4h10w10H10wParams25getCartesianControlParamsER22CartesianControlParams"></span><span id="humanoid::h10w::H10wParams::getCartesianControlParams__CartesianControlParamsR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a07644d645fb458e477c6e428b87eff2b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCartesianControlParams</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CartesianControlParams</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cartesianControlParamsList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams25getCartesianControlParamsER22CartesianControlParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get cartesian control parameters. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cartesianControlParamsList</strong> – [out] Cartesian control parameters list </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17forwardKinematicsERKNSt6vectorIiEERKNSt6vectorIdEERNSt6vectorI13TcpPoseParamsEE">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17forwardKinematicsERKNSt6vectorIiEERKNSt6vectorIdEERNSt6vectorI13TcpPoseParamsEE"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17forwardKinematicsERKNSt6vectorIiEERKNSt6vectorIdEERNSt6vectorI13TcpPoseParamsEE"></span><span id="humanoid::h10w::H10wParams::forwardKinematics__std::vector:i:CR.std::vector:double:CR.std::vector:TcpPoseParams:R"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1a25f2764681167dd5b6246136f9cd714c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">forwardKinematics</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">joint_angles</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w13TcpPoseParamsE" title="humanoid::h10w::TcpPoseParams"><span class="n"><span class="pre">TcpPoseParams</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pose</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17forwardKinematicsERKNSt6vectorIiEERKNSt6vectorIdEERNSt6vectorI13TcpPoseParamsEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Forward kinematics calculation. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – <strong>[in]</strong> Tcp end type: 1-left 2-right 3-torso </p></li>
+<li><p><strong>joint_angles</strong> – <strong>[in]</strong> Joint angles of whole body </p></li>
+<li><p><strong>pose</strong> – <strong>[out]</strong> Tcp pose </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wParams17inverseKinematicsERKNSt6vectorI13TcpPoseParamsEERKNSt6vectorIdEERNSt6vectorIdEEb">
+<span id="_CPPv3N8humanoid4h10w10H10wParams17inverseKinematicsERKNSt6vectorI13TcpPoseParamsEERKNSt6vectorIdEERNSt6vectorIdEEb"></span><span id="_CPPv2N8humanoid4h10w10H10wParams17inverseKinematicsERKNSt6vectorI13TcpPoseParamsEERKNSt6vectorIdEERNSt6vectorIdEEb"></span><span id="humanoid::h10w::H10wParams::inverseKinematics__std::vector:TcpPoseParams:CR.std::vector:double:CR.std::vector:double:R.b"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wParams_1ac1e21f054d0f6c0a77ab483d5eea0402"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">inverseKinematics</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w13TcpPoseParamsE" title="humanoid::h10w::TcpPoseParams"><span class="n"><span class="pre">TcpPoseParams</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pose</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">reference_angles</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">joint_angles</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">if_use_whole_body</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wParams17inverseKinematicsERKNSt6vectorI13TcpPoseParamsEERKNSt6vectorIdEERNSt6vectorIdEEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inverse kinematics calculation. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose</strong> – <strong>[in]</strong> Tcp pose </p></li>
+<li><p><strong>reference_angles</strong> – <strong>[in]</strong> Reference joint positions‌，used for calculating the inverse solution with the shortest distance </p></li>
+<li><p><strong>joint_angles</strong> – <strong>[out]</strong> Joint angles of whole body </p></li>
+<li><p><strong>if_use_whole_body</strong> – <strong>[in]</strong> Specifies whether the TCP pose is computed using the full-body joints. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-h10wstatus">
+<h2>humanoid::h10w::H10wStatus<a class="headerlink" href="#humanoid-h10w-h10wstatus" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wStatusE">
+<span id="_CPPv3N8humanoid4h10w10H10wStatusE"></span><span id="_CPPv2N8humanoid4h10w10H10wStatusE"></span><span id="humanoid::h10w::H10wStatus"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wStatus"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H10wStatus</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wStatusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>H10w status interface. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wStatus20getControllerMessageER23ControllerMessageParams">
+<span id="_CPPv3N8humanoid4h10w10H10wStatus20getControllerMessageER23ControllerMessageParams"></span><span id="_CPPv2N8humanoid4h10w10H10wStatus20getControllerMessageER23ControllerMessageParams"></span><span id="humanoid::h10w::H10wStatus::getControllerMessage__ControllerMessageParamsR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wStatus_1a68aa9574d2b8bd39ff1d96351dc73f5a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getControllerMessage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid23ControllerMessageParamsE" title="humanoid::ControllerMessageParams"><span class="n"><span class="pre">ControllerMessageParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">controller_message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wStatus20getControllerMessageER23ControllerMessageParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get current controller status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>controller_message</strong> – [out] Controller status, including controller enabled state, robot power state, joint or part brake state, etc. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wStatus14getMoveMessageER17MoveMessageParams">
+<span id="_CPPv3N8humanoid4h10w10H10wStatus14getMoveMessageER17MoveMessageParams"></span><span id="_CPPv2N8humanoid4h10w10H10wStatus14getMoveMessageER17MoveMessageParams"></span><span id="humanoid::h10w::H10wStatus::getMoveMessage__MoveMessageParamsR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wStatus_1a691d52b0c02f36502b22b35764ff9ecc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMoveMessage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w17MoveMessageParamsE" title="humanoid::h10w::MoveMessageParams"><span class="n"><span class="pre">MoveMessageParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">move_message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wStatus14getMoveMessageER17MoveMessageParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get current motion state. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>move_message</strong> – [out] Motion state, including joint angles, joint velocities, and TCP pose, etc. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wStatus15getErrorMessageER18ErrorMessageParams">
+<span id="_CPPv3N8humanoid4h10w10H10wStatus15getErrorMessageER18ErrorMessageParams"></span><span id="_CPPv2N8humanoid4h10w10H10wStatus15getErrorMessageER18ErrorMessageParams"></span><span id="humanoid::h10w::H10wStatus::getErrorMessage__ErrorMessageParamsR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wStatus_1a516d0a51f07a2f03a2f351c44b447256"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getErrorMessage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w18ErrorMessageParamsE" title="humanoid::h10w::ErrorMessageParams"><span class="n"><span class="pre">ErrorMessageParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wStatus15getErrorMessageER18ErrorMessageParams" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get current error state. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>error_message</strong> – [out] Detailed error information. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-h10wsystem">
+<h2>humanoid::h10w::H10wSystem<a class="headerlink" href="#humanoid-h10w-h10wsystem" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystemE">
+<span id="_CPPv3N8humanoid4h10w10H10wSystemE"></span><span id="_CPPv2N8humanoid4h10w10H10wSystemE"></span><span id="humanoid::h10w::H10wSystem"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H10wSystem</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystemE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>H10w system interface. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem31calibrateMechanicalZeroPositionEi">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem31calibrateMechanicalZeroPositionEi"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem31calibrateMechanicalZeroPositionEi"></span><span id="humanoid::h10w::H10wSystem::calibrateMechanicalZeroPosition__i"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1aa00087124925857db66b93f01392fbf0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrateMechanicalZeroPosition</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem31calibrateMechanicalZeroPositionEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calibrate the mechanical zero position of a specified joint. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mapping between joint indexes and int values is defined in <code class="docutils literal notranslate"><span class="pre">humanoid::h10w::JointIndexValue</span></code> in <code class="docutils literal notranslate"><span class="pre">common/h10w_def.h</span></code>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – [in] Joint index (int) to be calibrated. Elevater and gripper are not currently supported. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem22calibrate90DegPositionEi">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem22calibrate90DegPositionEi"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem22calibrate90DegPositionEi"></span><span id="humanoid::h10w::H10wSystem::calibrate90DegPosition__i"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a80dfa75039e0cf553205ab3a60fbd1e4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrate90DegPosition</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem22calibrate90DegPositionEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calibrate the 90° position of a specified joint. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mapping between joint indexes and int values is defined in <code class="docutils literal notranslate"><span class="pre">humanoid::h10w::JointIndexValue</span></code> in <code class="docutils literal notranslate"><span class="pre">common/h10w_def.h</span></code>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – [in] Joint index (int) to be calibrated. Elevater and gripper are not currently supported. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem19saveJointParametersEi">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem19saveJointParametersEi"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem19saveJointParametersEi"></span><span id="humanoid::h10w::H10wSystem::saveJointParameters__i"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a39674b9b95cbf754336a62cac264f0c2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveJointParameters</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem19saveJointParametersEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Save the mechanical zero position of specified joint zero position. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mapping between joint indexes and int values is defined in <code class="docutils literal notranslate"><span class="pre">humanoid::h10w::JointIndexValue</span></code> in <code class="docutils literal notranslate"><span class="pre">common/h10w_def.h</span></code>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – [in] Joint index (int) whose mechanical zero position is to be saved. Elevater and gripper are not currently supported. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem12controlPowerE10PowerState">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem12controlPowerE10PowerState"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem12controlPowerE10PowerState"></span><span id="humanoid::h10w::H10wSystem::controlPower__PowerState"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a5c8f4609ada0f5faada204123889510f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">controlPower</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/enum.html#_CPPv4N8humanoid10PowerStateE" title="humanoid::PowerState"><span class="n"><span class="pre">PowerState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem12controlPowerE10PowerState" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control the power state of the robot. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When calling the <code class="docutils literal notranslate"><span class="pre">PowerControl</span></code> interface, leave sufficient time between operations to avoid proceeding while power on/off has not fully taken effect. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – [in] <a class="reference internal" href="../humanoid/enum.html#namespacehumanoid_1a45a50ad5e722a1ec35f262c7893e3d68a3d6fc432ff9e2d9b890c591179a4401e"><span class="std std-ref">PowerState::POWER_ON</span></a>: power on; <a class="reference internal" href="../humanoid/enum.html#namespacehumanoid_1a45a50ad5e722a1ec35f262c7893e3d68aa15cea80d926d7282b831d451ba8aee8"><span class="std std-ref">PowerState::POWER_OFF</span></a>: power off. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem11statusPowerER10PowerState">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem11statusPowerER10PowerState"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem11statusPowerER10PowerState"></span><span id="humanoid::h10w::H10wSystem::statusPower__PowerStateR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a1976b6a4111ae02a97cf6a88659d71fa"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">statusPower</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/enum.html#_CPPv4N8humanoid10PowerStateE" title="humanoid::PowerState"><span class="n"><span class="pre">PowerState</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem11statusPowerER10PowerState" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the power state of the robot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – [out] <a class="reference internal" href="../humanoid/enum.html#namespacehumanoid_1a45a50ad5e722a1ec35f262c7893e3d68a3d6fc432ff9e2d9b890c591179a4401e"><span class="std std-ref">PowerState::POWER_ON</span></a>: power on; <a class="reference internal" href="../humanoid/enum.html#namespacehumanoid_1a45a50ad5e722a1ec35f262c7893e3d68aa15cea80d926d7282b831d451ba8aee8"><span class="std std-ref">PowerState::POWER_OFF</span></a>: power off. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem12controlBrakeE10BrakeState">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem12controlBrakeE10BrakeState"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem12controlBrakeE10BrakeState"></span><span id="humanoid::h10w::H10wSystem::controlBrake__BrakeState"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a8fc45260a808e8e51566619d5fd36296"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">controlBrake</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/enum.html#_CPPv4N8humanoid10BrakeStateE" title="humanoid::BrakeState"><span class="n"><span class="pre">BrakeState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem12controlBrakeE10BrakeState" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Control the brake state of the robot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – [in] <a class="reference internal" href="../humanoid/enum.html#namespacehumanoid_1ab43f1431ab00d99876f34b9cd408e804ada3b24b6cea6c1ee0f4cb3ad1214b0a8"><span class="std std-ref">BrakeState::BRAKE_OFF</span></a>: close brake; <a class="reference internal" href="../humanoid/enum.html#namespacehumanoid_1ab43f1431ab00d99876f34b9cd408e804a41fbc4f4e25e77f16e5accf0e3cb8e89"><span class="std std-ref">BrakeState::BRAKE_ON</span></a>: open brake. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem15getRobotVersionER12RobotVersion">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem15getRobotVersionER12RobotVersion"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem15getRobotVersionER12RobotVersion"></span><span id="humanoid::h10w::H10wSystem::getRobotVersion__RobotVersionR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a414cd4cb9d05c3d174352f72e80b7789"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRobotVersion</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid12RobotVersionE" title="humanoid::RobotVersion"><span class="n"><span class="pre">RobotVersion</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">robotVersion</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem15getRobotVersionER12RobotVersion" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the version of the robot and its plugins. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>robotVersion</strong> – [out] The version information structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem10clearErrorEv">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem10clearErrorEv"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem10clearErrorEv"></span><span id="humanoid::h10w::H10wSystem::clearError"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a5497dd6cf71693968ee8b24d073fa9c2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem10clearErrorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clear the error state of the robot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem16enableControllerEb">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem16enableControllerEb"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem16enableControllerEb"></span><span id="humanoid::h10w::H10wSystem::enableController__b"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a424b1cbb29a3335ae5d3ca48e75618b6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableController</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem16enableControllerEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable or disable the robot controller. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the robot controller is enabled, it can send motion commands to drives. When disabled, the controller will not send any motion commands to drives for safety. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – [in] true: enable; false: disable. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem19isControllerEnabledERb">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem19isControllerEnabledERb"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem19isControllerEnabledERb"></span><span id="humanoid::h10w::H10wSystem::isControllerEnabled__bR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a00210ba3ca529eb6fc98f22ede7e8af9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isControllerEnabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem19isControllerEnabledERb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check whether the robot controller is enabled. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – [out] The controller status, true: enable; false: disable. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem13getMicrophoneER16MicrophoneStatus">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem13getMicrophoneER16MicrophoneStatus"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem13getMicrophoneER16MicrophoneStatus"></span><span id="humanoid::h10w::H10wSystem::getMicrophone__MicrophoneStatusR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a139568c80e64a51642c1c1687c555b48"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMicrophone</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid16MicrophoneStatusE" title="humanoid::MicrophoneStatus"><span class="n"><span class="pre">MicrophoneStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem13getMicrophoneER16MicrophoneStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the microphone status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [out] The microphone status structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem13setMicrophoneERK16MicrophoneStatus">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem13setMicrophoneERK16MicrophoneStatus"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem13setMicrophoneERK16MicrophoneStatus"></span><span id="humanoid::h10w::H10wSystem::setMicrophone__MicrophoneStatusCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a3403130c3296356496f7224de059b976"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMicrophone</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid16MicrophoneStatusE" title="humanoid::MicrophoneStatus"><span class="n"><span class="pre">MicrophoneStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem13setMicrophoneERK16MicrophoneStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the microphone status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [in] The microphone status structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem10getSpeakerER13SpeakerStatus">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem10getSpeakerER13SpeakerStatus"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem10getSpeakerER13SpeakerStatus"></span><span id="humanoid::h10w::H10wSystem::getSpeaker__SpeakerStatusR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a804e2edee3012967ce3aeae58b504d43"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSpeaker</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid13SpeakerStatusE" title="humanoid::SpeakerStatus"><span class="n"><span class="pre">SpeakerStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem10getSpeakerER13SpeakerStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the speaker status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [out] The speaker status structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem10setSpeakerERK13SpeakerStatus">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem10setSpeakerERK13SpeakerStatus"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem10setSpeakerERK13SpeakerStatus"></span><span id="humanoid::h10w::H10wSystem::setSpeaker__SpeakerStatusCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a4a9e42bd70848b958890b620f2575e86"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSpeaker</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid13SpeakerStatusE" title="humanoid::SpeakerStatus"><span class="n"><span class="pre">SpeakerStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem10setSpeakerERK13SpeakerStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the speaker status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [in] The speaker status structure. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem13getPushPeriodER8uint32_t">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem13getPushPeriodER8uint32_t"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem13getPushPeriodER8uint32_t"></span><span id="humanoid::h10w::H10wSystem::getPushPeriod__uint32_tR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1ac341f2daee3e6e90e4d2e7e3e1bacfea"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPushPeriod</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem13getPushPeriodER8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get push period. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>period</strong> – [out] Push period (milliseconds) </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10H10wSystem13setPushPeriodE8uint32_t">
+<span id="_CPPv3N8humanoid4h10w10H10wSystem13setPushPeriodE8uint32_t"></span><span id="_CPPv2N8humanoid4h10w10H10wSystem13setPushPeriodE8uint32_t"></span><span id="humanoid::h10w::H10wSystem::setPushPeriod__uint32_t"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wSystem_1a31b2a78d77740e6b2bc9b1f288128f6b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPushPeriod</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10H10wSystem13setPushPeriodE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set push period. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>period</strong> – [in] Push period (milliseconds) </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-h10wlowlevel">
+<h2>humanoid::h10w::H10wLowLevel<a class="headerlink" href="#humanoid-h10w-h10wlowlevel" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12H10wLowLevelE">
+<span id="_CPPv3N8humanoid4h10w12H10wLowLevelE"></span><span id="_CPPv2N8humanoid4h10w12H10wLowLevelE"></span><span id="humanoid::h10w::H10wLowLevel"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wLowLevel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H10wLowLevel</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12H10wLowLevelE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12H10wLowLevel11writeLowCmdERK6LowCmd">
+<span id="_CPPv3N8humanoid4h10w12H10wLowLevel11writeLowCmdERK6LowCmd"></span><span id="_CPPv2N8humanoid4h10w12H10wLowLevel11writeLowCmdERK6LowCmd"></span><span id="humanoid::h10w::H10wLowLevel::writeLowCmd__LowCmdCR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wLowLevel_1a19d8db40e344cc6fe5f638f293dfb0ef"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeLowCmd</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w6LowCmdE" title="humanoid::h10w::LowCmd"><span class="n"><span class="pre">LowCmd</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lowCmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12H10wLowLevel11writeLowCmdERK6LowCmd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Publish low-level control command. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lowCmd</strong> – [in] Low-level control command </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12H10wLowLevel12readLowStateER8LowState">
+<span id="_CPPv3N8humanoid4h10w12H10wLowLevel12readLowStateER8LowState"></span><span id="_CPPv2N8humanoid4h10w12H10wLowLevel12readLowStateER8LowState"></span><span id="humanoid::h10w::H10wLowLevel::readLowState__LowStateR"></span><span class="target" id="classhumanoid_1_1h10w_1_1H10wLowLevel_1ac1fe758508fdaee02f2cd257afafb8a2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readLowState</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="struct.html#_CPPv4N8humanoid4h10w8LowStateE" title="humanoid::h10w::LowState"><span class="n"><span class="pre">LowState</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lowState</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12H10wLowLevel12readLowStateER8LowState" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Subscribe low-level state. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lowState</strong> – [out] Low-level state </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: Success;</p></li>
+<li><p>Other: Error code; </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Controller mode description</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: Enable motion control features and use high-level motion control APIs</p></li>
+<li><p><strong>EnableController = false</strong>: Activate low-level control mode and directly control the motor layer</p></li>
+</ul>
+<p>Before using motion control features, make sure the controller mode is set correctly.</p>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  
+        <div class="related-pages">
+          <a class="next-page" href="error.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Error Code List</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="struct.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Struct</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025 Beijing Siling Robot Technology Co., Ltd.
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+  
+    ﻿<div id="doc-toolbar">
+  <label>
+    
+      Language:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H10-W/v0.10.2/cpp/zh_CN/"
+              >
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H10-W/v0.10.2/cpp/en/"
+              selected>
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      Version:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H10-W/v0.10.2/cpp/en/en/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+  
+
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Classes</a><ul>
+<li><a class="reference internal" href="#humanoid-h10w-h10wchassis">humanoid::h10w::H10wChassis</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-h10wmotion">humanoid::h10w::H10wMotion</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-h10wparams">humanoid::h10w::H10wParams</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-h10wstatus">humanoid::h10w::H10wStatus</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-h10wsystem">humanoid::h10w::H10wSystem</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-h10wlowlevel">humanoid::h10w::H10wLowLevel</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=74347cb9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+    </body>
+</html>

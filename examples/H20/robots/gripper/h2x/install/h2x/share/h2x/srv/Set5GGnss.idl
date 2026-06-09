@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from h2x/srv/Set5GGnss.srv
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module srv {
+    @verbatim (language="comment", text=
+      "请求部分")
+    struct Set5GGnss_Request {
+      boolean mode_state;
+    };
+    @verbatim (language="comment", text=
+      "响应部分")
+    struct Set5GGnss_Response {
+      int32 result;
+    };
+  };
+};

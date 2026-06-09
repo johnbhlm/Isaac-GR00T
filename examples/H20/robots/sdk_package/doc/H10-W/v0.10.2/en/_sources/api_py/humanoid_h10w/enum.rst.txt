@@ -1,0 +1,37 @@
+枚举
+==================
+
+JointIndex（int 映射）
+----------------------
+
+`h10w` 子模块中的关节索引常量为 `int`，映射关系如下：
+
+- `h10w.JOINT_INDEX_UNKNOWN = 0`
+- `h10w.L_ARM_JOINT1 = 1`
+- `h10w.L_ARM_JOINT2 = 2`
+- `h10w.L_ARM_JOINT3 = 3`
+- `h10w.L_ARM_JOINT4 = 4`
+- `h10w.L_ARM_JOINT5 = 5`
+- `h10w.L_ARM_JOINT6 = 6`
+- `h10w.L_ARM_JOINT7 = 7`
+- `h10w.R_ARM_JOINT1 = 8`
+- `h10w.R_ARM_JOINT2 = 9`
+- `h10w.R_ARM_JOINT3 = 10`
+- `h10w.R_ARM_JOINT4 = 11`
+- `h10w.R_ARM_JOINT5 = 12`
+- `h10w.R_ARM_JOINT6 = 13`
+- `h10w.R_ARM_JOINT7 = 14`
+- `h10w.HEAD_PITCH = 15`
+- `h10w.HEAD_YAW = 16`
+- `h10w.ELEVATOR_MOTOR = 17`
+- `h10w.L_GRIPPER_MOTOR = 18`
+- `h10w.R_GRIPPER_MOTOR = 19`
+- `h10w.SIZE = 20`
+
+
+CartIndex
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.CartIndex
+   :members:
+   :exclude-members: name

@@ -1,0 +1,5 @@
+# 请求部分
+uint32 motor_index
+---
+# 响应部分
+int32 result

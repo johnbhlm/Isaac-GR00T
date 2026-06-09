@@ -1,0 +1,18 @@
+枚举
+================
+
+humanoid::PowerState
+----------------------
+.. doxygenenum:: humanoid::PowerState
+
+
+humanoid::BrakeState
+----------------------
+.. doxygenenum:: humanoid::BrakeState
+
+
+humanoid::ControlPolicy
+-------------------------
+.. doxygenenum:: humanoid::ControlPolicy
+
+

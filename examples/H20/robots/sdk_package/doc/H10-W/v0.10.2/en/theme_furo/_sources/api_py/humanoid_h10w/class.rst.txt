@@ -1,0 +1,82 @@
+类
+==============
+
+H10wChassis
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.H10wChassis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: 
+
+
+H10wMotion
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.H10wMotion
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: 
+
+
+
+
+.. note::
+
+   **控制器模式说明**
+   
+   - **EnableController = true**: 启用运动控制功能，可以使用高级运动控制API
+   - **EnableController = false**: 激活底层控制模式，直接控制电机底层
+   
+   在使用运动控制功能前，请确保已正确设置控制器模式。
+
+H10wParams
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.H10wParams
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: 
+
+
+H10wStatus
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.H10wStatus
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: 
+
+
+H10wSystem
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.H10wSystem
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: 
+
+
+H10wLowLevel
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h10w.H10wLowLevel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: 
+
+
+.. note::
+
+   **控制器模式说明**
+   
+   - **EnableController = true**: 启用运动控制功能，可以使用高级运动控制API
+   - **EnableController = false**: 激活底层控制模式，直接控制电机底层
+   
+   在使用运动控制功能前，请确保已正确设置控制器模式。

@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/GripperState.msg
+// generated code does not contain a copyright notice
+
+#include "h2x/msg/MotorStateGripper.idl"
+
+module h2x {
+  module msg {
+    typedef h2x::msg::MotorStateGripper h2x__msg__MotorStateGripper;
+    typedef h2x__msg__MotorStateGripper h2x__msg__MotorStateGripper__2[2];
+    struct GripperState {
+      uint32 tick;
+
+      h2x__msg__MotorStateGripper__2 motor_state;
+
+      uint8 is_data_valid;
+
+      uint32 crc;
+    };
+  };
+};

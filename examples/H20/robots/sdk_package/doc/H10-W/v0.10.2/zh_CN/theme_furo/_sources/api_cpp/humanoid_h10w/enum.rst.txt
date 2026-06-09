@@ -1,0 +1,35 @@
+枚举与关节索引
+================
+
+H10w 关节索引（int）
+----------------------------
+
+`jointIndex` 参数由 `int` 表示，映射关系如下：
+
+- `0`: `JOINT_INDEX_UNKNOWN`
+- `1`: `L_ARM_JOINT1`
+- `2`: `L_ARM_JOINT2`
+- `3`: `L_ARM_JOINT3`
+- `4`: `L_ARM_JOINT4`
+- `5`: `L_ARM_JOINT5`
+- `6`: `L_ARM_JOINT6`
+- `7`: `L_ARM_JOINT7`
+- `8`: `R_ARM_JOINT1`
+- `9`: `R_ARM_JOINT2`
+- `10`: `R_ARM_JOINT3`
+- `11`: `R_ARM_JOINT4`
+- `12`: `R_ARM_JOINT5`
+- `13`: `R_ARM_JOINT6`
+- `14`: `R_ARM_JOINT7`
+- `15`: `HEAD_PITCH`
+- `16`: `HEAD_YAW`
+- `17`: `ELEVATOR_MOTOR`
+- `18`: `L_GRIPPER_MOTOR`
+- `19`: `R_GRIPPER_MOTOR`
+- `20`: `SIZE`
+
+
+humanoid::h10w::CartIndex
+---------------------------
+.. doxygenenum:: humanoid::h10w::CartIndex
+

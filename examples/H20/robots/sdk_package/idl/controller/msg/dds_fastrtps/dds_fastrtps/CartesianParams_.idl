@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller:msg/CartesianParams.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller__msg__cartesian_params__idl__
+#define __controller__msg__cartesian_params__idl__
+
+
+module controller {
+
+module msg {
+
+module dds_ {
+
+
+struct CartesianParams_ {
+unsigned long cartesian_index_;
+double trans_max_vel_;
+double trans_max_acc_;
+double rota_max_vel_;
+double rota_max_acc_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller
+
+
+#endif  // __controller__msg__cartesian_params__idl__

@@ -1,0 +1,652 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/msg/LowState",
+      "fields": [
+        {
+          "name": "version",
+          "type": {
+            "type_id": 55,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "mode_pr",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "tick",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "imu_state",
+          "type": {
+            "type_id": 49,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/msg/IMUState"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "motor_state",
+          "type": {
+            "type_id": 49,
+            "capacity": 37,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/msg/MotorState"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "has_battery_info",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "battery_info",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/msg/BatteryState"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "ground_count",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "ground_signal",
+          "type": {
+            "type_id": 51,
+            "capacity": 4,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "time_seconds",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "is_pcu_valid",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "pcu_state",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/msg/PCUState"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "is_cdu_valid",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "cdu_state",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/msg/CDUState"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "is_data_valid",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "error_code",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "warning_code",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "reserved",
+          "type": {
+            "type_id": 55,
+            "capacity": 4,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "crc",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "h2x/msg/BatteryState",
+        "fields": [
+          {
+            "name": "battery_percentage",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "battery_state",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "battery_low_warning",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "error_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "warning_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/msg/CDUState",
+        "fields": [
+          {
+            "name": "error_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "warning_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/msg/IMUState",
+        "fields": [
+          {
+            "name": "quaternion",
+            "type": {
+              "type_id": 58,
+              "capacity": 4,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "gyroscope",
+            "type": {
+              "type_id": 58,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "accelerometer",
+            "type": {
+              "type_id": 58,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "rpy",
+            "type": {
+              "type_id": 58,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "temperature",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "error_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "warning_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/msg/MotorState",
+        "fields": [
+          {
+            "name": "mode",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "operation_mode",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "q",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "dq",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "ddq",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "cur",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "tau_est",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "temperature",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "kp",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "kd",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "error_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "warning_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "reserved",
+            "type": {
+              "type_id": 55,
+              "capacity": 4,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "h2x/msg/PCUState",
+        "fields": [
+          {
+            "name": "emergency_stop_state",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "control_supply_state",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "power_supply_state",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "pcu_error_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "pcu_warning_code",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "battery_voltage",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "motor_bus_voltage",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "motor_bus_current",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "dcdc_bus_voltage",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "voltage_24v",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "voltage_12v",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "current_24v",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "current_12v",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/msg/LowState",
+      "hash_string": "RIHS01_867356a7d7b54c890ef1fb134d7470c17c96a89e962292c691ff28fcc3b48d8e"
+    },
+    {
+      "type_name": "h2x/msg/BatteryState",
+      "hash_string": "RIHS01_0ac8ad932f3f508b99531d8cf236ad77fd0c0b55ea919a934fc687ca1a04f1ed"
+    },
+    {
+      "type_name": "h2x/msg/CDUState",
+      "hash_string": "RIHS01_0a65fe9c4f7dcf3d750480efa47867f559c4f6262650ebf55a1967429c7eb62f"
+    },
+    {
+      "type_name": "h2x/msg/IMUState",
+      "hash_string": "RIHS01_192bed63c1140ca36885c1973380b38c0ed8be5acf01f04a1deb8a7bfa666f0b"
+    },
+    {
+      "type_name": "h2x/msg/MotorState",
+      "hash_string": "RIHS01_c1674ddd411e283c57cbfe981c633cc0a491cf6731582b379040d139bbc76782"
+    },
+    {
+      "type_name": "h2x/msg/PCUState",
+      "hash_string": "RIHS01_b8164632527832edfe9c057d24765e87d97711895d7398c8a3c02b3a91087ab9"
+    }
+  ]
+}

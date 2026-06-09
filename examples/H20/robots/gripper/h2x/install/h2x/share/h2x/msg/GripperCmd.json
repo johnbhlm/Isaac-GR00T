@@ -1,0 +1,116 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/msg/GripperCmd",
+      "fields": [
+        {
+          "name": "motor_cmd",
+          "type": {
+            "type_id": 49,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": "h2x/msg/MotorCmdGripper"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "crc",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "h2x/msg/MotorCmdGripper",
+        "fields": [
+          {
+            "name": "mode",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "operation_mode",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "q",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "dq_percentage",
+            "type": {
+              "type_id": 5,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "acc_percentage",
+            "type": {
+              "type_id": 5,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "finger_force",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "reserved",
+            "type": {
+              "type_id": 55,
+              "capacity": 4,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/msg/GripperCmd",
+      "hash_string": "RIHS01_6126d51ecf34a602a30037a81e0e56de46b2e44e6cd0363f8cc34ab350d5be67"
+    },
+    {
+      "type_name": "h2x/msg/MotorCmdGripper",
+      "hash_string": "RIHS01_c943efca7d08e79e96c004389a957ce2c1e2673b52a5cd68cca270246f063b0e"
+    }
+  ]
+}

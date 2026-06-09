@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/MotorCmdGripper.msg
+// generated code does not contain a copyright notice
+
+
+module h2x {
+  module msg {
+    typedef uint32 uint32__4[4];
+    struct MotorCmdGripper {
+      uint8 mode;
+
+      uint8 operation_mode;
+
+      float q;
+
+      uint16 dq_percentage;
+
+      uint16 acc_percentage;
+
+      float finger_force;
+
+      uint32__4 reserved;
+    };
+  };
+};

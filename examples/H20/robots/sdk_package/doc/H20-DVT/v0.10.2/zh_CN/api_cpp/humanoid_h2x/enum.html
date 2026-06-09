@@ -1,0 +1,260 @@
+﻿
+﻿
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>枚举与关节索引 &mdash; H20-DVT 用户手册</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=204bd9fb" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=724c0c0a"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+      <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="结构体" href="struct.html" />
+    <link rel="prev" title="humanoid::h2x 命名空间" href="index.html" />
+  
+   
+  <link rel="stylesheet" href="../../_static/toolbar.css">
+  <script defer src="../../_static/toolbar.js"></script>
+
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            H20-DVT 用户手册
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">安装教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C++ 接口说明</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../humanoid/index.html">humanoid 命名空间</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">humanoid::h2x 命名空间</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">枚举与关节索引</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#h2x-int">H2x 关节索引（int）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-h2x-imuindex">humanoid::h2x::ImuIndex</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html">结构体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class.html">类</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_py/index.html">Python 接口说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../example/index.html">开始使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">常见问题</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">主题切换</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx RTD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theme_furo/api_cpp/humanoid_h2x/enum.html">Furo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">H20-DVT 用户手册</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">C++ 接口说明</a></li>
+          <li class="breadcrumb-item"><a href="index.html">humanoid::h2x 命名空间</a></li>
+      <li class="breadcrumb-item active">枚举与关节索引</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>枚举与关节索引<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<section id="h2x-int">
+<h2>H2x 关节索引（int）<a class="headerlink" href="#h2x-int" title="此标题的永久链接"></a></h2>
+<p><cite>jointIndex</cite> 参数由 <cite>int</cite> 表示，映射关系如下：</p>
+<ul class="simple">
+<li><p><cite>0</cite>: <cite>JOINT_INDEX_UNKNOWN</cite></p></li>
+<li><p><cite>1</cite>: <cite>L_HIP_PITCH</cite></p></li>
+<li><p><cite>2</cite>: <cite>L_HIP_ROLL</cite></p></li>
+<li><p><cite>3</cite>: <cite>L_HIP_YAW</cite></p></li>
+<li><p><cite>4</cite>: <cite>L_KNEE</cite></p></li>
+<li><p><cite>5</cite>: <cite>L_ANKLE_PITCH</cite></p></li>
+<li><p><cite>6</cite>: <cite>L_ANKLE_ROLL</cite></p></li>
+<li><p><cite>7</cite>: <cite>R_HIP_PITCH</cite></p></li>
+<li><p><cite>8</cite>: <cite>R_HIP_ROLL</cite></p></li>
+<li><p><cite>9</cite>: <cite>R_HIP_YAW</cite></p></li>
+<li><p><cite>10</cite>: <cite>R_KNEE</cite></p></li>
+<li><p><cite>11</cite>: <cite>R_ANKLE_PITCH</cite></p></li>
+<li><p><cite>12</cite>: <cite>R_ANKLE_ROLL</cite></p></li>
+<li><p><cite>13</cite>: <cite>WAIST_YAW</cite></p></li>
+<li><p><cite>14</cite>: <cite>WAIST_ROLL</cite></p></li>
+<li><p><cite>15</cite>: <cite>WAIST_PITCH</cite></p></li>
+<li><p><cite>16</cite>: <cite>L_SHOULDER_PITCH</cite></p></li>
+<li><p><cite>17</cite>: <cite>L_SHOULDER_ROLL</cite></p></li>
+<li><p><cite>18</cite>: <cite>L_SHOULDER_YAW</cite></p></li>
+<li><p><cite>19</cite>: <cite>L_ELBOW</cite></p></li>
+<li><p><cite>20</cite>: <cite>L_WRIST_ROLL</cite></p></li>
+<li><p><cite>21</cite>: <cite>L_WRIST_PITCH</cite></p></li>
+<li><p><cite>22</cite>: <cite>L_WRIST_YAW</cite></p></li>
+<li><p><cite>23</cite>: <cite>R_SHOULDER_PITCH</cite></p></li>
+<li><p><cite>24</cite>: <cite>R_SHOULDER_ROLL</cite></p></li>
+<li><p><cite>25</cite>: <cite>R_SHOULDER_YAW</cite></p></li>
+<li><p><cite>26</cite>: <cite>R_ELBOW</cite></p></li>
+<li><p><cite>27</cite>: <cite>R_WRIST_ROLL</cite></p></li>
+<li><p><cite>28</cite>: <cite>R_WRIST_PITCH</cite></p></li>
+<li><p><cite>29</cite>: <cite>R_WRIST_YAW</cite></p></li>
+<li><p><cite>36</cite>: <cite>HEAD_PITCH</cite></p></li>
+<li><p><cite>37</cite>: <cite>HEAD_YAW</cite></p></li>
+<li><p><cite>9999</cite>: <cite>ALL_JOINTS</cite></p></li>
+</ul>
+</section>
+<section id="humanoid-h2x-imuindex">
+<h2>humanoid::h2x::ImuIndex<a class="headerlink" href="#humanoid-h2x-imuindex" title="此标题的永久链接"></a></h2>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8ImuIndexE">
+<span id="_CPPv3N8humanoid3h2x8ImuIndexE"></span><span id="_CPPv2N8humanoid3h2x8ImuIndexE"></span><span class="target" id="namespacehumanoid_1_1h2x_1a30c38a99a61341b62ee0f1f672bc2d54"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">humanoid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">h2x</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">ImuIndex</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8ImuIndexE" title="永久链接至目标"></a><br /></dt>
+<dd><p>表示IMU索引的枚举类型 </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8ImuIndex17IMU_INDEX_UNKNOWNE">
+<span id="_CPPv3N8humanoid3h2x8ImuIndex17IMU_INDEX_UNKNOWNE"></span><span id="_CPPv2N8humanoid3h2x8ImuIndex17IMU_INDEX_UNKNOWNE"></span><span class="target" id="namespacehumanoid_1_1h2x_1a30c38a99a61341b62ee0f1f672bc2d54a8174e3da62d404f1c23d84da33973ec0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IMU_INDEX_UNKNOWN</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8ImuIndex17IMU_INDEX_UNKNOWNE" title="永久链接至目标"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8ImuIndex9TORSO_IMUE">
+<span id="_CPPv3N8humanoid3h2x8ImuIndex9TORSO_IMUE"></span><span id="_CPPv2N8humanoid3h2x8ImuIndex9TORSO_IMUE"></span><span class="target" id="namespacehumanoid_1_1h2x_1a30c38a99a61341b62ee0f1f672bc2d54a14307fb53042d5bcf7730152f6bc9a03"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TORSO_IMU</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8ImuIndex9TORSO_IMUE" title="永久链接至目标"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8ImuIndex9WAIST_IMUE">
+<span id="_CPPv3N8humanoid3h2x8ImuIndex9WAIST_IMUE"></span><span id="_CPPv2N8humanoid3h2x8ImuIndex9WAIST_IMUE"></span><span class="target" id="namespacehumanoid_1_1h2x_1a30c38a99a61341b62ee0f1f672bc2d54a6be58ce39fde7949e0182c927012be62"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WAIST_IMU</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8ImuIndex9WAIST_IMUE" title="永久链接至目标"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="index.html" class="btn btn-neutral float-left" title="humanoid::h2x 命名空间" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="struct.html" class="btn btn-neutral float-right" title="结构体" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2025 北京思灵机器人科技有限责任公司。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  
+   
+  ﻿<div id="doc-toolbar">
+  <label>
+    
+      语言:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H20-DVT/v0.10.2/cpp/zh_CN/"
+              selected>
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H20-DVT/v0.10.2/cpp/en/"
+              >
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      版本:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H20-DVT/v0.10.2/cpp/zh_CN/zh_CN/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+
+  
+
+
+</body>
+</html>

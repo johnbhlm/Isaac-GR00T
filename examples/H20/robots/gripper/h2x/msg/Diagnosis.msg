@@ -1,0 +1,15 @@
+bool[37] is_ds402
+DiagnosticData[37] ds402_data
+DebugIMUState[2] debug_imu_state
+DebugCDUState    debug_cdu_state
+int32[37] error_code
+int32[37] warning_code
+int32 cdu_error_code
+int32 cdu_warning_code
+int32 pcu_error_code
+int32 pcu_warning_code
+int32[2] imu_error_code
+int32[2] imu_warning_code
+int32 battery_error_code
+int32 battery_warning_code
+uint32 crc

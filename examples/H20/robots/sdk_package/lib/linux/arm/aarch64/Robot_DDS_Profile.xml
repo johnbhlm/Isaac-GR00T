@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<profiles xmlns="http://www.eprosima.com">
+
+    <transport_descriptors>
+        <transport_descriptor>
+            <transport_id>my_udpv4_nonblocking_transport</transport_id>
+            <type>UDPv4</type>
+            <sendBufferSize>16777216</sendBufferSize>
+            <receiveBufferSize>16777216</receiveBufferSize>
+            <non_blocking_send>true</non_blocking_send>
+            <!-- <interfaceWhiteList>
+                <address>0.0.0.0</address>
+            </interfaceWhiteList> -->
+        </transport_descriptor>
+        <transport_descriptor>
+            <transport_id>my_shm_transport</transport_id>
+            <type>SHM</type>
+            <segment_size>16777216</segment_size>            <!--16MB-->
+        </transport_descriptor>
+    </transport_descriptors>
+
+    <!-- DomainParticipant -->
+    <participant profile_name="participant_profile" is_default_profile="true">
+        <domainId>0</domainId>
+        <rtps>
+            <userTransports>
+                <transport_id>my_udpv4_nonblocking_transport</transport_id>
+                <transport_id>my_shm_transport</transport_id>
+            </userTransports>
+            <useBuiltinTransports>false</useBuiltinTransports>
+        </rtps>
+    </participant>
+
+    <topic profile_name="topic_profile">
+        <historyQos>
+            <kind>KEEP_LAST</kind>
+            <depth>2</depth>
+        </historyQos>
+        <resourceLimitsQos>
+            <max_samples>2</max_samples>
+            <max_instances>1</max_instances>
+            <max_samples_per_instance>2</max_samples_per_instance>
+        </resourceLimitsQos>
+    </topic>
+
+    <!-- DateWriter -->
+    <data_writer profile_name="datawriter_profile">
+        <qos>
+            <publishMode>
+                <kind>ASYNCHRONOUS</kind>
+            </publishMode>
+            <reliability>
+                <kind>BEST_EFFORT</kind>
+                <max_blocking_time>
+                    <nanosec>5000000</nanosec>
+                </max_blocking_time>
+            </reliability>
+            <liveliness>
+                <kind>AUTOMATIC</kind>
+                <announcement_period>
+                    <nanosec>3000000000</nanosec>
+                </announcement_period>
+                <lease_duration>
+                    <sec>1</sec>
+                </lease_duration>
+            </liveliness>
+        </qos>
+    </data_writer>
+
+    <!-- DateReader -->
+    <data_reader profile_name="datareader_profile">
+        <qos>
+            <reliability>
+                <kind>BEST_EFFORT</kind>
+                <max_blocking_time>
+                    <nanosec>5000000</nanosec>
+                </max_blocking_time>
+            </reliability>
+            <liveliness>
+                <kind>AUTOMATIC</kind>
+                <announcement_period>
+                    <nanosec>3000000000</nanosec>
+                </announcement_period>
+            </liveliness>
+        </qos>
+    </data_reader>
+
+    <!-- Service DateWriter -->
+    <data_writer profile_name="service_datawriter_profile">
+        <qos>
+            <publishMode>
+                <kind>ASYNCHRONOUS</kind>
+            </publishMode>
+            <reliability>
+                <kind>RELIABLE</kind>
+                <max_blocking_time>
+                    <nanosec>5000000</nanosec>
+                </max_blocking_time>
+            </reliability>
+            <liveliness>
+                <kind>AUTOMATIC</kind>
+                <announcement_period>
+                    <nanosec>3000000000</nanosec>
+                </announcement_period>
+                <lease_duration>
+                    <sec>1</sec>
+                </lease_duration>
+            </liveliness>
+        </qos>
+    </data_writer>
+
+    <!-- Service DateReader -->
+    <data_reader profile_name="service_datareader_profile">
+        <qos>
+            <reliability>
+                <kind>RELIABLE</kind>
+                <max_blocking_time>
+                    <nanosec>5000000</nanosec>
+                </max_blocking_time>
+            </reliability>
+            <liveliness>
+                <kind>AUTOMATIC</kind>
+                <announcement_period>
+                    <nanosec>3000000000</nanosec>
+                </announcement_period>
+            </liveliness>
+        </qos>
+    </data_reader>
+</profiles>

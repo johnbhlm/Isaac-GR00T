@@ -1,0 +1,14 @@
+source;share/h2x/hook/cmake_prefix_path.ps1
+source;share/h2x/hook/cmake_prefix_path.dsv
+source;share/h2x/hook/cmake_prefix_path.sh
+source;share/h2x/hook/ld_library_path_lib.ps1
+source;share/h2x/hook/ld_library_path_lib.dsv
+source;share/h2x/hook/ld_library_path_lib.sh
+source;share/h2x/hook/pythonpath.ps1
+source;share/h2x/hook/pythonpath.dsv
+source;share/h2x/hook/pythonpath.sh
+source;share/h2x/local_setup.bash
+source;share/h2x/local_setup.dsv
+source;share/h2x/local_setup.ps1
+source;share/h2x/local_setup.sh
+source;share/h2x/local_setup.zsh

@@ -1,0 +1,48 @@
+枚举
+==================
+
+JointIndex（int 映射）
+----------------------
+
+`h2x` 子模块中的关节索引常量为 `int`，映射关系如下：
+
+- `h2x.JOINT_INDEX_UNKNOWN = 0`
+- `h2x.L_HIP_PITCH = 1`
+- `h2x.L_HIP_ROLL = 2`
+- `h2x.L_HIP_YAW = 3`
+- `h2x.L_KNEE = 4`
+- `h2x.L_ANKLE_PITCH = 5`
+- `h2x.L_ANKLE_ROLL = 6`
+- `h2x.R_HIP_PITCH = 7`
+- `h2x.R_HIP_ROLL = 8`
+- `h2x.R_HIP_YAW = 9`
+- `h2x.R_KNEE = 10`
+- `h2x.R_ANKLE_PITCH = 11`
+- `h2x.R_ANKLE_ROLL = 12`
+- `h2x.WAIST_YAW = 13`
+- `h2x.WAIST_ROLL = 14`
+- `h2x.WAIST_PITCH = 15`
+- `h2x.L_SHOULDER_PITCH = 16`
+- `h2x.L_SHOULDER_ROLL = 17`
+- `h2x.L_SHOULDER_YAW = 18`
+- `h2x.L_ELBOW = 19`
+- `h2x.L_WRIST_ROLL = 20`
+- `h2x.L_WRIST_PITCH = 21`
+- `h2x.L_WRIST_YAW = 22`
+- `h2x.R_SHOULDER_PITCH = 23`
+- `h2x.R_SHOULDER_ROLL = 24`
+- `h2x.R_SHOULDER_YAW = 25`
+- `h2x.R_ELBOW = 26`
+- `h2x.R_WRIST_ROLL = 27`
+- `h2x.R_WRIST_PITCH = 28`
+- `h2x.R_WRIST_YAW = 29`
+- `h2x.HEAD_PITCH = 36`
+- `h2x.HEAD_YAW = 37`
+- `h2x.ALL_JOINTS = 9999`
+
+
+ImuIndex
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.ImuIndex
+   :undoc-members:

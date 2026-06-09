@@ -1,0 +1,2 @@
+int8 mode_of_operation
+int8 mode_display

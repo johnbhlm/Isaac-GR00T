@@ -1,0 +1,1483 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Classes" href="class.html" /><link rel="prev" title="Enumerations and Joint Index" href="enum.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.08.06 -->
+        <title>Struct - User Manual For H10-W SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=03768ecb" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #007acc;
+  --color-brand-content: #005a9e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+      }
+    }
+  }
+</style>
+  
+  
+    <link rel="stylesheet" href="../../_static/toolbar.css">
+    <script defer src="../../_static/toolbar.js"></script>
+  
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">User Manual For H10-W SDK</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">User Manual For H10-W SDK</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">installation guide</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">C++ interface description</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of C++ interface description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../humanoid/index.html">humanoid namespace</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of humanoid namespace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/struct.html">Struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/typedef.html">Typedef</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">humanoid::h10w namespace</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of humanoid::h10w namespace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">Enumerations and Joint Index</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class.html">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="error.html">Error Code List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_py/index.html">Python interface description</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Python interface description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_py/humanoid/index.html">humanoid_sdk_py module description</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py module description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid/enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid/struct.html">Struct</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_py/humanoid_h10w/index.html">humanoid_sdk_py.h10w module description</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py.h10w module description</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h10w/enum.html">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h10w/struct.html">Struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h10w/class.html">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h10w/error.html">Error Code List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../example/index.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../example/cpp.html">C++ Usage Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../example/python.html">Python Usage Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">common problems</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theme Switching</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../api_cpp/humanoid_h10w/struct.html">Sphinx RTD</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Furo</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="id1">
+<h1>Struct<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<section id="humanoid-h10w-realtimejointsparams">
+<h2>humanoid::h10w::RealtimeJointsParams<a class="headerlink" href="#humanoid-h10w-realtimejointsparams" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w20RealtimeJointsParamsE">
+<span id="_CPPv3N8humanoid4h10w20RealtimeJointsParamsE"></span><span id="_CPPv2N8humanoid4h10w20RealtimeJointsParamsE"></span><span id="humanoid::h10w::RealtimeJointsParams"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeJointsParams"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RealtimeJointsParams</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w20RealtimeJointsParamsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Realtime joint motion control parameters structure. </p>
+<p><ul class="simple">
+<li><p>left_arm: 7 joint angles of left arm (radians), valid when left_arm_valid=1</p></li>
+<li><p>left_arm_valid: Left arm data validity flag: 1-execute motion, 0-maintain current position</p></li>
+<li><p>right_arm: 7 joint angles of right arm (radians), valid when right_arm_valid=1</p></li>
+<li><p>right_arm_valid: Right arm data validity flag: 1-execute motion, 0-maintain current position</p></li>
+<li><p>torso: 3 joint angles of torso (radians), valid when torso_valid=1</p></li>
+<li><p>torso_valid: Torso data validity flag: 1-execute motion, 0-maintain current position</p></li>
+<li><p>time: Motion control period (seconds) </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w20RealtimeJointsParams8left_armE">
+<span id="_CPPv3N8humanoid4h10w20RealtimeJointsParams8left_armE"></span><span id="_CPPv2N8humanoid4h10w20RealtimeJointsParams8left_armE"></span><span id="humanoid::h10w::RealtimeJointsParams::left_arm__doubleA"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeJointsParams_1a1812118ded22e3331695b4833d58e3c8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_arm</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">7</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w20RealtimeJointsParams8left_armE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w20RealtimeJointsParams14left_arm_validE">
+<span id="_CPPv3N8humanoid4h10w20RealtimeJointsParams14left_arm_validE"></span><span id="_CPPv2N8humanoid4h10w20RealtimeJointsParams14left_arm_validE"></span><span id="humanoid::h10w::RealtimeJointsParams::left_arm_valid__int8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeJointsParams_1a1acd8c189e58948ffd71bc38f5711de6"></span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_arm_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w20RealtimeJointsParams14left_arm_validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w20RealtimeJointsParams9right_armE">
+<span id="_CPPv3N8humanoid4h10w20RealtimeJointsParams9right_armE"></span><span id="_CPPv2N8humanoid4h10w20RealtimeJointsParams9right_armE"></span><span id="humanoid::h10w::RealtimeJointsParams::right_arm__doubleA"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeJointsParams_1acb41abb82210902cb85aebbadbc68248"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_arm</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">7</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w20RealtimeJointsParams9right_armE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w20RealtimeJointsParams15right_arm_validE">
+<span id="_CPPv3N8humanoid4h10w20RealtimeJointsParams15right_arm_validE"></span><span id="_CPPv2N8humanoid4h10w20RealtimeJointsParams15right_arm_validE"></span><span id="humanoid::h10w::RealtimeJointsParams::right_arm_valid__int8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeJointsParams_1afc5f9061a2c2e8cb8e6d4ebabaf4ae34"></span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_arm_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w20RealtimeJointsParams15right_arm_validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w20RealtimeJointsParams5torsoE">
+<span id="_CPPv3N8humanoid4h10w20RealtimeJointsParams5torsoE"></span><span id="_CPPv2N8humanoid4h10w20RealtimeJointsParams5torsoE"></span><span id="humanoid::h10w::RealtimeJointsParams::torso__doubleA"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeJointsParams_1a3abe659c119db25b07f6cbe1ff0acbf3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torso</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w20RealtimeJointsParams5torsoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w20RealtimeJointsParams11torso_validE">
+<span id="_CPPv3N8humanoid4h10w20RealtimeJointsParams11torso_validE"></span><span id="_CPPv2N8humanoid4h10w20RealtimeJointsParams11torso_validE"></span><span id="humanoid::h10w::RealtimeJointsParams::torso_valid__int8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeJointsParams_1a317626096099d5aa93f5e531709f9f06"></span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torso_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w20RealtimeJointsParams11torso_validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w20RealtimeJointsParams4timeE">
+<span id="_CPPv3N8humanoid4h10w20RealtimeJointsParams4timeE"></span><span id="_CPPv2N8humanoid4h10w20RealtimeJointsParams4timeE"></span><span id="humanoid::h10w::RealtimeJointsParams::time__double"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeJointsParams_1aa089308f3e337a5ced5d38726d8c692b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w20RealtimeJointsParams4timeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-realtimetcpparams">
+<h2>humanoid::h10w::RealtimeTcpParams<a class="headerlink" href="#humanoid-h10w-realtimetcpparams" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17RealtimeTcpParamsE">
+<span id="_CPPv3N8humanoid4h10w17RealtimeTcpParamsE"></span><span id="_CPPv2N8humanoid4h10w17RealtimeTcpParamsE"></span><span id="humanoid::h10w::RealtimeTcpParams"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeTcpParams"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RealtimeTcpParams</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17RealtimeTcpParamsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Realtime TCP motion control parameters structure. </p>
+<p><ul class="simple">
+<li><p>left_arm: Left arm TCP pose: [x, y, z, roll, pitch, yaw] in meters and radians</p></li>
+<li><p>left_arm_valid: Left arm data validity: 1-execute motion, 0-maintain current pose (meters and radians)</p></li>
+<li><p>right_arm: Right arm TCP pose: [x, y, z, roll, pitch, yaw] in meters and radians</p></li>
+<li><p>right_arm_valid: Right arm data validity: 1-execute motion, 0-maintain current pose (meters and radians)</p></li>
+<li><p>torso: Torso TCP pose: [x, y, z, roll, pitch, yaw] in meters and radians</p></li>
+<li><p>torso_valid: Torso data validity: 1-execute motion, 0-maintain current pose (meters and radians)</p></li>
+<li><p>time: Motion control period (seconds) </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17RealtimeTcpParams8left_armE">
+<span id="_CPPv3N8humanoid4h10w17RealtimeTcpParams8left_armE"></span><span id="_CPPv2N8humanoid4h10w17RealtimeTcpParams8left_armE"></span><span id="humanoid::h10w::RealtimeTcpParams::left_arm__doubleA"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeTcpParams_1a71c25d6b33dab0ed0001a08921cdc3ab"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_arm</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17RealtimeTcpParams8left_armE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17RealtimeTcpParams14left_arm_validE">
+<span id="_CPPv3N8humanoid4h10w17RealtimeTcpParams14left_arm_validE"></span><span id="_CPPv2N8humanoid4h10w17RealtimeTcpParams14left_arm_validE"></span><span id="humanoid::h10w::RealtimeTcpParams::left_arm_valid__int8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeTcpParams_1ab53c5504245e0dcdd7adb9259c7c3908"></span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_arm_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17RealtimeTcpParams14left_arm_validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17RealtimeTcpParams9right_armE">
+<span id="_CPPv3N8humanoid4h10w17RealtimeTcpParams9right_armE"></span><span id="_CPPv2N8humanoid4h10w17RealtimeTcpParams9right_armE"></span><span id="humanoid::h10w::RealtimeTcpParams::right_arm__doubleA"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeTcpParams_1a88182912c7b194d0265d6403063d2afc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_arm</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17RealtimeTcpParams9right_armE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17RealtimeTcpParams15right_arm_validE">
+<span id="_CPPv3N8humanoid4h10w17RealtimeTcpParams15right_arm_validE"></span><span id="_CPPv2N8humanoid4h10w17RealtimeTcpParams15right_arm_validE"></span><span id="humanoid::h10w::RealtimeTcpParams::right_arm_valid__int8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeTcpParams_1af5682044336f87f13971d7381294311d"></span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_arm_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17RealtimeTcpParams15right_arm_validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17RealtimeTcpParams5torsoE">
+<span id="_CPPv3N8humanoid4h10w17RealtimeTcpParams5torsoE"></span><span id="_CPPv2N8humanoid4h10w17RealtimeTcpParams5torsoE"></span><span id="humanoid::h10w::RealtimeTcpParams::torso__doubleA"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeTcpParams_1a74b6d8b5037156b1b8f52bbe6dc72591"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torso</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17RealtimeTcpParams5torsoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17RealtimeTcpParams11torso_validE">
+<span id="_CPPv3N8humanoid4h10w17RealtimeTcpParams11torso_validE"></span><span id="_CPPv2N8humanoid4h10w17RealtimeTcpParams11torso_validE"></span><span id="humanoid::h10w::RealtimeTcpParams::torso_valid__int8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeTcpParams_1aad554e03436f995a018d685677fec1e6"></span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torso_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17RealtimeTcpParams11torso_validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17RealtimeTcpParams4timeE">
+<span id="_CPPv3N8humanoid4h10w17RealtimeTcpParams4timeE"></span><span id="_CPPv2N8humanoid4h10w17RealtimeTcpParams4timeE"></span><span id="humanoid::h10w::RealtimeTcpParams::time__double"></span><span class="target" id="structhumanoid_1_1h10w_1_1RealtimeTcpParams_1a283de07e59887f9f3e127c8fae086579"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17RealtimeTcpParams4timeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-lineartarget">
+<h2>humanoid::h10w::LinearTarget<a class="headerlink" href="#humanoid-h10w-lineartarget" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12LinearTargetE">
+<span id="_CPPv3N8humanoid4h10w12LinearTargetE"></span><span id="_CPPv2N8humanoid4h10w12LinearTargetE"></span><span id="humanoid::h10w::LinearTarget"></span><span class="target" id="structhumanoid_1_1h10w_1_1LinearTarget"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LinearTarget</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12LinearTargetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>TCP linear motion control parameters structure. </p>
+<p><ul class="simple">
+<li><p>type: Cartesian coordinate system end type, 1-left arm 2-right arm 3-torso</p></li>
+<li><p>pose: Cartesian end pose: [x, y, z, roll, pitch, yaw] in meters and radians</p></li>
+<li><p>velocityPercent: End velocity percentage, (0-1]</p></li>
+<li><p>accelerationPercent: End acceleration percentage, (0-1] </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12LinearTarget4typeE">
+<span id="_CPPv3N8humanoid4h10w12LinearTarget4typeE"></span><span id="_CPPv2N8humanoid4h10w12LinearTarget4typeE"></span><span id="humanoid::h10w::LinearTarget::type__CartIndex"></span><span class="target" id="structhumanoid_1_1h10w_1_1LinearTarget_1a6e0e1d088ef6b54c5d2e333e4889a704"></span><a class="reference internal" href="enum.html#_CPPv4N8humanoid4h10w9CartIndexE" title="humanoid::h10w::CartIndex"><span class="n"><span class="pre">CartIndex</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12LinearTarget4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12LinearTarget4poseE">
+<span id="_CPPv3N8humanoid4h10w12LinearTarget4poseE"></span><span id="_CPPv2N8humanoid4h10w12LinearTarget4poseE"></span><span id="humanoid::h10w::LinearTarget::pose__doubleA"></span><span class="target" id="structhumanoid_1_1h10w_1_1LinearTarget_1a4af4b1faaf4db81829e70127372c4215"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pose</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12LinearTarget4poseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12LinearTarget15velocityPercentE">
+<span id="_CPPv3N8humanoid4h10w12LinearTarget15velocityPercentE"></span><span id="_CPPv2N8humanoid4h10w12LinearTarget15velocityPercentE"></span><span id="humanoid::h10w::LinearTarget::velocityPercent__double"></span><span class="target" id="structhumanoid_1_1h10w_1_1LinearTarget_1a931ded5b1cf174d551fb5f6b64991884"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocityPercent</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12LinearTarget15velocityPercentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12LinearTarget19accelerationPercentE">
+<span id="_CPPv3N8humanoid4h10w12LinearTarget19accelerationPercentE"></span><span id="_CPPv2N8humanoid4h10w12LinearTarget19accelerationPercentE"></span><span id="humanoid::h10w::LinearTarget::accelerationPercent__double"></span><span class="target" id="structhumanoid_1_1h10w_1_1LinearTarget_1a3bb4eebd97864f9fd9c0d8859b9ef092"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accelerationPercent</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12LinearTarget19accelerationPercentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-tcpposeparams">
+<h2>humanoid::h10w::TcpPoseParams<a class="headerlink" href="#humanoid-h10w-tcpposeparams" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13TcpPoseParamsE">
+<span id="_CPPv3N8humanoid4h10w13TcpPoseParamsE"></span><span id="_CPPv2N8humanoid4h10w13TcpPoseParamsE"></span><span id="humanoid::h10w::TcpPoseParams"></span><span class="target" id="structhumanoid_1_1h10w_1_1TcpPoseParams"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TcpPoseParams</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13TcpPoseParamsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>TCP pose parameters structure. </p>
+<p><ul class="simple">
+<li><p>type: Cartesian coordinate system end type, 1-left arm 2-right arm 3-torso</p></li>
+<li><p>pose: Cartesian end pose: [x, y, z, roll, pitch, yaw] in meters and radians </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13TcpPoseParams4typeE">
+<span id="_CPPv3N8humanoid4h10w13TcpPoseParams4typeE"></span><span id="_CPPv2N8humanoid4h10w13TcpPoseParams4typeE"></span><span id="humanoid::h10w::TcpPoseParams::type__CartIndex"></span><span class="target" id="structhumanoid_1_1h10w_1_1TcpPoseParams_1a2da762b9c3cf012403669f4c873f0196"></span><a class="reference internal" href="enum.html#_CPPv4N8humanoid4h10w9CartIndexE" title="humanoid::h10w::CartIndex"><span class="n"><span class="pre">CartIndex</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13TcpPoseParams4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13TcpPoseParams4poseE">
+<span id="_CPPv3N8humanoid4h10w13TcpPoseParams4poseE"></span><span id="_CPPv2N8humanoid4h10w13TcpPoseParams4poseE"></span><span id="humanoid::h10w::TcpPoseParams::pose__doubleA"></span><span class="target" id="structhumanoid_1_1h10w_1_1TcpPoseParams_1a7a3cf16b13fb96658ddaa05f62b9fe21"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pose</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13TcpPoseParams4poseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-movemessageparams">
+<h2>humanoid::h10w::MoveMessageParams<a class="headerlink" href="#humanoid-h10w-movemessageparams" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17MoveMessageParamsE">
+<span id="_CPPv3N8humanoid4h10w17MoveMessageParamsE"></span><span id="_CPPv2N8humanoid4h10w17MoveMessageParamsE"></span><span id="humanoid::h10w::MoveMessageParams"></span><span class="target" id="structhumanoid_1_1h10w_1_1MoveMessageParams"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MoveMessageParams</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17MoveMessageParamsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Motion state parameters structure. </p>
+<p><ul class="simple">
+<li><p>state: Motion state, 0-Idle 1-Running 2-Paused 3-Error</p></li>
+<li><p>position: Joint position, in radians</p></li>
+<li><p>velocity: Joint velocity, in radians/second</p></li>
+<li><p>tcp_pose: End pose, in meters and radians</p></li>
+<li><p>task_id: Instruction sequence number, identifies the current instruction </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17MoveMessageParams5stateE">
+<span id="_CPPv3N8humanoid4h10w17MoveMessageParams5stateE"></span><span id="_CPPv2N8humanoid4h10w17MoveMessageParams5stateE"></span><span id="humanoid::h10w::MoveMessageParams::state__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1MoveMessageParams_1a3c16b192e5f7c46ccf870a05ce4976c4"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17MoveMessageParams5stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17MoveMessageParams8positionE">
+<span id="_CPPv3N8humanoid4h10w17MoveMessageParams8positionE"></span><span id="_CPPv2N8humanoid4h10w17MoveMessageParams8positionE"></span><span id="humanoid::h10w::MoveMessageParams::position__std::vector:double:"></span><span class="target" id="structhumanoid_1_1h10w_1_1MoveMessageParams_1a09e69155d9423b376f172273917708d0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">position</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17MoveMessageParams8positionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17MoveMessageParams8velocityE">
+<span id="_CPPv3N8humanoid4h10w17MoveMessageParams8velocityE"></span><span id="_CPPv2N8humanoid4h10w17MoveMessageParams8velocityE"></span><span id="humanoid::h10w::MoveMessageParams::velocity__std::vector:double:"></span><span class="target" id="structhumanoid_1_1h10w_1_1MoveMessageParams_1a55f85d381f9b2586beb450890471707a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocity</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17MoveMessageParams8velocityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17MoveMessageParams8tcp_poseE">
+<span id="_CPPv3N8humanoid4h10w17MoveMessageParams8tcp_poseE"></span><span id="_CPPv2N8humanoid4h10w17MoveMessageParams8tcp_poseE"></span><span id="humanoid::h10w::MoveMessageParams::tcp_pose__std::vector:TcpPoseParams:"></span><span class="target" id="structhumanoid_1_1h10w_1_1MoveMessageParams_1a9f5009366e8756abff8834f90113a6f6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w13TcpPoseParamsE" title="humanoid::h10w::TcpPoseParams"><span class="n"><span class="pre">TcpPoseParams</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tcp_pose</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17MoveMessageParams8tcp_poseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17MoveMessageParams10robot_modeE">
+<span id="_CPPv3N8humanoid4h10w17MoveMessageParams10robot_modeE"></span><span id="_CPPv2N8humanoid4h10w17MoveMessageParams10robot_modeE"></span><span id="humanoid::h10w::MoveMessageParams::robot_mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1MoveMessageParams_1a0989974eaa245c9aa87bef5e7d8a341a"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">robot_mode</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17MoveMessageParams10robot_modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w17MoveMessageParams7task_idE">
+<span id="_CPPv3N8humanoid4h10w17MoveMessageParams7task_idE"></span><span id="_CPPv2N8humanoid4h10w17MoveMessageParams7task_idE"></span><span id="humanoid::h10w::MoveMessageParams::task_id__uint32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1MoveMessageParams_1a1dde1a72d95fe164b5a1e2b6b4dd5f39"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">task_id</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w17MoveMessageParams7task_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-errormessageparams">
+<h2>humanoid::h10w::ErrorMessageParams<a class="headerlink" href="#humanoid-h10w-errormessageparams" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w18ErrorMessageParamsE">
+<span id="_CPPv3N8humanoid4h10w18ErrorMessageParamsE"></span><span id="_CPPv2N8humanoid4h10w18ErrorMessageParamsE"></span><span id="humanoid::h10w::ErrorMessageParams"></span><span class="target" id="structhumanoid_1_1h10w_1_1ErrorMessageParams"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ErrorMessageParams</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w18ErrorMessageParamsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Error message parameters structure. </p>
+<p><ul class="simple">
+<li><p>id: Error ID</p></li>
+<li><p>level: Error level</p></li>
+<li><p>module: Error module level, 1-Controller 2-Driver 3-Firmware</p></li>
+<li><p>error_code: Error code</p></li>
+<li><p>msg: Error message </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w18ErrorMessageParams2idE">
+<span id="_CPPv3N8humanoid4h10w18ErrorMessageParams2idE"></span><span id="_CPPv2N8humanoid4h10w18ErrorMessageParams2idE"></span><span id="humanoid::h10w::ErrorMessageParams::id__uint32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ErrorMessageParams_1ae23d4a65d4693a184f922f58b1378acf"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w18ErrorMessageParams2idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w18ErrorMessageParams5levelE">
+<span id="_CPPv3N8humanoid4h10w18ErrorMessageParams5levelE"></span><span id="_CPPv2N8humanoid4h10w18ErrorMessageParams5levelE"></span><span id="humanoid::h10w::ErrorMessageParams::level__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ErrorMessageParams_1aeed5f9f18c2ca2b6d387a749517ca23f"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">level</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w18ErrorMessageParams5levelE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w18ErrorMessageParams6moduleE">
+<span id="_CPPv3N8humanoid4h10w18ErrorMessageParams6moduleE"></span><span id="_CPPv2N8humanoid4h10w18ErrorMessageParams6moduleE"></span><span id="humanoid::h10w::ErrorMessageParams::module__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ErrorMessageParams_1a0e92a5ac584e3713071c2b51e533828e"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">module</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w18ErrorMessageParams6moduleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w18ErrorMessageParams10error_codeE">
+<span id="_CPPv3N8humanoid4h10w18ErrorMessageParams10error_codeE"></span><span id="_CPPv2N8humanoid4h10w18ErrorMessageParams10error_codeE"></span><span id="humanoid::h10w::ErrorMessageParams::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ErrorMessageParams_1a06ef3a583aefb5b565ba725766286eb7"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w18ErrorMessageParams10error_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w18ErrorMessageParams3msgE">
+<span id="_CPPv3N8humanoid4h10w18ErrorMessageParams3msgE"></span><span id="_CPPv2N8humanoid4h10w18ErrorMessageParams3msgE"></span><span id="humanoid::h10w::ErrorMessageParams::msg__ss"></span><span class="target" id="structhumanoid_1_1h10w_1_1ErrorMessageParams_1a1f5bf7e33a8f05ff7570319c70b34abe"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">msg</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w18ErrorMessageParams3msgE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-motorcmd">
+<h2>humanoid::h10w::MotorCmd<a class="headerlink" href="#humanoid-h10w-motorcmd" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8MotorCmdE">
+<span id="_CPPv3N8humanoid4h10w8MotorCmdE"></span><span id="_CPPv2N8humanoid4h10w8MotorCmdE"></span><span id="humanoid::h10w::MotorCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MotorCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8MotorCmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Full-body motor control (arm + head motor) parameters structure. </p>
+<p><ul class="simple">
+<li><p>mode: Control enable, 0-disable control 1-enable control</p></li>
+<li><p>q: Joint target position, in rad</p></li>
+<li><p>dq: Joint target velocity, in rad/s</p></li>
+<li><p>tau: Joint feedforward torque, in N·m </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8MotorCmd4modeE">
+<span id="_CPPv3N8humanoid4h10w8MotorCmd4modeE"></span><span id="_CPPv2N8humanoid4h10w8MotorCmd4modeE"></span><span id="humanoid::h10w::MotorCmd::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorCmd_1aa2ddae6bd55c394a76ba02ee8d80c1c3"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8MotorCmd4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8MotorCmd1qE">
+<span id="_CPPv3N8humanoid4h10w8MotorCmd1qE"></span><span id="_CPPv2N8humanoid4h10w8MotorCmd1qE"></span><span id="humanoid::h10w::MotorCmd::q__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorCmd_1a6070df25a96893ff48985a01f2c6a106"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">q</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8MotorCmd1qE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8MotorCmd2dqE">
+<span id="_CPPv3N8humanoid4h10w8MotorCmd2dqE"></span><span id="_CPPv2N8humanoid4h10w8MotorCmd2dqE"></span><span id="humanoid::h10w::MotorCmd::dq__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorCmd_1a1469c52d4e846aaea23a38157daa810c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dq</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8MotorCmd2dqE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8MotorCmd3tauE">
+<span id="_CPPv3N8humanoid4h10w8MotorCmd3tauE"></span><span id="_CPPv2N8humanoid4h10w8MotorCmd3tauE"></span><span id="humanoid::h10w::MotorCmd::tau__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorCmd_1a9cc53dfffbb40a3da5a816c57f705d44"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tau</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8MotorCmd3tauE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8MotorCmd8reservedE">
+<span id="_CPPv3N8humanoid4h10w8MotorCmd8reservedE"></span><span id="_CPPv2N8humanoid4h10w8MotorCmd8reservedE"></span><span id="humanoid::h10w::MotorCmd::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorCmd_1a8b325eccaeba2a010060ccf62105bc4d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8MotorCmd8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-basecmd">
+<h2>humanoid::h10w::BaseCmd<a class="headerlink" href="#humanoid-h10w-basecmd" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w7BaseCmdE">
+<span id="_CPPv3N8humanoid4h10w7BaseCmdE"></span><span id="_CPPv2N8humanoid4h10w7BaseCmdE"></span><span id="humanoid::h10w::BaseCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BaseCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w7BaseCmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Chassis motion control structure. </p>
+<p><ul class="simple">
+<li><p>mode: Control enable, 0-disable control 1-enable control</p></li>
+<li><p>left_velocity: Left wheel velocity, in m/s</p></li>
+<li><p>right_velocity: Right wheel velocity, in m/s </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w7BaseCmd4modeE">
+<span id="_CPPv3N8humanoid4h10w7BaseCmd4modeE"></span><span id="_CPPv2N8humanoid4h10w7BaseCmd4modeE"></span><span id="humanoid::h10w::BaseCmd::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseCmd_1a1070ef0f968225e589b02b20fb94b920"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w7BaseCmd4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w7BaseCmd13left_velocityE">
+<span id="_CPPv3N8humanoid4h10w7BaseCmd13left_velocityE"></span><span id="_CPPv2N8humanoid4h10w7BaseCmd13left_velocityE"></span><span id="humanoid::h10w::BaseCmd::left_velocity__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseCmd_1ac961efbe8ccab3465a20cee58180ee15"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_velocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w7BaseCmd13left_velocityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w7BaseCmd14right_velocityE">
+<span id="_CPPv3N8humanoid4h10w7BaseCmd14right_velocityE"></span><span id="_CPPv2N8humanoid4h10w7BaseCmd14right_velocityE"></span><span id="humanoid::h10w::BaseCmd::right_velocity__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseCmd_1a497e6d80b5356531f59037c67254b484"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_velocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w7BaseCmd14right_velocityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w7BaseCmd8reservedE">
+<span id="_CPPv3N8humanoid4h10w7BaseCmd8reservedE"></span><span id="_CPPv2N8humanoid4h10w7BaseCmd8reservedE"></span><span id="humanoid::h10w::BaseCmd::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseCmd_1aed859e136772315ecac78bb34bcc130e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w7BaseCmd8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-elevatorcmd">
+<h2>humanoid::h10w::ElevatorCmd<a class="headerlink" href="#humanoid-h10w-elevatorcmd" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11ElevatorCmdE">
+<span id="_CPPv3N8humanoid4h10w11ElevatorCmdE"></span><span id="_CPPv2N8humanoid4h10w11ElevatorCmdE"></span><span id="humanoid::h10w::ElevatorCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ElevatorCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11ElevatorCmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Elevator control parameters structure. </p>
+<p><ul class="simple">
+<li><p>mode: Control enable, 0-disable control 1-enable control</p></li>
+<li><p>position: Elevator motor position, in m</p></li>
+<li><p>velocity: Elevator motor velocity, in m/s </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11ElevatorCmd4modeE">
+<span id="_CPPv3N8humanoid4h10w11ElevatorCmd4modeE"></span><span id="_CPPv2N8humanoid4h10w11ElevatorCmd4modeE"></span><span id="humanoid::h10w::ElevatorCmd::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorCmd_1a826b3719c9bee1aa4a7f33d27b3faf80"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11ElevatorCmd4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11ElevatorCmd8positionE">
+<span id="_CPPv3N8humanoid4h10w11ElevatorCmd8positionE"></span><span id="_CPPv2N8humanoid4h10w11ElevatorCmd8positionE"></span><span id="humanoid::h10w::ElevatorCmd::position__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorCmd_1a1e9cecd1d4b70f8118e70ece9b6666da"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">position</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11ElevatorCmd8positionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11ElevatorCmd8velocityE">
+<span id="_CPPv3N8humanoid4h10w11ElevatorCmd8velocityE"></span><span id="_CPPv2N8humanoid4h10w11ElevatorCmd8velocityE"></span><span id="humanoid::h10w::ElevatorCmd::velocity__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorCmd_1a90513db18d121a5b0903621f8d846d05"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11ElevatorCmd8velocityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w11ElevatorCmd8reservedE">
+<span id="_CPPv3N8humanoid4h10w11ElevatorCmd8reservedE"></span><span id="_CPPv2N8humanoid4h10w11ElevatorCmd8reservedE"></span><span id="humanoid::h10w::ElevatorCmd::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorCmd_1aaa23a81dc683268d50ea313a6f1e5717"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w11ElevatorCmd8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-grippercmd">
+<h2>humanoid::h10w::GripperCmd<a class="headerlink" href="#humanoid-h10w-grippercmd" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10GripperCmdE">
+<span id="_CPPv3N8humanoid4h10w10GripperCmdE"></span><span id="_CPPv2N8humanoid4h10w10GripperCmdE"></span><span id="humanoid::h10w::GripperCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GripperCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10GripperCmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gripper control parameters structure. </p>
+<p><ul class="simple">
+<li><p>mode: Control enable, 0-disable control 1-enable control</p></li>
+<li><p>position: target position, in m</p></li>
+<li><p>force: Gripper force, in N</p></li>
+<li><p>velocity: Gripper velocity, in m/s </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10GripperCmd4modeE">
+<span id="_CPPv3N8humanoid4h10w10GripperCmd4modeE"></span><span id="_CPPv2N8humanoid4h10w10GripperCmd4modeE"></span><span id="humanoid::h10w::GripperCmd::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperCmd_1a2d8f2ad11aecfddeb40dd613e1c78f51"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10GripperCmd4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10GripperCmd8positionE">
+<span id="_CPPv3N8humanoid4h10w10GripperCmd8positionE"></span><span id="_CPPv2N8humanoid4h10w10GripperCmd8positionE"></span><span id="humanoid::h10w::GripperCmd::position__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperCmd_1a7fb0a922bb9a9c9e8fe052f601a57393"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">position</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10GripperCmd8positionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10GripperCmd5forceE">
+<span id="_CPPv3N8humanoid4h10w10GripperCmd5forceE"></span><span id="_CPPv2N8humanoid4h10w10GripperCmd5forceE"></span><span id="humanoid::h10w::GripperCmd::force__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperCmd_1add56493f5f6d183006bc14f4898e8287"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">force</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10GripperCmd5forceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10GripperCmd8velocityE">
+<span id="_CPPv3N8humanoid4h10w10GripperCmd8velocityE"></span><span id="_CPPv2N8humanoid4h10w10GripperCmd8velocityE"></span><span id="humanoid::h10w::GripperCmd::velocity__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperCmd_1a1e2c3a4b819a98525f2492cd68def540"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10GripperCmd8velocityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10GripperCmd8reservedE">
+<span id="_CPPv3N8humanoid4h10w10GripperCmd8reservedE"></span><span id="_CPPv2N8humanoid4h10w10GripperCmd8reservedE"></span><span id="humanoid::h10w::GripperCmd::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperCmd_1aabd152d459d22f6b650e130493071601"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10GripperCmd8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-pcucmd">
+<h2>humanoid::h10w::PCUCmd<a class="headerlink" href="#humanoid-h10w-pcucmd" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6PCUCmdE">
+<span id="_CPPv3N8humanoid4h10w6PCUCmdE"></span><span id="_CPPv2N8humanoid4h10w6PCUCmdE"></span><span id="humanoid::h10w::PCUCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PCUCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6PCUCmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>PCU control parameters structure. </p>
+<p><ul class="simple">
+<li><p>mode: Whether the tricolor light is enabled</p></li>
+<li><p>led_r: RGB-R control information</p></li>
+<li><p>led_g: RGB-G control information</p></li>
+<li><p>led_b: RGB-B control information</p></li>
+<li><p>led_mode: Tricolor light flashing mode</p></li>
+<li><p>led_frequency: Tricolor light flashing frequency </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6PCUCmd4modeE">
+<span id="_CPPv3N8humanoid4h10w6PCUCmd4modeE"></span><span id="_CPPv2N8humanoid4h10w6PCUCmd4modeE"></span><span id="humanoid::h10w::PCUCmd::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUCmd_1a6dba54194f71fb13e5f197a55c812e13"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6PCUCmd4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6PCUCmd5led_rE">
+<span id="_CPPv3N8humanoid4h10w6PCUCmd5led_rE"></span><span id="_CPPv2N8humanoid4h10w6PCUCmd5led_rE"></span><span id="humanoid::h10w::PCUCmd::led_r__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUCmd_1a63f6f91a35c606f9c2d389e16fdfb10d"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">led_r</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6PCUCmd5led_rE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6PCUCmd5led_gE">
+<span id="_CPPv3N8humanoid4h10w6PCUCmd5led_gE"></span><span id="_CPPv2N8humanoid4h10w6PCUCmd5led_gE"></span><span id="humanoid::h10w::PCUCmd::led_g__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUCmd_1a6008d311efc24eb7aecba87fda4a6c8e"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">led_g</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6PCUCmd5led_gE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6PCUCmd5led_bE">
+<span id="_CPPv3N8humanoid4h10w6PCUCmd5led_bE"></span><span id="_CPPv2N8humanoid4h10w6PCUCmd5led_bE"></span><span id="humanoid::h10w::PCUCmd::led_b__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUCmd_1ae511cc4a1f6d5cfd741257bfa745d61e"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">led_b</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6PCUCmd5led_bE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6PCUCmd8led_modeE">
+<span id="_CPPv3N8humanoid4h10w6PCUCmd8led_modeE"></span><span id="_CPPv2N8humanoid4h10w6PCUCmd8led_modeE"></span><span id="humanoid::h10w::PCUCmd::led_mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUCmd_1ab9e713c424639a7e2941e0e5eac632d3"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">led_mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6PCUCmd8led_modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6PCUCmd13led_frequencyE">
+<span id="_CPPv3N8humanoid4h10w6PCUCmd13led_frequencyE"></span><span id="_CPPv2N8humanoid4h10w6PCUCmd13led_frequencyE"></span><span id="humanoid::h10w::PCUCmd::led_frequency__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUCmd_1aead445a10488548c6ba202c6644fc874"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">led_frequency</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6PCUCmd13led_frequencyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-motorstate">
+<h2>humanoid::h10w::MotorState<a class="headerlink" href="#humanoid-h10w-motorstate" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorStateE">
+<span id="_CPPv3N8humanoid4h10w10MotorStateE"></span><span id="_CPPv2N8humanoid4h10w10MotorStateE"></span><span id="humanoid::h10w::MotorState"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MotorState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Full-body motor status parameters structure. </p>
+<p><ul class="simple">
+<li><p>mode: Control mode, 0-disable control 1-enable control</p></li>
+<li><p>q: Joint position, in rad</p></li>
+<li><p>dq: Joint velocity, in rad/s</p></li>
+<li><p>ddq: Joint acceleration, in rad/s²</p></li>
+<li><p>tau_est: Joint estimated torque, in N·m</p></li>
+<li><p>volt: Voltage, in V</p></li>
+<li><p>brake_state: 1-brake engaged, 0-brake disengaged</p></li>
+<li><p>error_code: Error code</p></li>
+<li><p>warning_code: Warning code </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState4modeE">
+<span id="_CPPv3N8humanoid4h10w10MotorState4modeE"></span><span id="_CPPv2N8humanoid4h10w10MotorState4modeE"></span><span id="humanoid::h10w::MotorState::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1a21826185116fdf0377fa05e7540ddd76"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState1qE">
+<span id="_CPPv3N8humanoid4h10w10MotorState1qE"></span><span id="_CPPv2N8humanoid4h10w10MotorState1qE"></span><span id="humanoid::h10w::MotorState::q__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1a6c6510df281ad6332a4b5dcacf7de165"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">q</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState1qE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState2dqE">
+<span id="_CPPv3N8humanoid4h10w10MotorState2dqE"></span><span id="_CPPv2N8humanoid4h10w10MotorState2dqE"></span><span id="humanoid::h10w::MotorState::dq__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1a05e8f9192234b994f7ac2bae9cf7c33b"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dq</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState2dqE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState3ddqE">
+<span id="_CPPv3N8humanoid4h10w10MotorState3ddqE"></span><span id="_CPPv2N8humanoid4h10w10MotorState3ddqE"></span><span id="humanoid::h10w::MotorState::ddq__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1a951df044d731117428069e188a7ce2d0"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ddq</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState3ddqE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState7tau_estE">
+<span id="_CPPv3N8humanoid4h10w10MotorState7tau_estE"></span><span id="_CPPv2N8humanoid4h10w10MotorState7tau_estE"></span><span id="humanoid::h10w::MotorState::tau_est__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1ace31f1f8fd3ce335d221d7a7a30bbfcd"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tau_est</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState7tau_estE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState4voltE">
+<span id="_CPPv3N8humanoid4h10w10MotorState4voltE"></span><span id="_CPPv2N8humanoid4h10w10MotorState4voltE"></span><span id="humanoid::h10w::MotorState::volt__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1afe2a97b981eb26c481528e242bd16dcb"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">volt</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState4voltE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState11brake_stateE">
+<span id="_CPPv3N8humanoid4h10w10MotorState11brake_stateE"></span><span id="_CPPv2N8humanoid4h10w10MotorState11brake_stateE"></span><span id="humanoid::h10w::MotorState::brake_state__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1a72e762bde0b817d2cdc3df28d5a9e6e5"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">brake_state</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState11brake_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState10error_codeE">
+<span id="_CPPv3N8humanoid4h10w10MotorState10error_codeE"></span><span id="_CPPv2N8humanoid4h10w10MotorState10error_codeE"></span><span id="humanoid::h10w::MotorState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1ab680d08fa41ee2e6e045135beeff2aa5"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState10error_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState12warning_codeE">
+<span id="_CPPv3N8humanoid4h10w10MotorState12warning_codeE"></span><span id="_CPPv2N8humanoid4h10w10MotorState12warning_codeE"></span><span id="humanoid::h10w::MotorState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1ae889cab2f43234ae9be42ec31b9ef808"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState12warning_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w10MotorState8reservedE">
+<span id="_CPPv3N8humanoid4h10w10MotorState8reservedE"></span><span id="_CPPv2N8humanoid4h10w10MotorState8reservedE"></span><span id="humanoid::h10w::MotorState::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1MotorState_1a10062fe2b006e11c00515469d37d9b08"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w10MotorState8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-imustate">
+<h2>humanoid::h10w::IMUState<a class="headerlink" href="#humanoid-h10w-imustate" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8IMUStateE">
+<span id="_CPPv3N8humanoid4h10w8IMUStateE"></span><span id="_CPPv2N8humanoid4h10w8IMUStateE"></span><span id="humanoid::h10w::IMUState"></span><span class="target" id="structhumanoid_1_1h10w_1_1IMUState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IMUState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8IMUStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>IMU state parameters structure. </p>
+<p><ul class="simple">
+<li><p>gyroscope: Gyroscope data, in radians/second</p></li>
+<li><p>accelerometer: Accelerometer data, in meters/second^2</p></li>
+<li><p>error_code: Error code</p></li>
+<li><p>warning_code: Warning code </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8IMUState9gyroscopeE">
+<span id="_CPPv3N8humanoid4h10w8IMUState9gyroscopeE"></span><span id="_CPPv2N8humanoid4h10w8IMUState9gyroscopeE"></span><span id="humanoid::h10w::IMUState::gyroscope__std::array:float.3:"></span><span class="target" id="structhumanoid_1_1h10w_1_1IMUState_1a079e1457b0435c10babf88c93186878c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gyroscope</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8IMUState9gyroscopeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8IMUState13accelerometerE">
+<span id="_CPPv3N8humanoid4h10w8IMUState13accelerometerE"></span><span id="_CPPv2N8humanoid4h10w8IMUState13accelerometerE"></span><span id="humanoid::h10w::IMUState::accelerometer__std::array:float.3:"></span><span class="target" id="structhumanoid_1_1h10w_1_1IMUState_1a4510114cfa1a60d6e22c3f3e6c7774b0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accelerometer</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8IMUState13accelerometerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8IMUState10error_codeE">
+<span id="_CPPv3N8humanoid4h10w8IMUState10error_codeE"></span><span id="_CPPv2N8humanoid4h10w8IMUState10error_codeE"></span><span id="humanoid::h10w::IMUState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1IMUState_1ae066231b4b717e68ca1e72ae864ca7c9"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8IMUState10error_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8IMUState12warning_codeE">
+<span id="_CPPv3N8humanoid4h10w8IMUState12warning_codeE"></span><span id="_CPPv2N8humanoid4h10w8IMUState12warning_codeE"></span><span id="humanoid::h10w::IMUState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1IMUState_1ad48c3c38151b0417f520fd0604f93fb1"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8IMUState12warning_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-basestate">
+<h2>humanoid::h10w::BaseState<a class="headerlink" href="#humanoid-h10w-basestate" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseStateE">
+<span id="_CPPv3N8humanoid4h10w9BaseStateE"></span><span id="_CPPv2N8humanoid4h10w9BaseStateE"></span><span id="humanoid::h10w::BaseState"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BaseState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Chassis motion state parameters structure. </p>
+<p><ul class="simple">
+<li><p>mode: Control mode</p></li>
+<li><p>left_velocity: Left wheel velocity, in m/s</p></li>
+<li><p>right_velocity: Right wheel velocity, in m/s</p></li>
+<li><p>left_torque: Left wheel torque, in N·m</p></li>
+<li><p>right_torque: Right wheel torque, in N·m</p></li>
+<li><p>left_current: Left wheel current, in A</p></li>
+<li><p>right_current: Right wheel current, in A</p></li>
+<li><p>left_voltage: Left wheel voltage, in volts</p></li>
+<li><p>right_voltage: Right wheel voltage, in volts</p></li>
+<li><p>left_temperature: Left wheel temperature (°C)</p></li>
+<li><p>right_temperature: Right wheel temperature (°C)</p></li>
+<li><p>left_error_code: Left wheel error code</p></li>
+<li><p>right_error_code: Right wheel error code</p></li>
+<li><p>left_warning_code: Left wheel warning code</p></li>
+<li><p>right_warning_code: Right wheel warning code </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState4modeE">
+<span id="_CPPv3N8humanoid4h10w9BaseState4modeE"></span><span id="_CPPv2N8humanoid4h10w9BaseState4modeE"></span><span id="humanoid::h10w::BaseState::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1afa99278a013aa8aeb06a8c3dc7c7d68c"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState13left_velocityE">
+<span id="_CPPv3N8humanoid4h10w9BaseState13left_velocityE"></span><span id="_CPPv2N8humanoid4h10w9BaseState13left_velocityE"></span><span id="humanoid::h10w::BaseState::left_velocity__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1a6804c21f9b3df2fd9e67e85f9f63611a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_velocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState13left_velocityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState14right_velocityE">
+<span id="_CPPv3N8humanoid4h10w9BaseState14right_velocityE"></span><span id="_CPPv2N8humanoid4h10w9BaseState14right_velocityE"></span><span id="humanoid::h10w::BaseState::right_velocity__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1a2ea1d0478d4ce6beff35c575af0003be"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_velocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState14right_velocityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState11left_torqueE">
+<span id="_CPPv3N8humanoid4h10w9BaseState11left_torqueE"></span><span id="_CPPv2N8humanoid4h10w9BaseState11left_torqueE"></span><span id="humanoid::h10w::BaseState::left_torque__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1ab0fd3afa08a85a972d2a95122c3f83c3"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_torque</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState11left_torqueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState12right_torqueE">
+<span id="_CPPv3N8humanoid4h10w9BaseState12right_torqueE"></span><span id="_CPPv2N8humanoid4h10w9BaseState12right_torqueE"></span><span id="humanoid::h10w::BaseState::right_torque__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1a1a0fa8076d02bc28487cf91ea9d53698"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_torque</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState12right_torqueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState12left_currentE">
+<span id="_CPPv3N8humanoid4h10w9BaseState12left_currentE"></span><span id="_CPPv2N8humanoid4h10w9BaseState12left_currentE"></span><span id="humanoid::h10w::BaseState::left_current__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1a4910472f9242ea89ce767d2924ec5eac"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_current</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState12left_currentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState13right_currentE">
+<span id="_CPPv3N8humanoid4h10w9BaseState13right_currentE"></span><span id="_CPPv2N8humanoid4h10w9BaseState13right_currentE"></span><span id="humanoid::h10w::BaseState::right_current__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1a818d8533cbd789e090f7d61fac1d6ded"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_current</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState13right_currentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState12left_voltageE">
+<span id="_CPPv3N8humanoid4h10w9BaseState12left_voltageE"></span><span id="_CPPv2N8humanoid4h10w9BaseState12left_voltageE"></span><span id="humanoid::h10w::BaseState::left_voltage__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1a348d92c600bc6984bb6cd5236cee98c8"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_voltage</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState12left_voltageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState13right_voltageE">
+<span id="_CPPv3N8humanoid4h10w9BaseState13right_voltageE"></span><span id="_CPPv2N8humanoid4h10w9BaseState13right_voltageE"></span><span id="humanoid::h10w::BaseState::right_voltage__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1abcd350d5d7b5bacdfd2e78d2b4d8af96"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_voltage</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState13right_voltageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState16left_temperatureE">
+<span id="_CPPv3N8humanoid4h10w9BaseState16left_temperatureE"></span><span id="_CPPv2N8humanoid4h10w9BaseState16left_temperatureE"></span><span id="humanoid::h10w::BaseState::left_temperature__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1ab8805bb8a8ccfc50118de364498be9f1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_temperature</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState16left_temperatureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState17right_temperatureE">
+<span id="_CPPv3N8humanoid4h10w9BaseState17right_temperatureE"></span><span id="_CPPv2N8humanoid4h10w9BaseState17right_temperatureE"></span><span id="humanoid::h10w::BaseState::right_temperature__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1abd03c83f2fe11ca0e0d77a794aeb154d"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_temperature</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState17right_temperatureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState15left_error_codeE">
+<span id="_CPPv3N8humanoid4h10w9BaseState15left_error_codeE"></span><span id="_CPPv2N8humanoid4h10w9BaseState15left_error_codeE"></span><span id="humanoid::h10w::BaseState::left_error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1ad67fdfbc3a07c6c33711042e26addc5d"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_error_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState15left_error_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState16right_error_codeE">
+<span id="_CPPv3N8humanoid4h10w9BaseState16right_error_codeE"></span><span id="_CPPv2N8humanoid4h10w9BaseState16right_error_codeE"></span><span id="humanoid::h10w::BaseState::right_error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1a8d34dac32ddd7fe022cddda0b4f917fa"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_error_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState16right_error_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState17left_warning_codeE">
+<span id="_CPPv3N8humanoid4h10w9BaseState17left_warning_codeE"></span><span id="_CPPv2N8humanoid4h10w9BaseState17left_warning_codeE"></span><span id="humanoid::h10w::BaseState::left_warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1ae24ea8781a499fbed63adfbf0174b5bf"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left_warning_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState17left_warning_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState18right_warning_codeE">
+<span id="_CPPv3N8humanoid4h10w9BaseState18right_warning_codeE"></span><span id="_CPPv2N8humanoid4h10w9BaseState18right_warning_codeE"></span><span id="humanoid::h10w::BaseState::right_warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1ae86067fb08d1ca79346cd09a06e8ff69"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right_warning_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState18right_warning_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w9BaseState8reservedE">
+<span id="_CPPv3N8humanoid4h10w9BaseState8reservedE"></span><span id="_CPPv2N8humanoid4h10w9BaseState8reservedE"></span><span id="humanoid::h10w::BaseState::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1BaseState_1ac68403060785d833eed44586aa3916ed"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w9BaseState8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-elevatorstate">
+<h2>humanoid::h10w::ElevatorState<a class="headerlink" href="#humanoid-h10w-elevatorstate" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13ElevatorStateE">
+<span id="_CPPv3N8humanoid4h10w13ElevatorStateE"></span><span id="_CPPv2N8humanoid4h10w13ElevatorStateE"></span><span id="humanoid::h10w::ElevatorState"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ElevatorState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13ElevatorStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Elevator state parameters structure. </p>
+<p><ul class="simple">
+<li><p>mode: Control mode</p></li>
+<li><p>position: Elevator motor position, in meters</p></li>
+<li><p>velocity: Elevator motor velocity, in meters/second</p></li>
+<li><p>brake_state: Brake state, 0-release 1-brake</p></li>
+<li><p>error_code: Error code</p></li>
+<li><p>warning_code: Warning code </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13ElevatorState4modeE">
+<span id="_CPPv3N8humanoid4h10w13ElevatorState4modeE"></span><span id="_CPPv2N8humanoid4h10w13ElevatorState4modeE"></span><span id="humanoid::h10w::ElevatorState::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorState_1ac65daadf30c557912824ddb04fe8a3e9"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13ElevatorState4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13ElevatorState8positionE">
+<span id="_CPPv3N8humanoid4h10w13ElevatorState8positionE"></span><span id="_CPPv2N8humanoid4h10w13ElevatorState8positionE"></span><span id="humanoid::h10w::ElevatorState::position__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorState_1af30b7f8045a19269c179d77b33057244"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">position</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13ElevatorState8positionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13ElevatorState8velocityE">
+<span id="_CPPv3N8humanoid4h10w13ElevatorState8velocityE"></span><span id="_CPPv2N8humanoid4h10w13ElevatorState8velocityE"></span><span id="humanoid::h10w::ElevatorState::velocity__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorState_1aefd61c376da08961dab3601299a2ec0a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13ElevatorState8velocityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13ElevatorState11brake_stateE">
+<span id="_CPPv3N8humanoid4h10w13ElevatorState11brake_stateE"></span><span id="_CPPv2N8humanoid4h10w13ElevatorState11brake_stateE"></span><span id="humanoid::h10w::ElevatorState::brake_state__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorState_1a8c1ca1387cce2c293857d80dd6e4e69b"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">brake_state</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13ElevatorState11brake_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13ElevatorState10error_codeE">
+<span id="_CPPv3N8humanoid4h10w13ElevatorState10error_codeE"></span><span id="_CPPv2N8humanoid4h10w13ElevatorState10error_codeE"></span><span id="humanoid::h10w::ElevatorState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorState_1ab8dbc1ac9c37d2b66aab01043d1e265a"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13ElevatorState10error_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13ElevatorState12warning_codeE">
+<span id="_CPPv3N8humanoid4h10w13ElevatorState12warning_codeE"></span><span id="_CPPv2N8humanoid4h10w13ElevatorState12warning_codeE"></span><span id="humanoid::h10w::ElevatorState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorState_1a1ee3bf85643e29f3309b51ec38eb5986"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13ElevatorState12warning_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w13ElevatorState8reservedE">
+<span id="_CPPv3N8humanoid4h10w13ElevatorState8reservedE"></span><span id="_CPPv2N8humanoid4h10w13ElevatorState8reservedE"></span><span id="humanoid::h10w::ElevatorState::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1ElevatorState_1a2bc87421b28cd3f929e7e2ffb46933d6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w13ElevatorState8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-gripperstate">
+<h2>humanoid::h10w::GripperState<a class="headerlink" href="#humanoid-h10w-gripperstate" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12GripperStateE">
+<span id="_CPPv3N8humanoid4h10w12GripperStateE"></span><span id="_CPPv2N8humanoid4h10w12GripperStateE"></span><span id="humanoid::h10w::GripperState"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GripperState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12GripperStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gripper state parameters structure. </p>
+<p><ul class="simple">
+<li><p>mode: Control mode, 0-disable control 1-enable control</p></li>
+<li><p>position: Current gripper position, in m</p></li>
+<li><p>force: Gripper force, in N</p></li>
+<li><p>error_code: Error code</p></li>
+<li><p>warning_code: Warning code </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12GripperState4modeE">
+<span id="_CPPv3N8humanoid4h10w12GripperState4modeE"></span><span id="_CPPv2N8humanoid4h10w12GripperState4modeE"></span><span id="humanoid::h10w::GripperState::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperState_1a9d9a3b7544fd213aba6cdc5de5fbee9a"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12GripperState4modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12GripperState8positionE">
+<span id="_CPPv3N8humanoid4h10w12GripperState8positionE"></span><span id="_CPPv2N8humanoid4h10w12GripperState8positionE"></span><span id="humanoid::h10w::GripperState::position__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperState_1ae6d0474abd06ed718431dc9ddafa975e"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">position</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12GripperState8positionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12GripperState5forceE">
+<span id="_CPPv3N8humanoid4h10w12GripperState5forceE"></span><span id="_CPPv2N8humanoid4h10w12GripperState5forceE"></span><span id="humanoid::h10w::GripperState::force__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperState_1a258e280a37b721531b6225d034971a83"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">force</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12GripperState5forceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12GripperState10error_codeE">
+<span id="_CPPv3N8humanoid4h10w12GripperState10error_codeE"></span><span id="_CPPv2N8humanoid4h10w12GripperState10error_codeE"></span><span id="humanoid::h10w::GripperState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperState_1a4d7ccf2c65b6a12194962ca15e901696"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12GripperState10error_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12GripperState12warning_codeE">
+<span id="_CPPv3N8humanoid4h10w12GripperState12warning_codeE"></span><span id="_CPPv2N8humanoid4h10w12GripperState12warning_codeE"></span><span id="humanoid::h10w::GripperState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperState_1ad456e139328a83532f85ce283e4b7d83"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12GripperState12warning_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12GripperState8reservedE">
+<span id="_CPPv3N8humanoid4h10w12GripperState8reservedE"></span><span id="_CPPv2N8humanoid4h10w12GripperState8reservedE"></span><span id="humanoid::h10w::GripperState::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1GripperState_1a39d25aa772d7dd49ce1c329c4104e779"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12GripperState8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-pcustate">
+<h2>humanoid::h10w::PCUState<a class="headerlink" href="#humanoid-h10w-pcustate" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8PCUStateE">
+<span id="_CPPv3N8humanoid4h10w8PCUStateE"></span><span id="_CPPv2N8humanoid4h10w8PCUStateE"></span><span id="humanoid::h10w::PCUState"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PCUState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8PCUStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>PCU state parameters structure. </p>
+<p><ul class="simple">
+<li><p>power_off_flag: Power off flag, 0-normal 1-power off</p></li>
+<li><p>emergency_stop_flag: Emergency stop flag, 0-on, 1-off</p></li>
+<li><p>reset_flag: Reset flag, 0-on, 1-off</p></li>
+<li><p>brake_release_flag: Brake release flag, 1-release, 0-brake </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8PCUState14power_off_flagE">
+<span id="_CPPv3N8humanoid4h10w8PCUState14power_off_flagE"></span><span id="_CPPv2N8humanoid4h10w8PCUState14power_off_flagE"></span><span id="humanoid::h10w::PCUState::power_off_flag__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUState_1aabca44689662015c75e8643d6a206c29"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">power_off_flag</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8PCUState14power_off_flagE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8PCUState19emergency_stop_flagE">
+<span id="_CPPv3N8humanoid4h10w8PCUState19emergency_stop_flagE"></span><span id="_CPPv2N8humanoid4h10w8PCUState19emergency_stop_flagE"></span><span id="humanoid::h10w::PCUState::emergency_stop_flag__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUState_1acc0af77e391dc935601dc9e35fa33d36"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">emergency_stop_flag</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8PCUState19emergency_stop_flagE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8PCUState10reset_flagE">
+<span id="_CPPv3N8humanoid4h10w8PCUState10reset_flagE"></span><span id="_CPPv2N8humanoid4h10w8PCUState10reset_flagE"></span><span id="humanoid::h10w::PCUState::reset_flag__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUState_1aebbe0ac5537dcab035fc2b6054f6f875"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_flag</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8PCUState10reset_flagE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8PCUState18brake_release_flagE">
+<span id="_CPPv3N8humanoid4h10w8PCUState18brake_release_flagE"></span><span id="_CPPv2N8humanoid4h10w8PCUState18brake_release_flagE"></span><span id="humanoid::h10w::PCUState::brake_release_flag__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1PCUState_1a1c88fdd1e90049e760641ab28f932c5b"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">brake_release_flag</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8PCUState18brake_release_flagE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-batterystate">
+<h2>humanoid::h10w::BatteryState<a class="headerlink" href="#humanoid-h10w-batterystate" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12BatteryStateE">
+<span id="_CPPv3N8humanoid4h10w12BatteryStateE"></span><span id="_CPPv2N8humanoid4h10w12BatteryStateE"></span><span id="humanoid::h10w::BatteryState"></span><span class="target" id="structhumanoid_1_1h10w_1_1BatteryState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BatteryState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12BatteryStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Battery information parameters structure. </p>
+<p><ul class="simple">
+<li><p>capacity_percentage: Battery capacity percentage, 0-100%</p></li>
+<li><p>charging_state: Battery state: 0-invalid, 1-charging, 2-discharging, 3-idle </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12BatteryState19capacity_percentageE">
+<span id="_CPPv3N8humanoid4h10w12BatteryState19capacity_percentageE"></span><span id="_CPPv2N8humanoid4h10w12BatteryState19capacity_percentageE"></span><span id="humanoid::h10w::BatteryState::capacity_percentage__float"></span><span class="target" id="structhumanoid_1_1h10w_1_1BatteryState_1aa83a83a36afbc77242b31082fb480fb2"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">capacity_percentage</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12BatteryState19capacity_percentageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w12BatteryState14charging_stateE">
+<span id="_CPPv3N8humanoid4h10w12BatteryState14charging_stateE"></span><span id="_CPPv2N8humanoid4h10w12BatteryState14charging_stateE"></span><span id="humanoid::h10w::BatteryState::charging_state__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1BatteryState_1aa35be40106a32dd0f5184dfd5db4f411"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">charging_state</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w12BatteryState14charging_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-lowcmd">
+<h2>humanoid::h10w::LowCmd<a class="headerlink" href="#humanoid-h10w-lowcmd" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6LowCmdE">
+<span id="_CPPv3N8humanoid4h10w6LowCmdE"></span><span id="_CPPv2N8humanoid4h10w6LowCmdE"></span><span id="humanoid::h10w::LowCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LowCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6LowCmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Low level control parameters structure. </p>
+<p><ul class="simple">
+<li><p>motor_cmd: Motor control parameters array</p></li>
+<li><p>base_cmd: Base control parameters</p></li>
+<li><p>elevator_cmd: Elevator control parameters</p></li>
+<li><p>gripper_cmd: Gripper control parameters array</p></li>
+<li><p>pcu_cmd: PCU control parameters </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6LowCmd9motor_cmdE">
+<span id="_CPPv3N8humanoid4h10w6LowCmd9motor_cmdE"></span><span id="_CPPv2N8humanoid4h10w6LowCmd9motor_cmdE"></span><span id="humanoid::h10w::LowCmd::motor_cmd__std::array:MotorCmd.16:"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowCmd_1ac4918ea2ec563a8ab4899f9b34c37419"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w8MotorCmdE" title="humanoid::h10w::MotorCmd"><span class="n"><span class="pre">MotorCmd</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">16</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_cmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6LowCmd9motor_cmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6LowCmd8base_cmdE">
+<span id="_CPPv3N8humanoid4h10w6LowCmd8base_cmdE"></span><span id="_CPPv2N8humanoid4h10w6LowCmd8base_cmdE"></span><span id="humanoid::h10w::LowCmd::base_cmd__BaseCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowCmd_1a9740dd70c7f3c1d62e530f987d5e8c9f"></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w7BaseCmdE" title="humanoid::h10w::BaseCmd"><span class="n"><span class="pre">BaseCmd</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">base_cmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6LowCmd8base_cmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6LowCmd12elevator_cmdE">
+<span id="_CPPv3N8humanoid4h10w6LowCmd12elevator_cmdE"></span><span id="_CPPv2N8humanoid4h10w6LowCmd12elevator_cmdE"></span><span id="humanoid::h10w::LowCmd::elevator_cmd__ElevatorCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowCmd_1a92d589c35a75a1ff2e1eeabd70cd1ac6"></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w11ElevatorCmdE" title="humanoid::h10w::ElevatorCmd"><span class="n"><span class="pre">ElevatorCmd</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">elevator_cmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6LowCmd12elevator_cmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6LowCmd11gripper_cmdE">
+<span id="_CPPv3N8humanoid4h10w6LowCmd11gripper_cmdE"></span><span id="_CPPv2N8humanoid4h10w6LowCmd11gripper_cmdE"></span><span id="humanoid::h10w::LowCmd::gripper_cmd__std::array:GripperCmd.2:"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowCmd_1a0a42519d34cafefe016edc5f257722bb"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w10GripperCmdE" title="humanoid::h10w::GripperCmd"><span class="n"><span class="pre">GripperCmd</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gripper_cmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6LowCmd11gripper_cmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6LowCmd7pcu_cmdE">
+<span id="_CPPv3N8humanoid4h10w6LowCmd7pcu_cmdE"></span><span id="_CPPv2N8humanoid4h10w6LowCmd7pcu_cmdE"></span><span id="humanoid::h10w::LowCmd::pcu_cmd__PCUCmd"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowCmd_1a18eeb9eddc9beaafd88c804996901fb1"></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w6PCUCmdE" title="humanoid::h10w::PCUCmd"><span class="n"><span class="pre">PCUCmd</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pcu_cmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6LowCmd7pcu_cmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w6LowCmd8reservedE">
+<span id="_CPPv3N8humanoid4h10w6LowCmd8reservedE"></span><span id="_CPPv2N8humanoid4h10w6LowCmd8reservedE"></span><span id="humanoid::h10w::LowCmd::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowCmd_1a3a2269de8182e6730ff1239a0506eca8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w6LowCmd8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h10w-lowstate">
+<h2>humanoid::h10w::LowState<a class="headerlink" href="#humanoid-h10w-lowstate" title="Permalink to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowStateE">
+<span id="_CPPv3N8humanoid4h10w8LowStateE"></span><span id="_CPPv2N8humanoid4h10w8LowStateE"></span><span id="humanoid::h10w::LowState"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LowState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Low level state parameters structure. </p>
+<p><ul class="simple">
+<li><p>version: Version number</p></li>
+<li><p>tick: Timer</p></li>
+<li><p>motor_state: Motor state parameters array</p></li>
+<li><p>imu_state: IMU state parameters</p></li>
+<li><p>base_state: Base state parameters</p></li>
+<li><p>elevator_state: Elevator state parameters</p></li>
+<li><p>gripper_state: Gripper state parameters array</p></li>
+<li><p>pcu_state: PCU state parameters</p></li>
+<li><p>battery_state: Battery state parameters</p></li>
+<li><p>time_seconds: Accumulated time, in seconds</p></li>
+<li><p>upper_brake_state: Upper body brake state</p></li>
+<li><p>is_data_valid: Data valid flag, 0-invalid 1-valid</p></li>
+<li><p>error_code: Error code</p></li>
+<li><p>warning_code: Warning code </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState7versionE">
+<span id="_CPPv3N8humanoid4h10w8LowState7versionE"></span><span id="_CPPv2N8humanoid4h10w8LowState7versionE"></span><span id="humanoid::h10w::LowState::version__std::array:uint32_t.2:"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a79eaf3a98a090f1daf3d0a285b9510d8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState7versionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState4tickE">
+<span id="_CPPv3N8humanoid4h10w8LowState4tickE"></span><span id="_CPPv2N8humanoid4h10w8LowState4tickE"></span><span id="humanoid::h10w::LowState::tick__uint32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1ac55169b5f75837d9653cac0d95a0f1de"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tick</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState4tickE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState11motor_stateE">
+<span id="_CPPv3N8humanoid4h10w8LowState11motor_stateE"></span><span id="_CPPv2N8humanoid4h10w8LowState11motor_stateE"></span><span id="humanoid::h10w::LowState::motor_state__std::array:MotorState.16:"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a74c5159f0e4985afc3df528fbd6d08d5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w10MotorStateE" title="humanoid::h10w::MotorState"><span class="n"><span class="pre">MotorState</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">16</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState11motor_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState9imu_stateE">
+<span id="_CPPv3N8humanoid4h10w8LowState9imu_stateE"></span><span id="_CPPv2N8humanoid4h10w8LowState9imu_stateE"></span><span id="humanoid::h10w::LowState::imu_state__IMUState"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a546c222b93d58a277978ca608aed8b7b"></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w8IMUStateE" title="humanoid::h10w::IMUState"><span class="n"><span class="pre">IMUState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">imu_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState9imu_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState10base_stateE">
+<span id="_CPPv3N8humanoid4h10w8LowState10base_stateE"></span><span id="_CPPv2N8humanoid4h10w8LowState10base_stateE"></span><span id="humanoid::h10w::LowState::base_state__BaseState"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1aca3abf41fea74610ecc8d27d01de7861"></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w9BaseStateE" title="humanoid::h10w::BaseState"><span class="n"><span class="pre">BaseState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">base_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState10base_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState14elevator_stateE">
+<span id="_CPPv3N8humanoid4h10w8LowState14elevator_stateE"></span><span id="_CPPv2N8humanoid4h10w8LowState14elevator_stateE"></span><span id="humanoid::h10w::LowState::elevator_state__ElevatorState"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1aece7e1b5e3384859c4afe19026c30a4e"></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w13ElevatorStateE" title="humanoid::h10w::ElevatorState"><span class="n"><span class="pre">ElevatorState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">elevator_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState14elevator_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState13gripper_stateE">
+<span id="_CPPv3N8humanoid4h10w8LowState13gripper_stateE"></span><span id="_CPPv2N8humanoid4h10w8LowState13gripper_stateE"></span><span id="humanoid::h10w::LowState::gripper_state__std::array:GripperState.2:"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a786b7e164b1ef439a881b29d04ffa5c1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w12GripperStateE" title="humanoid::h10w::GripperState"><span class="n"><span class="pre">GripperState</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gripper_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState13gripper_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState9pcu_stateE">
+<span id="_CPPv3N8humanoid4h10w8LowState9pcu_stateE"></span><span id="_CPPv2N8humanoid4h10w8LowState9pcu_stateE"></span><span id="humanoid::h10w::LowState::pcu_state__PCUState"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a6f3f144768a94e641b82e1ab31a5e746"></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w8PCUStateE" title="humanoid::h10w::PCUState"><span class="n"><span class="pre">PCUState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pcu_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState9pcu_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState13battery_stateE">
+<span id="_CPPv3N8humanoid4h10w8LowState13battery_stateE"></span><span id="_CPPv2N8humanoid4h10w8LowState13battery_stateE"></span><span id="humanoid::h10w::LowState::battery_state__BatteryState"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a201ca1372770a4aee1093dc5f66caeb8"></span><a class="reference internal" href="#_CPPv4N8humanoid4h10w12BatteryStateE" title="humanoid::h10w::BatteryState"><span class="n"><span class="pre">BatteryState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">battery_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState13battery_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState12time_secondsE">
+<span id="_CPPv3N8humanoid4h10w8LowState12time_secondsE"></span><span id="_CPPv2N8humanoid4h10w8LowState12time_secondsE"></span><span id="humanoid::h10w::LowState::time_seconds__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a739161d5ea4b94dd62899373b35f79ac"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_seconds</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState12time_secondsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState17upper_brake_stateE">
+<span id="_CPPv3N8humanoid4h10w8LowState17upper_brake_stateE"></span><span id="_CPPv2N8humanoid4h10w8LowState17upper_brake_stateE"></span><span id="humanoid::h10w::LowState::upper_brake_state__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a1e9fc0e6e8d207b6f331fa2e2ac26a7e"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">upper_brake_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState17upper_brake_stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState13is_data_validE">
+<span id="_CPPv3N8humanoid4h10w8LowState13is_data_validE"></span><span id="_CPPv2N8humanoid4h10w8LowState13is_data_validE"></span><span id="humanoid::h10w::LowState::is_data_valid__uint8_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1a22d29159725a24b9128b13b035c17d73"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_data_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState13is_data_validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState10error_codeE">
+<span id="_CPPv3N8humanoid4h10w8LowState10error_codeE"></span><span id="_CPPv2N8humanoid4h10w8LowState10error_codeE"></span><span id="humanoid::h10w::LowState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1ab914ec48b873c9f72a2e3c0894201cde"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState10error_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState12warning_codeE">
+<span id="_CPPv3N8humanoid4h10w8LowState12warning_codeE"></span><span id="_CPPv2N8humanoid4h10w8LowState12warning_codeE"></span><span id="humanoid::h10w::LowState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1af0a5c6a33a6460d2f0b09847dbdb38ae"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState12warning_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid4h10w8LowState8reservedE">
+<span id="_CPPv3N8humanoid4h10w8LowState8reservedE"></span><span id="_CPPv2N8humanoid4h10w8LowState8reservedE"></span><span id="humanoid::h10w::LowState::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h10w_1_1LowState_1ab2f5f6a194e53003dfff6137970f559f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid4h10w8LowState8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  
+        <div class="related-pages">
+          <a class="next-page" href="class.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Classes</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="enum.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Enumerations and Joint Index</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025 Beijing Siling Robot Technology Co., Ltd.
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+  
+    ﻿<div id="doc-toolbar">
+  <label>
+    
+      Language:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H10-W/v0.10.2/cpp/zh_CN/"
+              >
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H10-W/v0.10.2/cpp/en/"
+              selected>
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      Version:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H10-W/v0.10.2/cpp/en/en/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+  
+
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Struct</a><ul>
+<li><a class="reference internal" href="#humanoid-h10w-realtimejointsparams">humanoid::h10w::RealtimeJointsParams</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-realtimetcpparams">humanoid::h10w::RealtimeTcpParams</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-lineartarget">humanoid::h10w::LinearTarget</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-tcpposeparams">humanoid::h10w::TcpPoseParams</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-movemessageparams">humanoid::h10w::MoveMessageParams</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-errormessageparams">humanoid::h10w::ErrorMessageParams</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-motorcmd">humanoid::h10w::MotorCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-basecmd">humanoid::h10w::BaseCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-elevatorcmd">humanoid::h10w::ElevatorCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-grippercmd">humanoid::h10w::GripperCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-pcucmd">humanoid::h10w::PCUCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-motorstate">humanoid::h10w::MotorState</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-imustate">humanoid::h10w::IMUState</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-basestate">humanoid::h10w::BaseState</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-elevatorstate">humanoid::h10w::ElevatorState</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-gripperstate">humanoid::h10w::GripperState</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-pcustate">humanoid::h10w::PCUState</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-batterystate">humanoid::h10w::BatteryState</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-lowcmd">humanoid::h10w::LowCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h10w-lowstate">humanoid::h10w::LowState</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=74347cb9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+    </body>
+</html>

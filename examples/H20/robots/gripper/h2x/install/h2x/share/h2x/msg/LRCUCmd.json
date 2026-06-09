@@ -1,0 +1,86 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/msg/LRCUCmd",
+      "fields": [
+        {
+          "name": "led_enable",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "led_mode",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "led_period_ms",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "led_r",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "led_g",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "led_b",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "crc",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/msg/LRCUCmd",
+      "hash_string": "RIHS01_f947047436bd5505e6a07c11b7c98927ee103560a167ad657822f7e9f08ce5ce"
+    }
+  ]
+}

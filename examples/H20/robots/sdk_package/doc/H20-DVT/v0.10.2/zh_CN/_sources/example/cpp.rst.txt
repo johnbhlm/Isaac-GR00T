@@ -1,0 +1,89 @@
+C++ 使用示例
+==================
+
+本文档介绍如何使用 C++ 语言调用 HumanoidSDK 库，并演示如何构建一个简单的示例程序。
+
+.. hint::
+   更多示例请参考 sdk_package/example 目录。
+
+配置环境变量
+-----------------
+
+.. code-block:: bash
+
+    cd ~/sdk_package
+    export LD_LIBRARY_PATH="$(pwd)/lib/linux/x86_64/x64:$(pwd)/dependency/sdk/Runtime_Env/linux/x86_64/x64:$(pwd)/dependency/fastdds/linux/x86_64/x64:$LD_LIBRARY_PATH"
+
+可选：如果要使用自定义 DDS 配置文件，设置 ROBOT_DDS_PROFILE 环境变量：
+
+.. code-block:: bash
+
+    export ROBOT_DDS_PROFILE=path/to/your/Robot_DDS_Profile.xml
+
+构建一个简单示例程序
+----------------------
+
+1. 创建 main.cpp 文件
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: cpp
+   :linenos:
+
+    // main.cpp
+    #include <iostream>
+    #include <iomanip>
+    #include "h10-w/h10w_params.h"
+    #include "common/common_def.h"
+
+    using namespace humanoid;
+    using namespace humanoid::h10w;
+
+    int main() {
+    H10wParams params;
+    JointLimit jointLimits;
+
+    if (params.getJointSoftLimit(jointLimits) == 0) {
+        std::cout << "get joint soft limit success" << std::endl;
+
+        for (const auto& limit : jointLimits) {
+        const auto& [jointIndex, maxPos, minPos] = limit;
+        std::cout << "    joint " << jointIndex << ": "
+                    << "max pos=" << std::fixed << std::setprecision(3) << maxPos
+                    << " rad, "
+                    << "min pos=" << minPos << " rad" << std::endl;
+        }
+    } else {
+        std::cout << "get joint soft limit failed" << std::endl;
+        return -1;
+    }
+    return 0;
+    }
+
+2. 创建 CMakeLists.txt 文件
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: cmake
+   :linenos:
+
+   cmake_minimum_required(VERSION 3.10)
+   project(simple_example)
+
+   # Project Options
+   set(CMAKE_CXX_STANDARD 17)
+   set(CMAKE_CXX_EXTENSIONS OFF)
+   set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+   # Find HumanoidSDK
+   set(HumanoidSDK_DIR "path/to/sdk_package/cmake/HumanoidSDK") ## replace with your sdk package path
+   find_package(HumanoidSDK REQUIRED)
+
+   add_executable(${PROJECT_NAME} main.cpp)
+   target_link_libraries(${PROJECT_NAME} humanoid_sdk::humanoid_sdk)
+
+3. 编译并运行示例程序
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+   mkdir build && cd build && cmake .. && make
+   ./simple_example

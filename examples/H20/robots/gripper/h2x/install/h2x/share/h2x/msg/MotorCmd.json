@@ -1,0 +1,96 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "h2x/msg/MotorCmd",
+      "fields": [
+        {
+          "name": "mode",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "operation_mode",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "q",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "dq",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "tau",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "kp",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "kd",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "reserved",
+          "type": {
+            "type_id": 55,
+            "capacity": 4,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "h2x/msg/MotorCmd",
+      "hash_string": "RIHS01_cd3aa0874d775046a07b1e1857f07568f6976701977c78e2ac9fb8fe9eeb5e6f"
+    }
+  ]
+}

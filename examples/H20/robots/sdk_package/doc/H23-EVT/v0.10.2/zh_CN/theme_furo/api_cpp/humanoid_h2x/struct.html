@@ -1,0 +1,1415 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="类" href="class.html" /><link rel="prev" title="枚举与关节索引" href="enum.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.08.06 -->
+        <title>结构体 - H23-EVT 用户手册</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=204bd9fb" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #007acc;
+  --color-brand-content: #005a9e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #7dbcea;
+  --color-brand-content: #4692d6;
+  
+      }
+    }
+  }
+</style>
+  
+  
+    <link rel="stylesheet" href="../../_static/toolbar.css">
+    <script defer src="../../_static/toolbar.js"></script>
+  
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">H23-EVT 用户手册</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">H23-EVT 用户手册</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">安装教程</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">C++ 接口说明</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of C++ 接口说明</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../humanoid/index.html">humanoid 命名空间</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of humanoid 命名空间</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/struct.html">结构体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../humanoid/typedef.html">类型别名</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">humanoid::h2x 命名空间</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of humanoid::h2x 命名空间</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">枚举与关节索引</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">结构体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class.html">类</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_py/index.html">Python 接口说明</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Python 接口说明</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_py/humanoid/index.html">humanoid_sdk_py 模块说明</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py 模块说明</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid/struct.html">结构体</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../api_py/humanoid_h2x/index.html">humanoid_sdk_py.h2x 模块说明</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of humanoid_sdk_py.h2x 模块说明</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h2x/enum.html">枚举</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api_py/humanoid_h2x/class.html">类</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../example/index.html">开始使用</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 开始使用</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../example/cpp.html">C++ 使用示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../example/python.html">Python 使用示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">常见问题</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">主题切换</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../api_cpp/humanoid_h2x/struct.html">Sphinx RTD</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Furo</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="id1">
+<h1>结构体<a class="headerlink" href="#id1" title="此标题的永久链接">¶</a></h1>
+<section id="humanoid-h2x-motorcmd">
+<h2>humanoid::h2x::MotorCmd<a class="headerlink" href="#humanoid-h2x-motorcmd" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmdE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmdE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmdE"></span><span id="humanoid::h2x::MotorCmd"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MotorCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmdE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>全身电机控制（机械臂+头部电机）参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmd4modeE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmd4modeE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmd4modeE"></span><span id="humanoid::h2x::MotorCmd::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd_1a4386a489515f9b17aecd5148d7c24fe7"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmd4modeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmd14operation_modeE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmd14operation_modeE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmd14operation_modeE"></span><span id="humanoid::h2x::MotorCmd::operation_mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd_1aee55029d44c0d2c3da0da50260ece20a"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">operation_mode</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmd14operation_modeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmd1qE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmd1qE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmd1qE"></span><span id="humanoid::h2x::MotorCmd::q__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd_1a542625f700ef1535378e71c17ac74bdc"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">q</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmd1qE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmd2dqE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmd2dqE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmd2dqE"></span><span id="humanoid::h2x::MotorCmd::dq__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd_1a32fe369bf2b64e93ff2fb2d6d6c27022"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dq</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmd2dqE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmd3tauE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmd3tauE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmd3tauE"></span><span id="humanoid::h2x::MotorCmd::tau__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd_1a7d325078a061a1c14f86fe5730612e4c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tau</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmd3tauE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmd2kpE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmd2kpE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmd2kpE"></span><span id="humanoid::h2x::MotorCmd::kp__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd_1ac16c1fc0f381fda1efb52e78dcb0a5d2"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kp</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmd2kpE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmd2kdE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmd2kdE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmd2kdE"></span><span id="humanoid::h2x::MotorCmd::kd__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd_1a00920cdb1e01be58144b803ff3ecd69a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmd2kdE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8MotorCmd8reservedE">
+<span id="_CPPv3N8humanoid3h2x8MotorCmd8reservedE"></span><span id="_CPPv2N8humanoid3h2x8MotorCmd8reservedE"></span><span id="humanoid::h2x::MotorCmd::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorCmd_1a25ab6181c97953f37e90e42c6ddeb987"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8MotorCmd8reservedE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode_</strong>： 电机控制模式，0 = Disable（命令忽略），1 = Enable（命令生效）。</p></li>
+<li><p><strong>operation_mode_</strong>： 工作模式。</p></li>
+<li><p><strong>q</strong>：关节目标位置，单位：<strong>rad</strong></p></li>
+<li><p><strong>dq</strong>：关节目标速度，单位：<strong>rad/s</strong></p></li>
+<li><p><strong>tau</strong>：关节前馈力矩，单位：<strong>Nm</strong></p></li>
+<li><p><strong>kp</strong>：关节刚度系数</p></li>
+<li><p><strong>kd</strong>：关节阻尼系数</p></li>
+<li><p><strong>reserved</strong>：预留</p></li>
+</ul>
+<p>0～12 关节工作模式：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件模式码</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>力位混控模式（默认工作模式）</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>伺服位置控制模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x02</p></td>
+<td><p>伺服速度控制模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x03</p></td>
+<td><p>电流、力矩控制模式和刹车控制指令</p></td>
+</tr>
+<tr class="row-even"><td><p>0x04</p></td>
+<td><p>配置指令</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x05</p></td>
+<td><p>电机控制参数查询指令</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>15~28、35~36 关节工作模式：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件模式码</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>力位混控模式（默认工作模式）</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x09</p></td>
+<td><p>轮廓位置模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0A</p></td>
+<td><p>轮廓速度模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0B</p></td>
+<td><p>轮廓转矩模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0C</p></td>
+<td><p>回原模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x06</p></td>
+<td><p>周期同步位置模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x07</p></td>
+<td><p>周期同步速度模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x08</p></td>
+<td><p>周期同步转矩模式</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></blockquote>
+</div>
+</section>
+<section id="humanoid-h2x-lowcmd">
+<h2>humanoid::h2x::LowCmd<a class="headerlink" href="#humanoid-h2x-lowcmd" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x6LowCmdE">
+<span id="_CPPv3N8humanoid3h2x6LowCmdE"></span><span id="_CPPv2N8humanoid3h2x6LowCmdE"></span><span id="humanoid::h2x::LowCmd"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LowCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x6LowCmdE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>底层控制参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x6LowCmd7mode_prE">
+<span id="_CPPv3N8humanoid3h2x6LowCmd7mode_prE"></span><span id="_CPPv2N8humanoid3h2x6LowCmd7mode_prE"></span><span id="humanoid::h2x::LowCmd::mode_pr__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowCmd_1ab4f9ca61888efa4a2aac8f59d444ce78"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode_pr</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x6LowCmd7mode_prE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x6LowCmd9motor_cmdE">
+<span id="_CPPv3N8humanoid3h2x6LowCmd9motor_cmdE"></span><span id="_CPPv2N8humanoid3h2x6LowCmd9motor_cmdE"></span><span id="humanoid::h2x::LowCmd::motor_cmd__std::array:MotorCmd.37:"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowCmd_1a7cedacfa4ae097ace49333ba44a09d8b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid3h2x8MotorCmdE" title="humanoid::h2x::MotorCmd"><span class="n"><span class="pre">MotorCmd</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">37</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_cmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x6LowCmd9motor_cmdE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x6LowCmd8reservedE">
+<span id="_CPPv3N8humanoid3h2x6LowCmd8reservedE"></span><span id="_CPPv2N8humanoid3h2x6LowCmd8reservedE"></span><span id="humanoid::h2x::LowCmd::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowCmd_1ab052b3bc308a8df10af0657ffe48ce4e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x6LowCmd8reservedE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode_pr</strong>：并联机构（脚踝和腰部）控制模式</p>
+<ul>
+<li><p>0: PR模式 (俯仰/滚转角度控制) [默认]</p></li>
+<li><p>1: AB模式 (电机直接控制)</p></li>
+</ul>
+</li>
+<li><p><strong>motorCmd[37]</strong>：电机控制指令</p></li>
+<li><p><strong>reserved[4]</strong>：预留</p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+<section id="humanoid-h2x-realtimecmd">
+<h2>humanoid::h2x::RealtimeCmd<a class="headerlink" href="#humanoid-h2x-realtimecmd" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11RealtimeCmdE">
+<span id="_CPPv3N8humanoid3h2x11RealtimeCmdE"></span><span id="_CPPv2N8humanoid3h2x11RealtimeCmdE"></span><span id="humanoid::h2x::RealtimeCmd"></span><span class="target" id="structhumanoid_1_1h2x_1_1RealtimeCmd"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RealtimeCmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11RealtimeCmdE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>实时控制命令参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11RealtimeCmd7mode_prE">
+<span id="_CPPv3N8humanoid3h2x11RealtimeCmd7mode_prE"></span><span id="_CPPv2N8humanoid3h2x11RealtimeCmd7mode_prE"></span><span id="humanoid::h2x::RealtimeCmd::mode_pr__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1RealtimeCmd_1a879435211ed8aa659e1046b1356b0d71"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode_pr</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11RealtimeCmd7mode_prE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11RealtimeCmd4timeE">
+<span id="_CPPv3N8humanoid3h2x11RealtimeCmd4timeE"></span><span id="_CPPv2N8humanoid3h2x11RealtimeCmd4timeE"></span><span id="humanoid::h2x::RealtimeCmd::time__double"></span><span class="target" id="structhumanoid_1_1h2x_1_1RealtimeCmd_1a37189b13ccb96653b8943428a322e44d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11RealtimeCmd4timeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11RealtimeCmd9motor_cmdE">
+<span id="_CPPv3N8humanoid3h2x11RealtimeCmd9motor_cmdE"></span><span id="_CPPv2N8humanoid3h2x11RealtimeCmd9motor_cmdE"></span><span id="humanoid::h2x::RealtimeCmd::motor_cmd__std::array:MotorCmd.37:"></span><span class="target" id="structhumanoid_1_1h2x_1_1RealtimeCmd_1a3f3e504b6f819f07a84048d5088ed20d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid3h2x8MotorCmdE" title="humanoid::h2x::MotorCmd"><span class="n"><span class="pre">MotorCmd</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">37</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_cmd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11RealtimeCmd9motor_cmdE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11RealtimeCmd8reservedE">
+<span id="_CPPv3N8humanoid3h2x11RealtimeCmd8reservedE"></span><span id="_CPPv2N8humanoid3h2x11RealtimeCmd8reservedE"></span><span id="humanoid::h2x::RealtimeCmd::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h2x_1_1RealtimeCmd_1a813084e5fb96944e7ad864f8e9598c65"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11RealtimeCmd8reservedE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode_pr</strong>：并联机构控制模式</p>
+<ul>
+<li><p>0：PR (俯仰/滚转角度控制) [默认]</p></li>
+<li><p>1：AB (电机直接控制)</p></li>
+</ul>
+</li>
+<li><p><strong>motorCmd[37]</strong>：电机控制指令</p></li>
+<li><p><strong>reserved[4]</strong>：预留</p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+<section id="humanoid-h2x-imustate">
+<h2>humanoid::h2x::IMUState<a class="headerlink" href="#humanoid-h2x-imustate" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8IMUStateE">
+<span id="_CPPv3N8humanoid3h2x8IMUStateE"></span><span id="_CPPv2N8humanoid3h2x8IMUStateE"></span><span id="humanoid::h2x::IMUState"></span><span class="target" id="structhumanoid_1_1h2x_1_1IMUState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IMUState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8IMUStateE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>IMU状态参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8IMUState10quaternionE">
+<span id="_CPPv3N8humanoid3h2x8IMUState10quaternionE"></span><span id="_CPPv2N8humanoid3h2x8IMUState10quaternionE"></span><span id="humanoid::h2x::IMUState::quaternion__std::array:float.4:"></span><span class="target" id="structhumanoid_1_1h2x_1_1IMUState_1ab47e2516b98094d64c4aa516846cc518"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">quaternion</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8IMUState10quaternionE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8IMUState9gyroscopeE">
+<span id="_CPPv3N8humanoid3h2x8IMUState9gyroscopeE"></span><span id="_CPPv2N8humanoid3h2x8IMUState9gyroscopeE"></span><span id="humanoid::h2x::IMUState::gyroscope__std::array:float.3:"></span><span class="target" id="structhumanoid_1_1h2x_1_1IMUState_1a6cb7bf5bfaf3a7e5dfe612fb06968695"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gyroscope</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8IMUState9gyroscopeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8IMUState13accelerometerE">
+<span id="_CPPv3N8humanoid3h2x8IMUState13accelerometerE"></span><span id="_CPPv2N8humanoid3h2x8IMUState13accelerometerE"></span><span id="humanoid::h2x::IMUState::accelerometer__std::array:float.3:"></span><span class="target" id="structhumanoid_1_1h2x_1_1IMUState_1adace1e40d4fd038ddfe64f0e6246e059"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accelerometer</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8IMUState13accelerometerE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8IMUState3rpyE">
+<span id="_CPPv3N8humanoid3h2x8IMUState3rpyE"></span><span id="_CPPv2N8humanoid3h2x8IMUState3rpyE"></span><span id="humanoid::h2x::IMUState::rpy__std::array:float.3:"></span><span class="target" id="structhumanoid_1_1h2x_1_1IMUState_1a228fc18200acf269e3ab7210caf7efd7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rpy</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8IMUState3rpyE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8IMUState11temperatureE">
+<span id="_CPPv3N8humanoid3h2x8IMUState11temperatureE"></span><span id="_CPPv2N8humanoid3h2x8IMUState11temperatureE"></span><span id="humanoid::h2x::IMUState::temperature__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1IMUState_1a3d5f6c8ed58db85541e1d34a8bf89d1d"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">temperature</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8IMUState11temperatureE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8IMUState10error_codeE">
+<span id="_CPPv3N8humanoid3h2x8IMUState10error_codeE"></span><span id="_CPPv2N8humanoid3h2x8IMUState10error_codeE"></span><span id="humanoid::h2x::IMUState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1IMUState_1abbda87e2292282163cff9bb3220a9e96"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8IMUState10error_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8IMUState12warning_codeE">
+<span id="_CPPv3N8humanoid3h2x8IMUState12warning_codeE"></span><span id="_CPPv2N8humanoid3h2x8IMUState12warning_codeE"></span><span id="humanoid::h2x::IMUState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1IMUState_1a55a98a6497bc1257978cb6bb73353715"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8IMUState12warning_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<ul class="simple">
+<li><p><strong>quaternion_[4]</strong>： 四元数，表示机器人坐标系绕世界坐标系的转动情况。</p>
+<ul>
+<li><p>0： w</p></li>
+<li><p>1： x</p></li>
+<li><p>2： y</p></li>
+<li><p>3： z</p></li>
+</ul>
+</li>
+<li><p><strong>gyroscope_[3]</strong>： 陀螺仪角速度（绕三个坐标轴），单位 <strong>rad/s</strong>。</p>
+<ul>
+<li><p>0： x轴</p></li>
+<li><p>1： y轴</p></li>
+<li><p>2： z轴</p></li>
+</ul>
+</li>
+<li><p><strong>accelerometer_[3]</strong>： 加速度（三个坐标轴），单位 <strong>m/s²</strong>。</p>
+<ul>
+<li><p>0： x轴</p></li>
+<li><p>1： y轴</p></li>
+<li><p>2： z轴</p></li>
+</ul>
+</li>
+<li><p><strong>rpy_[3]</strong>： 欧拉角 (Roll, Pitch, Yaw)，表示机器人坐标系绕世界坐标系的转动角度，单位 <strong>rad</strong>。</p>
+<ul>
+<li><p>0： roll</p></li>
+<li><p>1： pitch</p></li>
+<li><p>2： yaw</p></li>
+</ul>
+</li>
+<li><p><strong>temperature_</strong>： IMU传感器温度，单位 <strong>°C</strong>。</p></li>
+<li><p><strong>error_code_</strong>： IMU错误码。</p></li>
+<li><p><strong>warning_code_</strong>： IMU警告码。</p></li>
+</ul>
+</div>
+</section>
+<section id="humanoid-h2x-motorstate">
+<h2>humanoid::h2x::MotorState<a class="headerlink" href="#humanoid-h2x-motorstate" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorStateE">
+<span id="_CPPv3N8humanoid3h2x10MotorStateE"></span><span id="_CPPv2N8humanoid3h2x10MotorStateE"></span><span id="humanoid::h2x::MotorState"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MotorState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorStateE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>全身电机状态参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState4modeE">
+<span id="_CPPv3N8humanoid3h2x10MotorState4modeE"></span><span id="_CPPv2N8humanoid3h2x10MotorState4modeE"></span><span id="humanoid::h2x::MotorState::mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a1411c831f3a2304c6100e416855a787a"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState4modeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState14operation_modeE">
+<span id="_CPPv3N8humanoid3h2x10MotorState14operation_modeE"></span><span id="_CPPv2N8humanoid3h2x10MotorState14operation_modeE"></span><span id="humanoid::h2x::MotorState::operation_mode__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a9769c5fde599c31392d735bdc0a6a89d"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">operation_mode</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState14operation_modeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState1qE">
+<span id="_CPPv3N8humanoid3h2x10MotorState1qE"></span><span id="_CPPv2N8humanoid3h2x10MotorState1qE"></span><span id="humanoid::h2x::MotorState::q__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a3ccfd2964f2300a422a98b8d6d3470d6"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">q</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState1qE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState2dqE">
+<span id="_CPPv3N8humanoid3h2x10MotorState2dqE"></span><span id="_CPPv2N8humanoid3h2x10MotorState2dqE"></span><span id="humanoid::h2x::MotorState::dq__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a665830e8c42baf89d97688a1111ad6e3"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dq</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState2dqE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState3ddqE">
+<span id="_CPPv3N8humanoid3h2x10MotorState3ddqE"></span><span id="_CPPv2N8humanoid3h2x10MotorState3ddqE"></span><span id="humanoid::h2x::MotorState::ddq__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a4d51ce5ab642688feadf2c220a802331"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ddq</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState3ddqE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState3curE">
+<span id="_CPPv3N8humanoid3h2x10MotorState3curE"></span><span id="_CPPv2N8humanoid3h2x10MotorState3curE"></span><span id="humanoid::h2x::MotorState::cur__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a3fc49eb9e106d3128d522a9ab035543a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState3curE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState7tau_estE">
+<span id="_CPPv3N8humanoid3h2x10MotorState7tau_estE"></span><span id="_CPPv2N8humanoid3h2x10MotorState7tau_estE"></span><span id="humanoid::h2x::MotorState::tau_est__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a018191f0301e77e85e09016f6841a2ae"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tau_est</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState7tau_estE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState11temperatureE">
+<span id="_CPPv3N8humanoid3h2x10MotorState11temperatureE"></span><span id="_CPPv2N8humanoid3h2x10MotorState11temperatureE"></span><span id="humanoid::h2x::MotorState::temperature__std::array:float.2:"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1aab2cbb5c5978be770baec7fb46fc7166"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">temperature</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState11temperatureE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState2kpE">
+<span id="_CPPv3N8humanoid3h2x10MotorState2kpE"></span><span id="_CPPv2N8humanoid3h2x10MotorState2kpE"></span><span id="humanoid::h2x::MotorState::kp__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1aea2943daeeff69a9dcc584929c2cbb58"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kp</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState2kpE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState2kdE">
+<span id="_CPPv3N8humanoid3h2x10MotorState2kdE"></span><span id="_CPPv2N8humanoid3h2x10MotorState2kdE"></span><span id="humanoid::h2x::MotorState::kd__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a53013bd622ff6223894370452d21c920"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kd</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState2kdE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState10error_codeE">
+<span id="_CPPv3N8humanoid3h2x10MotorState10error_codeE"></span><span id="_CPPv2N8humanoid3h2x10MotorState10error_codeE"></span><span id="humanoid::h2x::MotorState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1ac7126171a0fa786600c0887eb9c57cbf"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState10error_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState12warning_codeE">
+<span id="_CPPv3N8humanoid3h2x10MotorState12warning_codeE"></span><span id="_CPPv2N8humanoid3h2x10MotorState12warning_codeE"></span><span id="humanoid::h2x::MotorState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1acb248b81130e9dbe60fdd7e37f3720e5"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState12warning_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x10MotorState8reservedE">
+<span id="_CPPv3N8humanoid3h2x10MotorState8reservedE"></span><span id="_CPPv2N8humanoid3h2x10MotorState8reservedE"></span><span id="humanoid::h2x::MotorState::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h2x_1_1MotorState_1a45f6cfe656a4a61c203da8cf6d209476"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x10MotorState8reservedE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>mode_</strong>： 当前控制模式， 0 = Disable（命令忽略）， 1 = Enable（命令生效）。</p></li>
+<li><p><strong>operation_mode_</strong>： 工作模式。</p></li>
+<li><p><strong>q_</strong>： 关节反馈位置，单位 <strong>rad</strong>。</p></li>
+<li><p><strong>dq_</strong>： 关节反馈速度，单位 <strong>rad/s</strong>。</p></li>
+<li><p><strong>ddq_</strong>： 关节反馈加速度，单位 <strong>rad/s²</strong>。</p></li>
+<li><p><strong>cur_</strong>： 关节反馈电流，单位 <strong>A</strong>。</p></li>
+<li><p><strong>tau_est_</strong>： 关节反馈力矩，单位 <strong>N·m</strong>。</p></li>
+<li><p><strong>temperature_[2]</strong>： 关节温度，单位 <strong>°C</strong>。</p>
+<ul>
+<li><p>0： 外表温度</p></li>
+<li><p>1： 绕组温度</p></li>
+</ul>
+</li>
+<li><p><strong>kp_</strong>： 关节刚度系数。</p></li>
+<li><p><strong>kd_</strong>： 关节阻尼系数。</p></li>
+<li><p><strong>error_code_</strong>： 错误码。</p></li>
+<li><p><strong>warning_code_</strong>： 警告码。</p></li>
+<li><p><strong>reserved_[4]</strong>： 预留 4 个，unsigned long 类型。</p></li>
+</ul>
+<p>0～12 关节工作模式：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件模式码</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>力位混控模式（默认工作模式）</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>伺服位置控制模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x02</p></td>
+<td><p>伺服速度控制模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x03</p></td>
+<td><p>电流、力矩控制模式和刹车控制指令</p></td>
+</tr>
+<tr class="row-even"><td><p>0x04</p></td>
+<td><p>配置指令</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x05</p></td>
+<td><p>电机控制参数查询指令</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>15~28、35~36 关节工作模式：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件模式码</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>力位混控模式（默认工作模式）</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x09</p></td>
+<td><p>轮廓位置模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0A</p></td>
+<td><p>轮廓速度模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0B</p></td>
+<td><p>轮廓转矩模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0C</p></td>
+<td><p>回原模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x06</p></td>
+<td><p>周期同步位置模式</p></td>
+</tr>
+<tr class="row-even"><td><p>0x07</p></td>
+<td><p>周期同步速度模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x08</p></td>
+<td><p>周期同步转矩模式</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>电机错误码定义</p>
+<p>0~12 关节错误码定义：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件错误码</p></th>
+<th class="head"><p>错误定义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1001</p></td>
+<td><p>无错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1002</p></td>
+<td><p>电机过热</p></td>
+</tr>
+<tr class="row-even"><td><p>-1003</p></td>
+<td><p>电机过流</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1004</p></td>
+<td><p>电机电压过低</p></td>
+</tr>
+<tr class="row-even"><td><p>-1005</p></td>
+<td><p>电机编码器错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1006</p></td>
+<td><p>电机刹车电压过高</p></td>
+</tr>
+<tr class="row-even"><td><p>-1007</p></td>
+<td><p>DRV 驱动错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1203</p></td>
+<td><p>参数非法</p></td>
+</tr>
+<tr class="row-even"><td><p>-1204</p></td>
+<td><p>位置超限</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>13~28、35~36 关节错误码定义：</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>软件错误码</p></th>
+<th class="head"><p>错误定义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1022</p></td>
+<td><p>Continuous Over Current（电机过载）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1023</p></td>
+<td><p>Mains Under Voltage（供电电压过低）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1024</p></td>
+<td><p>Mains Over Voltage（供电电压过高）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1025</p></td>
+<td><p>Temperature Device（电机温度报警）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1026</p></td>
+<td><p>Temperature Drive（驱动器温度报警）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1027</p></td>
+<td><p>Sensor Error（编码器报警）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1028</p></td>
+<td><p>Control Computing Circuit（控制电路 CPU 错误）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1029</p></td>
+<td><p>Short Circuit Earth Leakage Motor Side（输出短路报警）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1030</p></td>
+<td><p>Internal Software（内部软件错误）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1031</p></td>
+<td><p>Communication（通讯错误）</p></td>
+</tr>
+<tr class="row-even"><td><p>-1032</p></td>
+<td><p>Following Error（跟随误差过大）</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1203</p></td>
+<td><p>参数非法</p></td>
+</tr>
+<tr class="row-even"><td><p>-1204</p></td>
+<td><p>位置超限</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></blockquote>
+</div>
+</section>
+<section id="humanoid-h2x-batterystate">
+<h2>humanoid::h2x::BatteryState<a class="headerlink" href="#humanoid-h2x-batterystate" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12BatteryStateE">
+<span id="_CPPv3N8humanoid3h2x12BatteryStateE"></span><span id="_CPPv2N8humanoid3h2x12BatteryStateE"></span><span id="humanoid::h2x::BatteryState"></span><span class="target" id="structhumanoid_1_1h2x_1_1BatteryState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BatteryState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12BatteryStateE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>电池信息参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12BatteryState18battery_percentageE">
+<span id="_CPPv3N8humanoid3h2x12BatteryState18battery_percentageE"></span><span id="_CPPv2N8humanoid3h2x12BatteryState18battery_percentageE"></span><span id="humanoid::h2x::BatteryState::battery_percentage__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1BatteryState_1a12fd58021581ba68678024ea47f946ea"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">battery_percentage</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12BatteryState18battery_percentageE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12BatteryState13battery_stateE">
+<span id="_CPPv3N8humanoid3h2x12BatteryState13battery_stateE"></span><span id="_CPPv2N8humanoid3h2x12BatteryState13battery_stateE"></span><span id="humanoid::h2x::BatteryState::battery_state__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1BatteryState_1a883f7ece6adc807b9d2c60a9bba83a4a"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">battery_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12BatteryState13battery_stateE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12BatteryState19battery_low_warningE">
+<span id="_CPPv3N8humanoid3h2x12BatteryState19battery_low_warningE"></span><span id="_CPPv2N8humanoid3h2x12BatteryState19battery_low_warningE"></span><span id="humanoid::h2x::BatteryState::battery_low_warning__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1BatteryState_1abf29baa1c5f0be3a6edcdf69e0e4e4f2"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">battery_low_warning</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12BatteryState19battery_low_warningE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12BatteryState10error_codeE">
+<span id="_CPPv3N8humanoid3h2x12BatteryState10error_codeE"></span><span id="_CPPv2N8humanoid3h2x12BatteryState10error_codeE"></span><span id="humanoid::h2x::BatteryState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1BatteryState_1a203238f45d891429b9cd85d78a905959"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12BatteryState10error_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12BatteryState12warning_codeE">
+<span id="_CPPv3N8humanoid3h2x12BatteryState12warning_codeE"></span><span id="_CPPv2N8humanoid3h2x12BatteryState12warning_codeE"></span><span id="humanoid::h2x::BatteryState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1BatteryState_1ae86f43d789dbbdc6f8c4e4011d216af4"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12BatteryState12warning_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">电池参数说明</p>
+<ul class="simple">
+<li><p><strong>battery_percentage</strong>：电池电量</p>
+<ul>
+<li><p>范围：0～100％</p></li>
+<li><p>无效时为 0</p></li>
+</ul>
+</li>
+<li><p><strong>battery_state</strong>：电池状态</p>
+<ul>
+<li><p>0：无效</p></li>
+<li><p>1：充电</p></li>
+<li><p>2：放电</p></li>
+<li><p>3：静止</p></li>
+</ul>
+</li>
+<li><p><strong>battery_level_warning</strong>：电池电量警告</p>
+<ul>
+<li><p>0：无效</p></li>
+<li><p>1：电池电量低警告</p></li>
+<li><p>2：其余警告</p></li>
+</ul>
+</li>
+<li><p><strong>error_code</strong>：错误码</p></li>
+<li><p><strong>warning_code</strong>：警告码</p></li>
+</ul>
+</div>
+</section>
+<section id="humanoid-h2x-pcustate">
+<h2>humanoid::h2x::PCUState<a class="headerlink" href="#humanoid-h2x-pcustate" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUStateE">
+<span id="_CPPv3N8humanoid3h2x8PCUStateE"></span><span id="_CPPv2N8humanoid3h2x8PCUStateE"></span><span id="humanoid::h2x::PCUState"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PCUState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUStateE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>PCU状态参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState20emergency_stop_stateE">
+<span id="_CPPv3N8humanoid3h2x8PCUState20emergency_stop_stateE"></span><span id="_CPPv2N8humanoid3h2x8PCUState20emergency_stop_stateE"></span><span id="humanoid::h2x::PCUState::emergency_stop_state__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1acbb315642f3e9f454e64b3fa062145fd"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">emergency_stop_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState20emergency_stop_stateE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState20control_supply_stateE">
+<span id="_CPPv3N8humanoid3h2x8PCUState20control_supply_stateE"></span><span id="_CPPv2N8humanoid3h2x8PCUState20control_supply_stateE"></span><span id="humanoid::h2x::PCUState::control_supply_state__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1aaea3019b045098f7bbd2ad0883513cce"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">control_supply_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState20control_supply_stateE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState18power_supply_stateE">
+<span id="_CPPv3N8humanoid3h2x8PCUState18power_supply_stateE"></span><span id="_CPPv2N8humanoid3h2x8PCUState18power_supply_stateE"></span><span id="humanoid::h2x::PCUState::power_supply_state__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1aea692fb1c39aad46eb4ad19d659e44fa"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">power_supply_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState18power_supply_stateE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState14pcu_error_codeE">
+<span id="_CPPv3N8humanoid3h2x8PCUState14pcu_error_codeE"></span><span id="_CPPv2N8humanoid3h2x8PCUState14pcu_error_codeE"></span><span id="humanoid::h2x::PCUState::pcu_error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1aa2b47e55c893a18680d94b5900cd94e1"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pcu_error_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState14pcu_error_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState16pcu_warning_codeE">
+<span id="_CPPv3N8humanoid3h2x8PCUState16pcu_warning_codeE"></span><span id="_CPPv2N8humanoid3h2x8PCUState16pcu_warning_codeE"></span><span id="humanoid::h2x::PCUState::pcu_warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1a3bc5d127ff9ccb421b1782fc595c5527"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pcu_warning_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState16pcu_warning_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState15battery_voltageE">
+<span id="_CPPv3N8humanoid3h2x8PCUState15battery_voltageE"></span><span id="_CPPv2N8humanoid3h2x8PCUState15battery_voltageE"></span><span id="humanoid::h2x::PCUState::battery_voltage__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1a4eb214c8b4001198218827faf552deb7"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">battery_voltage</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState15battery_voltageE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState17motor_bus_voltageE">
+<span id="_CPPv3N8humanoid3h2x8PCUState17motor_bus_voltageE"></span><span id="_CPPv2N8humanoid3h2x8PCUState17motor_bus_voltageE"></span><span id="humanoid::h2x::PCUState::motor_bus_voltage__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1aff21a3e09841e9f24c3de775a584d8ef"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_bus_voltage</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState17motor_bus_voltageE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState17motor_bus_currentE">
+<span id="_CPPv3N8humanoid3h2x8PCUState17motor_bus_currentE"></span><span id="_CPPv2N8humanoid3h2x8PCUState17motor_bus_currentE"></span><span id="humanoid::h2x::PCUState::motor_bus_current__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1a4f884d3c2f07a495c238c52b9c13d7da"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_bus_current</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState17motor_bus_currentE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState16dcdc_bus_voltageE">
+<span id="_CPPv3N8humanoid3h2x8PCUState16dcdc_bus_voltageE"></span><span id="_CPPv2N8humanoid3h2x8PCUState16dcdc_bus_voltageE"></span><span id="humanoid::h2x::PCUState::dcdc_bus_voltage__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1a18f2a033f0731b1e9d1c8b93a9ed6889"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dcdc_bus_voltage</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState16dcdc_bus_voltageE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState11voltage_24vE">
+<span id="_CPPv3N8humanoid3h2x8PCUState11voltage_24vE"></span><span id="_CPPv2N8humanoid3h2x8PCUState11voltage_24vE"></span><span id="humanoid::h2x::PCUState::voltage_24v__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1a942e09accaff171d5e43f5423ca02ff6"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">voltage_24v</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState11voltage_24vE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState11voltage_12vE">
+<span id="_CPPv3N8humanoid3h2x8PCUState11voltage_12vE"></span><span id="_CPPv2N8humanoid3h2x8PCUState11voltage_12vE"></span><span id="humanoid::h2x::PCUState::voltage_12v__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1a1f72d5bf7592f410e8c945a9d2299ffa"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">voltage_12v</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState11voltage_12vE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState11current_24vE">
+<span id="_CPPv3N8humanoid3h2x8PCUState11current_24vE"></span><span id="_CPPv2N8humanoid3h2x8PCUState11current_24vE"></span><span id="humanoid::h2x::PCUState::current_24v__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1a293f2dbc310b8505ae79fa51ff6080cc"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_24v</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState11current_24vE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8PCUState11current_12vE">
+<span id="_CPPv3N8humanoid3h2x8PCUState11current_12vE"></span><span id="_CPPv2N8humanoid3h2x8PCUState11current_12vE"></span><span id="humanoid::h2x::PCUState::current_12v__float"></span><span class="target" id="structhumanoid_1_1h2x_1_1PCUState_1ab190bbb6d150acca05a59223db9649bc"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_12v</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8PCUState11current_12vE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<ul class="simple">
+<li><p><strong>emergency_stop_state_</strong>： 急停状态，0：on，1：off。</p></li>
+<li><p><strong>control_supply_state_</strong>： 控制电状态：0：待机状态，2：上电状态，4：错误状态。</p></li>
+<li><p><strong>power_supply_state_</strong>： 动力电状态：0：待机状态，1：预充状态，2：上电状态，3：下电状态，4：错误状态。</p></li>
+<li><p><strong>pcu_error_code_</strong>： PCU错误码。</p></li>
+<li><p><strong>pcu_warning_code_</strong>： PCU警告码。</p></li>
+<li><p><strong>battery_voltage_</strong>： 电池电压，单位 V。</p></li>
+<li><p><strong>motor_bus_voltage_</strong>： 电机母线电压，单位 V。</p></li>
+<li><p><strong>motor_bus_current_</strong>： 电机母线电流，单位 A。</p></li>
+<li><p><strong>dcdc_bus_voltage_</strong>： DCDC母线电压，单位 V。</p></li>
+<li><p><strong>voltage_24v_</strong>： 24V电压，单位 V。</p></li>
+<li><p><strong>voltage_12v_</strong>： 12V电压，单位 V。</p></li>
+<li><p><strong>current_24v_</strong>： 24V电流，单位 A。</p></li>
+<li><p><strong>current_12v_</strong>： 12V电流，单位 A。</p></li>
+</ul>
+</div>
+</section>
+<section id="humanoid-h2x-cdustate">
+<h2>humanoid::h2x::CDUState<a class="headerlink" href="#humanoid-h2x-cdustate" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8CDUStateE">
+<span id="_CPPv3N8humanoid3h2x8CDUStateE"></span><span id="_CPPv2N8humanoid3h2x8CDUStateE"></span><span id="humanoid::h2x::CDUState"></span><span class="target" id="structhumanoid_1_1h2x_1_1CDUState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CDUState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8CDUStateE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>CDU状态参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8CDUState10error_codeE">
+<span id="_CPPv3N8humanoid3h2x8CDUState10error_codeE"></span><span id="_CPPv2N8humanoid3h2x8CDUState10error_codeE"></span><span id="humanoid::h2x::CDUState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1CDUState_1a60b8f8d0efb6e0988b1494cd1eaf65b3"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8CDUState10error_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8CDUState12warning_codeE">
+<span id="_CPPv3N8humanoid3h2x8CDUState12warning_codeE"></span><span id="_CPPv2N8humanoid3h2x8CDUState12warning_codeE"></span><span id="humanoid::h2x::CDUState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1CDUState_1a72b942f824e579f5470159f000850c70"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8CDUState12warning_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">CDU 参数说明</p>
+<ul class="simple">
+<li><p><strong>cdu_error_code</strong>：CDU 错误码</p></li>
+<li><p><strong>cdu_warning_code</strong>：CDU 警告码</p></li>
+</ul>
+</div>
+</section>
+<section id="humanoid-h2x-lowstate">
+<h2>humanoid::h2x::LowState<a class="headerlink" href="#humanoid-h2x-lowstate" title="此标题的永久链接">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowStateE">
+<span id="_CPPv3N8humanoid3h2x8LowStateE"></span><span id="_CPPv2N8humanoid3h2x8LowStateE"></span><span id="humanoid::h2x::LowState"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LowState</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowStateE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>底层状态参数结构体 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState7versionE">
+<span id="_CPPv3N8humanoid3h2x8LowState7versionE"></span><span id="_CPPv2N8humanoid3h2x8LowState7versionE"></span><span id="humanoid::h2x::LowState::version__std::array:uint32_t.2:"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1ad415029b0dfe9b4fc16c614b67fad48c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">version</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState7versionE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState7mode_prE">
+<span id="_CPPv3N8humanoid3h2x8LowState7mode_prE"></span><span id="_CPPv2N8humanoid3h2x8LowState7mode_prE"></span><span id="humanoid::h2x::LowState::mode_pr__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a21deb310f93b131318242545d1303092"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode_pr</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState7mode_prE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState4tickE">
+<span id="_CPPv3N8humanoid3h2x8LowState4tickE"></span><span id="_CPPv2N8humanoid3h2x8LowState4tickE"></span><span id="humanoid::h2x::LowState::tick__uint32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a9d8ed1e66a983094e96f6e3eaac4ae3d"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tick</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState4tickE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState9imu_stateE">
+<span id="_CPPv3N8humanoid3h2x8LowState9imu_stateE"></span><span id="_CPPv2N8humanoid3h2x8LowState9imu_stateE"></span><span id="humanoid::h2x::LowState::imu_state__std::array:IMUState.2:"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a020c445d739a8139463025c707b7f894"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid3h2x8IMUStateE" title="humanoid::h2x::IMUState"><span class="n"><span class="pre">IMUState</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">imu_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState9imu_stateE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState11motor_stateE">
+<span id="_CPPv3N8humanoid3h2x8LowState11motor_stateE"></span><span id="_CPPv2N8humanoid3h2x8LowState11motor_stateE"></span><span id="humanoid::h2x::LowState::motor_state__std::array:MotorState.37:"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a99aea69c0c5de8f251591b9f88db36f1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8humanoid3h2x10MotorStateE" title="humanoid::h2x::MotorState"><span class="n"><span class="pre">MotorState</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">37</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState11motor_stateE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState16has_battery_infoE">
+<span id="_CPPv3N8humanoid3h2x8LowState16has_battery_infoE"></span><span id="_CPPv2N8humanoid3h2x8LowState16has_battery_infoE"></span><span id="humanoid::h2x::LowState::has_battery_info__b"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a79e9aa0a422b1a70f61b2042e4acd409"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">has_battery_info</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState16has_battery_infoE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState12battery_infoE">
+<span id="_CPPv3N8humanoid3h2x8LowState12battery_infoE"></span><span id="_CPPv2N8humanoid3h2x8LowState12battery_infoE"></span><span id="humanoid::h2x::LowState::battery_info__BatteryState"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a895452bd44de085be06b7e3415c38807"></span><a class="reference internal" href="#_CPPv4N8humanoid3h2x12BatteryStateE" title="humanoid::h2x::BatteryState"><span class="n"><span class="pre">BatteryState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">battery_info</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState12battery_infoE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState12ground_countE">
+<span id="_CPPv3N8humanoid3h2x8LowState12ground_countE"></span><span id="_CPPv2N8humanoid3h2x8LowState12ground_countE"></span><span id="humanoid::h2x::LowState::ground_count__uint16_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a7b5e430d22b8b469ec6fed52ce009993"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ground_count</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState12ground_countE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState13ground_signalE">
+<span id="_CPPv3N8humanoid3h2x8LowState13ground_signalE"></span><span id="_CPPv2N8humanoid3h2x8LowState13ground_signalE"></span><span id="humanoid::h2x::LowState::ground_signal__std::array:uint8_t.4:"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a2ec8397029a65f8d2e1ec7dade1ef0da"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ground_signal</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState13ground_signalE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState12time_secondsE">
+<span id="_CPPv3N8humanoid3h2x8LowState12time_secondsE"></span><span id="_CPPv2N8humanoid3h2x8LowState12time_secondsE"></span><span id="humanoid::h2x::LowState::time_seconds__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a22aaae0ce3bc79f56c9521e97dd2c17e"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_seconds</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState12time_secondsE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState12is_pcu_validE">
+<span id="_CPPv3N8humanoid3h2x8LowState12is_pcu_validE"></span><span id="_CPPv2N8humanoid3h2x8LowState12is_pcu_validE"></span><span id="humanoid::h2x::LowState::is_pcu_valid__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a38dfadf44cd06787cfdc16ec538d1774"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_pcu_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState12is_pcu_validE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState9pcu_stateE">
+<span id="_CPPv3N8humanoid3h2x8LowState9pcu_stateE"></span><span id="_CPPv2N8humanoid3h2x8LowState9pcu_stateE"></span><span id="humanoid::h2x::LowState::pcu_state__PCUState"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a4143bae1a6b45809b5075e59a24ccea4"></span><a class="reference internal" href="#_CPPv4N8humanoid3h2x8PCUStateE" title="humanoid::h2x::PCUState"><span class="n"><span class="pre">PCUState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pcu_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState9pcu_stateE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState12is_cdu_validE">
+<span id="_CPPv3N8humanoid3h2x8LowState12is_cdu_validE"></span><span id="_CPPv2N8humanoid3h2x8LowState12is_cdu_validE"></span><span id="humanoid::h2x::LowState::is_cdu_valid__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a648d701942159d2e266e51ac5205b028"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_cdu_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState12is_cdu_validE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState9cdu_stateE">
+<span id="_CPPv3N8humanoid3h2x8LowState9cdu_stateE"></span><span id="_CPPv2N8humanoid3h2x8LowState9cdu_stateE"></span><span id="humanoid::h2x::LowState::cdu_state__CDUState"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1ace2c50dfaefbbba16107ff9182592f58"></span><a class="reference internal" href="#_CPPv4N8humanoid3h2x8CDUStateE" title="humanoid::h2x::CDUState"><span class="n"><span class="pre">CDUState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cdu_state</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState9cdu_stateE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState13is_data_validE">
+<span id="_CPPv3N8humanoid3h2x8LowState13is_data_validE"></span><span id="_CPPv2N8humanoid3h2x8LowState13is_data_validE"></span><span id="humanoid::h2x::LowState::is_data_valid__uint8_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a2d04468e94aba0c0f898c7b7d52590f4"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_data_valid</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState13is_data_validE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState10error_codeE">
+<span id="_CPPv3N8humanoid3h2x8LowState10error_codeE"></span><span id="_CPPv2N8humanoid3h2x8LowState10error_codeE"></span><span id="humanoid::h2x::LowState::error_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a23b305bf80d5cecad16c8f9bd447467e"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState10error_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState12warning_codeE">
+<span id="_CPPv3N8humanoid3h2x8LowState12warning_codeE"></span><span id="_CPPv2N8humanoid3h2x8LowState12warning_codeE"></span><span id="humanoid::h2x::LowState::warning_code__int32_t"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a8957a32b8540ba7c678cffe5a073d9d1"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning_code</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState12warning_codeE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x8LowState8reservedE">
+<span id="_CPPv3N8humanoid3h2x8LowState8reservedE"></span><span id="_CPPv2N8humanoid3h2x8LowState8reservedE"></span><span id="humanoid::h2x::LowState::reserved__std::array:uint32_t.4:"></span><span class="target" id="structhumanoid_1_1h2x_1_1LowState_1a338a30acc7bdfa25b98c90fec1fdfe5c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x8LowState8reservedE" title="永久链接至目标">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="note admonition">
+<p class="admonition-title">参数说明</p>
+<ul>
+<li><p><strong>version</strong>：软件版本信息</p></li>
+<li><p><strong>mode_pr</strong>：并联机构（脚踝和腰部）控制模式</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: PR模式 (俯仰/滚转角度控制) [默认]</p></li>
+<li><p>1: AB模式 (电机直接控制)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>tick</strong>：计时器，每 <strong>1ms</strong> 递增</p></li>
+<li><p><strong>imu_state</strong>：IMU 状态</p></li>
+<li><p><strong>motor_state</strong>：所有电机状态</p></li>
+<li><p><strong>has_battery_info</strong>：是否有电池信息</p>
+<ul class="simple">
+<li><p>true：包含电池信息</p></li>
+<li><p>false：不包含电池信息</p></li>
+</ul>
+</li>
+<li><p><strong>battery_info</strong>：电池信息</p></li>
+<li><p><strong>ground_count</strong>：足底触底开关数量</p></li>
+<li><p><strong>ground_signal</strong>：足底触底开关状态</p></li>
+<li><p><strong>time_seconds</strong>：累计时间，单位 <strong>s</strong></p></li>
+<li><p><strong>is_pcu_valid</strong>：PCU 是否有效(此机型无效)</p>
+<ul class="simple">
+<li><p>0：无效</p></li>
+<li><p>1：有效</p></li>
+</ul>
+</li>
+<li><p><strong>pcu_state</strong>：PCU 状态</p></li>
+<li><p><strong>is_cdu_valid</strong>：CDU 是否有效(此机型无效)</p>
+<ul class="simple">
+<li><p>0：无效</p></li>
+<li><p>1：有效</p></li>
+</ul>
+</li>
+<li><p><strong>cdu_state</strong>：CDU 状态</p></li>
+<li><p><strong>is_data_valid</strong>：数据是否有效</p>
+<ul class="simple">
+<li><p>0：全部无效</p></li>
+<li><p>1：部分有效</p></li>
+<li><p>2：全部有效</p></li>
+</ul>
+</li>
+<li><p><strong>error_code</strong>：驱动层错误码</p>
+<ul class="simple">
+<li><p>0：无错误</p></li>
+<li><p>-2000~-2999：驱动层软件错误</p></li>
+<li><p>-1：固件层错误</p></li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>错误码</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>无错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>固件层错误</p></td>
+</tr>
+<tr class="row-even"><td><p>-2029</p></td>
+<td><p>参数非法</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2030</p></td>
+<td><p>V3 关节 FrameCounter 在 1 分钟内不匹配超 10 次</p></td>
+</tr>
+<tr class="row-even"><td><p>-2031</p></td>
+<td><p>Business 计数和 HAL 计数在 1 分钟内不匹配超 10 次</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2032</p></td>
+<td><p>算法错误</p></td>
+</tr>
+<tr class="row-even"><td><p>-2033</p></td>
+<td><p>急停</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2034</p></td>
+<td><p>CDU 通讯中断</p></td>
+</tr>
+<tr class="row-even"><td><p>-2035</p></td>
+<td><p>腰部 IMU 通讯中断</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>warning_code</strong>：驱动层警告码</p>
+<ul>
+<li><p><strong>0</strong>：无警告</p></li>
+<li><p><strong>-1</strong>：固件层警告</p></li>
+</ul>
+</li>
+<li><p><strong>reserved</strong>：预留 4 个</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+  
+        <div class="related-pages">
+          <a class="next-page" href="class.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">类</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="enum.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">枚举与关节索引</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025 北京思灵机器人科技有限责任公司
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+  
+    ﻿<div id="doc-toolbar">
+  <label>
+    
+      语言:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H23-EVT/v0.10.2/cpp/zh_CN/"
+              selected>
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H23-EVT/v0.10.2/cpp/en/"
+              >
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      版本:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H23-EVT/v0.10.2/cpp/zh_CN/zh_CN/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+  
+
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">结构体</a><ul>
+<li><a class="reference internal" href="#humanoid-h2x-motorcmd">humanoid::h2x::MotorCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h2x-lowcmd">humanoid::h2x::LowCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h2x-realtimecmd">humanoid::h2x::RealtimeCmd</a></li>
+<li><a class="reference internal" href="#humanoid-h2x-imustate">humanoid::h2x::IMUState</a></li>
+<li><a class="reference internal" href="#humanoid-h2x-motorstate">humanoid::h2x::MotorState</a></li>
+<li><a class="reference internal" href="#humanoid-h2x-batterystate">humanoid::h2x::BatteryState</a></li>
+<li><a class="reference internal" href="#humanoid-h2x-pcustate">humanoid::h2x::PCUState</a></li>
+<li><a class="reference internal" href="#humanoid-h2x-cdustate">humanoid::h2x::CDUState</a></li>
+<li><a class="reference internal" href="#humanoid-h2x-lowstate">humanoid::h2x::LowState</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=5beec3ff"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

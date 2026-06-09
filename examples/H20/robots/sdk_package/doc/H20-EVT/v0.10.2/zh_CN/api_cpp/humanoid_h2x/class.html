@@ -1,0 +1,795 @@
+﻿
+﻿
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>类 &mdash; H20-EVT 用户手册</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/toolbar.css?v=8724d423" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=204bd9fb" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=724c0c0a"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="../../_static/toolbar.js?v=fb63e8ae"></script>
+      <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="Python 接口说明" href="../../api_py/index.html" />
+    <link rel="prev" title="结构体" href="struct.html" />
+  
+   
+  <link rel="stylesheet" href="../../_static/toolbar.css">
+  <script defer src="../../_static/toolbar.js"></script>
+
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            H20-EVT 用户手册
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">安装教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C++ 接口说明</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../humanoid/index.html">humanoid 命名空间</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">humanoid::h2x 命名空间</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum.html">枚举与关节索引</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html">结构体</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-h2x-h2xlowlevel">humanoid::h2x::H2xLowLevel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-h2x-h2xsystem">humanoid::h2x::H2xSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#humanoid-h2x-h2xhighlevel">humanoid::h2x::H2xHighLevel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_py/index.html">Python 接口说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../example/index.html">开始使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trouble.html">常见问题</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">主题切换</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx RTD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theme_furo/api_cpp/humanoid_h2x/class.html">Furo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">H20-EVT 用户手册</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">C++ 接口说明</a></li>
+          <li class="breadcrumb-item"><a href="index.html">humanoid::h2x 命名空间</a></li>
+      <li class="breadcrumb-item active">类</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>类<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<section id="humanoid-h2x-h2xlowlevel">
+<h2>humanoid::h2x::H2xLowLevel<a class="headerlink" href="#humanoid-h2x-h2xlowlevel" title="此标题的永久链接"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevelE">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevelE"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevelE"></span><span id="humanoid::h2x::H2xLowLevel"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H2xLowLevel</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevelE" title="永久链接至目标"></a><br /></dt>
+<dd><p>H2x 机器人低级别控制接口类 </p>
+<p>该类提供了对 H2x 机器人底层硬件的直接控制接口，包括关节空间控制、 读取机器人状态等功能。适用于需要精细控制机器人底层行为的应用场景。 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevel11writeLowCmdERK6LowCmd">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevel11writeLowCmdERK6LowCmd"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevel11writeLowCmdERK6LowCmd"></span><span id="humanoid::h2x::H2xLowLevel::writeLowCmd__LowCmdCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel_1a592b531bfd2b6748f15bf900d0d5d8f4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeLowCmd</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid3h2x6LowCmdE" title="humanoid::h2x::LowCmd"><span class="n"><span class="pre">LowCmd</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lowCmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevel11writeLowCmdERK6LowCmd" title="永久链接至目标"></a><br /></dt>
+<dd><p>写入低级别控制命令 </p>
+<p>向机器人发送低级别控制命令，包括关节角度、有效性标志和时间戳。 该接口提供对机器人底层硬件的直接控制。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lowCmd</strong> – [in] 低级别控制命令结构体 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int 执行结果<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevel12readLowStateER8LowState">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevel12readLowStateER8LowState"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevel12readLowStateER8LowState"></span><span id="humanoid::h2x::H2xLowLevel::readLowState__LowStateR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel_1a0c032aa19b79c096ea142b17dcded023"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readLowState</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="struct.html#_CPPv4N8humanoid3h2x8LowStateE" title="humanoid::h2x::LowState"><span class="n"><span class="pre">LowState</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lowState</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevel12readLowStateER8LowState" title="永久链接至目标"></a><br /></dt>
+<dd><p>读取低级别状态信息 </p>
+<p>从机器人读取当前的低级别状态信息，包括末端执行器位姿、有效性标志等。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lowState</strong> – [out] 低级别状态结构体，用于接收状态数据 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int 执行结果<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevel12writeLRCUCmdERK7LRCUCmd">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevel12writeLRCUCmdERK7LRCUCmd"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevel12writeLRCUCmdERK7LRCUCmd"></span><span id="humanoid::h2x::H2xLowLevel::writeLRCUCmd__LRCUCmdCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel_1ac74b7930fdca7aefc1efd57b40f3568d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeLRCUCmd</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">LRCUCmd</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lRCUCmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevel12writeLRCUCmdERK7LRCUCmd" title="永久链接至目标"></a><br /></dt>
+<dd><p>写入LR-CU控制命令 </p>
+<p>向LR-CU（左右控制单元）发送控制命令。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lRCUCmd</strong> – [in] LR-CU控制命令 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int 执行结果<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x11H2xLowLevel13readLRCUStateER9LRCUState">
+<span id="_CPPv3N8humanoid3h2x11H2xLowLevel13readLRCUStateER9LRCUState"></span><span id="_CPPv2N8humanoid3h2x11H2xLowLevel13readLRCUStateER9LRCUState"></span><span id="humanoid::h2x::H2xLowLevel::readLRCUState__LRCUStateR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xLowLevel_1a22cbd63100b36c120a89776951b4f080"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readLRCUState</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">LRCUState</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lRCUState</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x11H2xLowLevel13readLRCUStateER9LRCUState" title="永久链接至目标"></a><br /></dt>
+<dd><p>读取LR-CU状态信息 </p>
+<p>从LR-CU（左右控制单元）读取当前状态信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lRCUState</strong> – [out] LR-CU状态结构体，用于接收状态数据 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int 执行结果<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>控制器模式说明</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: 启用运动控制功能，可以使用高级运动控制API</p></li>
+<li><p><strong>EnableController = false</strong>: 激活底层控制模式，直接控制电机底层</p></li>
+</ul>
+<p>在使用运动控制功能前，请确保已正确设置控制器模式。</p>
+</div>
+</section>
+<section id="humanoid-h2x-h2xsystem">
+<h2>humanoid::h2x::H2xSystem<a class="headerlink" href="#humanoid-h2x-h2xsystem" title="此标题的永久链接"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystemE">
+<span id="_CPPv3N8humanoid3h2x9H2xSystemE"></span><span id="_CPPv2N8humanoid3h2x9H2xSystemE"></span><span id="humanoid::h2x::H2xSystem"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H2xSystem</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystemE" title="永久链接至目标"></a><br /></dt>
+<dd><p>H2x 系统接口 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem31calibrateMechanicalZeroPositionEi">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem31calibrateMechanicalZeroPositionEi"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem31calibrateMechanicalZeroPositionEi"></span><span id="humanoid::h2x::H2xSystem::calibrateMechanicalZeroPosition__i"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1aec6a9cf93f133a3a33ca00d60ac1ddd3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrateMechanicalZeroPosition</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem31calibrateMechanicalZeroPositionEi" title="永久链接至目标"></a><br /></dt>
+<dd><p>标定指定关节的机械零位位置 </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>关节索引与 int 的映射关系见 <code class="docutils literal notranslate"><span class="pre">common/h2x_def.h</span></code> 中 <code class="docutils literal notranslate"><span class="pre">humanoid::h2x::JointIndexValue</span></code>。 </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – [in] 要标定的关节索引（int） </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem19saveJointParametersEi">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem19saveJointParametersEi"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem19saveJointParametersEi"></span><span id="humanoid::h2x::H2xSystem::saveJointParameters__i"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a0d84886a86448706e4de68002c6f11f3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveJointParameters</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointIndex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem19saveJointParametersEi" title="永久链接至目标"></a><br /></dt>
+<dd><p>设置当前关节的位置作为机械零位位置 </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>关节索引与 int 的映射关系见 <code class="docutils literal notranslate"><span class="pre">common/h2x_def.h</span></code> 中 <code class="docutils literal notranslate"><span class="pre">humanoid::h2x::JointIndexValue</span></code>。 </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jointIndex</strong> – [in] 要设置机械零位位置的关节索引（int） </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem15getRobotVersionER12RobotVersion">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem15getRobotVersionER12RobotVersion"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem15getRobotVersionER12RobotVersion"></span><span id="humanoid::h2x::H2xSystem::getRobotVersion__RobotVersionR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a78606abfc6274eccaa0ab24b83094da7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRobotVersion</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid12RobotVersionE" title="humanoid::RobotVersion"><span class="n"><span class="pre">RobotVersion</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">version</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem15getRobotVersionER12RobotVersion" title="永久链接至目标"></a><br /></dt>
+<dd><p>获取机器人版本信息 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>version</strong> – [out] 版本信息结构体 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem10clearErrorEv">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem10clearErrorEv"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem10clearErrorEv"></span><span id="humanoid::h2x::H2xSystem::clearError"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1adcc83e146c85451a8a5c03074154ad24"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem10clearErrorEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>清除机器人错误状态 </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem16enableControllerEb">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem16enableControllerEb"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem16enableControllerEb"></span><span id="humanoid::h2x::H2xSystem::enableController__b"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a587db2612453775550343d5fae4f848b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableController</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem16enableControllerEb" title="永久链接至目标"></a><br /></dt>
+<dd><p>使能机器人控制器 </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>使能机器人控制器后，控制器可以发送动作命令给驱动器。禁用后，控制器将不再向驱动器发送任何动作命令，以防止安全事故。 </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – [in] true: 使能；false: 禁用 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem19isControllerEnabledERb">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem19isControllerEnabledERb"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem19isControllerEnabledERb"></span><span id="humanoid::h2x::H2xSystem::isControllerEnabled__bR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a9a9aa7951ab6439db28599dd1d00322f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isControllerEnabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem19isControllerEnabledERb" title="永久链接至目标"></a><br /></dt>
+<dd><p>检查机器人控制器是否使能 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – [out] 控制器状态，true: 使能；false: 禁用 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem13getMicrophoneER16MicrophoneStatus">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem13getMicrophoneER16MicrophoneStatus"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem13getMicrophoneER16MicrophoneStatus"></span><span id="humanoid::h2x::H2xSystem::getMicrophone__MicrophoneStatusR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a63a30ecfac4f3b80b1c26b4cc68b6b73"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMicrophone</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid16MicrophoneStatusE" title="humanoid::MicrophoneStatus"><span class="n"><span class="pre">MicrophoneStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem13getMicrophoneER16MicrophoneStatus" title="永久链接至目标"></a><br /></dt>
+<dd><p>获取麦克风状态 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [out] 麦克风状态结构体 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem13setMicrophoneERK16MicrophoneStatus">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem13setMicrophoneERK16MicrophoneStatus"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem13setMicrophoneERK16MicrophoneStatus"></span><span id="humanoid::h2x::H2xSystem::setMicrophone__MicrophoneStatusCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a63f6e380aed081d0a2b6a0e346ad8498"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMicrophone</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid16MicrophoneStatusE" title="humanoid::MicrophoneStatus"><span class="n"><span class="pre">MicrophoneStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem13setMicrophoneERK16MicrophoneStatus" title="永久链接至目标"></a><br /></dt>
+<dd><p>设置麦克风状态 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [in] 麦克风状态结构体 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem10getSpeakerER13SpeakerStatus">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem10getSpeakerER13SpeakerStatus"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem10getSpeakerER13SpeakerStatus"></span><span id="humanoid::h2x::H2xSystem::getSpeaker__SpeakerStatusR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a2a167d4d4d72aad9699a646033eb3c9d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSpeaker</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid13SpeakerStatusE" title="humanoid::SpeakerStatus"><span class="n"><span class="pre">SpeakerStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem10getSpeakerER13SpeakerStatus" title="永久链接至目标"></a><br /></dt>
+<dd><p>获取扬声器状态 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [out] 扬声器状态结构体 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x9H2xSystem10setSpeakerERK13SpeakerStatus">
+<span id="_CPPv3N8humanoid3h2x9H2xSystem10setSpeakerERK13SpeakerStatus"></span><span id="_CPPv2N8humanoid3h2x9H2xSystem10setSpeakerERK13SpeakerStatus"></span><span id="humanoid::h2x::H2xSystem::setSpeaker__SpeakerStatusCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xSystem_1a5cfa909f9df941c1754bb8e319a26e42"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSpeaker</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../humanoid/struct.html#_CPPv4N8humanoid13SpeakerStatusE" title="humanoid::SpeakerStatus"><span class="n"><span class="pre">SpeakerStatus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x9H2xSystem10setSpeakerERK13SpeakerStatus" title="永久链接至目标"></a><br /></dt>
+<dd><p>设置扬声器状态 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – [in] 扬声器状态结构体 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>- 其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="humanoid-h2x-h2xhighlevel">
+<h2>humanoid::h2x::H2xHighLevel<a class="headerlink" href="#humanoid-h2x-h2xhighlevel" title="此标题的永久链接"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevelE">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevelE"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevelE"></span><span id="humanoid::h2x::H2xHighLevel"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">H2xHighLevel</span></span></span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevelE" title="永久链接至目标"></a><br /></dt>
+<dd><p>H2x 机器人高级别控制接口类 </p>
+<p>该类提供了对 H2x 机器人的高级别控制接口，包括模式切换、姿态控制和运动控制等功能。 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel14ZeroTorqueModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel14ZeroTorqueModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel14ZeroTorqueModeEv"></span><span id="humanoid::h2x::H2xHighLevel::ZeroTorqueMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a885a4661d95fe5cedfa0f9af794dcdd9"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ZeroTorqueMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel14ZeroTorqueModeEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>进入零力矩模式 </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel8DampModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel8DampModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel8DampModeEv"></span><span id="humanoid::h2x::H2xHighLevel::DampMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1aeb9d2a3a82629933d438f607c9435d17"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DampMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel8DampModeEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>进入阻尼模式 </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel13LockStandModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel13LockStandModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel13LockStandModeEv"></span><span id="humanoid::h2x::H2xHighLevel::LockStandMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a0b125bfe42d0cddfe035d2e890c80015"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LockStandMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel13LockStandModeEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>进入锁定站立模式（非抗干扰） </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel11WalkRunModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel11WalkRunModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel11WalkRunModeEv"></span><span id="humanoid::h2x::H2xHighLevel::WalkRunMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a1a7f282f22a3d32efe50fe4b469aa212"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WalkRunMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel11WalkRunModeEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>进入走跑模式（抗干扰） </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel15ClimbStairsModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel15ClimbStairsModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel15ClimbStairsModeEv"></span><span id="humanoid::h2x::H2xHighLevel::ClimbStairsMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1aa66a8d46a12a6a808b6a3bef2bf7dd51"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ClimbStairsMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel15ClimbStairsModeEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>进入爬楼梯（盲走）模式 </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel9DanceModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel9DanceModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel9DanceModeEv"></span><span id="humanoid::h2x::H2xHighLevel::DanceMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a910a4c14c94a59aff609f9568ac0f27f"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DanceMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel9DanceModeEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>进入舞蹈模式 </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel5DanceENSt6stringE">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel5DanceENSt6stringE"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel5DanceENSt6stringE"></span><span id="humanoid::h2x::H2xHighLevel::Dance__ss"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a7d262b5f10327297575e4737e2e71a56"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Dance</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dance_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel5DanceENSt6stringE" title="永久链接至目标"></a><br /></dt>
+<dd><p>执行指定的舞蹈动作 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dance_name</strong> – [in] 舞蹈动作的名称 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel4MoveEddddb">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel4MoveEddddb"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel4MoveEddddb"></span><span id="humanoid::h2x::H2xHighLevel::Move__double.double.double.double.b"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a62144495da2eeca23cce0df8b08c1ed2"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Move</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vx</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vy</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vyaw</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">height</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">continuous_move</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel4MoveEddddb" title="永久链接至目标"></a><br /></dt>
+<dd><p>机器人移动控制接口 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vx</strong> – 前后运动速度（矢状轴），向前为正。 </p></li>
+<li><p><strong>vy</strong> – 左右移动速度（冠状轴），向左为正。 </p></li>
+<li><p><strong>vyaw</strong> – 旋转角速度（横截面），逆时针为正。 </p></li>
+<li><p><strong>height</strong> – 机器人行走时，质心的高度。 </p></li>
+<li><p><strong>continuous_move</strong> – 是否持续运动，true为持续运动，否则仅移动1s。 </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel8StopMoveEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel8StopMoveEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel8StopMoveEv"></span><span id="humanoid::h2x::H2xHighLevel::StopMove"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a688b9f0a74374e1f00f05b2250ca417e"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StopMove</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel8StopMoveEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>机器人停止运动接口 </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel11waitRunningEKi">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel11waitRunningEKi"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel11waitRunningEKi"></span><span id="humanoid::h2x::H2xHighLevel::waitRunning__iC"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a084029d085e9f1131ac97c44544d87e2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitRunning</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1000</span></span><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><span class="m"><span class="pre">100</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel11waitRunningEKi" title="永久链接至目标"></a><br /></dt>
+<dd><p>等待执行完成接口 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – [in] 超时时间（毫秒） </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel17WalkOnTerrainModeEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel17WalkOnTerrainModeEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel17WalkOnTerrainModeEv"></span><span id="humanoid::h2x::H2xHighLevel::WalkOnTerrainMode"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a0b76baace8a4c3958be23a6458f15408"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WalkOnTerrainMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel17WalkOnTerrainModeEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>进入多地形行走模式 在此模式下，可以在多种地形行走（带传感器），并保持平衡状态，例如爬楼、泡沫、木头条等。 </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel9SquatDownEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel9SquatDownEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel9SquatDownEv"></span><span id="humanoid::h2x::H2xHighLevel::SquatDown"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1af6d54901622033a78c3aad109bb556ba"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SquatDown</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel9SquatDownEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>机器人从站立姿态平稳下蹲到蹲姿态接口 执行条件：机器人处于站立状态，地面平坦且无障碍物； 执行过程： 1.初始为走跑模式； 2.先切换至下蹲模型，执行下蹲动作； 3.运动过程中保持抗干扰状态； 执行完成：最终脚部保持刚度，其余关节切换为阻尼模式； </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel7SquatUpEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel7SquatUpEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel7SquatUpEv"></span><span id="humanoid::h2x::H2xHighLevel::SquatUp"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a69e4c92c8eac789b4ae264c241670134"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SquatUp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel7SquatUpEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>机器人从蹲姿平稳站起到站立姿态接口 执行条件：机器人处于稳定蹲姿，周围无障碍物； 执行过程： 1.先切换为位置模式，移动至蹲姿初始位置； 2.后切换为蹲起模型； 3.移动过程中保持抗干扰状态； 执行完成：机器人处于稳定站姿，并自动切换为走跑模式； </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel7SitDownEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel7SitDownEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel7SitDownEv"></span><span id="humanoid::h2x::H2xHighLevel::SitDown"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a566a1895afd2f67475ed94c0ce3a7568"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SitDown</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel7SitDownEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>机器人从站立姿态移动到坐姿态接口 执行条件：机器人处于站立状态 执行过程：位置控制执行坐下动作； 执行完成：机器人上半身关节为阻尼模式，腰部关节、下半身锁定位置模式，保持稳定坐姿； </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel4RiseEv">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel4RiseEv"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel4RiseEv"></span><span id="humanoid::h2x::H2xHighLevel::Rise"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a41aaf930f02ea34370a141538ff67d9b"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Rise</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel4RiseEv" title="永久链接至目标"></a><br /></dt>
+<dd><p>机器人从躺姿移动到站立姿态接口 执行条件：地面平坦且有足够空间，人为手动将姿势展开； 执行过程： 1.初始状态为阻尼模式，先通过位置控制将姿态调整至标准躺姿。 2.从躺姿缓慢至蹲姿，位置控制非抗干扰； 3.从蹲姿平稳站立，保持抗干扰状态； 执行完成：机器人站立完成后保持平衡模式； </p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel12GetRobotModeER7int32_t">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel12GetRobotModeER7int32_t"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel12GetRobotModeER7int32_t"></span><span id="humanoid::h2x::H2xHighLevel::GetRobotMode__int32_tR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1a81a6e71012d62ef21b5e4b29d020c204"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetRobotMode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">robotMode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel12GetRobotModeER7int32_t" title="永久链接至目标"></a><br /></dt>
+<dd><p>获取当前模式 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>robotMode</strong> – <strong>[out]</strong> 当前模式 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8humanoid3h2x12H2xHighLevel12realtimeMoveERK11RealtimeCmd">
+<span id="_CPPv3N8humanoid3h2x12H2xHighLevel12realtimeMoveERK11RealtimeCmd"></span><span id="_CPPv2N8humanoid3h2x12H2xHighLevel12realtimeMoveERK11RealtimeCmd"></span><span id="humanoid::h2x::H2xHighLevel::realtimeMove__RealtimeCmdCR"></span><span class="target" id="classhumanoid_1_1h2x_1_1H2xHighLevel_1ab480607e69b6878352392addd8950073"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">realtimeMove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="struct.html#_CPPv4N8humanoid3h2x11RealtimeCmdE" title="humanoid::h2x::RealtimeCmd"><span class="n"><span class="pre">RealtimeCmd</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">realtimeCmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8humanoid3h2x12H2xHighLevel12realtimeMoveERK11RealtimeCmd" title="永久链接至目标"></a><br /></dt>
+<dd><p>发送实时控制命令 </p>
+<p>向机器人发送实时控制命令，使用实时DDS消息进行通信。 当前该接口主要用于 ClimbStairsMode 下的上半身实时控制。 <code class="docutils literal notranslate"><span class="pre">realtimeCmd.time</span></code> 表示本条目标的插补时长，单位为秒；例如 <code class="docutils literal notranslate"><span class="pre">0.1</span></code> 表示控制器会在 100 ms 内平滑插补到目标。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>realtimeCmd</strong> – [in] 实时控制命令结构体 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>int32_t<ul class="simple">
+<li><p>0: 成功；</p></li>
+<li><p>其他: 错误码； </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>控制器模式说明</strong></p>
+<ul class="simple">
+<li><p><strong>EnableController = true</strong>: 启用运动控制功能，可以使用高级运动控制API</p></li>
+<li><p><strong>EnableController = false</strong>: 激活底层控制模式，直接控制电机底层</p></li>
+</ul>
+<p>在使用运动控制功能前，请确保已正确设置控制器模式。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="struct.html" class="btn btn-neutral float-left" title="结构体" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../../api_py/index.html" class="btn btn-neutral float-right" title="Python 接口说明" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2025 北京思灵机器人科技有限责任公司。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  
+   
+  ﻿<div id="doc-toolbar">
+  <label>
+    
+      语言:
+    
+  </label>
+  <select id="lang-switch">
+    
+      <option value="zh_CN"
+              data-href="/H20-EVT/v0.10.2/cpp/zh_CN/"
+              selected>
+        简体中文
+      </option>
+    
+      <option value="en"
+              data-href="/H20-EVT/v0.10.2/cpp/en/"
+              >
+        English
+      </option>
+    
+  </select>
+  |
+  <label>
+    
+      版本:
+    
+  </label>
+  <select id="ver-switch">
+    
+      <option value="latest"
+              
+              >
+        Latest
+      </option>
+    
+      <option value="v0.10.2"
+              data-href="/H20-EVT/v0.10.2/cpp/zh_CN/zh_CN/"
+              selected>
+        v0.10.2
+      </option>
+    
+  </select>
+</div>
+
+  
+
+
+</body>
+</html>

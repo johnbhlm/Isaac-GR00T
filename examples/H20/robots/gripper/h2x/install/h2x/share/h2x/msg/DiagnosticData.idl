@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/DiagnosticData.msg
+// generated code does not contain a copyright notice
+
+#include "h2x/msg/DebugMotorState.idl"
+
+module h2x {
+  module msg {
+    struct DiagnosticData {
+      uint16 control_word;
+
+      uint16 status_word;
+
+      uint8 error_register;
+
+      int8 mode_of_operation;
+
+      int8 mode_display;
+
+      h2x::msg::DebugMotorState debug_motor_state;
+    };
+  };
+};

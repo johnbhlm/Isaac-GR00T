@@ -1,0 +1,4 @@
+uint32[] motor_index        # 请求的关节索引数组
+---
+float64[] min_position      # 对应硬限位的下限数组
+float64[] max_position      # 对应硬限位的上限数组

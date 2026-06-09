@@ -1,0 +1,531 @@
+类
+==============
+
+MotorCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.MotorCmd
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: 参数说明
+  :class: note
+
+    - **mode**： 电机控制模式，0 = Disable（命令忽略），1 = Enable（命令生效）。
+    - **operation_mode**： 工作模式。
+
+    - **q**：关节目标位置，单位：**rad**
+
+    - **dq**：关节目标速度，单位：**rad/s**
+
+    - **tau**：关节前馈力矩，单位：**Nm**
+
+    - **kp**：关节刚度系数
+
+    - **kd**：关节阻尼系数
+
+    - **reserved**：预留
+
+    0～12 关节工作模式：
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 30 70
+
+      * - 软件模式码
+        - 模式
+      * - 0x00
+        - 力位混控模式（默认工作模式）
+      * - 0x01
+        - 伺服位置控制模式
+      * - 0x02
+        - 伺服速度控制模式
+      * - 0x03
+        - 电流、力矩控制模式和刹车控制指令
+      * - 0x04
+        - 配置指令
+      * - 0x05
+        - 电机控制参数查询指令
+
+    15~28、35~36 关节工作模式：
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 30 70
+
+      * - 软件模式码
+        - 模式
+      * - 0x00
+        - 力位混控模式（默认工作模式）
+      * - 0x09
+        - 轮廓位置模式
+      * - 0x0A
+        - 轮廓速度模式
+      * - 0x0B
+        - 轮廓转矩模式
+      * - 0x0C
+        - 回原模式
+      * - 0x06
+        - 周期同步位置模式
+      * - 0x07
+        - 周期同步速度模式
+      * - 0x08
+        - 周期同步转矩模式
+
+LowCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.LowCmd
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: 参数说明
+  :class: note
+
+    - **mode_pr**：并联机构（脚踝和腰部）控制模式
+
+      - 0：PR (俯仰/滚转角度控制) [默认]
+      - 1：AB (电机直接控制)
+    - **motorCmd[37]**：电机控制指令
+    - **reserved[4]**：预留
+
+RealtimeCmd
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.RealtimeCmd
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: 参数说明
+  :class: note
+
+    - **mode_pr**：并联机构控制模式
+
+      - 0：PR (俯仰/滚转角度控制) [默认]
+      - 1：AB (电机直接控制)
+    - **motorCmd[37]**：电机控制指令
+    - **reserved[4]**：预留
+
+IMUState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.IMUState
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: 参数说明
+  :class: note
+
+  - **quaternion**： 四元数，表示机器人坐标系绕世界坐标系的转动情况。
+
+    - **0**： w
+    - **1**： x
+    - **2**： y
+    - **3**： z
+  - **gyroscope**： 陀螺仪角速度（绕三个坐标轴），单位 **rad/s**。
+
+    - **0**： x轴
+    - **1**： y轴
+    - **2**： z轴
+  - **accelerometer**： 加速度（三个坐标轴），单位 **m/s²**。
+
+    - **0**： x轴
+    - **1**： y轴
+    - **2**： z轴
+  - **rpy**： 欧拉角 (Roll, Pitch, Yaw)，表示机器人坐标系绕世界坐标系的转动角度，单位 **rad**。
+
+    - **0**： roll
+    - **1**： pitch
+    - **2**： yaw
+  - **temperature**： IMU传感器温度，单位 **°C**。
+  - **error_code**： IMU错误码。
+  - **warning_code**： IMU警告码。
+
+MotorState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.MotorState
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: 参数说明
+  :class: note
+
+    - **mode**： 当前控制模式， 0 = Disable（命令忽略）， 1 = Enable（命令生效）。
+    - **operation_mode**： 工作模式。
+    - **q**： 关节反馈位置，单位 **rad**。
+    - **dq**： 关节反馈速度，单位 **rad/s**。
+    - **ddq**： 关节反馈加速度，单位 **rad/s²**。
+    - **cur**： 关节反馈电流，单位 **A**。
+    - **tau_est**： 关节反馈力矩，单位 **N·m**。
+    - **temperature**： 关节温度，单位 **°C**。
+    
+      - **0**： 外表温度
+      - **1**： 绕组温度
+    - **kp**： 关节刚度系数。
+    - **kd**： 关节阻尼系数。
+    - **error_code**： 错误码。
+    - **warning_code**： 警告码。
+    - **reserved**： 预留 4 个，unsigned long 类型。
+
+    0～12 关节工作模式：
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 30 70
+
+      * - 软件模式码
+        - 模式
+      * - 0x00
+        - 力位混控模式（默认工作模式）
+      * - 0x01
+        - 伺服位置控制模式
+      * - 0x02
+        - 伺服速度控制模式
+      * - 0x03
+        - 电流、力矩控制模式和刹车控制指令
+      * - 0x04
+        - 配置指令
+      * - 0x05
+        - 电机控制参数查询指令
+
+    15~28、35~36 关节工作模式：
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 30 70
+
+      * - 软件模式码
+        - 模式
+      * - 0x00
+        - 力位混控模式（默认工作模式）
+      * - 0x09
+        - 轮廓位置模式
+      * - 0x0A
+        - 轮廓速度模式
+      * - 0x0B
+        - 轮廓转矩模式
+      * - 0x0C
+        - 回原模式
+      * - 0x06
+        - 周期同步位置模式
+      * - 0x07
+        - 周期同步速度模式
+      * - 0x08
+        - 周期同步转矩模式
+
+    电机错误码定义
+
+    0~12 关节错误码定义：
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 30 70
+
+      * - 软件错误码
+        - 错误定义
+      * - -1001
+        - 无错误
+      * - -1002
+        - 电机过热
+      * - -1003
+        - 电机过流
+      * - -1004
+        - 电机电压过低
+      * - -1005
+        - 电机编码器错误
+      * - -1006
+        - 电机刹车电压过高
+      * - -1007
+        - DRV 驱动错误
+      * - -1203
+        - 参数非法
+      * - -1204
+        - 位置超限
+
+    13~28、35~36 关节错误码定义：
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 30 70
+
+      * - 软件错误码
+        - 错误定义
+      * - -1022
+        - Continuous Over Current（电机过载）
+      * - -1023
+        - Mains Under Voltage（供电电压过低）
+      * - -1024
+        - Mains Over Voltage（供电电压过高）
+      * - -1025
+        - Temperature Device（电机温度报警）
+      * - -1026
+        - Temperature Drive（驱动器温度报警）
+      * - -1027
+        - Sensor Error（编码器报警）
+      * - -1028
+        - Control Computing Circuit（控制电路 CPU 错误）
+      * - -1029
+        - Short Circuit Earth Leakage Motor Side（输出短路报警）
+      * - -1030
+        - Internal Software（内部软件错误）
+      * - -1031
+        - Communication（通讯错误）
+      * - -1032
+        - Following Error（跟随误差过大）
+      * - -1203
+        - 参数非法
+      * - -1204
+        - 位置超限
+
+BatteryState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.BatteryState
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: 电池参数说明
+   :class: note
+
+   - **battery_percentage**：电池电量
+
+     - 范围：**0～100％**
+     - 无效时为 **0**
+
+   - **battery_state**：电池状态
+
+     - **0**：无效
+     - **1**：充电
+     - **2**：放电
+     - **3**：静止
+
+   - **battery_level_warning**：电池电量警告
+
+     - **0**：无效
+     - **1**：电池电量低警告
+     - **2**：其余警告
+
+   - **error_code**：错误码
+   - **warning_code**：警告码
+
+PCUState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.PCUState
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: 参数说明
+  :class: note
+
+  - **emergency_stop_state**： 急停状态，**0：on**，**1：off**。
+  - **control_supply_state**： 控制电状态：**0：待机状态**，**2：上电状态**，**4：错误状态**。
+  - **power_supply_state**： 动力电状态：**0：待机状态**，**1：预充状态**，**2：上电状态**，**3：下电状态**，**4：错误状态**。
+  - **pcu_error_code**： PCU错误码。
+  - **pcu_warning_code**： PCU警告码。
+  - **battery_voltage**： 电池电压，单位 **V**。
+  - **motor_bus_voltage**： 电机母线电压，单位 **V**。
+  - **motor_bus_current**： 电机母线电流，单位 **A**。
+  - **dcdc_bus_voltage**： DCDC母线电压，单位 **V**。
+  - **voltage_24v**： 24V电压，单位 **V**。
+  - **voltage_12v**： 12V电压，单位 **V**。
+  - **current_24v**： 24V电流，单位 **A**。
+  - **current_12v**： 12V电流，单位 **A**。
+
+CDUState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.CDUState
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: CDU 参数说明
+   :class: note
+
+   - **cdu_error_code**：CDU 错误码
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 20 60
+
+      * - CDU 错误码
+        - 错误定义
+      * - -1205
+        - 主机低频通信错误
+      * - -1206
+        - PCU 低频通信错误
+      * - -1207
+        - LRCU 低频通信错误
+      * - -1208
+        - 主机连续帧校验错误
+      * - -1209
+        - PCU 连续帧校验错误
+      * - -1210
+        - LRCU 连续帧校验错误
+
+   - **cdu_warning_code**：CDU 警告码
+
+LowState
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.LowState
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+.. admonition:: 参数说明
+   :class: note
+
+   - **version**：软件版本信息
+
+   - **mode_pr**：并联机构（脚踝和腰部）控制模式
+
+      - 0: PR模式 (俯仰/滚转角度控制) [默认]
+      - 1: AB模式 (电机直接控制)
+
+   - **tick**：计时器，每 **1ms** 递增
+
+   - **imu_state**：IMU 状态
+
+   - **motor_state**：所有电机状态
+
+   - **has_battery_info**：是否有电池信息
+
+     - **true**：包含电池信息
+     - **false**：不包含电池信息
+
+   - **battery_info**：电池信息
+
+   - **ground_count**：足底触底开关数量
+
+   - **ground_signal**：足底触底开关状态
+
+   - **time_seconds**：累计时间，单位 **s**
+
+   - **is_pcu_valid**：PCU 是否有效
+
+     - **0**：无效
+     - **1**：有效
+
+   - **pcu_state**：PCU 状态
+
+   - **is_cdu_valid**：CDU 是否有效(此机型无效)
+
+     - **0**：无效
+     - **1**：有效
+
+   - **cdu_state**：CDU 状态
+
+   - **is_data_valid**：数据是否有效(此机型无效)
+
+     - **0**：全部无效
+     - **1**：部分有效
+     - **2**：全部有效
+
+   - **error_code**：驱动层错误码
+
+     - **0**：无错误
+     - **-2000~-2999**：驱动层软件错误
+     - **-1**：固件层错误
+
+   .. list-table:: 
+      :widths: 20 80
+      :header-rows: 1
+      
+      * - 错误码
+        - 说明
+      * - 0
+        - 无错误
+      * -  -1
+        - 固件层错误
+      * -  -2029
+        - 参数非法
+      * -  -2030
+        - V3 关节 FrameCounter 在 1 分钟内不匹配超 10 次
+      * -  -2031
+        - Business 计数和 HAL 计数在 1 分钟内不匹配超 10 次
+      * -  -2032
+        - 算法错误
+      * -  -2033
+        - 急停
+      * -  -2034
+        - CDU 通讯中断
+      * -  -2035
+        - 腰部 IMU 通讯中断
+
+   - **warning_code**：驱动层警告码
+
+     - **0**：无警告
+     - **-1**：固件层警告
+
+   - **reserved**：预留 4 个
+
+
+H2xLowLevel
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.H2xLowLevel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+
+
+.. note::
+
+   **控制器模式说明**
+   
+   - **EnableController = true**: 启用运动控制功能，可以使用高级运动控制API
+   - **EnableController = false**: 激活底层控制模式，直接控制电机底层
+   
+   在使用运动控制功能前，请确保已正确设置控制器模式。
+
+
+H2xSystem
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.H2xSystem
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+
+H2xHighLevel
+----------------------
+
+.. autoclass:: humanoid_sdk_py.h2x.H2xHighLevel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :member-order: bysource
+
+  
+
+.. note::
+
+   **控制器模式说明**
+   
+   - **EnableController = true**: 启用运动控制功能，可以使用高级运动控制API
+   - **EnableController = false**: 激活底层控制模式，直接控制电机底层
+   
+   在使用运动控制功能前，请确保已正确设置控制器模式。

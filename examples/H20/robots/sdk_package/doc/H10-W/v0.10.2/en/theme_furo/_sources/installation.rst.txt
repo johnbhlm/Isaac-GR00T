@@ -1,0 +1,30 @@
+
+安装教程
+========================
+
+
+Ubuntu 22.04
+~~~~~~~~~~~~~~~
+目前仅支持 Ubuntu 22.04 及以上版本
+
+1. 解压 SDK 软件包
+^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+    tar -xf sdk_package_vX.X.X.tar.xz
+
+2. 配置环境变量
+^^^^^^^^^^^^^^^^^^
+.. code-block:: bash
+
+    cd ~/sdk_package
+    export LD_LIBRARY_PATH="$(pwd)/lib/linux/x86_64/x64:$(pwd)/dependency/sdk/Runtime_Env/linux/x86_64/x64:$(pwd)/dependency/fastdds/linux/x86_64/x64:$LD_LIBRARY_PATH"
+    export PYTHONPATH="$(pwd)/lib/linux/x86_64/x64:$PYTHONPATH"
+
+
+可选：如果要使用自定义 DDS 配置文件，设置 ROBOT_DDS_PROFILE 环境变量：
+
+.. code-block:: bash
+
+   export ROBOT_DDS_PROFILE=path/to/your/Robot_DDS_Profile.xml

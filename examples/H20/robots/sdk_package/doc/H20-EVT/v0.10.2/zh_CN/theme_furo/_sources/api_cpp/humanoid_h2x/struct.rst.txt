@@ -1,0 +1,397 @@
+结构体
+==========
+
+humanoid::h2x::MotorCmd
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::MotorCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+
+.. admonition:: 参数说明
+  :class: note
+
+    - **mode_**： 电机控制模式，0 = Disable（命令忽略），1 = Enable（命令生效）。
+    - **operation_mode_**： 工作模式。
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 15 70
+
+      * - 工作模式 (Hex)
+        - 模式描述
+      * - 0x00
+        - 力位混控模式（默认工作模式）
+      * - 0x01
+        - 伺服位置控制模式
+      * - 0x02
+        - 伺服速度控制模式
+      * - 0x03
+        - 电流、力矩控制模式和刹车控制指令
+      * - 0x04
+        - 配置指令
+      * - 0x05
+        - 电机控制参数查询指令
+
+    - **q**：关节目标位置，单位：**rad**
+
+    - **dq**：关节目标速度，单位：**rad/s**
+
+    - **tau**：关节前馈力矩，单位：**Nm**
+
+    - **kp**：关节刚度系数
+
+    - **kd**：关节阻尼系数
+
+    - **reserved**：预留
+
+humanoid::h2x::LowCmd
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::LowCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+.. admonition:: 参数说明
+  :class: note
+
+    - **mode_pr**：并联机构（脚踝和腰部）控制模式
+
+      - 0: PR模式 (俯仰/滚转角度控制) [默认]
+      - 1: AB模式 (电机直接控制)
+    - **motorCmd[37]**：电机控制指令
+    - **reserved[4]**：预留
+
+humanoid::h2x::RealtimeCmd
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::RealtimeCmd
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+.. admonition:: 参数说明
+  :class: note
+
+    - **mode_pr**：并联机构控制模式
+
+      - 0：PR (俯仰/滚转角度控制) [默认]
+      - 1：AB (电机直接控制)
+    - **motorCmd[37]**：电机控制指令
+    - **reserved[4]**：预留
+
+humanoid::h2x::IMUState
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::IMUState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+.. admonition:: 参数说明
+  :class: note
+
+  - **quaternion_[4]**： 四元数，表示机器人坐标系绕世界坐标系的转动情况。
+
+    - 0： w
+    - 1： x
+    - 2： y
+    - 3： z
+  - **gyroscope_[3]**： 陀螺仪角速度（绕三个坐标轴），单位 **rad/s**。
+
+    - 0： x轴
+    - 1： y轴
+    - 2： z轴
+  - **accelerometer_[3]**： 加速度（三个坐标轴），单位 **m/s²**。
+
+    - 0： x轴
+    - 1： y轴
+    - 2： z轴
+  - **rpy_[3]**： 欧拉角 (Roll, Pitch, Yaw)，表示机器人坐标系绕世界坐标系的转动角度，单位 **rad**。
+
+    - 0： roll
+    - 1： pitch
+    - 2： yaw
+  - **temperature_**： IMU传感器温度，单位 **°C**。
+  - **error_code_**： IMU错误码。
+  - **warning_code_**： IMU警告码。
+
+
+humanoid::h2x::MotorState
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::MotorState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+.. admonition:: 参数说明
+  :class: note
+
+    - **mode_**： 当前控制模式， 0 = Disable（命令忽略）， 1 = Enable（命令生效）。
+    - **operation_mode_**： 工作模式。
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 15 70
+
+      * - 工作模式 (Hex)
+        - 模式描述
+      * - 0x00
+        - 力位混控模式（默认工作模式）
+      * - 0x01
+        - 伺服位置控制模式
+      * - 0x02
+        - 伺服速度控制模式
+      * - 0x03
+        - 电流、力矩控制模式和刹车控制指令
+      * - 0x04
+        - 配置指令
+      * - 0x05
+        - 电机控制参数查询指令
+
+    - **q_**： 关节反馈位置，单位 **rad**。
+    - **dq_**： 关节反馈速度，单位 **rad/s**。
+    - **ddq_**： 关节反馈加速度，单位 **rad/s²**。
+    - **cur_**： 关节反馈电流，单位 **A**。
+    - **tau_est_**： 关节反馈力矩，单位 **N·m**。
+    - **temperature_[2]**： 关节温度，单位 **°C**。
+
+      - 0： 外表温度
+      - 1： 绕组温度
+    - **kp_**： 关节刚度系数。
+    - **kd_**： 关节阻尼系数。
+    - **error_code_**： 错误码。
+    - **warning_code_**： 警告码。
+    - **reserved_[4]**： 预留 4 个，unsigned long 类型。
+
+    电机错误码定义
+
+    .. list-table::
+      :header-rows: 1
+      :widths: 30 70
+
+      * - 软件错误码
+        - 错误定义
+      * - -1001
+        - 无错误
+      * - -1002
+        - 电机过热
+      * - -1003
+        - 电机过流
+      * - -1004
+        - 电机电压过低
+      * - -1005
+        - 电机编码器错误
+      * - -1006
+        - 电机刹车电压过高
+      * - -1007
+        - DRV 驱动错误
+      * - -1008
+        - 电压异常
+      * - -1009
+        - 磁编码异常
+      * - -1010
+        - 温度异常
+      * - -1011
+        - 电流异常
+      * - -1012
+        - 负载异常
+      * - -1203
+        - 参数非法
+      * - -1204
+        - 位置超限
+
+
+humanoid::h2x::BatteryState
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::BatteryState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+.. admonition:: 电池参数说明
+   :class: note
+   
+   - **battery_percentage**：电池电量
+
+     - 范围：0～100％
+     - 无效时为 0
+   
+   - **battery_state**：电池状态
+
+     - 0：无效
+     - 1：充电
+     - 2：放电
+     - 3：静止
+   
+   - **battery_level_warning**：电池电量警告
+
+     - 0：无效
+     - 1：电池电量低警告
+     - 2：其余警告
+   
+   - **error_code**：错误码
+   - **warning_code**：警告码
+
+
+humanoid::h2x::PCUState
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::PCUState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+.. admonition:: 参数说明
+  :class: note
+
+  - **emergency_stop_state_**： 急停状态，0：on，1：off。
+  - **control_supply_state_**： 控制电状态：0：待机状态，2：上电状态，4：错误状态。
+  - **power_supply_state_**： 动力电状态：0：待机状态，1：预充状态，2：上电状态，3：下电状态，4：错误状态。
+  - **pcu_error_code_**： PCU错误码。
+  - **pcu_warning_code_**： PCU警告码。
+  - **battery_voltage_**： 电池电压，单位 V。
+  - **motor_bus_voltage_**： 电机母线电压，单位 V。
+  - **motor_bus_current_**： 电机母线电流，单位 A。
+  - **dcdc_bus_voltage_**： DCDC母线电压，单位 V。
+  - **voltage_24v_**： 24V电压，单位 V。
+  - **voltage_12v_**： 12V电压，单位 V。
+  - **current_24v_**： 24V电流，单位 A。
+  - **current_12v_**： 12V电流，单位 A。
+
+humanoid::h2x::CDUState
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::CDUState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+.. admonition:: CDU 参数说明
+   :class: note
+   
+   - **cdu_error_code**：CDU 错误码
+   
+   .. list-table::
+      :header-rows: 1
+      :widths: 20 60
+      
+      * - CDU 错误码
+        - 错误定义
+      * - -1205
+        - 主机低频通信错误
+      * - -1206
+        - PCU 低频通信错误
+      * - -1207
+        - LRCU 低频通信错误
+      * - -1208
+        - 主机连续帧校验错误
+      * - -1209
+        - PCU 连续帧校验错误
+      * - -1210
+        - LRCU 连续帧校验错误
+   
+   - **cdu_warning_code**：CDU 警告码
+
+
+humanoid::h2x::LowState
+-----------------------------
+.. doxygenstruct:: humanoid::h2x::LowState
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+
+.. admonition:: 参数说明
+   :class: note
+   
+   - **version**：软件版本信息
+   
+   - **mode_pr**：并联机构（脚踝和腰部）控制模式
+
+      - 0: PR模式 (俯仰/滚转角度控制) [默认]
+      - 1: AB模式 (电机直接控制)
+   
+   - **tick**：计时器，每 **1ms** 递增
+   
+   - **imu_state**：IMU 状态
+   
+   - **motor_state**：所有电机状态
+   
+   - **has_battery_info**：是否有电池信息
+
+     - true：包含电池信息
+     - false：不包含电池信息
+   
+   - **battery_info**：电池信息
+   
+   - **ground_count**：足底触底开关数量
+   
+   - **ground_signal**：足底触底开关状态
+   
+   - **time_seconds**：累计时间，单位 **s**
+   
+   - **is_pcu_valid**：PCU 是否有效 (此机型无效)
+
+     - 0：无效
+     - 1：有效
+   
+   - **pcu_state**：PCU 状态
+   
+   - **is_cdu_valid**：CDU 是否有效 (此机型无效)
+
+     - 0：无效
+     - 1：有效
+   
+   - **cdu_state**：CDU 状态
+   
+   - **is_data_valid**：数据是否有效
+
+     - 0：全部无效
+     - 1：部分有效
+     - 2：全部有效
+   
+   - **error_code**：驱动层错误码
+
+     - 0：无错误
+     - -2000~-2999：驱动层软件错误
+     - -1：固件层错误
+   
+    .. list-table::
+      :widths: 20 80
+      :header-rows: 1
+
+      * - 错误码
+        - 说明
+      * - 0
+        - 无错误
+      * - -1
+        - 固件层错误
+      * - -2029
+        - 参数非法
+      * - -2030
+        - V3 关节 FrameCounter 在 1 分钟内不匹配超 10 次
+      * - -2031
+        - Business 计数和 HAL 计数在 1 分钟内不匹配超 10 次
+      * - -2032
+        - 算法错误
+      * - -2033
+        - 急停
+      * - -2034
+        - CDU 通讯中断
+      * - -2035
+        - 腰部 IMU 通讯中断
+   
+   - **warning_code**：驱动层警告码
+
+     - 0：无警告
+     - -1：固件层警告
+   
+   
+   - **reserved**：预留 4 个

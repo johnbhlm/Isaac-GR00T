@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from h2x/msg/GripperDiagnosis.msg
+// generated code does not contain a copyright notice
+
+#include "h2x/msg/GripperDiagnosticData.idl"
+
+module h2x {
+  module msg {
+    typedef h2x::msg::GripperDiagnosticData h2x__msg__GripperDiagnosticData;
+    typedef h2x__msg__GripperDiagnosticData h2x__msg__GripperDiagnosticData__2[2];
+    typedef int32 int32__2[2];
+    struct GripperDiagnosis {
+      h2x__msg__GripperDiagnosticData__2 ds_data;
+
+      int32__2 error_code;
+
+      int32__2 warning_code;
+
+      uint32 crc;
+    };
+  };
+};
