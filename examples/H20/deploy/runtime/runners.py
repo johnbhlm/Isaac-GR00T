@@ -1,76 +1,140 @@
-# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
-# SPDX-License-Identifier: Apache-2.0
-
 from __future__ import annotations
 
-from dataclasses import dataclass
-import select
-import sys
-import termios
 import time
-import tty
-from typing import Callable
+import numpy as np
+
+from examples.H20.deploy.utils.async_runtime import AsyncChunkInferenceWorker
+from examples.H20.deploy.utils.rtc_utils import apply_action_drop
+from examples.H20.robots.model2h20_interface import ModelClient
 
 
-@dataclass
-class KeyboardCommand:
-    """Single keyboard event consumed by the deployment controller."""
-
-    key: str
-    timestamp: float
-
-
-class KeyboardReader:
-    """Non-blocking single-key reader for Thor console operation."""
-
-    def __init__(self):
-        self._fd = sys.stdin.fileno()
-        self._old_settings: list | None = None
-        self.enabled = sys.stdin.isatty()
-
-    def __enter__(self) -> "KeyboardReader":
-        if self.enabled:
-            self._old_settings = termios.tcgetattr(self._fd)
-            tty.setcbreak(self._fd)
-        return self
-
-    def __exit__(self, exc_type, exc, tb) -> None:
-        if self.enabled and self._old_settings is not None:
-            termios.tcsetattr(self._fd, termios.TCSADRAIN, self._old_settings)
-
-    def poll(self) -> KeyboardCommand | None:
-        if not self.enabled:
-            return None
-        readable, _, _ = select.select([sys.stdin], [], [], 0.0)
-        if not readable:
-            return None
-        return KeyboardCommand(sys.stdin.read(1), time.time())
+def select_action_window(actions, action_horizon: int, drop_steps: int = 0):
+    if actions is None or len(actions) == 0:
+        return None
+    actions = np.asarray(actions)[0:action_horizon]
+    if drop_steps > 0:
+        return apply_action_drop(actions, drop_steps)
+    return actions
 
 
-class Rate:
-    """Simple wall-clock loop-rate helper."""
-
-    def __init__(self, hz: float):
-        if hz <= 0:
-            raise ValueError(f"hz must be > 0, got {hz}")
-        self.period = 1.0 / hz
-
-    def sleep(self, started_at: float) -> None:
-        remaining = self.period - (time.time() - started_at)
-        if remaining > 0:
-            time.sleep(remaining)
+def infer_action_window(model, example, action_horizon: int, drop_steps: int = 0):
+    resp = model.step(example)
+    raw_actions = None if resp is None else resp.get("raw_actions")
+    return select_action_window(raw_actions, action_horizon=action_horizon, drop_steps=drop_steps)
 
 
-class ClosedLoopRunner:
-    """Runs a pollable callback until it returns False or a stop key is received."""
+class SyncRunner:
+    def __init__(self, controller, model, observation_builder, action_executor):
+        self.c = controller
+        self.model = model
+        self.obs = observation_builder
+        self.executor = action_executor
 
-    def __init__(self, control_hz: float):
-        self.rate = Rate(control_hz)
+    def run(self, current_task: str):
+        example = self.obs.build(current_task)
+        if example is None:
+            time.sleep(0.02)
+            return
+        resp = self.model.step(example)
+        raw_actions = None if resp is None else resp.get("raw_actions")
+        actions = select_action_window(raw_actions, action_horizon=self.c.action_horizon, drop_steps=int(getattr(self.c.args, "drop_steps", 0)) if getattr(self.c.args, "enable_action_drop", False) else 0)
+        if actions is None:
+            return
+        for action in actions:
+            stop = self.executor.execute_step(action, current_task, self.c.left_gripper_smoother, self.c.right_gripper_smoother, allow_inactive_arm_freeze=False, allow_done_flag=False)
+            if stop:
+                break
 
-    def run(self, tick: Callable[[KeyboardCommand | None], bool]) -> None:
-        with KeyboardReader() as keyboard:
-            while True:
-                started_at = time.time()
-                if not tick(keyboard.poll()):
-                    return
-                self.rate.sleep(started_at)
+
+class AsyncRunner:
+    def __init__(self, controller, main_model, observation_builder, action_executor):
+        self.c = controller
+        self.main_model = main_model
+        self.obs = observation_builder
+        self.executor = action_executor
+        self.worker_model = None
+        self.worker = None
+
+    def _ensure_worker(self):
+        if self.worker is not None:
+            return
+        c = self.c
+        async_wait_timeout = float(getattr(c.args, "async_wait_timeout", 0.04))
+        self.worker_model = ModelClient(policy_ckpt_path=c.args.pretrained_path, host=c.args.host, port=c.args.port, image_size=list(c.args.resize_size))
+        self.worker = AsyncChunkInferenceWorker(self.worker_model, wait_timeout=async_wait_timeout, queue_size=int(getattr(c.args, "async_queue_size", 2)))
+
+    def close_worker(self):
+        if self.worker is not None:
+            self.worker.stop()
+            self.worker = None
+        if self.worker_model is not None and hasattr(self.worker_model, "close"):
+            self.worker_model.close()
+            self.worker_model = None
+
+    def run(self, current_task: str):
+        c = self.c
+        mode_drop_steps = int(getattr(c.args, "drop_steps", 0)) if bool(getattr(c.args, "enable_action_drop", False)) else 0
+        enable_async_fallback = bool(getattr(c.args, "enable_async_fallback", False))
+        async_wait_timeout = float(getattr(c.args, "async_wait_timeout", 0.04))
+        self._ensure_worker()
+        worker = self.worker
+        example = self.obs.build(current_task)
+        if example is None:
+            time.sleep(0.02)
+            return
+        actions = infer_action_window(self.main_model, example, c.action_horizon, drop_steps=mode_drop_steps)
+        if actions is None:
+            time.sleep(0.02)
+            return
+        task_epoch = worker.start_new_task(); request_id = 0; pending_request_id = None
+        prefetch_lead_steps = int(getattr(c.args, "prefetch_lead_steps", 8))
+        while not c.stop_program and c.current_mode == "infer" and c._deploy_flag and not c._task_done_requested:
+            if c.task_switch_flag:
+                self.close_worker(); return
+            chunk_len = len(actions); prefetch_index = max(0, chunk_len - prefetch_lead_steps); switched = False
+            prefetch_sent = False
+            for i, action in enumerate(actions):
+                if c.task_switch_flag:
+                    self.close_worker(); return
+                stop = self.executor.execute_step(action, current_task, c.left_gripper_smoother, c.right_gripper_smoother, allow_inactive_arm_freeze=bool(getattr(c.args, "enable_inactive_arm_freeze", False)), allow_done_flag=bool(getattr(c.args, "enable_done_flag", False)))
+                if stop:
+                    self.close_worker(); return
+                if (not prefetch_sent) and pending_request_id is None and i >= prefetch_index:
+                    next_example = self.obs.build(current_task)
+                    if next_example is not None:
+                        request_id += 1
+                        if worker.request(next_example, request_id, task_epoch):
+                            pending_request_id = request_id
+                            prefetch_sent = True
+                if pending_request_id is not None:
+                    hit = worker.get_latest_matching_request(pending_request_id, task_epoch)
+                    if hit is not None:
+                        _, got = hit
+                        next_actions = select_action_window(got, c.action_horizon, drop_steps=mode_drop_steps)
+                        if next_actions is not None:
+                            actions = next_actions; pending_request_id = None; prefetch_sent = False; switched = True; break
+            if switched:
+                continue
+            if pending_request_id is not None:
+                try:
+                    _, got = worker.get_blocking_for_request(pending_request_id, task_epoch, async_wait_timeout)
+                    next_actions = select_action_window(got, c.action_horizon, drop_steps=mode_drop_steps)
+                    if next_actions is not None:
+                        actions = next_actions; pending_request_id = None; prefetch_sent = False; continue
+                    if not enable_async_fallback:
+                        time.sleep(0.005)
+                        continue
+                    pending_request_id = None
+                except Exception:
+                    if not enable_async_fallback:
+                        time.sleep(0.005)
+                        continue
+                    pending_request_id = None
+            latest_example = self.obs.build(current_task)
+            if latest_example is None:
+                time.sleep(0.02)
+                continue
+            actions = infer_action_window(self.main_model, latest_example, c.action_horizon, drop_steps=mode_drop_steps)
+            if actions is None:
+                time.sleep(0.02)
+                continue

@@ -1,77 +1,53 @@
-# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
-# SPDX-License-Identifier: Apache-2.0
-
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Any
-
+import time
 import numpy as np
 
 
-@dataclass
-class H20Observation:
-    """Raw H20 observation before GR00T batch/time formatting."""
+class ObservationBuilder:
+    def __init__(self, controller):
+        self.c = controller
 
-    images: dict[str, np.ndarray]
-    left_joints: np.ndarray
-    right_joints: np.ndarray
-    left_gripper: np.ndarray
-    right_gripper: np.ndarray
+    def build(self, current_task: str):
+        c = self.c
+        # img_top = c.head_camera.get_data()[0]
+        # img_left = c.left_camera.get_data()[0]
+        # img_right = c.right_camera.get_data()[0]
+        # if img_top is None or img_left is None or img_right is None:
+        #     time.sleep(0.01)
+        #     return None
+        
+        # 获取相机观测,通过相机ros topic读取
+        img_top = c.camera_manager.GetImage("head_camera")
+        img_left = c.camera_manager.GetImage("left_wrist_camera")
+        img_right = c.camera_manager.GetImage("right_wrist_camera")
+        if img_top is None or img_left is None or img_right is None:
+            return None
 
+        c.left_gripper_state = c.gripper_controller.gripper_state.motor_state[0].q
+        c.right_gripper_state = c.gripper_controller.gripper_state.motor_state[1].q
+        c.left_gripper_state = 0.0 if c.left_gripper_state < 0.06 else 1.0
+        c.right_gripper_state = 0.0 if c.right_gripper_state < 0.06 else 1.0
 
-def _as_float32_vector(value: Any, expected_dim: int, name: str) -> np.ndarray:
-    arr = np.asarray(value, dtype=np.float32).reshape(-1)
-    if arr.shape[0] != expected_dim:
-        raise ValueError(f"{name} must have {expected_dim} values, got shape {arr.shape}")
-    return arr
+        task = current_task.lower()
+        if c.freeze_right and "place" in task:
+            c.right_gripper_state = 0.0
+        if c.freeze_left and "place" in task:
+            c.left_gripper_state = 0.0
 
+        ret, c.low_state = c.low_level.readLowState()
+        if ret != 0 and ret != -512:
+            return None
+        if c.low_state is None:
+            time.sleep(0.01)
+            return None
 
-def _as_uint8_rgb(image: np.ndarray, name: str) -> np.ndarray:
-    arr = np.asarray(image)
-    if arr.ndim != 3 or arr.shape[-1] != 3:
-        raise ValueError(f"{name} must be an HxWx3 RGB image, got shape {arr.shape}")
-    if arr.dtype != np.uint8:
-        arr = np.clip(arr, 0, 255).astype(np.uint8)
-    return arr
+        for i in range(15, 22):
+            c.left_arm_joints[i - 15] = c.low_state.motor_state[i].q
+        for i in range(22, 29):
+            c.right_arm_joints[i - 22] = c.low_state.motor_state[i].q
 
-
-class H20ObservationBuilder:
-    """Builds GR00T server observations from H20 camera/proprioceptive readings."""
-
-    def __init__(
-        self,
-        video_keys: tuple[str, str, str],
-        state_keys: tuple[str, str, str, str],
-        language_key: str,
-    ):
-        self.video_keys = video_keys
-        self.state_keys = state_keys
-        self.language_key = language_key
-
-    def read_robot(self, robot: Any) -> H20Observation:
-        frames = robot.get_camera_frames()
-        left_joints, right_joints = robot.get_arm_joint_positions()
-        left_gripper, right_gripper = robot.get_gripper_positions()
-        return H20Observation(
-            images={key: _as_uint8_rgb(frames[key], key) for key in self.video_keys},
-            left_joints=_as_float32_vector(left_joints, 7, "left_joints"),
-            right_joints=_as_float32_vector(right_joints, 7, "right_joints"),
-            left_gripper=_as_float32_vector(left_gripper, 1, "left_gripper"),
-            right_gripper=_as_float32_vector(right_gripper, 1, "right_gripper"),
-        )
-
-    def to_policy_input(self, observation: H20Observation, instruction: str) -> dict[str, Any]:
-        """Return PolicyClient input with B=1 and T=1 dimensions."""
-
-        left_state_key, left_gripper_key, right_state_key, right_gripper_key = self.state_keys
-        return {
-            "video": {key: observation.images[key][None, None, ...] for key in self.video_keys},
-            "state": {
-                left_state_key: observation.left_joints[None, None, ...],
-                left_gripper_key: observation.left_gripper[None, None, ...],
-                right_state_key: observation.right_joints[None, None, ...],
-                right_gripper_key: observation.right_gripper[None, None, ...],
-            },
-            "language": {self.language_key: [[instruction]]},
-        }
+        # state = np.array(c.left_arm_joints + [c.left_gripper_state] + c.right_arm_joints + [c.right_gripper_state])
+        state = np.array(c.left_arm_joints  + c.right_arm_joints)
+        state = c.normalizer.forward(state).tolist()
+        return {"image": [img_top, img_left, img_right], "lang": current_task, "state": state}
