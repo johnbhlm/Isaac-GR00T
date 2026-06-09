@@ -13,6 +13,10 @@ class ActionExecutor:
 
     def execute_step(self, action, current_task: str, left_smoother, right_smoother, *, allow_inactive_arm_freeze: bool = False, allow_done_flag: bool = False) -> bool:
         c = self.c
+        action = np.asarray(action, dtype=np.float32)
+        if not np.all(np.isfinite(action)):
+            print("[ActionExecutor] skip NaN/Inf action")
+            return True
         left_arm = np.array(action[0:7])
         left_gripper = action[7]
         right_arm = np.array(action[8:15])

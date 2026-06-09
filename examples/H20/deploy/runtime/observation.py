@@ -47,7 +47,11 @@ class ObservationBuilder:
         for i in range(22, 29):
             c.right_arm_joints[i - 22] = c.low_state.motor_state[i].q
 
-        # state = np.array(c.left_arm_joints + [c.left_gripper_state] + c.right_arm_joints + [c.right_gripper_state])
-        state = np.array(c.left_arm_joints  + c.right_arm_joints)
-        state = c.normalizer.forward(state).tolist()
+        state = np.array(
+            c.left_arm_joints
+            + [c.left_gripper_state]
+            + c.right_arm_joints
+            + [c.right_gripper_state],
+            dtype=np.float32,
+        )
         return {"image": [img_top, img_left, img_right], "lang": current_task, "state": state}
