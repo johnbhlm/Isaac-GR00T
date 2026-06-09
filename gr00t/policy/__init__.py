@@ -13,12 +13,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .gr00t_policy import Gr00tPolicy
 from .policy import BasePolicy, PolicyWrapper
+from .server_client import PolicyClient, PolicyServer
 
 
 __all__ = [
     "BasePolicy",
     "Gr00tPolicy",
+    "PolicyClient",
+    "PolicyServer",
     "PolicyWrapper",
 ]
+
+
+def __getattr__(name):
+    if name == "Gr00tPolicy":
+        from .gr00t_policy import Gr00tPolicy
+
+        return Gr00tPolicy
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

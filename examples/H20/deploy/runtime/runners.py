@@ -5,7 +5,7 @@ import numpy as np
 
 from examples.H20.deploy.utils.async_runtime import AsyncChunkInferenceWorker
 from examples.H20.deploy.utils.rtc_utils import apply_action_drop
-from examples.H20.robots.model2h20_interface import ModelClient
+from examples.H20.robots.groot_h20_interface import GrootH20ModelClient as ModelClient
 
 
 def select_action_window(actions, action_horizon: int, drop_steps: int = 0):
@@ -60,7 +60,15 @@ class AsyncRunner:
             return
         c = self.c
         async_wait_timeout = float(getattr(c.args, "async_wait_timeout", 0.04))
-        self.worker_model = ModelClient(policy_ckpt_path=c.args.pretrained_path, host=c.args.host, port=c.args.port, image_size=list(c.args.resize_size))
+        self.worker_model = ModelClient(
+            host=c.args.host,
+            port=c.args.port,
+            image_size=list(c.args.resize_size),
+            action_horizon=c.args.action_horizon,
+            bgr_to_rgb=getattr(c.args, "bgr_to_rgb", True),
+            timeout_ms=getattr(c.args, "policy_timeout_ms", 30000),
+            debug=getattr(c.args, "debug", False),
+        )
         self.worker = AsyncChunkInferenceWorker(self.worker_model, wait_timeout=async_wait_timeout, queue_size=int(getattr(c.args, "async_queue_size", 2)))
 
     def close_worker(self):

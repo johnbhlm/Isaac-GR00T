@@ -16,6 +16,11 @@ def parse_cli_args() -> Args:
     parser.add_argument("--port", type=int, default=Args.port)
     parser.add_argument("--image-width", type=int, default=Args.resize_size[0])
     parser.add_argument("--image-height", type=int, default=Args.resize_size[1])
+    parser.add_argument("--action-horizon", type=int, default=Args.action_horizon)
+    parser.add_argument("--bgr-to-rgb", dest="bgr_to_rgb", action="store_true", default=Args.bgr_to_rgb)
+    parser.add_argument("--no-bgr-to-rgb", dest="bgr_to_rgb", action="store_false")
+    parser.add_argument("--policy-timeout-ms", type=int, default=Args.policy_timeout_ms)
+    parser.add_argument("--debug", action="store_true", default=Args.debug)
     parser.add_argument("--run-mode", default=Args.run_mode, choices=["sync", "async"])
     parser.add_argument("--drop-steps", type=int, default=Args.drop_steps)
     parser.add_argument("--enable-action-drop", action="store_true", default=Args.enable_action_drop)
@@ -34,6 +39,10 @@ def parse_cli_args() -> Args:
         resize_size=(parsed.image_width, parsed.image_height),
         pretrained_path=parsed.pretrained_path,
         stats_path=stats_path,
+        action_horizon=parsed.action_horizon,
+        bgr_to_rgb=parsed.bgr_to_rgb,
+        policy_timeout_ms=parsed.policy_timeout_ms,
+        debug=parsed.debug,
         run_mode=parsed.run_mode,
         drop_steps=parsed.drop_steps,
         enable_action_drop=parsed.enable_action_drop,

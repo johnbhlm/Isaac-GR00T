@@ -32,10 +32,9 @@ from examples.H20.robots.gripper.gripper_control import (
 )
 from examples.H20.deploy.ai_agent.grasp_flow_node import GraspFlowNode
 from examples.H20.deploy.utils.keyboard_handlers import make_on_press,SSHKeyboardListener
-from examples.H20.deploy.utils.normalizer import Normalizer, load_stats
 from examples.H20.deploy.utils.task_utils import mark_task_done, mark_task_done_by_hand, should_apply_gripper_lock
 from examples.H20.deploy.configs import DeployArgs as Args
-from examples.H20.robots.model2h20_interface import ModelClient
+from examples.H20.robots.groot_h20_interface import GrootH20ModelClient as ModelClient
 from examples.H20.deploy.runtime.observation import ObservationBuilder
 from examples.H20.deploy.runtime.action_executor import ActionExecutor
 from examples.H20.deploy.runtime.runners import SyncRunner, AsyncRunner
@@ -50,9 +49,6 @@ class RobotState(enum.Enum):
 class H20VLA:
     def __init__(self, args: Args):
         self.args = args
-        stats = load_stats(args.stats_path)
-        self.normalizer = Normalizer("min_max", stats) 
-
         self.high_level = h2x.H2xHighLevel()
         self.low_level = h2x.H2xLowLevel()
         self.cmd = h2x.RealtimeCmd()
@@ -123,7 +119,7 @@ class H20VLA:
 
         self.inference_dt = 0.2
         self.cmd_dt = 0.01
-        self.action_horizon = 16
+        self.action_horizon = int(getattr(self.args, "action_horizon", 1))
         self.cmd.time = 0.2
         self.init_dt = 0.01
         self.interp_steps = 1 # 每个动作插值的控制周期数
@@ -556,7 +552,15 @@ class H20VLA:
         model = None
         async_runner = None
         try:
-            model = ModelClient(policy_ckpt_path=self.args.pretrained_path, host=self.args.host, port=self.args.port, image_size=list(self.args.resize_size))
+            model = ModelClient(
+                host=self.args.host,
+                port=self.args.port,
+                image_size=list(self.args.resize_size),
+                action_horizon=self.args.action_horizon,
+                bgr_to_rgb=getattr(self.args, "bgr_to_rgb", True),
+                timeout_ms=getattr(self.args, "policy_timeout_ms", 30000),
+                debug=getattr(self.args, "debug", False),
+            )
             self._deploy_flag = True
             self.left_gripper_smoother = GripperSmoother()
             self.right_gripper_smoother = GripperSmoother(window=2)
