@@ -61,7 +61,7 @@ class AsyncRunner:
         c = self.c
         async_wait_timeout = float(getattr(c.args, "async_wait_timeout", 0.04))
         self.worker_model = ModelClient(
-            policy_ckpt_path=c.args.pretrained_path,
+            # policy_ckpt_path=c.args.pretrained_path,
             host=c.args.host,
             port=c.args.port,
             image_size=list(c.args.resize_size),

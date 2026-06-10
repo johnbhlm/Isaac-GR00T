@@ -6,7 +6,6 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 
 MODEL_HOST="${1:-10.8.26.6}"
 MODEL_PORT="${2:-5555}"
-ACTION_HORIZON="${3:-1}"
 
 cd "${REPO_ROOT}/examples/H20/robots/sdk_package/"
 
@@ -28,6 +27,3 @@ export PYTHONPATH="${PYTHONPATH}:${REPO_ROOT}"
 python -m examples.H20.deploy.main \
   --host "${MODEL_HOST}" \
   --port "${MODEL_PORT}" \
-  --action-horizon "${ACTION_HORIZON}" \
-  --bgr-to-rgb \
-  --policy-timeout-ms 30000

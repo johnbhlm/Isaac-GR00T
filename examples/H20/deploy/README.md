@@ -18,16 +18,10 @@ python gr00t/eval/run_gr00t_server.py \
 
 ## Thor client
 
-Smoke test with the dummy robot adapter:
-
-```bash
-bash examples/H20/run_deployment_main.sh 10.8.26.6 5555 dummy
-```
-
 Real hardware is selected by passing an importable adapter module:
 
 ```bash
-bash examples/H20/run_deployment_main.sh 10.8.26.6 5555 my_h20_sdk_adapter /path/to/h20_robot.json
+bash examples/H20/run_h20_groot_deployment_main.sh 10.8.26.6 5555
 ```
 
 The adapter module must define `create_h20_robot_interface(config: dict)` and return an object that

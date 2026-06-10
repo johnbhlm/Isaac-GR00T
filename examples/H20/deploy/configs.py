@@ -10,8 +10,8 @@ class DeployArgs:
     host: str = "10.8.26.6"
     port: int = 5555
     resize_size: tuple[int, int] = (224, 224)
-    pretrained_path: str = "./results/Checkpoints/h20_gr00t_desk_hand_toy_0514"
-    stats_path: str = "./results/Checkpoints/h20_gr00t_desk_hand_toy_0514/dataset_statistics.json"
+    # pretrained_path: str = "./results/Checkpoints/h20_gr00t_desk_hand_toy_0514"
+    # stats_path: str = "./results/Checkpoints/h20_gr00t_desk_hand_toy_0514/dataset_statistics.json"
     enable_inactive_arm_freeze: bool = False
     run_mode: str = "async" # sync  async
     drop_steps: int = 8

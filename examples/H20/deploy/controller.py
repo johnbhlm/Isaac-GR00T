@@ -553,7 +553,7 @@ class H20VLA:
         async_runner = None
         try:
             model = ModelClient(
-                policy_ckpt_path=self.args.pretrained_path,
+                # policy_ckpt_path=self.args.pretrained_path,
                 host=self.args.host,
                 port=self.args.port,
                 image_size=list(self.args.resize_size),

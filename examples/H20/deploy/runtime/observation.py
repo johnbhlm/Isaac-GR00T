@@ -23,6 +23,8 @@ class ObservationBuilder:
         img_right = c.camera_manager.GetImage("right_wrist_camera")
         if img_top is None or img_left is None or img_right is None:
             return None
+        if c.gripper_controller.gripper_state is None:
+            return None     
 
         c.left_gripper_state = c.gripper_controller.gripper_state.motor_state[0].q
         c.right_gripper_state = c.gripper_controller.gripper_state.motor_state[1].q

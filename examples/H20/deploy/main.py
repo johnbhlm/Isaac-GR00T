@@ -10,8 +10,8 @@ from examples.H20.deploy.controller import H20VLA
 
 def parse_cli_args() -> Args:
     parser = argparse.ArgumentParser(description="H20 deployment policy runner")
-    parser.add_argument("--pretrained-path", default=Args.pretrained_path)
-    parser.add_argument("--stats-path", default=None)
+    # parser.add_argument("--pretrained-path", default=Args.pretrained_path)
+    # parser.add_argument("--stats-path", default=None)
     parser.add_argument("--host", default=Args.host)
     parser.add_argument("--port", type=int, default=Args.port)
     parser.add_argument("--image-width", type=int, default=Args.resize_size[0])
@@ -27,13 +27,13 @@ def parse_cli_args() -> Args:
     parser.add_argument("--control-sleep", type=float, default=Args.control_sleep)
 
     parsed = parser.parse_args()
-    stats_path = parsed.stats_path or f"{parsed.pretrained_path}/dataset_statistics.json"
+    # stats_path = parsed.stats_path or f"{parsed.pretrained_path}/dataset_statistics.json"
     return Args(
         host=parsed.host,
         port=parsed.port,
         resize_size=(parsed.image_width, parsed.image_height),
-        pretrained_path=parsed.pretrained_path,
-        stats_path=stats_path,
+        # pretrained_path=parsed.pretrained_path,
+        # stats_path=stats_path,
         run_mode=parsed.run_mode,
         drop_steps=parsed.drop_steps,
         enable_action_drop=parsed.enable_action_drop,
