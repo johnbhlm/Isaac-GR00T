@@ -119,7 +119,7 @@ class H20VLA:
 
         self.inference_dt = 0.2
         self.cmd_dt = 0.01
-        self.action_horizon = int(getattr(self.args, "action_horizon", 1))
+        self.action_horizon = 16
         self.cmd.time = 0.2
         self.init_dt = 0.01
         self.interp_steps = 1 # 每个动作插值的控制周期数
@@ -553,13 +553,10 @@ class H20VLA:
         async_runner = None
         try:
             model = ModelClient(
+                policy_ckpt_path=self.args.pretrained_path,
                 host=self.args.host,
                 port=self.args.port,
                 image_size=list(self.args.resize_size),
-                action_horizon=self.args.action_horizon,
-                bgr_to_rgb=getattr(self.args, "bgr_to_rgb", True),
-                timeout_ms=getattr(self.args, "policy_timeout_ms", 30000),
-                debug=getattr(self.args, "debug", False),
             )
             self._deploy_flag = True
             self.left_gripper_smoother = GripperSmoother()

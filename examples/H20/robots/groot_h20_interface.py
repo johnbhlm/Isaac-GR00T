@@ -19,29 +19,13 @@ class GrootH20ModelClient:
         host: str,
         port: int,
         image_size=(224, 224),
-        action_horizon: int = 16,
-        bgr_to_rgb: bool = True,
-        timeout_ms: int = 30000,
-        debug: bool = False,
         **kwargs,
     ):
         self.host = host
         self.port = int(port)
         self.image_size = tuple(image_size)
-        self.action_horizon = int(action_horizon)
-        self.bgr_to_rgb = bool(bgr_to_rgb)
-        self.timeout_ms = int(timeout_ms)
-        self.debug = bool(debug)
 
-        # Keep this compatible across slightly different PolicyClient signatures.
-        try:
-            self.client = PolicyClient(
-                host=self.host,
-                port=self.port,
-                timeout_ms=self.timeout_ms,
-            )
-        except TypeError:
-            self.client = PolicyClient(host=self.host, port=self.port)
+        self.client = PolicyClient(host=self.host, port=self.port)
 
         if not self.client.ping():
             raise RuntimeError(f"Cannot connect to GR00T PolicyServer at {self.host}:{self.port}")
@@ -60,9 +44,8 @@ class GrootH20ModelClient:
         if img.dtype != np.uint8:
             img = np.clip(img, 0, 255).astype(np.uint8)
 
-        # StarVLA/OpenCV camera path is normally BGR; GR00T should receive RGB.
-        if self.bgr_to_rgb:
-            img = img[..., ::-1].copy()
+        
+        img = img[..., ::-1].copy()
 
         return img
 
@@ -126,13 +109,6 @@ class GrootH20ModelClient:
             },
         }
 
-        if self.debug:
-            for key, value in obs["video"].items():
-                print("[GR00T obs video]", key, value.shape, value.dtype)
-            for key, value in obs["state"].items():
-                print("[GR00T obs state]", key, value.shape, value.dtype)
-            print("[GR00T obs language]", task)
-
         return obs
 
     def _convert_action(self, action: dict) -> np.ndarray:
@@ -170,7 +146,6 @@ class GrootH20ModelClient:
             left_gripper.shape[0],
             right.shape[0],
             right_gripper.shape[0],
-            self.action_horizon,
         )
 
         raw_actions = np.zeros((horizon, 16), dtype=np.float32)
@@ -182,16 +157,6 @@ class GrootH20ModelClient:
         if not np.all(np.isfinite(raw_actions)):
             raise ValueError(f"GR00T returned NaN/Inf raw_actions: {raw_actions}")
 
-        if self.debug:
-            print(
-                "[GR00T raw_actions]",
-                raw_actions.shape,
-                "min=",
-                float(raw_actions.min()),
-                "max=",
-                float(raw_actions.max()),
-            )
-
         return raw_actions
 
     def step(self, example: dict, step: int = 0, **kwargs) -> dict:
@@ -201,5 +166,4 @@ class GrootH20ModelClient:
         return {"raw_actions": raw_actions, "info": info}
 
 
-# Compatibility with copied StarVLA code.
 ModelClient = GrootH20ModelClient

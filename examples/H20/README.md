@@ -109,7 +109,7 @@ examples/H20/
 1. 读三路图像 + 低层状态 + 夹爪状态；  
 2. 归一化 state，组 `example`（含 `lang`）；  
 3. `ModelClient.step` → `raw_actions`；  
-4. 按 `action_horizon` 与插值步数执行臂与夹爪；结合 `freeze_left` / `freeze_right`、任务完成与夹爪锁定逻辑。
+4. 按固定动作窗口与插值步数执行臂与夹爪；结合 `freeze_left` / `freeze_right`、任务完成与夹爪锁定逻辑。
 
 ### 4.3 任务键 1~8
 
